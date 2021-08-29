@@ -38,7 +38,6 @@ elseif(isset($_SESSION['xx_001']) && $axc0 != 'x006' && $axc0 != 'x001' ){ // --
 elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión si es redirigido y la sessi´on no existe ---
 	
 
-	$carpetaFondos = "dist/img/wallpappers/";
 	$fondos = [];
 	if ($handler = opendir($carpetaFondos)) {
 		while (false !== ($file = readdir($handler))) {

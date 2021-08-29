@@ -21,3 +21,7 @@ $vst = $iDi['config_vista'];
 $rll = $iDi['u5hpR0lr5'];
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 $dRV = $iDi['config_rDven'];
+
+
+////------ Varibles de configuracion
+$carpetaFondos = "dist/img/wallpappers/";

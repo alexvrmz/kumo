@@ -19,7 +19,7 @@ include ('ap4673i/fncnes5632.php');
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page" 
-style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('dist/img/wallspappers/<?= $fondo ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
+style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos.$fondo ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
 <div class="login-box" id="app">
   <div class="login-logo">
     <a href="index.php" class="texto-neon-azul" style="color: white;"><br><b>KUMO</b> 雲 </a>
