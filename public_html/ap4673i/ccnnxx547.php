@@ -5,12 +5,9 @@ setlocale(LC_MONETARY, 'es_MX');
 
 //error_reporting(E_ALL ^ E_NOTICE);
 //error_reporting(0);
-if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'nopixcua.kumo.click' || $_SERVER['SERVER_NAME'] == '192.168.1.80' ){
-    $cnnx4s = new mysqli('mieke.mx', 'nopixcua', 'Yn4LR4Tc4HldvXv', 'nopixcua');
+if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == 'app.kumo.click' || $_SERVER['SERVER_NAME'] == '192.168.1.80' ){
+    $cnnx4s = new mysqli('kumo.click', 'uNh7uH', 'Rjf6ge.Fa', 'kumo_v4');
    // $cnnx4s = new mysqli('localhost', 'uNh7uH', 'Rjf6ge.Fa', 'hiiqwla5x64x');
-}
-elseif($_SERVER['SERVER_NAME'] == 'mieke.mx'){
-    $cnnx4s = new mysqli('localhost', 'nopixcua', 'Yn4LR4Tc4HldvXv', 'nopixcua');
 }
 
 $tildes = $cnnx4s->query("SET NAMES 'utf8'");
