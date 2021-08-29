@@ -49,7 +49,7 @@ elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión s
 		}
 		closedir($handler);
 	}
-	$fondo_aleatorio = array_rand($fondos, 1);
+	$fondo_aleatorio = array_rand($fondos, 2);
 	$fondo = $fondos[$fondo_aleatorio[0]];
 
 
