@@ -37,6 +37,22 @@ elseif(isset($_SESSION['xx_001']) && $axc0 != 'x006' && $axc0 != 'x001' ){ // --
 
 elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión si es redirigido y la sessi´on no existe ---
 	
+
+	$carpetaFondos = "dist/img/wallpappers/";
+	$fondos = [];
+	if ($handler = opendir($carpetaFondos)) {
+		while (false !== ($file = readdir($handler))) {
+			$fondos = [
+				'fondo' => $file
+			];
+			array_push($fondos, $fondo);
+		}
+		closedir($handler);
+	}
+	$fondo_aleatorio = array_rand($fondos, 1);
+	$fondo = $fondos[$fondo_aleatorio[0]];
+
+
 	// ---- Include del escen78 ----
 	include('escen78/lgaccs25.php');
 	
