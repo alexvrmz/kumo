@@ -14,9 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		}else{
 			echo "fuck ho gya";
 		}*/
-    echo '<pre>';
+    /*echo '<pre>';
     print_r($_POST);
-    echo '</pre>';
+    echo '</pre>';*/
 
 }else{
 	echo "Try again Later";
