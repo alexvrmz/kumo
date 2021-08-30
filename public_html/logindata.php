@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $efid = $S001->fetch_assoc();
     if($efid['fb_id'] == $fb_Id){
       echo 'Cuenta Vinculada';
+      $usuariom = $efid['u5hUS8ir5'];
     }
     else{
       $arr = [];
