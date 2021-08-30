@@ -128,6 +128,7 @@ var getInfo;
               <div class="col-lg-12">
                 <div class="form-group row">
                 <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();"></fb:login-button>
+                <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
                 <div id="status">
                 </div>
                 <div id="response"></div>
