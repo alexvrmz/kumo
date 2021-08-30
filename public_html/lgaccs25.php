@@ -40,7 +40,6 @@ elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión s
 	include('ap4673i/ccnnxx547.php');
 	include('ap4673i/fncnes5632.php');
 
-
 	
 
 	// ---- Include del escen78 ----

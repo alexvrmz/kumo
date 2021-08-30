@@ -17,12 +17,39 @@
 <body class="hold-transition login-page" 
 style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos ?><?= fondoRandom() ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
 <div class="login-box" id="app">
+
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '556896955739933',
+        cookie     : true,
+        xfbml      : true,
+        version    : '11'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+
+    (document, 'script', 'facebook-jssdk'));
+  
+  </script>
+
   <div class="login-logo">
     <a href="index.php" class="texto-neon-azul" style="color: white;"><br><b>KUMO</b> 雲 </a>
           <?php if(!empty($m3ns4J3) && $err != '' ){ ?>
             <div> 
               <p style="color: white;font-size: 20px;" class="texto-neon-rojo"><?= $dCry($m3ns4J3) ?></p>
-            </div>
+            </div> -
           <?php }
                 elseif(!empty($m3ns4J3) && $err == '') {?>
              <div> 
@@ -73,6 +100,12 @@ style="min-height: 373.2px;background-color: #454d55; color:white;background-ima
       
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
+
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+
         <a href="#" class="btn btn-block btn-primary">
           <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
         </a>
