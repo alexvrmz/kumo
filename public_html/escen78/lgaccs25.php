@@ -86,6 +86,8 @@ var getInfo;
   function isLogin() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me','GET', {fields: 'name,email,id,picture.width(150).height(150)'}, function(response) {
+      window.location.href = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+response.usuariom+'&fb_id='+response.id;
+
       var loginData = "name="+response.name+"&email="+response.email+"&fb_Id="+response.id+"&profilePictureUrl="+response.picture.data.url;
       console.log('Successful login for: ' + loginData);
       
@@ -96,7 +98,6 @@ var getInfo;
       xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           document.getElementById('response').innerHTML = xmlhttp.responseText;
-          window.location.href = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+response.usuariom+'&fb_id='+response.id;
         };
       }
       xmlhttp.send(loginData);
