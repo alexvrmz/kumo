@@ -101,17 +101,7 @@ style="min-height: 373.2px;background-color: #454d55; color:white;background-ima
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
 
-<fb:login-button 
-  scope="public_profile,email"
-  onlogin="checkLoginState();">
-</fb:login-button>
-
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
+         <a id="btn-fblogin" href="fblogin.php" class="btn btn-primary">Login with Facebook</a>
       </div>
 
       <p class="mb-1">
