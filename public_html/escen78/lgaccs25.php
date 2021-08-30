@@ -1,7 +1,3 @@
-<?php
-include ('ap4673i/ccnnxx547.php');
-include ('ap4673i/fncnes5632.php');
-?>
 <!DOCTYPE html>
 <html lang="es_MX">
 <head>
@@ -19,7 +15,7 @@ include ('ap4673i/fncnes5632.php');
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page" 
-style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos.$fondo ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
+style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos ?><?= fondoRandom() ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
 <div class="login-box" id="app">
   <div class="login-logo">
     <a href="index.php" class="texto-neon-azul" style="color: white;"><br><b>KUMO</b> 雲 </a>
@@ -37,24 +33,24 @@ style="min-height: 373.2px;background-color: #454d55; color:white;background-ima
       
   </div>
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary" style="background-color: #00000014;">
-    <div class="card-body login-card-body" style="background-color: #343a4000; color:white;box-shadow: 0px 0px 81px #007BFF;">
-      <p class="login-box-msg">Ingresa tus datos para iniciar sesión</p>
+  <div >
+    <div>
+      <p class="login-box-msg" style="font-weight: bold;">Ingresa tus datos para iniciar sesión</p>
       <form id="inicioSesion" autosomplete="off" method="POST" action="lgaccs25?axc0=x005" class="form">
       <div id="printMe"></div>
         <div class="input-group mb-3">
-          <input type="text" class="form-control texto-neon-azul" placeholder="Usuario" name="pp_xx005" style="background-color: #ffffff30;color: white;" required>
+          <input type="text" class="form-control" placeholder="Usuario" name="pp_xx005" style="background-color: #ffffff94;color: black; font-weight: bold;" required>
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fa-duotone fa-user texto-neon-azul"></span>
+              <span class="fad fa-user"></span>
             </div>
           </div>
         </div> 
         <div class="input-group mb-3">
-          <input type="password" class="form-control texto-neon-azul" placeholder="Password" name="psbxX012s" style="background-color: #ffffff30;color: white;" required>
+          <input type="password" class="form-control" placeholder="Password" name="psbxX012s" style="background-color: #ffffff94;color: black; font-weight: bold;" required>
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fa-duotone fa-lock texto-neon-azul" ></span>
+              <span class="fad fa-lock" ></span>
             </div>
           </div>
         </div>
@@ -62,19 +58,19 @@ style="min-height: 373.2px;background-color: #454d55; color:white;background-ima
           <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
-              <label for="remember">
+              <label for="remember" style="font-weight: bold; color: white;">
                 Recordarme
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block texto-neon-azul" style="background-color: #0000;box-shadow: 0px 0px 20px #007BFF;">Entrar</button>
+            <button type="submit" class="btn btn-primary btn-block" style="font-weight: bold;"> <i class="fad fa-portal-enter"></i> Entrar</button>
           </div>
           <!-- /.col -->
         </div>
 
-<!--
+      
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">
@@ -83,19 +79,19 @@ style="min-height: 373.2px;background-color: #454d55; color:white;background-ima
         <a href="#" class="btn btn-block btn-danger">
           <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
         </a>
-      </div>-->
-      <!-- /.social-auth-links -->
+      </div>
 
       <p class="mb-1">
-        <a href="lgaccs25?axc0=p3rMps">Perdi mi contraseña</a>
+        <a href="lgaccs25?axc0=p3rMps" style="font-weight: bold; color: white;">Perdi mi contraseña</a>
       </p>
       <p class="mb-0">
-        <a href="lgaccs25?axc0=r3g7r0" class="text-center">Registrarme</a>
+        <a href="lgaccs25?axc0=r3g7r0" class="text-center" style="font-weight: bold; color: white;">Registrarme</a>
       </p>
     </form>
     </div>
     <!-- /.login-card-body -->
   </div>
+  <div class="text-center texto-neon-azul" style="color: white;"><h3><a href="https://kumo.click" style="color: white;">Kumo.click</a></h3> <br><p style="font-size: 18px;">V 21.0829.01</p></div>
 </div>
 <!-- /.login-box -->
 

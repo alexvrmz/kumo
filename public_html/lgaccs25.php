@@ -5,6 +5,7 @@ session_start(); // --- Validar sesión ---
 if($axc0 == 'x002'){
 	include('ap4673i/ccnnxx547.php');
 	include('ap4673i/fncnes5632.php');
+
 	include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
   bi74c0('3xi7', lbl_8i7_x028.$_SESSION['u5hID8ir5'], '');
 	
@@ -36,27 +37,18 @@ elseif(isset($_SESSION['xx_001']) && $axc0 != 'x006' && $axc0 != 'x001' ){ // --
 
 
 elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión si es redirigido y la sessi´on no existe ---
+	include('ap4673i/ccnnxx547.php');
+	include('ap4673i/fncnes5632.php');
+
+
 	
-
-	$fondos = [];
-	if ($handler = opendir($carpetaFondos)) {
-		while (false !== ($file = readdir($handler))) {
-			$fondos = [
-				'fondo' => $file
-			];
-			array_push($fondos, $fondo);
-		}
-		closedir($handler);
-	}
-	$fondo_aleatorio = array_rand($fondos, 2);
-	$fondo = $fondos[$fondo_aleatorio[0]];
-
 
 	// ---- Include del escen78 ----
 	include('escen78/lgaccs25.php');
 	
 } 
 elseif($axc0 == 'r3g7r0'){
+	
 	include('escen78/r3g7r0.php');
 }
 elseif($axc0 == 'x005'){ // --- Validar datos ---

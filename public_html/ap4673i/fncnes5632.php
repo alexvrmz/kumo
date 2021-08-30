@@ -898,6 +898,25 @@ function AES_Decrypt($password,$salt,$text_to_decrypt){
     return "No se pudo procesar";
   }
 }
+function fondoRandom() {
+  global $carpetaFondos;
+  $fondos = [];
+  $i = 0;
+  if ($handler = opendir($carpetaFondos)) {
+    while (false !== ($file = readdir($handler))) {
+      $fondo = [
+        'fondo' => $file
+      ];
+      array_push($fondos, $fondo);
+      $i++;
+    }
+    closedir($handler);
+  }
+  $i = rand( 0, $i );
+  //$fondo_aleatorio = array_rand($fondos, 2);
+  $fondo = $fondos[$i]['fondo'];
+  return $fondo;
+}
 
 
 
