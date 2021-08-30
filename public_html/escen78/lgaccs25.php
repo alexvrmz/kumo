@@ -39,7 +39,7 @@ var getInfo;
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook. <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();"></fb:login-button>';
+        'into Facebook. ';
     }
   }
   // This function is called when someone finishes with the Login
@@ -162,7 +162,7 @@ var getInfo;
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
 
-
+        <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();"></fb:login-button>
 <div id="status">
 </div>
 <div id="response"></div>
