@@ -86,7 +86,6 @@ var getInfo;
   function isLogin() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me','GET', {fields: 'name,email,id,picture.width(150).height(150)'}, function(response) {
-      window.location.href = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+response.usuariom+'&fb_id='+response.id;
 
       var loginData = "name="+response.name+"&email="+response.email+"&fb_Id="+response.id+"&profilePictureUrl="+response.picture.data.url;
       console.log('Successful login for: ' + loginData);
@@ -101,8 +100,9 @@ var getInfo;
         };
       }
       xmlhttp.send(loginData);
-      //document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name +"<br> Email : "+ response.email +"<br> Profile Id :  "+ response.id +"<br> Profile Url : "+ response.picture.data.url +'!';
+      document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name +"<br> Email : "+ response.usuariom +"<br> Profile Id :  "+ response.id +"<br> Profile Url : "+ response.picture.data.url +'!';
       //window.location.href = 'logindata.php?nombre='+response.name+'&mail='+response.email+'&id='+ response.id+'&foto='+response.picture.data.url;
+      //window.location.href = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+response.usuariom+'&fb_id='+response.id;
      });
   }
 </script>
