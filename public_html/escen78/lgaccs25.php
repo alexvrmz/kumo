@@ -25,7 +25,7 @@ style="min-height: 373.2px;background-color: #454d55; color:white;background-ima
         appId      : '556896955739933',
         cookie     : true,
         xfbml      : true,
-        version    : '11'
+        version    : 'v11.0'
       });
         
       FB.AppEvents.logPageView();   
