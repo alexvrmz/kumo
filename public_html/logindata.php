@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $S001 = $cnnx4s->query($C001) or die ("Fallo al consultar fb id");
     $efid = $S001->fetch_assoc();
     if($efid['fb_id'] == $fb_Id){
-      echo 'Cuenta Vinculada';
       $usuariom = $efid['u5hUS8ir5'];
+      echo $usuariom;
     }
     else{
       $arr = [];
