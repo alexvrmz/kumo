@@ -20,8 +20,8 @@ var getInfo;
       isLogin();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+      document.getElementById('status').innerHTML = 'Vincula tu cuenta ' +
+        'con Facebook.';
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
@@ -127,7 +127,7 @@ var getInfo;
                 
               <div class="col-lg-12">
                 <div class="form-group">
-                  <label>Cuanta de Facebook</label>
+                  <label>Cuanta de Facebook</label><br>
                   <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
                   <div id="status">
                   </div>
