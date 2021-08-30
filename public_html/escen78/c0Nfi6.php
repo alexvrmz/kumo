@@ -39,55 +39,17 @@ include('p4rc4l35/7i7ul0.php');
               </div>
               <div class="row" style="margin-bottom: 20px;">
                 
-                <div class="col-12">
-                  <div class="form-group">
-                    <label><?= lbl_m0do ?></label>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="col-12">
-                    <img src="dist/img/modelo1.png" class="img-fluid mb-2">
-                  </div>
-                  <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group row">
+                <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();"></fb:login-button>
+<div id="status">
+</div>
+<div id="response"></div>
 
-                    <div class="col-1">
-                      &nbsp;
-                    </div>
-                    <div class="col-10" style="padding-left: 56.5px;">
-                      <?php if($mdr == 1){ ?>
-                        <a href="#" class="btn btn-success btn-app disabled"><i class="fa-duotone fa-check"></i> Modo 1</a>
-                      <?php }
-                            else { ?>
-                        <a href="ap4673i/c0Nfi6_4pi.php?axc0=mo0DStruX&miumh=<?= $eCry($u5u4i0) ?>&xas=<?= $eCry(1) ?>" class="btn btn-warning btn-app"><i class="fa-duotone fa-times"></i> Modo 1</a>
-                      <?php } ?>
-                    </div>
-                    <div class="col-1">
-                      &nbsp;
-                    </div>
-                  </div>
-                </div>
+      </div>
 
-                <div class="col-6">
-                  <div class="col-12">
-                    <img src="dist/img/modelo2.png" class="img-fluid mb-2">
-                  </div>
-                  <div class="row">
-                    <div class="col-1">
-                      &nbsp;
-                    </div>
-                    <div class="col-10" style="padding-left: 56.5px;">
-                      <?php if($mdr == 2){ ?>
-                        <a href="#" class="btn btn-success btn-app disabled"><i class="fa-duotone fa-check"></i> Modo 2</a>
-                      <?php }
-                            else { ?>
-                        <a href="ap4673i/c0Nfi6_4pi.php?axc0=mo0DStruX&miumh=<?= $eCry($u5u4i0) ?>&xas=<?= $eCry(2) ?>" class="btn btn-warning btn-app"><i class="fa-duotone fa-times"></i> Modo 2</a>
-                      <?php } ?>  
-                    </div>
-                    <div class="col-1">
-                      &nbsp;
-                    </div>
-                  </div>
                 </div>
+              </div>
                 
                 
 
