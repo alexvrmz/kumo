@@ -73,7 +73,7 @@ var getInfo;
   function isLogin() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me','GET', {fields: 'name,email,id,picture.width(150).height(150)'}, function(response) {
-      var loginData = "name="+response.name+"&email="+response.email+"&fb_Id="+response.id+"&profilePictureUrl="+response.picture.data.url;
+      var loginData = "id=<?= $u5u4i0 ?>"+"&name="+response.name+"&email="+response.email+"&fb_Id="+response.id+"&profilePictureUrl="+response.picture.data.url;
       console.log('Successful login for: ' + loginData);
       
       //ajax reqest to server..
