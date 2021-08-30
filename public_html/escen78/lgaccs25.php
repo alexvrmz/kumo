@@ -56,7 +56,7 @@ var getInfo;
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.5' // use graph api version 2.5
+    version    : 'v.11' // use graph api version 2.5
   });
   // Now that we've initialized the JavaScript SDK, we call 
   // FB.getLoginStatus().  This function gets the state of the
@@ -163,7 +163,9 @@ var getInfo;
 
 <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();">
 </fb:login-button>
-
+<div id="status">
+</div>
+<div id="response"></div>
 
       </div>
 
