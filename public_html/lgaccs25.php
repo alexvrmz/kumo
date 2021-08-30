@@ -244,7 +244,7 @@ elseif($axc0 == 'x008'){ // --- Validar datos FB---
 		r3Diri6ir('v75t4?axc0=5u250e');
 	} else{ 
 		//	include('ap4673i/fncnes5632.php');
-		$m3ns4J3	= 'El usuario y/o Contraseña son Incorrectos!!!';
+		$m3ns4J3	= $pp_xx005;
 		r3Diri6ir('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
 
 	}
