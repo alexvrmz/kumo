@@ -25,8 +25,8 @@ var getInfo;
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook. ';
+      document.getElementById('status').innerHTML = 'Inicia sesión ' +
+        'en Facebook. ';
     }
   }
   // This function is called when someone finishes with the Login
@@ -126,15 +126,14 @@ var getInfo;
               <div class="row" style="margin-bottom: 20px;">
                 
               <div class="col-lg-12">
-                <div class="form-group row">
-                <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();"></fb:login-button>
-                <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
-                <div id="status">
+                <div class="form-group">
+                  <label>Cuanta de Facebook</label>
+                  <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="true"></div>
+                  <div id="status">
+                  </div>
+                  <div id="response"></div>
+                  </div>
                 </div>
-                <div id="response"></div>
-
-                </div>
-
               </div>
                 
                 
