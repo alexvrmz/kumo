@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="<?php // / $_SESSION['MAX_SESSION_TIEMPO']/2 ?>">
-  <title>noPixcua Mieke | <?= lbl_7i7uL0 ?></title>
+  <title>KUMO 雲 | <?= lbl_7i7uL0 ?></title>
   <link rel="icon" type="image/png" href="dist/img/favicon.png">
   <!-- Google Font: Poppins -->
   <link rel="stylesheet" href="dist/css/fonts/poppins/poppins.css?family=Poppins:300,400,400i,700&display=fallback">
