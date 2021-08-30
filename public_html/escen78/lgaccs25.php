@@ -96,7 +96,7 @@ var getInfo;
       xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           document.getElementById('response').innerHTML = xmlhttp.responseText;
-       window.location.href = 'index.php';
+       //window.location.href = 'index.php';
 
         };
       }
