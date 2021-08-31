@@ -17,7 +17,7 @@
 <body class="hold-transition login-page" 
 style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos ?><?= fondoRandom() ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
 <div class="login-box" id="app">
-
+<?php /*
 <script>
 var getInfo;
   // This is called with the results from from FB.getLoginStatus().
@@ -106,7 +106,7 @@ var getInfo;
       //window.location.href = 'logindata.php?nombre='+response.name+'&mail='+response.email+'&id='+ response.id+'&foto='+response.picture.data.url;
      });
   }
-</script>
+</script>*/ ?>
 
   <div class="login-logo">
     <a href="index.php" class="texto-neon-azul" style="color: white;"><br><b>KUMO</b> 雲 </a>
@@ -162,7 +162,7 @@ var getInfo;
         </div>
 
       
-      <div class="social-auth-links text-center mb-3">
+      <?php /*<div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
 
         <fb:login-button scope="public_profile,email" id="login" onlogin="checkLoginState();"></fb:login-button>
@@ -170,7 +170,7 @@ var getInfo;
 </div>
 <div id="response"></div>
 
-      </div>
+      </div>*/ ?>
 
       <p class="mb-1">
         <a href="lgaccs25?axc0=p3rMps" style="font-weight: bold; color: white;">Perdi mi contraseña</a>
