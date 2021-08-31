@@ -1,4 +1,5 @@
 <?php
+session_start();
 	include('ap4673i/ccnnxx547.php');
 	include('ap4673i/fncnes5632.php');
 	//return $conn variable.
