@@ -97,7 +97,7 @@ var getInfo;
       xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           //document.getElementById('response').innerHTML = xmlhttp.responseText;
-          document.getElementById('status').innerHTML = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id;
+          document.getElementById('status').innerHTML = '<a href="https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id+'">Iniciar con Facebook</a>';
           //window.location.href = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id;
         };
       }
