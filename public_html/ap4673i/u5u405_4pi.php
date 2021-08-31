@@ -104,24 +104,7 @@ elseif($axc0 === "5u540l_02"){
 			if($dU5u4o['u5hUS8ir5'] != ''){ $US8ir5 = /*dCry2(*/$dU5u4o['u5hUS8ir5']/*)*/; }
 
       $u5h34r5_nombre = $N18ir5. ' ' .$A28ir5. ' ' .$N18ir5. ' ' .$N28ir5;
-			$C005 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = $u5u4oxX";
-			$S005 = $cnnx4s->query($C005) or die ("Fallo al consultar relaciones de usuario: ".$C005);
-			if($DdR = $S005->fetch_assoc()){
-				$xDridn = $DdR['UEFIxTU'];
-				$xDeidn = $DdR['UEFExTU'];
-				$xDfidn = $DdR['UEFFxTU'];
-				$xDaidn = $DdR['UEFVxTU'];
-
-				$C008 = "SELECT eMNICEm, eMIDEm FROM eMpR3sA5 WHERE eMIDEm = $xDeidn";
-				$S008 = $cnnx4s->query($C008) or die ("Fallo al consultar empresas: ".$C008);
-				$DdE = $S008->fetch_assoc();
-				$nEmP = dCry2($DdE['eMNICEm']);
-
-				$C009 = "SELECT xN4m37l0, xID7l0 FROM x7l07 WHERE xID7l0 = $xDfidn";
-				$S009 = $cnnx4s->query($C009) or die ("Fallo al consultar flotas: ".$C009);
-				$DdF = $S009->fetch_assoc();
-				$nFlO = dCry2($DdF['xN4m37l0']);
-			}
+			
 
       $x4rr36l0 = array('u5hID8ir5' => $dU5u4o['u5hID8ir5'],
                       'u5hUS8ir5' => $US8ir5,
@@ -144,88 +127,7 @@ elseif($axc0 === "5u540l_02"){
       array_push($d4705_u5u, $x4rr36l0); 
     }
 
-		$C008 = "SELECT eMNICEm, eMIDEm FROM eMpR3sA5 WHERE xXUNVrSXx = $xXUNVrSXx";
-		$S008 = $cnnx4s->query($C008) or die ("Fallo al consultar empresas: ".$C008);
-		$LDE = [];
-		while ($DdE = $S008->fetch_array()) {
-			$xEID = $DdE['eMIDEm'];
-			$xNIc = dCry2($DdE['eMNICEm']);
-			unset($elme);
-			$elme = [
-				'xEID' => $xEID,
-				'xNIc' => $xNIc
-			];
-			array_push($LDE, $elme);
-		}
-
-		$C009 = "SELECT xN4m37l0, xID7l0 FROM x7l07 WHERE xXUNVrSXx = $xXUNVrSXx";
-		$S009 = $cnnx4s->query($C009) or die ("Fallo al consultar flotas: ".$C009);
-		$LDF = [];
-		while ($DdE = $S009->fetch_array()) {
-			$xFID = $DdE['xID7l0'];
-			$xFDc = dCry2($DdE['xN4m37l0']);
-			unset($elme);
-			$elme = [
-				'xFID' => $xFID,
-				'xFDc' => $xFDc
-			];
-			array_push($LDF, $elme);
-		}
-
-		$C005 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = $u5u4oxX";
-		$S005 = $cnnx4s->query($C005) or die ("Fallo al consultar relaciones de usuario: ".$C005);
-		$lV = [];
-		
-			while ($DR = $S005->fetch_assoc()) {
-				if($DR['UEFVxTU'] != 0){
-					$xDridn = $DR['UEFIxTU'];
-					$xDeidn = $DR['UEFExTU'];
-					$xDfidn = $DR['UEFFxTU'];
-					$xDaidn = $DR['UEFVxTU'];
-
-					$C006 = "SELECT * FROM v3hiXu7l0s WHERE xV3hiIDXu7l0s = $xDaidn";
-					$S006 = $cnnx4s->query($C006) or die ("Fallo: erro al seleccionar auto: ".$C006);
-					$DV = $S006->fetch_assoc();
-
-					$vXIDxv = $DV['xV3hiIDXu7l0s'];
-					$vXECxv = dCry2($DV['xV3hi3C0Xu7l0s']);
-					$vXPLxv = dCry2($DV['xV3hiPl4c45Xu7l0s']);
-					$vXEIxv = $DV['xV3hi3MPrXu7l0s'];
-					$xVFIxv = $DV['xV3hiFl074Xu7l0s'];
-					$xVUIxv = $DV['xV3hiUIDXu7l0s'];
-					$xVEDxv = $DV['xV3hiEDOXu7l0s'];
-					$xVMDidxv = $DV['xV3hi5uBm4rc4Xu7l0s'];
-					$vXMKidxv = $DV['xV3hiM4rc4Xu7l0s'];
-					$xVTPxv = dCry2($DV['xV3hi5ub7ip0Xu7l0s']);
-					$xVANxV = $DV['xV3hi4n0Xu7l0s'];
-
-					$C007 = "SELECT m4rCxD35c5s FROM m4rC45v3Hi WHERE m4rCxID5s = $vXMKidxv";
-					$S007 = $cnnx4s->query($C007) or die ("Fallo al seleccionar marca de auto: ".$C007);
-					$DM = $S007->fetch_assoc();
-					$vXMKxv = $DM['m4rCxD35c5s'];
-
-					$SQ5u8M4 = "SELECT j5uBxMiMgx, j5uBxD35x FROM m0d3loS WHERE j5uBxIDx = '".$xVMDidxv."' ";
-					$CQ5u8M4 = $cnnx4s->query($SQ5u8M4) or die ("Falló al cargar submarcas: ".$SQ5u8M4);
-					$su8 = $CQ5u8M4->fetch_assoc();
-					$j5m0FT = $su8['j5uBxMiMgx'];
-					if($j5m0FT != ''){
-						$xVFTxv = '<img src="dist/img/m0d3l0s/'.$su8['j5uBxMiMgx'].'" class="card-img-top" style="width: 100px;">';
-					}
-					else{
-						$xVFTxv = '<img src="dist/img/m0d3l0s/0.png" class="card-img-top" style="width: 100px;">';
-					}
-					$xVMDxv = $su8['j5uBxD35x'];
-					$ea = true;
-					$lDUREF = [
-						'xDeidn' => $xDeidn
-					];
-					array_push($lV);
-				}
-				else{
-					$ea = false;
-				}				
-			}
-		
+	
   }
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de usuario a editar! (m-01).';

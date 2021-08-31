@@ -22,146 +22,6 @@ if ($fjkj === true) {
 }
 
 
-
-$D0c7ip0s = [
-	'1' => 'Tarjeta de Circulación',
-	'2' => 'Póliza de Seguro',
-	//'10' => 'Archivo PDF',
-	//'11' => 'Archivo Word',
-	//'12' => 'Imagen',
-	'13' => 'Placas',
-	//'100' => 'Otro Tipo'
-];
-
-$tPV = [
-  1 => 'Automoviles',
-  2 => 'Motocicletas',
-  3 => 'Camiones',
-  4 => 'Remolques'
-];
-
-/// --- NOTIFICACION TRAMITES
-  $C001n = "SELECT * FROM c4TD0cxxV WHERE d0C_xDED0 = 1 AND xXUNVrSXx = $xXUNVrSXx";
-  $S001n = $cnnx4s->query($C001n) or die ("Fallo al consultar notificaciones de Trámites: ".$C001n);
-  $LDNT = [];
-  $DPA = 0;
-  while ($DnFT = $S001n->fetch_array()) {
-    $dNIxd = $DnFT['d0C_xDID'];
-    $dNDx3s = $DnFT['d0C_xDd35'];
-    $dNTxIm = $DnFT['d0C_xDTMP'];
-    $dNIxCo = $DnFT['d0C_xDico'];
-    $h = date("Y-m-d");
-    $C002n = "SELECT * FROM tr4m7s WHERE xIoTrIDC4Tx = $dNIxd AND xIoTrEDOx = 1 AND xXUNVrSXx = $xXUNVrSXx ORDER BY xIoTrFFx ASC";
-    $S002n = $cnnx4s->query($C002n) or die ("Fallo al consultar detalle de trámites: ".$C002n);
-    while ($DT = $S002n->fetch_array()) {
-      $xmVhe = $DT['xIoTrV3Hx'];
-      $xmFeF = $DT['xIoTrFFx'];
-      $xmCeI = $DT['xIoTrIDC4Tx'];
-      $xmIeD = $DT['xIoTrIDx'];
-      $FF = date("Y-m-d",strtotime($xmFeF."- $dRV days")); 
-      $xdDcVED = date_diff(date_create($h), date_create($xmFeF));
-			$xdDcVED = $xdDcVED->format('%R%a');
-      if($xdDcVED > 0){
-        $xTXVx = 'Vence en: ';
-        $xdDcVED = str_replace("+", "", $xdDcVED);
-        $class = 'success';
-      }
-      elseif($xdDcVED < 0){
-        $xTXVx = 'Vencio hace: ';
-        $xdDcVED = str_replace("-", "", $xdDcVED);
-        $class = 'danger';
-      }
-      else{
-        $xTXVx = 'Vence Hoy';
-        $xdDcVED = str_replace("+", "", $xdDcVED);
-        $class = 'warning';
-      }
-      if($h >= $FF){
-        $C003n = "SELECT xV3hiPl4c45Xu7l0s FROM v3hiXu7l0s WHERE xV3hiIDXu7l0s = $xmVhe";
-        $S003n = $cnnx4s->query($C003n) or die ("Fallo al consultar placas de automovil (trámite notificaciones): ".$C003n);
-        $PDV = $S003n->fetch_assoc();
-        $xmVheP = dCry2($PDV['xV3hiPl4c45Xu7l0s']);
-        unset($ara);
-        $ara = [
-          'xmD3s' => $dNDx3s,
-          'xmVhe' => $xmVhe,
-          'xmVheP' => $xmVheP,
-          'dNIxCo' => $dNIxCo,
-          'xdDcVED' => $xdDcVED,
-          'xTXVx' => $xTXVx,
-          'class' => $class,
-          'xmCeI' => $xmCeI,
-          'xmIeD' => $xmIeD,
-          'xmFeF' => $xmFeF
-        ];
-        array_push($LDNT, $ara);
-        $DPA++;
-      }
-    }
-  }
-/// --- NOTIFICACION TRAMITES FIN
- 
-/// --- NOTIFICACION SERVICIOS
-  $C001s = "SELECT * FROM c4TS3rxxV WHERE s3R_xDED0 = 1 AND xXUNVrSXx = $xXUNVrSXx";
-  $S001s = $cnnx4s->query($C001s) or die ("Fallo al consultar Notificaciones de Servicios: ".$C001s);
-  $LDNS = [];
-  $NDDP = 0;
-  $hs = date("Y-m-d");
-  while ($DdNS = $S001s->fetch_array()) {
-    $xIDSx = $DdNS['s3R_xDID'];
-    $dNDx3ss = $DdNS['s3R_xDd35'];
-    $dNTxIms = $DdNS['s3R_xDTMP'];
-    $dNIxCos = $DdNS['s3R_xDico'];
-    $C002s = "SELECT * FROM D0cUM3n705 WHERE D0cS3RxS = $xIDSx AND D0c4c7iv0xS = 1 AND xXUNVrSXx = $xXUNVrSXx ORDER BY D0cFVxS ASC";
-    $S002s = $cnnx4s->query($C002s) or die ("Fallo al consultar detalles de servicios: ".$C002s);
-    while ($DdDS = $S002s->fetch_array()) {
-      $xmVhes = $DdDS['D0cv3HiDxS'];
-      $xmFeFs = $DdDS['D0cFVxS'];
-      $xmCeIs = $DdDS['D0cS3RxS'];
-      $xmIeDs = $DdDS['D0cIDxS'];
-      $FFs = date("Y-m-d",strtotime($xmFeFs."- $dRV days")); 
-      $xdDcVEDs = date_diff(date_create($hs), date_create($xmFeFs));
-			$xdDcVEDs = $xdDcVEDs->format('%R%a');
-      if($xdDcVEDs > 0){
-        $xTXVxs = 'Vence en: ';
-        $xdDcVEDs = str_replace("+", "", $xdDcVEDs);
-        $classs = 'success';
-      }
-      elseif($xdDcVEDs < 0){
-        $xTXVxs = 'Vencio hace: ';
-        $xdDcVEDs = str_replace("-", "", $xdDcVEDs);
-        $classs = 'danger';
-      }
-      else{
-        $xTXVxs = 'Vence Hoy';
-        $xdDcVEDs = str_replace("+", "", $xdDcVEDs);
-        $classs = 'warning';
-      }
-      if($hs >= $FFs){
-        $C003n = "SELECT xV3hiPl4c45Xu7l0s FROM v3hiXu7l0s WHERE xV3hiIDXu7l0s = $xmVhes";
-        $S003n = $cnnx4s->query($C003n) or die ("Fallo al consultar placas de automovil (trámite notificaciones): ".$C003n);
-        $PDVs = $S003n->fetch_assoc();
-        $xmVhePs = dCry2($PDVs['xV3hiPl4c45Xu7l0s']);
-        unset($aras);
-        $aras = [
-          'xmD3ss' => $dNDx3ss,
-          'xmVhes' => $xmVhes,
-          'xmVhePs' => $xmVhePs,
-          'dNIxCos' => $dNIxCos,
-          'xdDcVEDs' => $xdDcVEDs,
-          'xTXVxs' => $xTXVxs,
-          'classs' => $classs,
-          'xmCeIs' => $xmCeIs,
-          'xmIeDs' => $xmIeDs,
-          'xmFeFs' => $xmFeFs
-        ];
-        array_push($LDNS, $aras);
-        $NDDP++;
-      }
-    }
-  }
-/// --- NOTIFICACION SERVICIOS FIN
-
 ///----
   //$C004 = "SELECT * FROM "
 
@@ -244,7 +104,6 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       $_SESSION['m3n3Rr0R'] = 'si';
       include('escen78/404.php');
     }
-		
 	}
 	elseif($axc0 == '50200'){ /// --- Generar Token
 		if(v4lID44x50("500-006", $u5u4i0) == TRUE){	
@@ -329,6 +188,25 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
+  elseif($axc0 == 'mascotas'){
+    if(v4lID44x50("200-001", $u5u4i0) == TRUE){
+      
+      // ---- Marcar la sección en el menú ---
+      $menu_mascotas_t = 'active';
+      $menu_mascotas_abierto = 'menu-open';
+      $menu_mascotas = 'active';
+      
+      // --- BACKEND ----
+      include('ap4673i/mascotas_api.php');
+      include('escen78/mascotas.php');
+      
+    }
+    else{
+      $_SESSION['m3ns4J3'] = 'No tienes acceso a este Módulo';
+      $_SESSION['m3n3Rr0R'] = 'si';
+      include('escen78/404.php');
+    }
+  }
   elseif($axc0 == 's3rv'){ /// --- axc0 Servicios
 		/// --- ACCESO MODULO PERMISOS 
 		if(v4lID44x50("1300-001", $u5u4i0) == TRUE){
@@ -392,69 +270,6 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-  elseif($axc0 == 'd0cx6y'){ /// --- axc0 Documentos
-		/// --- ACCESO MODULO PERMISOS 
-		if(v4lID44x50("1400-001", $u5u4i0) == TRUE){
-
-      // ---- Marcar la sección en el menú ---
-			$menu_d0cx6y_t = 'active';
-			$menu_d0cx6y_abierto = 'menu-open';
-			$menu_d0cx6y = 'active';
-			$menu_d0cx6y_0 = 'active';
-      
-      // --- BACKEND ----
-      include('ap4673i/d0cx6y_4pi.php');
-			include('escen78/d0cx6y.php');		
-			
-		}
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-	}
-  elseif($axc0 == 'ldxV'){ /// --- axc0 Documentos x vencer
-		/// --- ACCESO MODULO PERMISOS 
-		if(v4lID44x50("1300-001", $u5u4i0) == TRUE){
-
-      // ---- Marcar la sección en el menú ---
-			$menu_ldxV_t = 'active';
-			$menu_ldxV_abierto = 'menu-open';
-			$menu_ldxV = 'active';
-			$menu_ldxV_0 = 'active';
-      
-      // --- BACKEND ----
-      //include('ap4673i/ldxV_4pi.php');
-			include('escen78/ldxV.php');		
-			
-		}
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-	}  
-  elseif($axc0 == 'lsxV'){ /// --- axc0 Servicios x vencer
-		/// --- ACCESO MODULO PERMISOS 
-		if(v4lID44x50("1300-001", $u5u4i0) == TRUE){
-
-      // ---- Marcar la sección en el menú ---
-			$menu_lsxV_t = 'active';
-			$menu_lsxV_abierto = 'menu-open';
-			$menu_lsxV = 'active';
-			$menu_lsxV_0 = 'active';
-      
-      // --- BACKEND ----
-      //include('ap4673i/lsxV_4pi.php');
-			include('escen78/lsxV.php');		
-			
-		}
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-	}  
 	elseif($axc0 == 'm0d78Os'){
 		/// --- ACCESO MODULO MODULOS
 		if(v4lID44x50("400-001", $u5u4i0) == TRUE){
@@ -491,41 +306,6 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('ap4673i/m0d78Os_4pi.php');
 			include('escen78/m0d78Os-3di7.php');
 			
-		}
-		
-	}
-	elseif($axc0 == 'eMpr35As'){ /// --- empresas
-		/// --- ACCESO MODULO empresas
-		if(v4lID44x50("1100-001", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-			$menu_eMpr35As_t = 'active';
-			$menu_eMpr35As_abierto = 'menu-open';
-			$menu_eMpr35As = 'active';
-      
-      // --- BACKEND ----
-      include('ap4673i/eMpr35As_4pi.php');
-      if($mdr == 1){
-        include('escen78/eMpr35As.php');
-      }
-			else{ 
-        include('escen78/eMpr35As_m2.php');
-      }
-			
-		}
-		
-	}
-  elseif($axc0 == 'emPr3Edi7'){ /// --- editar empresa
-		/// --- ACCESO MODULO empresas
-		if(v4lID44x50("1100-003", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-			//$menu_eMpr35As_t = 'active';
-			//$menu_eMpr35As_abierto = 'menu-open';
-			$menu_eMpr35As = 'active';
-      
-      include('ap4673i/eMpr35As_4pi.php');
-      include('escen78/emPr3Edi7.php');
 		}
 		
 	}
@@ -570,262 +350,6 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('ap4673i/pR0VxD_4pi.php');
         include('escen78/pr0VxDT.php');
 		}
-		
-	}
-	elseif($axc0 == 'v3hiXs'){ /// --- Automoviles
-
-    if(v4lID44x50("700-001", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_v3hiXs = 'active';
-			$menu_v3hiXs1 = 'active';
-      
-      // --- BACKEND ----
-      include('ap4673i/v3hiCs_4pi.php');
-      include('escen78/v3hiCs.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-  elseif($axc0 == 'asNxV'){ /// --- Automoviles
-
-    if(v4lID44x50("700-015", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_v3hiXs = 'active';
-			$menu_v3hiXsAS = 'active';
-      
-      // --- BACKEND ----
-      include('ap4673i/asgNv_4pi.php');
-      include('escen78/asgNv.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'xmRc4s'){ /// --- marcas
-
-    if(v4lID44x50("900-001", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_xmRc4s = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/xmRc4s_4pi.php');
-      include('escen78/xmRc4s.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'xmRc4s_o983'){ /// --- marcas
-
-    if(v4lID44x50("900-003", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_xmRc4s = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/xmRc4s_4pi.php');
-      include('escen78/xmRc4s_3di7.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'Tm0d3ls'){ /// --- Automoviles
-
-    if(v4lID44x50("1000-001", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_Tm0d3ls = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/Tm0d3ls_4pi.php');
-      include('escen78/Tm0d3ls.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'Tm0d3ls_9i88'){ /// --- Automoviles
-
-    if(v4lID44x50("1000-003", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_Tm0d3ls = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/Tm0d3ls_4pi.php');
-      include('escen78/Tm0d3ls_3di7.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'v3hFh4'){ /// --- Automoviles ficha
-
-    if(v4lID44x50("700-004", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_v3hFicH4 = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/v3hFicH4_4pi.php');
-      include('escen78/v3hFicH4.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'v3hFh4_sd04'){ /// --- Automoviles editar
-
-    if(v4lID44x50("700-003", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_v3hFh4_sd04 = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/v3hiCs_4pi.php');
-      include('escen78/v3hiCs_3di7.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'x7l07iLl4'){ /// --- flotillas
-
-    if(v4lID44x50("1200-001", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_x7l07iLl4_t = 'active';
-      $menu_x7l07iLl4_abierto = 'menu-open';
-      $menu_x7l07iLl4_sd04 = 'active';
-			$menu_x7l07iLl4 = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/x7l07iLl4_4pi.php');
-      if($mdr == 1){
-        include('escen78/x7l07iLl4.php');
-      }
-      else{
-        include('escen78/x7l07iLl4_m2.php');
-      }
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-  elseif($axc0 == 'edi74flo0'){ /// --- flotillas
-
-    if(v4lID44x50("1200-003", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-      $menu_x7l07iLl4_f = 'active';
-      $menu_x7l07iLl4_abierto = 'menu-open';
-      $menu_x7l07iLl4_sd04 = 'active';
-			$menu_x7l07iLl4 = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/x7l07iLl4_4pi.php');
-      include('escen78/edi74flo0.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
-		
-	}
-	elseif($axc0 == 'xkmtr4G'){ /// --- kilomtraje
-
-    if(v4lID44x50("700-008", $u5u4i0) == TRUE){
-      
-      // ---- Marcar la sección en el menú ---
-			//$menu_v3hiXs_t = 'active';
-      $menu_v3hiXs_abierto = 'menu-open';
-      $menu_xkmtr4G = 'active';
-			$menu_v3hiXs = 'active';
-			
-      
-      // --- BACKEND ----
-      include('ap4673i/v3hiCs_4pi.php');
-      include('escen78/xkmtr4G.php');
-      
-    }
-    else{
-      $_SESSION['m3ns4J3'] = 'NO TIENES ACCESO PERMITIDO A ESTA AREA';
-      $_SESSION['m3n3Rr0R'] = 'si';
-      include('escen78/404.php');
-    }
 		
 	}
   elseif($axc0 == 'eDtSrv'){ /// --- Editar Servicio (documentos)

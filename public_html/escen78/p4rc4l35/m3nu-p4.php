@@ -12,27 +12,22 @@
         <a href="#" class="nav-link"><?= lbl_C0N74c70 ?></a>
       </li>
     </ul>
-    <?php /*if($mdr == 1){ ?>
-      <span class="right badge badge-info">Modo de Relaciones | Empresas -> Flotas</span>
-    <?php }
-          elseif($mdr == 2){ ?>
-      <span class="right badge badge-info">Modo de Relaciones | Flotas -> Empresas</span>
-    <?php } */?>
+   
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto nav-child-indent">
       <!-- Banderas Idiomas -->
-      <!--<li class="nav-item">
-        <?php //if($iDi['u5h8ir5_iDi'] == 'es_MX'){ ?>
+      <li class="nav-item">
+        <?php if($iDi['u5h8ir5_iDi'] == 'es_MX'){ ?>
           <a class="nav-link" href="ap4673i/c4r64iDi?axc0=c02252&u5u4i0=<?= $u5u4i0 ?>&uh73Gg=<?= $_SERVER["REQUEST_URI"] ?>">
             <img src="dist/img/en_US.png" width="24px" height="auto" title="Switch to english">
           </a>
-        <?php //} elseif($iDi['u5h8ir5_iDi'] == 'en_US'){ ?>
+        <?php } elseif($iDi['u5h8ir5_iDi'] == 'en_US'){ ?>
           <a class="nav-link" href="ap4673i/c4r64iDi?axc0=c02251&u5u4i0=<?= $u5u4i0 ?>&uh73Gg=<?= $_SERVER["REQUEST_URI"] ?>">
-            <img src="dist/img/es_MX.png" width="24px" height="auto" title="Cambiar a Español">
+          <img src="dist/img/es_MX.png" width="24px" height="auto" title="Cambiar a Español">
           </a>
-        <?php //} ?>
-      </li>-->
+        <?php } ?>
+      </li>
 
       <?php /*<!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
@@ -92,63 +87,7 @@
           <a href="#" class="dropdown-item dropdown-footer">En desarrollo...</a>
         </div>
       </li> ----> */ ?>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fa-duotone fa-file-times<?php if($DPA != 0){ ?> fa-flash <?php } ?>" <?php if($DPA != 0){ ?> style="--fa-animation-iteration-count: 5;--fa-animation-timing: ease-in-out;"<?php } ?>></i>
-          <?php if($DPA != 0){ ?><span class="badge badge-danger navbar-badge"><?= $DPA ?></span><?php } ?>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="max-width: 600px;width: max-content;">
-          <span class="dropdown-item dropdown-header" style="font-size: .7rem;font-weight: 400;top: 4px;right: 5px;"><?= $DPA ?> Trámites por Vencer</span>
-          
-          <div class="dropdown-divider"></div>
-          <?php $i = 0; 
-            foreach ($LDNT as $key => $value) {               ?>
-             
-              <a href="v75t4?axc0=Tr4V&xDI4Rt=<?= $eCry($value['xmCeI']) ?>&xIDS=<?= $eCry($value['xmIeD']) ?>&xcIDV3Hs=<?= $eCry($value['xmVhe']) ?>" class="dropdown-item">
-                <i class="fa-duotone fa-<?= $value['dNIxCo'] ?> mr-2"></i> 
-                <small><?= $value['xmD3s'] ?> de <?= $value['xmVheP'] ?></small>
-                <span class="badge badge-<?= $value['class'] ?>" ><?= $value['xTXVx'] ?> <?php if($value['xdDcVED'] != 0) { ?><?= $value['xdDcVED'] ?> dia(s)<?php } ?></span>
-              </a>
-              <div class="dropdown-divider"></div>
-          <?php 
-            if (++$i == 10) break;
-            } ?>
-
-          
-          <a href="v75t4?axc0=ldxV" class="dropdown-item dropdown-footer">Ver Todos...</a>
-        </div>
-      </li> 
-
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fa-duotone fa-tools<?php if($NDDP != 0){ ?> fa-flash <?php } ?>" <?php if($NDDP != 0){ ?> style="--fa-animation-iteration-count: 5;--fa-animation-timing: ease-in-out;"<?php } ?>></i>
-          <?php if($NDDP != 0){ ?><span class="badge badge-danger navbar-badge"><?= $NDDP ?></span><?php } ?>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="max-width: 600px;width: max-content;">
-          <span class="dropdown-item dropdown-header" style="font-size: .7rem;font-weight: 400;top: 4px;right: 5px;"><?= $NDDP ?> Servicio(s) pendiente(s)</span>
-          
-          <div class="dropdown-divider"></div>
-          
-          <?php $i = 0; 
-            foreach ($LDNS as $key => $value) { ?>
-
-              <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($value['xmVhes']) ?>" class="dropdown-item">
       
-                <i class="fa-duotone fa-<?= $value['dNIxCos'] ?> mr-2"></i> 
-                <small><?= $value['xmD3ss'] ?> para <?= $value['xmVhePs'] ?></small>
-                <span class="badge badge-<?= $value['classs'] ?>" ><?= $value['xTXVxs'] ?><?php if($value['xdDcVEDs'] != 0) { ?><?= $value['xdDcVEDs'] ?> dia(s)<?php } ?></span>
-              </a>
-              <div class="dropdown-divider"></div>
-          <?php 
-            if (++$i == 10) break;
-            } ?>
-
-              
-          
-          <a href="v75t4?axc0=lsxV" class="dropdown-item dropdown-footer">Ver Todos...</a>
-        </div>
-      </li> 
 
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -203,26 +142,7 @@
             
           </li>
           
-          <?php if(v4lID44x50("200-001", $u5u4i0) == TRUE){ /// --- ?>
-            <li class="nav-item <?= $menu_instancias_abierto ?>">
-               <!-- <li class="nav-item">-->
-              <a href="v75t4?axc0=instancias" class="nav-link <?= $menu_instancias ?>">
-                <i class="nav-icon fa-duotone fa-building"></i>
-                <p>
-                  <?= lbl_iN574ncI45 ?>
-                  <i class="right fa-duotone fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="v75t4?axc0=instancias" class="nav-link <?= $menu_instancias ?>">
-                    <i class="fa-duotone fa-list nav-icon"></i>
-                    <p><?= lbl_lI574D0_iN5 ?></p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          <?php } ?>  
+        
 
           <?php if(v4lID44x50("1500-001", $u5u4i0) == TRUE){ /// --- ?>
             <li class="nav-item <?= $menu_kuru_abierto ?>">
@@ -259,112 +179,26 @@
             </li>
           <?php } ?>
 
-          <?php if(v4lID44x50("1100-001", $u5u4i0) == TRUE){ /// --- ?>
-            <li class="nav-item <?= $menu_eMpr35As_abierto ?>">
-              <a href="v75t4?axc0=eMpr35As" class="nav-link <?= $menu_eMpr35As ?>">
-                <i class="nav-icon fa-duotone fa-duotone fa-city"></i>
+          <?php if(v4lID44x50("200-001", $u5u4i0) == TRUE){ /// --- ?>
+            <li class="nav-item <?= $menu_mascotas_abierto ?>">
+              <a href="v75t4?axc0=mascotas" class="nav-link <?= $menu_mascotas ?>">
+                <i class="nav-icon fa-duotone fa-paw"></i>
                 <p>
-                  <?= lbl_eMpr35As ?>
+                  <?= mascotas ?>
                   <i class="right fa-duotone fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="v75t4?axc0=eMpr35As" class="nav-link <?= $menu_eMpr35As ?>">
+                  <a href="v75t4?axc0=mascotas" class="nav-link <?= $menu_mascotas ?>">
                     <i class="fa-duotone fa-list nav-icon"></i>
-                    <p><?= lbl_lI574D0_3mp ?></p>
+                    <p><?= listadoMascotas ?></p>
                   </a>
                 </li>
-              
-              
               </ul>
-              
             </li>
           <?php } ?>
 
-          <?php if(v4lID44x50("1200-001", $u5u4i0) == TRUE){ /// --- ?>
-            <li class="nav-item <?= $menu_x7l07iLl4_abierto ?>">
-              <a href="v75t4?axc0=x7l07iLl4" class="nav-link <?= $menu_x7l07iLl4 ?>">
-                <i class="nav-icon fa-duotone fa-duotone fa-folder-open"></i>
-                <p>
-                  <?= lbl_7lo7ill4s ?>
-                  <i class="right fa-duotone fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="v75t4?axc0=x7l07iLl4" class="nav-link <?= $menu_x7l07iLl4 ?>">
-                    <i class="fa-duotone fa-folder-tree nav-icon"></i>
-                    <p><?= lbl_lI574D0_7lo ?></p>
-                  </a>
-                </li>
-              
-              
-              </ul>
-              
-            </li>
-          <?php } ?>
-
-          <?php if(v4lID44x50("700-001", $u5u4i0) == TRUE){ /// --- ?>
-            <li class="nav-item <?= $menu_v3hiXs_abierto ?>">
-              <a href="v75t4?axc0=v3hiXs" class="nav-link <?= $menu_v3hiXs ?>">
-                <i class="nav-icon fa-duotone fa-cars"></i>
-                <p>
-                  <?= lbl_v3hisE ?>
-                  <i class="right fa-duotone fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="v75t4?axc0=v3hiXs" class="nav-link <?= $menu_v3hiXs1 ?>">
-                    <i class="fa-duotone fa-list nav-icon"></i>
-                    <p><?= lbl_v3hisEL ?></p>
-                  </a>
-                </li>
-                <?php if($axc0 == 'v3hFh4'){ ?>
-                  <li class="nav-item">
-                    <a href="v75t4?axc0=v3hFh4" class="nav-link <?= $menu_v3hFicH4 ?>">
-                    <i class="fa-duotone fa-garage-car"></i>
-                      <p><?= lbl_v3hF ?></p>
-                    </a>
-                  </li>
-                <?php } ?>
-                <?php if(v4lID44x50("900-001", $u5u4i0) == TRUE){ /// --- ?>
-                  <li class="nav-item">
-                    <a href="v75t4?axc0=xmRc4s" class="nav-link <?= $menu_xmRc4s ?>">
-                      <i class="fa-duotone fa-car-building nav-icon"></i>
-                      <p><?= lbl_v3hisM4rc ?></p>
-                    </a>
-                  </li>
-                <?php } ?>
-                <?php if(v4lID44x50("1000-001", $u5u4i0) == TRUE){ /// --- ?>
-                  <li class="nav-item">
-                    <a href="v75t4?axc0=Tm0d3ls" class="nav-link <?= $menu_Tm0d3ls ?>">
-                      <i class="fa-duotone fa-car-bus nav-icon"></i>
-                      <p><?= lbl_v3his5u8m4 ?></p>
-                    </a>
-                  </li>
-                <?php } ?>
-                <?php if(v4lID44x50("700-007", $u5u4i0) == TRUE && $axc0 == 'xkmtr4G'){ /// --- ?>
-                  <li class="nav-item">
-                    <a href="v75t4?axc0=xkmtr4G" class="nav-link <?= $menu_xkmtr4G ?>">
-                      <i class="fa-duotone fa-tachometer-alt-slow nav-icon"></i>
-                      <p><?= lbl_v3hikmt ?></p>
-                    </a>
-                  </li>
-                <?php } ?>
-               <!--<li class="nav-item">
-                  <a href="v75t4?axc0=v3hiXs" class="nav-link ">
-                    <i class="fa-duotone fa-swatchbook nav-icon"></i>
-                    <p></p>
-                  </a>
-                </li>-->
-              
-              
-              </ul>
-              
-            </li>
-          <?php } ?>  
 
           <?php if(v4lID44x50("1600-000", $u5u4i0) == TRUE){ /// --- ?>
             <li class="nav-item <?= $menu_pR0VxD_abierto ?>">
@@ -443,7 +277,7 @@
             </li>
           <?php } ?>  
 
-          <?php if(v4lID44x50("1300-001", $u5u4i0) == TRUE){ /// --- ?>
+          <?php /*if(v4lID44x50("1300-001", $u5u4i0) == TRUE){ /// --- ?>
             <li class="nav-item <?= $menu_s3rv_abierto ?>">
               <a href="v75t4?axc0=s3rv" class="nav-link <?= $menu_s3rv ?>">
                 <i class="nav-icon fa-duotone fa-toolbox"></i>
@@ -464,9 +298,9 @@
               </ul>
             
             </li>
-          <?php } ?>  
+          <?php }*/ ?>  
 
-          <?php if(v4lID44x50("1400-001", $u5u4i0) == TRUE){ /// --- ?>
+          <?php /*if(v4lID44x50("1400-001", $u5u4i0) == TRUE){ /// --- ?>
             <li class="nav-item <?= $menu_d0cx6y_abierto ?>">
               <a href="v75t4?axc0=d0cx6y" class="nav-link <?= $menu_d0cx6y ?>">
                 <i class="nav-icon fa-duotone fa-cabinet-filing"></i>
@@ -487,7 +321,7 @@
               </ul>
             
             </li>
-          <?php } ?>
+          <?php }*/ ?>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

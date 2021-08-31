@@ -13,4 +13,8 @@ define('lbl_h0m3','Inicio');
 define('lbl_bi3nv3nid4_1','Buenos Días Bienvenido a noPixcua Mieke');
 define('lbl_bi3nv3nid4_2','Buenas Tardes Bienvenido a noPixcua Mieke');
 define('lbl_bi3nv3nid4_3','Buenas Noches Bienvenido a noPixcua Mieke');
+
+
+define('noAccesoMascotas', 'No tienes acceso al Módulo Mascotas');
+
 ?>

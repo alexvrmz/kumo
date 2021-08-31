@@ -1,28 +1,27 @@
-
 <script type="text/javascript">
 	function e(q) {
     document.body.appendChild( document.createTextNode(q) );
     document.body.appendChild( document.createElement("BR") );
-}
-function inactividad() {
-    window.location.href = "v75t4?axc0=l00k5cR3n";
-}
-var t=null;
-function contadorInactividad() {
-var tt = (60000*<?= $iDi['config_7im3Bl0'] ?>);//60,000 == 1 Minuto
-    t=setTimeout("inactividad()",tt);
-}
-window.onblur=window.onmousemove=function() {
-    if(t) clearTimeout(t);
-    contadorInactividad();
-    
-}
+  }
+  function inactividad() {
+      window.location.href = "v75t4?axc0=l00k5cR3n";
+  }
+  var t=null;
+  function contadorInactividad() {
+  var tt = (60000*<?= $iDi['config_7im3Bl0'] ?>);//60,000 == 1 Minuto
+      t=setTimeout("inactividad()",tt);
+  }
+  window.onblur=window.onmousemove=function() {
+      if(t) clearTimeout(t);
+      contadorInactividad();
+      
+  }
 </script>
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> <a href="v75t4?axc0=v3r">2021.08.28</a>
     </div>
-    <strong>Copyright &copy; <?php date('Y'); ?> <a href="http://mieke.mx" target="_blank">mieke.mx</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright &copy; <?php date('Y'); ?> <a href="http://kumo.click" target="_blank">kumo.click</a>.</strong> Todos los derechos reservados.
   </footer>
 
   <!-- Control Sidebar -->
@@ -76,7 +75,7 @@ window.onblur=window.onmousemove=function() {
   </script>
 <?php } ?>
 
-<?php if($axc0 === 'eMpr35As' || $axc0 === 'pR0VxD'){
+<?php if($axc0 === 'pR0VxD'){
         if($px002 != ''){ ?>
           <script type="text/javascript">
             $(window).on('load', function() {
@@ -156,8 +155,7 @@ window.onblur=window.onmousemove=function() {
   });
 </script>
 
-<?php if($axc0 == 'xkmtr4G' || $axc0 == 'v3hiXs' || $axc0 == 'eMpr35As' || $axc0 == 'x7l07iLl4' || $axc0 == '5u250e' || $axc0 == 's3rv' || $axc0 == 'd0cx6y' || $axc0 == 'v3hFh4'
-      || $axc0 == 'ldxV' || $axc0 == 'lsxV' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os' || $axc0 == 'Tr4V' || $axc0 == 'pR0VxD' || $axc0 == 'Tr4V'){ ?>
+<?php if($axc0 == 'mascotas' || $axc0 == '5u250e' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os' || $axc0 == 'pR0VxD'){ ?>
   <!-- DataTables  & Plugins -->
   <script src="plugins/datatables/jquery.dataTables.min.js"></script>
   <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -173,14 +171,9 @@ window.onblur=window.onmousemove=function() {
   <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <?php } ?>
-<?php if($axc0 == 'v3hiXs'){ ?>
-  <?php if($_SESSION['v3_c004'] != ''){ ?>
-          <script type="text/javascript">
-            $(window).on('load', function() {
-                $('#modal-nuevo').modal('show');
-            });
-          </script>
-        <?php } ?> 
+
+<?php if($axc0 == '5u250e' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os'
+      || $axc0 == 'pR0VxD' || $axc0 == 'mascotas'){ ?>
   <script>
     $(function () {
       $("#example1").DataTable({
@@ -200,251 +193,6 @@ window.onblur=window.onmousemove=function() {
     });
   </script>
 <?php } ?>
-<?php if($axc0 == 'x7l07iLl4'){ ?>
-  <script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": false, "lengthChange": true, "autoWidth": false,
-        //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        "buttons": ["copy", "csv", "excel", "print"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-  </script>
-<?php } ?>
-<?php if($axc0 == 's3rv' || $axc0 == 'd0cx6y' || $axc0 == 'Tr4V'){ ?>
-  <script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": false, "lengthChange": true, "autoWidth": false,
-        //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        "buttons": ["copy", "csv", "excel", "print"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-  </script>
-<?php } ?>
-<?php if($axc0 == '5u250e' || $axc0 == 'v3hFh4' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os'
-      || $axc0 == 'pR0VxD'){ ?>
-  <script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": false, "lengthChange": true, "autoWidth": false,
-        //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        "buttons": ["copy", "csv", "excel", "print"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-  </script>
-<?php } ?>
-
-<?php if($axc0 == 'eMpr35As'){ ?>
-  <script>
-    $(function () {
-      $("#example1").DataTable({
-        "responsive": false, "lengthChange": true, "autoWidth": false,
-        //"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        "buttons": ["copy", "csv", "excel", "print"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": false,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-  </script>
-<?php } ?>
-<?php if($axc0 == 'xkmtr4G' || $axc0 == 'v3hFh4' || $axc0 == 'eDtSrv' || $axc0 == 'eDtD' || $axc0 == 'N3wTr4' || $axc0 == 'Tr4V'){ ?>
-  <!-- Tempusdominus Bootstrap 4 -->
-
-  <script src="plugins/moment/moment.min.js"></script>
-  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-  <script src="plugins/moment/locale/es.js"></script>
-<?php } ?>
-
-  <?php if($axc0 == 'N3wTr4'){ ?>
-    <script>
-      $('#frm_x002').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
-        },
-        calendarWeeks: true,
-        locale: 'es',
-        toolbarplacement: 'bottom',
-        buttons:  {
-            showToday: true,
-            showClear: true,
-            showClose: true
-        }
-      });
-
-      $('#frm_x003').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
-        },
-        calendarWeeks: true,
-        locale: 'es',
-        toolbarplacement: 'bottom',
-        buttons:  {
-            showToday: true,
-            showClear: true,
-            showClose: true
-        }
-      });
-    </script>
-  <?php } ?>
-
-
-
-  
-
-
-
-  <?php if($axc0 == 'eDtSrv'){ ?>
-    <script>
-      $('#xDsSx003').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
-        },
-        calendarWeeks: true,
-        locale: 'es',
-        toolbarplacement: 'bottom',
-        buttons:  {
-            showToday: true,
-            showClear: true,
-            showClose: true
-        }
-      });
-
-      $('#xDsSx004').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
-        },
-        calendarWeeks: true,
-        locale: 'es',
-        toolbarplacement: 'bottom',
-        buttons:  {
-            showToday: true,
-            showClear: true,
-            showClose: true
-        }
-      });
-    </script>
-  <?php } ?>
-
-  <?php if($axc0 == 'eDtD'){ ?>
-    <script>
-      $('#xDsDx003').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
-        },
-        calendarWeeks: true,
-        locale: 'es',
-        toolbarplacement: 'bottom',
-        buttons:  {
-            showToday: true,
-            showClear: true,
-            showClose: true
-        }
-      });
-
-      $('#xDsDx040').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
-        },
-        calendarWeeks: true,
-        locale: 'es',
-        toolbarplacement: 'bottom',
-        buttons:  {
-            showToday: true,
-            showClear: true,
-            showClose: true
-        }
-      });
-    </script>
-  <?php } ?>
   
 <?php if($axc0 == '5u540l'){ ?>
   <?php if($pp_xx007_add != ''){ ?>

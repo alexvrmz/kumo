@@ -5,16 +5,20 @@ session_start();
 if(!isset($_SESSION['xx_001'])){
 	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
 }
-$xXUNVrSXx = $_SESSION['xXUNVrSXx'];
-if($axc0 === "5u540l_03"){
+if($axc0 === "tR4Add" ){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
+ 	include('fncnesF0rM5.php');
 }
+ 
+if($axc0 === 'mascotas'){
+	/*if(!empty($idMascota)){
+	$mascota = $dCry[$mascota];
 
-$nU = 0; 
-$nP = 0; 
-
-$C016 = "SELECT u5hID8ir5 FROM u5u405 WHERE xXUNVrSXx = $xXUNVrSXx";
-$S016 = $cnnx4s->query($C016) or die ("Fallo al seleccionar Usuarios: ".$C016);
-$nU = $S016->num_rows;
-?>
+	}
+	else{
+		$_SESSION['m3n3Rr0R']  = 'si';
+		$_SESSION['m3ns4J3'] = 'Falta ID de Mascota';
+		r3Diri6ir('v75t4?axc0=mascotas');
+	}*/
+}
