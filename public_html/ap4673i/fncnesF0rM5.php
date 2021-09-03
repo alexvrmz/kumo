@@ -47,7 +47,7 @@ session_start();
   }
 
 /// --- LIMPIAR
-  function Cl34N($v4l){
+  function limpia($v4l){
     $v4l = preg_replace('([^A-Za-z0-9 áéíóúüÁÉÍÓÚ])', '', $v4l);
     $v4l = trim($v4l);
     $v4l = ucwords(strtolower($v4l)); 

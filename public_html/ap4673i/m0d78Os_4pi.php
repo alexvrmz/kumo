@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 session_start();
 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 if($axc0 === "m0d7545x" || $axc0 === 'm0d7ff5Gg'){
 	include('ccnnxx547.php');
@@ -40,17 +40,17 @@ elseif ($axc0 == 'm0d7545x') {
 											 'm0DxL0_numero' => $m0DxL0_numero_add,
 											 'm0DxL0_estado' => $m0DxL0_estado_add
 											];		
-    x3J3cU74DB('m0d78Os', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('m0d78Os', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x020.$m0DxL0_descripcion_add;
 		bi74c0('4DdM0du', $_SESSION['m3ns4J3'], '');
 
-    r3Diri6ir('../v75t4?axc0=m0d78Os');
+    llevame('../v75t4?axc0=m0d78Os');
 	}
   else{
     $_SESSION['m3n3Rr0R'] = 'si';
     $_SESSION['m3ns4J3'] = lbl_8i7_x021;
-    r3Diri6ir('../v75t4?axc0=m0d78Os');
+    llevame('../v75t4?axc0=m0d78Os');
 		bi74c0('4DdM0du2', $_SESSION['m3ns4J3'], '');
   }
 }
@@ -75,7 +75,7 @@ elseif($axc0 === "m0d7fdDs"){
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de modulo a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('v75t4?axc0=m0d78Os');
+    llevame('v75t4?axc0=m0d78Os');
   }
 
 }
@@ -90,13 +90,13 @@ elseif ($axc0 == 'm0d7ff5Gg') {  /// --- accion actualizar modulo
 											 'm0DxL0_numero' => $pp_xx002,
 											 'm0DxL0_estado' => $pp_xx003
 											];		
-    x3J3cU74DB('m0d78Os', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('m0d78Os', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
     
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x022.$pp_xx001;
 		bi74c0('4c7M0du', $_SESSION['m3ns4J3'], '');
 
-		r3Diri6ir('../v75t4?axc0=m0d78Os');   
+		llevame('../v75t4?axc0=m0d78Os');   
 
 	}
   else {
@@ -106,7 +106,7 @@ elseif ($axc0 == 'm0d7ff5Gg') {  /// --- accion actualizar modulo
     $_SESSION['m3ns4J3'] = lbl_8i7_x023;
 		bi74c0('4c7M0du2', $_SESSION['m3ns4J3'], '');
 
-    r3Diri6ir('../v75t4?axc0=m0d78Os');
+    llevame('../v75t4?axc0=m0d78Os');
   }
 		
 }

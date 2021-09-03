@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 
 if($axc0 === "5u5v78Ds" || $axc0 === 'p3rf5Gg' || $axc0 === 'sD4xG5d5' || $axc0 == 'psDef4Gg'){
@@ -63,20 +63,20 @@ elseif ($axc0 == '5u5v78Ds') {
 											 'p3ry6m0DuXx' => $pt5_xx02,
 											 'p3ry6nUm3Xx' => $pt5_xx03
 											];		
-    x3J3cU74DB('p3rM5sx_e', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('p3rM5sx_e', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
     
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x024.$pt5_xx01;
 		bi74c0('p3r4r', $_SESSION['m3ns4J3'], '');
 
-    r3Diri6ir('../v75t4?axc0=5u550l');
+    llevame('../v75t4?axc0=5u550l');
 	}
   else{
     $_SESSION['m3n3Rr0R'] = 'si';
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x025;
 		bi74c0('p3r4r2', $_SESSION['m3ns4J3'], '');
-    r3Diri6ir('../v75t4?axc0=5u550l');
+    llevame('../v75t4?axc0=5u550l');
   }
 
 }
@@ -101,7 +101,7 @@ elseif ($axc0 == 'xu5sdS7l') { /// --- Accion cargar datos de permiso
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de permiso a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('v75t4?axc0=5u540l');
+    llevame('v75t4?axc0=5u540l');
   }
 		
 }
@@ -119,12 +119,12 @@ elseif ($axc0 == 'p3rf5Gg') { /// --- Accion actualizar
 											];		
 		
 
-		x3J3cU74DB('p3rM5sx_e', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('p3rM5sx_e', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x026.$pp_xx004;
 		bi74c0('4c7p3r', $_SESSION['m3ns4J3'], '');
-		r3Diri6ir('../v75t4?axc0=5u550l');
+		llevame('../v75t4?axc0=5u550l');
 
 	}
   else {
@@ -133,7 +133,7 @@ elseif ($axc0 == 'p3rf5Gg') { /// --- Accion actualizar
     $_SESSION['m3ns4J3'] = lbl_8i7_x027.$pp_xx004;
 		bi74c0('4c7p3r2', $_SESSION['m3ns4J3'], '');
 
-    r3Diri6ir('../v75t4?axc0=5u550l');
+    llevame('../v75t4?axc0=5u550l');
   }
 		
 }
@@ -184,7 +184,7 @@ elseif ($axc0 === '5uXds4H') {
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de permiso a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('v75t4?axc0=5u540l');
+    llevame('v75t4?axc0=5u540l');
   }
 }
 elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
@@ -207,7 +207,7 @@ elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
 		unset($_SESSION['pt5_xx05']);
 		$_SESSION['pt5_xx05'] = $d4705_u5u;
 		
-		r3Diri6ir('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
+		llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
 		/// --- guardar en SESSION los permisos de modulo
   }
 	elseif($pt5_xx05 != '' || $pt5_xx05 != 'nada'){
@@ -218,14 +218,14 @@ elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
 											 'p3rXo3PRs' => 1,
 											 'p3rXoFPRs' => date("Y-m-d H:i:s")
 											];		
-    x3J3cU74DB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		$_SESSION['m3n3Rr0R'] = 'no';
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x014.$pt5_xx05.' / '.$pt5_xx04;
 		bi74c0('4ddP3rm', $_SESSION['m3ns4J3'], '');
 		unset($_SESSION['pt5_xx02']);
 		unset($_SESSION['pt5_xx05']);
-		r3Diri6ir('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
+		llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
 		
 	}
   else{
@@ -233,7 +233,7 @@ elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x015;
 		bi74c0('4ddP3rm2', $_SESSION['m3ns4J3'], '');
-    r3Diri6ir('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
+    llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
   }
 }
 
@@ -256,13 +256,13 @@ elseif ($axc0 == 'psDef4Gg') { /// --- Accion actualizar estado permiso
 											];		
 		
 
-		x3J3cU74DB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		
 		$_SESSION['m3ns4J3'] = $ssx.lbl_8i7_x016.' '.$h7gr;
 		bi74c0('3dtP3rm', $_SESSION['m3ns4J3'], '');
 
-    r3Diri6ir('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
+    llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
 
 	}
   else {
@@ -270,7 +270,7 @@ elseif ($axc0 == 'psDef4Gg') { /// --- Accion actualizar estado permiso
     $_SESSION['m3ns4J3'] = lbl_8i7_x019;
     $_SESSION['m3n3Rr0R'] = 'si';
 		bi74c0('3dtP3rm2', $_SESSION['m3ns4J3'], '');
-    r3Diri6ir('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
+    llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
   }
 		
 }

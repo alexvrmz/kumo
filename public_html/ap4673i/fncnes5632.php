@@ -29,7 +29,7 @@ function mostrarTexto($texto) {
   return $texto;
 }
 
-function x3J3cU74DB($table, $data, $action, $parameters) {
+function ejecutaDB($table, $data, $action, $parameters) {
     
     reset($data);
     global  $cnnx4s;
@@ -94,7 +94,7 @@ function x3J3cU74DB($table, $data, $action, $parameters) {
 
 }
 
-function r3Diri6ir($url) {
+function llevame($url) {
   $host  = $_SERVER['HTTP_HOST'];
   header('Location:' . $url);
   exit();
@@ -115,7 +115,7 @@ function bi74c0($Fxc47374, $Fxd3scR74, $u53) {
            'x8if3cH474' => $Fxf3ch474, 
            'x8id35c74' => $Fxd3scR74
           ];
-  if(x3J3cU74DB('8i74c0r4', $data, 'insertar', $paramtros)){
+  if(ejecutaDB('8i74c0r4', $data, 'insertar', $paramtros)){
     return true;
   }
   else{
@@ -140,7 +140,7 @@ function Bin4kuru($d3s=0, $axc0=0, $V=0, $U=0, $F=0, $E=0, $D=0, $P=0) {
     'kuRuAXIBiN' => $axc0,
     'kuRuTIMBiN' => $Fxf3ch474
   ];
-  if(x3J3cU74DB('1Bin4kuru', $data, 'insertar', $paramtros)){
+  if(ejecutaDB('1Bin4kuru', $data, 'insertar', $paramtros)){
     return true;
   }
   else{
@@ -918,7 +918,12 @@ function fondoRandom() {
   return $fondo;
 }
 
-
+function calcularEdad($fecha){
+  $fecha_nac = new DateTime(date('Y-m-d',strtotime($fecha))); // Creo un objeto DateTime de la fecha ingresada
+  $fecha_hoy =  new DateTime(date('Y-m-d',time())); // Creo un objeto DateTime de la fecha de hoy
+  $edad = date_diff($fecha_hoy,$fecha_nac); // La funcion ayuda a calcular la diferencia, esto seria un objeto
+  return $edad;
+}
 
 ?>
 

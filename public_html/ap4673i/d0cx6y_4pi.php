@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
@@ -48,7 +48,7 @@ elseif($axc0 === 'Tr43Dt'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta el ID de Trámite';
 		$rl = '../v75t4?axc0=d0cx6y';
-		r3Diri6ir($rl);
+		llevame($rl);
 	}
 }
 elseif($axc0 === 'sV3Tr4'){
@@ -71,9 +71,9 @@ elseif($axc0 === 'sV3Tr4'){
 		$_SESSION['tXFrm']['frm_002'] = 'El campo Estado es obligatorio';
 	}
 
-	$frm_001 = Cl34N($frm_001);
-	$frm_002 = Cl34N($frm_002);
-	$frm_003 = Cl34N($frm_003);
+	$frm_001 = limpia($frm_001);
+	$frm_002 = limpia($frm_002);
+	$frm_003 = limpia($frm_003);
 	
 	if($_SESSION['m3n3Rr0R_num'] == 0){
 		$axc0 = 'actualizar';
@@ -95,7 +95,7 @@ elseif($axc0 === 'sV3Tr4'){
 		}
 		print_r($sQl_d474_4rr4y);
 		$p4r4m37r05 = "d0C_xDID = $pXRoI";
-		x3J3cU74DB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		bi74c0('eDtstr4', 'el usuario edito el trámite '.$frm_001.' con exito', '');
 		$_SESSION['m3ns4J3'] = 'Datos Actualizados con exito!';
 		$rl = '../v75t4?axc0=d0cx6y';
@@ -105,7 +105,7 @@ elseif($axc0 === 'sV3Tr4'){
 		$_SESSION['m3ns4J3'] = 'Verifica los datos';
 		$rl = '../v75t4?axc0=d0cx6y&pXRoI='.$eCry($pXRoI).'&frm_001='.$eCry($frm_001).'&frm_002='.$eCry($frm_002).'&frm_006='.$eCry($frm_006);
 	}
-r3Diri6ir($rl);
+llevame($rl);
 }
 elseif($axc0 === '4ddd0C'){
 	if(!empty($pt5_xx01)){
@@ -122,7 +122,7 @@ elseif($axc0 === '4ddd0C'){
 			'd0C_xDini' => 0,
 			'xXUNVrSXx' => $xXUNVrSXx
 		];
-    x3J3cU74DB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		bi74c0('addD0c', 'el usuario agrego el Tipo de Documento '.$pt5_xx01.' con exito', '');
 		$rl = '../v75t4?axc0=d0cx6y';
@@ -132,5 +132,5 @@ elseif($axc0 === '4ddd0C'){
 		$_SESSION['m3ns4J3'] = 'Faltan Datos';
 		$rl = '../v75t4?axc0=d0cx6y';
 	}
-	r3Diri6ir($rl);
+	llevame($rl);
 }

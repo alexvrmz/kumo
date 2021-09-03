@@ -54,7 +54,13 @@
 <!-- Toastr -->
 <script src="plugins/toastr/toastr.min.js"></script>
 
+<?php if($axc0 == 'mascotas' || $axc0 == 'v3hFh4' || $axc0 == 'eDtSrv' || $axc0 == 'eDtD' || $axc0 == 'N3wTr4' || $axc0 == 'Tr4V'){ ?>
+  <!-- Tempusdominus Bootstrap 4 -->
 
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="plugins/moment/locale/es.js"></script>
+<?php } ?>
 
 <?php if($axc0 === '5u540l'){ ?>
   <script>
@@ -173,7 +179,7 @@
 <?php } ?>
 
 <?php if($axc0 == '5u250e' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os'
-      || $axc0 == 'pR0VxD' || $axc0 == 'mascotas'){ ?>
+      || $axc0 == 'pR0VxD'){ ?>
   <script>
     $(function () {
       $("#example1").DataTable({

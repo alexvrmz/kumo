@@ -64,7 +64,7 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 	
 				$axc0 = "insertar";
 				unset($p4r4m37r05);
-				$idLl = x3J3cU74DB('L4v3s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 				
 			/*	unset($sQl_d474_4rr4y);
@@ -80,8 +80,8 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 					'L4v3s_uid' => $uxx,
 				];
 				$axc0 = "insertar";
-				$idLl = x3J3cU74DB('L4v3s', $sQl_d474_4rr4y, $axc0, '');*/
-				//$idLl = x3J3cU74DB('L4v3s', $sQl_d474_4rr4y, 'insertar', '');
+				$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, $axc0, '');*/
+				//$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, 'insertar', '');
 
 				unset($sQl_d474_4rr4y);
 				$sQl_d474_4rr4y = [
@@ -93,7 +93,7 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 				];	
 				$p4r4m37r05 = "u5hUS8ir5 = '$pp_xx005'"; 
 				$axc0 = "actualizar";
-				x3J3cU74DB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 				
 			}
 			$LLSC = $pp_xx101;

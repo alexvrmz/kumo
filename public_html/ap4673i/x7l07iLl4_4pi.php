@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 session_start();
 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
@@ -161,7 +161,7 @@ if($axc0 === "x7l07iLl4"){
 }
 
 elseif ($axc0 == 'fLo7025') {
-	$Fl0_x001 = Cl34N($Fl0_x001);
+	$Fl0_x001 = limpia($Fl0_x001);
 	if(!empty($Fl0_x001)){
 		$Fl0_x001 = eCry2($Fl0_x001);
 		$axc0 = 'insertar'; 
@@ -176,7 +176,7 @@ elseif ($axc0 == 'fLo7025') {
 											];		
     
 		
-		$ffflo0 = x3J3cU74DB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$ffflo0 = ejecutaDB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		if($Fl0_x002 === 0){}
 		elseif($Fl0_x002 != 0){
 			unset($sQl_d474_4rr4y);
@@ -184,7 +184,7 @@ elseif ($axc0 == 'fLo7025') {
 												'r3FFloO00' => $ffflo0,
 												'xXUNVrSXx' => $xXUNVrSXx
 												];		
-			x3J3cU74DB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		}
 
 
@@ -205,7 +205,7 @@ elseif ($axc0 == 'fLo7025') {
     $_SESSION['m3ns4J3'] = lbl_8i7_x0500;
     
   }
-	r3Diri6ir('../v75t4?axc0=x7l07iLl4');
+	llevame('../v75t4?axc0=x7l07iLl4');
 }
 
 /// --- axc0 Consultar Datos de una flota
@@ -271,7 +271,7 @@ elseif($axc0 === "edi74flo0"){
   else{
     $_SESSION['m3ns4J3'] = lbl_8i7_eFlo0_1;
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('v75t4?axc0=x7l07iLl4');
+    llevame('v75t4?axc0=x7l07iLl4');
   }
 }
 elseif($axc0 == 'aGr3mP'){
@@ -285,7 +285,7 @@ elseif($axc0 == 'aGr3mP'){
 			include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 			$_SESSION['m3ns4J3'] = lbl_8i7_eFlo0_3;
    	 	$_SESSION['m3n3Rr0R'] = 'si';
-			r3Diri6ir('../v75t4?axc0=edi74flo0&flo0='.$eCry($gju8UUy));
+			llevame('../v75t4?axc0=edi74flo0&flo0='.$eCry($gju8UUy));
 			
 		}
 		elseif($nR3l == 0){
@@ -295,7 +295,7 @@ elseif($axc0 == 'aGr3mP'){
 			$sQl_d474_4rr4y = ['r3F3mP00' => $pp_xx005,
 												'r3FFloO00' => $gju8UUy
 												];		
-			x3J3cU74DB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 			
 			include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 			$_SESSION['m3ns4J3'] = lbl_8i7_F001.' => '.$pp_xx005.' / '.$gju8UUy;
@@ -304,18 +304,18 @@ elseif($axc0 == 'aGr3mP'){
 			$axc0 = 402;
 			$d3s = eCry2($Bin4kuru[$axc0]);
 			Bin4kuru($d3s, $axc0, $V=0, $U=0, $gju8UUy, $pp_xx005, $D=0, $P=0);
-			r3Diri6ir('../v75t4?axc0=edi74flo0&flo0='.$eCry($gju8UUy));
+			llevame('../v75t4?axc0=edi74flo0&flo0='.$eCry($gju8UUy));
 		}
 		
 	}
 	else{
     $_SESSION['m3ns4J3'] = lbl_8i7_eFlo0_2;
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('../v75t4?axc0=x7l07iLl4');
+    llevame('../v75t4?axc0=x7l07iLl4');
   }
 }
 elseif($axc0 == 'eDi7flo0'){
-	$pp_xx001 = Cl34N($pp_xx001);
+	$pp_xx001 = limpia($pp_xx001);
 	if($gju8UUy != '' && $pp_xx001 != ''){
 		$axc0 = 'actualizar';
 		$p4r4m37r05 = 'xID7l0 = "'.$gju8UUy.'"'; 
@@ -324,7 +324,7 @@ elseif($axc0 == 'eDi7flo0'){
 		$sQl_d474_4rr4y = ['xN4m37l0' => $pp_xx001,
 											 'x3MPID7l0' => $pp_xx004
 											];		
-    x3J3cU74DB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
     $pp_xx001 = dCry2($pp_xx001);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_F002.' => '.$pp_xx001;
@@ -333,12 +333,12 @@ elseif($axc0 == 'eDi7flo0'){
 		$axc0 = 401;
 		$d3s = eCry2($Bin4kuru[$axc0]);
 		Bin4kuru($d3s, $axc0, $V=0, $U=0, $gju8UUy, $E=0, $D=0, $P=0);
-		r3Diri6ir('../v75t4?axc0=edi74flo0&flo0='.$eCry($gju8UUy));
+		llevame('../v75t4?axc0=edi74flo0&flo0='.$eCry($gju8UUy));
 	}
 	else{
 		$_SESSION['m3ns4J3'] = lbl_8i7_eFlo0_2;
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('../v75t4?axc0=x7l07iLl4');
+    llevame('../v75t4?axc0=x7l07iLl4');
 	}
 }
 elseif($axc0 = 'd3lr3l'){
@@ -349,7 +349,7 @@ elseif($axc0 = 'd3lr3l'){
 		$axc0 = 'eliminar';
 		$p4r4m37r05 = 'r3FID00 = "'.$r3l4.'"'; 
 		
-    x3J3cU74DB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_F003.' => '.$r3l4;
 		bi74c0('d3l7Rel', $_SESSION['m3ns4J3'], '');
@@ -357,12 +357,12 @@ elseif($axc0 = 'd3lr3l'){
 		$axc0 = 403;
 		$d3s = eCry2($Bin4kuru[$axc0]);
 		Bin4kuru($d3s, $axc0, $V=0, $U=0, $flo0, $eMp4, $D=0, $P=0);
-		r3Diri6ir('../v75t4?axc0=edi74flo0&flo0='.$eCry($flo0));
+		llevame('../v75t4?axc0=edi74flo0&flo0='.$eCry($flo0));
 	}
 	else{
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_eFlo0_4;
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('../v75t4?axc0=x7l07iLl4');
+    llevame('../v75t4?axc0=x7l07iLl4');
 	}
 }

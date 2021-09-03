@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 //$axc0 = $dCry($axc0);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
@@ -522,7 +522,7 @@ elseif($axc0 === 's3RvAdd'){
 			];
 			$axc0 = 'actualizar';
 			$p4r4 = 'D0cIDxS = '.$idD;
-			x3J3cU74DB('D0cUM3n705', $ar, $axc0, $p4r4);
+			ejecutaDB('D0cUM3n705', $ar, $axc0, $p4r4);
 			bi74c0('4ct-s3r-'.$idD, 'Se desactivo el documento:'.$idD, '');
 		}
 
@@ -600,7 +600,7 @@ elseif($axc0 === 's3RvAdd'){
 			'D0cALTxS' => $ags_x009,
 			'xXUNVrSXx' => $xXUNVrSXx
 		];		
-		x3J3cU74DB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		$_SESSION['m3ns4J3'] = 'Se Agrego el Servicio: '.$DSEV;
 		bi74c0('4ct-s3r-'.$ags_x007, $_SESSION['m3ns4J3'], '');
@@ -609,7 +609,7 @@ elseif($axc0 === 's3RvAdd'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Faltan datos';
 	}
-	r3Diri6ir('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($ags_x006));
+	llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($ags_x006));
 
 }
 elseif($axc0 === 'd0CvAdd'){
@@ -624,7 +624,7 @@ elseif($axc0 === 'd0CvAdd'){
 			];
 			$axc0 = 'actualizar';
 			$p4r4 = 'D0cIDxS = '.$idD;
-			x3J3cU74DB('D0cUM3n705', $ar, $axc0, $p4r4);
+			ejecutaDB('D0cUM3n705', $ar, $axc0, $p4r4);
 			bi74c0('4ct-d0c-'.$idD, 'Se desactivo el documento:'.$idD, '');
 		}
 
@@ -701,7 +701,7 @@ elseif($axc0 === 'd0CvAdd'){
 		echo '<pre>';
 		print_r($sQl_d474_4rr4y);
 		echo '</pre>';
-		x3J3cU74DB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		$_SESSION['m3ns4J3'] = 'Se actualizo con exito el documento';
 		bi74c0('4ct-d0c-'.$agd_x007, $_SESSION['m3ns4J3'], '');
@@ -710,7 +710,7 @@ elseif($axc0 === 'd0CvAdd'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Faltan datos';
 	}
-	r3Diri6ir('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($agd_x006));
+	llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($agd_x006));
 
 }
 
@@ -749,7 +749,7 @@ elseif($axc0 === 'hY776'){
 											 'xku5uIDms' => $pp_xx0102,
 		  									'xXUNVrSXx' => $xXUNVrSXx
 											];		
-		x3J3cU74DB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0400.$pp_xx0100;
@@ -760,7 +760,7 @@ elseif($axc0 === 'hY776'){
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = 'Falta el Kilometraje';
 	}
-	r3Diri6ir('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($pp_xx0101));
+	llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($pp_xx0101));
 }
 elseif($axc0 === 'hY778'){
 	$_SESSION['NERR_hY778'] = 0;
@@ -831,12 +831,12 @@ elseif($axc0 === 'hY778'){
 		$_SESSION['NERR_hY778']++;
 	}
 
-	$_SESSION['FRM_hY778']['frm_rgcmb001'] = Cl34N($frm_rgcmb001);
+	$_SESSION['FRM_hY778']['frm_rgcmb001'] = limpia($frm_rgcmb001);
 	$_SESSION['FRM_hY778']['frm_rgcmb002'] = $frm_rgcmb002;
 	$_SESSION['FRM_hY778']['frm_rgcmb003'] = $frm_rgcmb003;
-	$_SESSION['FRM_hY778']['frm_rgcmb004'] = strtoupper(Cl34N($frm_rgcmb004));
-	$_SESSION['FRM_hY778']['frm_rgcmb006'] = Cl34N($frm_rgcmb006);
-	$_SESSION['FRM_hY778']['frm_rgcmb009'] = Cl34N($frm_rgcmb006);
+	$_SESSION['FRM_hY778']['frm_rgcmb004'] = strtoupper(limpia($frm_rgcmb004));
+	$_SESSION['FRM_hY778']['frm_rgcmb006'] = limpia($frm_rgcmb006);
+	$_SESSION['FRM_hY778']['frm_rgcmb009'] = limpia($frm_rgcmb006);
 	$_SESSION['FRM_hY778']['frm_rgcmb010'] = $frm_rgcmb010;
 
 	if($_SESSION['NERR_hY778'] == 0){
@@ -967,7 +967,7 @@ elseif($axc0 === 'hY778'){
 			'xkDRCms' => $DRcD,
 			'xXUNVrSXx' => $xXUNVrSXx
 		];		
-		x3J3cU74DB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0400.$pp_xx0100;
 		bi74c0('4ctKm', $_SESSION['m3ns4J3'], '');
@@ -979,7 +979,7 @@ elseif($axc0 === 'hY778'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Por favor revisa la información';
 	}
-	r3Diri6ir('../v75t4?axc0=xkmtr4G&vh3UjI6Did='.$eCry($frm_rgcmb007));
+	llevame('../v75t4?axc0=xkmtr4G&vh3UjI6Did='.$eCry($frm_rgcmb007));
 	/*echo '<pre>';
 	print_r($sQl_d474_4rr4y);
 	echo '</pre>';*/

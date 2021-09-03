@@ -7,7 +7,7 @@ $_SESSION['session_look'] = true;
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>noPixcua Mieke | Pantalla Bloqueada</title>
+  <title>Kumo 雲 | Pantalla Bloqueada</title>
  
   <!-- Google Font: Poppins -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -20,7 +20,7 @@ $_SESSION['session_look'] = true;
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper" style="background-color: #00000014;margin-top: 10%;" >
   <div class="lockscreen-logo" >
-    <a href="index.php" class="texto-neon-azul" style="color: white;"><b>noPixcua</b> Mieke</a>
+    <a href="index.php" class="texto-neon-azul" style="color: white;"><b>KUMO</b> 雲</a>
   </div>
   <?php if($_SESSION['m3ns4J3'] != ''){ ?>
     <p class="text-danger" style="text-align: center;"><?= $_SESSION['m3ns4J3'] ?></p>

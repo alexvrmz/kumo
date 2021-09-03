@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 
 if($axc0 === 'eDtDpp'){
@@ -61,7 +61,7 @@ if($axc0 === "eDtD"){
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'No se encontro ID de Documento y/o Vehiculo';
-		//r3Diri6ir('v75t4?axc0=5u250e');
+		//llevame('v75t4?axc0=5u250e');
 	}
 }
 elseif($axc0 == 'eDtDpp'){
@@ -147,14 +147,14 @@ elseif($axc0 == 'eDtDpp'){
 		echo '<pre>';
 		print_r($_FILES['xDsDx007']);
 		echo '</pre>';
-		x3J3cU74DB('D0cUM3n705', $sql_arr, $axc0, $p4r4);
+		ejecutaDB('D0cUM3n705', $sql_arr, $axc0, $p4r4);
 		bi74c0('4ct-d0c', 'Se actualizo el documento:'.$xDsDx008, '');
 		$_SESSION['m3ns4J3'] = 'Se actualizo el Documento con exito!';
-		r3Diri6ir('../v75t4?axc0=eDtD&DidxD='.$eCry($xDsDx008).'&vh3iP='.$eCry($vh3iP));
+		llevame('../v75t4?axc0=eDtD&DidxD='.$eCry($xDsDx008).'&vh3iP='.$eCry($vh3iP));
 	}
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'No se encontro ID de Documento y/o Vehiculo';
-		r3Diri6ir('../v75t4?axc0=5u250e');
+		llevame('../v75t4?axc0=5u250e');
 	}
 }

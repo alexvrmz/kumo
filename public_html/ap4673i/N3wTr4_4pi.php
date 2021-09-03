@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 //$axc0 = $dCry($axc0);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 if($axc0 === "tR4Add" || $axc0 === 'ad4DcTr4' || $axc0 === 'edTDcTr4'){
 	include('ccnnxx547.php');
@@ -65,7 +65,7 @@ if($axc0 === 'N3wTr4'){
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta ID de Trámite y/o de Vehiculo';
-		r3Diri6ir('v75t4?axc0=v3hFh4&vh3iP='.$eCry($xcIDV3Hs));
+		llevame('v75t4?axc0=v3hFh4&vh3iP='.$eCry($xcIDV3Hs));
 	}
 }
 elseif($axc0 === 'tR4Add'){
@@ -107,7 +107,7 @@ elseif($axc0 === 'tR4Add'){
 			];
 			$p4r4m37r05 = "xIoTrIDx = $rr";
 			$axc0 = 'actualizar';
-			x3J3cU74DB('tr4m7s', $art, $axc0, $p4r4m37r05);
+			ejecutaDB('tr4m7s', $art, $axc0, $p4r4m37r05);
 			bi74c0('4ctTraM', 'Se desactivo el tramite '.$rr, '');
 
 			unset($art);
@@ -116,7 +116,7 @@ elseif($axc0 === 'tR4Add'){
 			];
 			$p4r4m37r05 = "xIoTrIDx = $rr";
 			$axc0 = 'actualizar';
-			x3J3cU74DB('tr4m7s', $art, $axc0, $p4r4m37r05);
+			ejecutaDB('tr4m7s', $art, $axc0, $p4r4m37r05);
 			bi74c0('4ctTraM', 'Se desactivo el tramite '.$rr, '');
 
 			$C011 = "SELECT D0cIDxS FROM D0cUM3n705 WHERE D0cTR4xS = $rr";
@@ -128,7 +128,7 @@ elseif($axc0 === 'tR4Add'){
 				];
 				$p4r4m37r05 = "D0cIDxS = ".$DdTRE['D0cIDxS'];
 				$axc0 = 'actualizar';
-				x3J3cU74DB('D0cUM3n705', $art, $axc0, $p4r4m37r05);
+				ejecutaDB('D0cUM3n705', $art, $axc0, $p4r4m37r05);
 				bi74c0('4ctD0c', 'Se desactivo el Documento '.$DdTRE['D0cIDxS'], '');
 			}
 		}
@@ -163,7 +163,7 @@ elseif($axc0 === 'tR4Add'){
 		echo '</pre>';
 		$p4r4m37r05 = "";
 		$axc0 = "insertar";
-		$idt = x3J3cU74DB('tr4m7s', $srt6, $axc0, $p4r4m37r05);
+		$idt = ejecutaDB('tr4m7s', $srt6, $axc0, $p4r4m37r05);
 		$_SESSION['m3ns4J3'] = 'Se Agrego correctamente el trámite: '.$frm_x001;
 		bi74c0('4ddTraM', $_SESSION['m3ns4J3'], '');
 		/*include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
@@ -180,7 +180,7 @@ elseif($axc0 === 'tR4Add'){
 		$rl .= '&frm_x005='.$eCry($frm_x005).'&frm_x006='.$eCry($frm_x006).'&frm_x007='.$eCry($frm_x007).'&frm_x008='.$eCry($frm_x008).'&frm_x009='.$eCry($frm_x009);
 		$rl .= '&xDI4Rt='.$eCry($frm_x007).'&xcIDV3Hs='.$eCry($frm_x006);
 	}
-	r3Diri6ir($rl);
+	llevame($rl);
 
 }
 elseif($axc0 === 'Tr4V'){
@@ -337,7 +337,7 @@ elseif($axc0 === 'Tr4V'){
 		$_SESSION['m3ns4J3'] = 'Falta ID de Trámite y/o de Vehiculo';
 		$xDI4Rt = $dCry($xDI4Rt);
 		$xcIDV3Hs = $dCry($xcIDV3Hs);
-		r3Diri6ir('v75t4?axc0=v3hFh4&vh3iP='.$eCry($xcIDV3Hs));
+		llevame('v75t4?axc0=v3hFh4&vh3iP='.$eCry($xcIDV3Hs));
 	}
 }
 elseif($axc0 === 'ad4DcTr4'){
@@ -393,7 +393,7 @@ elseif($axc0 === 'ad4DcTr4'){
 													];		
 				echo '<pre>'; print_r($sQl_d474_4rr4y); echo '</pre>';
 
-				x3J3cU74DB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 				$_SESSION['m3ns4J3'] = 'Se subio con exito el documento: '.dCry2($fmrd_001);
 				bi74c0('4dd-doc-', $_SESSION['m3ns4J3'], '');
@@ -415,7 +415,7 @@ elseif($axc0 === 'ad4DcTr4'){
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0304.$_FILES['fmrd_008']['error'];
 	}
 
-		r3Diri6ir($rd);
+		llevame($rd);
 	
 
 }
@@ -461,7 +461,7 @@ elseif($axc0 === 'edTDcTr4'){
 			//'xIoTrEDOx' => 1
 		];		
 
-		x3J3cU74DB('tr4m7s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('tr4m7s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		$_SESSION['m3ns4J3'] = 'Se actualizo el trámite '.$fmrd_002;
 		bi74c0('4ct-Tr4', $_SESSION['m3ns4J3'], '');
@@ -472,5 +472,5 @@ elseif($axc0 === 'edTDcTr4'){
 		$_SESSION['m3ns4J3'] = 'Verifica los campos indicados';					
 		$rd = '../v75t4?axc0=Tr4V&xDI4Rt='.$eCry($fmrd_009).'&xcIDV3Hs='.$eCry($fmrd_010).'&fmrd_003_e='.$eCry($fmrd_003_e).'&fmrd_004_e='.$eCry($fmrd_004_e).'&fmrd_005='.$eCry($fmrd_005).'&fmrd_007='.$eCry($fmrd_007).'&xcIDV3Hs='.$eCry($fmrd_010);
 	}
-	r3Diri6ir($rd);
+	llevame($rd);
 }

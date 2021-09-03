@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 //$axc0 = $dCry($axc0);
 /*if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }*/
 define('r001E', 'Correo Eléctronico es Obligatorio');
 define('r001E2', 'Correo Eléctronico no es válido');
@@ -28,15 +28,15 @@ if ($axc0 == 'r3gu') {
 	$tm = date("Y-m-d H:i:s");
 
 	if(v4lRQ($r001) == FALSE){ $_SESSION['m3n3Rr0R']['r001'] = r001E;	$_SESSION['ne']++; } else { if(v4lEm4Il($r001) == FALSE) { $_SESSION['m3n3Rr0R']['r001'] = r001E2; $_SESSION['ne']++; } }
-	if(v4lRQ($r002) == FALSE){ $_SESSION['m3n3Rr0R']['r002'] = r002E;	$_SESSION['ne']++; }  else { $r002 = Cl34N($r002); }
-	if(v4lRQ($r004) == FALSE){ $_SESSION['m3n3Rr0R']['r004'] = r004E;	$_SESSION['ne']++; }  else { $r004 = Cl34N($r004); }
+	if(v4lRQ($r002) == FALSE){ $_SESSION['m3n3Rr0R']['r002'] = r002E;	$_SESSION['ne']++; }  else { $r002 = limpia($r002); }
+	if(v4lRQ($r004) == FALSE){ $_SESSION['m3n3Rr0R']['r004'] = r004E;	$_SESSION['ne']++; }  else { $r004 = limpia($r004); }
 	if(v4lRQ($r006) == FALSE){ $_SESSION['m3n3Rr0R']['r006'] = r006E;	$_SESSION['ne']++; }	else { if($r006 != $r007){ $_SESSION['m3n3Rr0R']['r007'] = r007E;	$_SESSION['ne']++; } else { if(V4lPss($r006) == FALSE){ $_SESSION['m3n3Rr0R']['r006'] = r006E2; $_SESSION['ne']++; }}	}
 	if(v4lRQ($r008) == FALSE){ $_SESSION['m3n3Rr0R']['r008'] = r008E; $_SESSION['ne']++; }
 	if(v4lRQ($r009) == FALSE){ $_SESSION['m3n3Rr0R']['r009'] = r009E; $_SESSION['ne']++; }
 	if(v4lRQ($r010) == FALSE){ $_SESSION['m3n3Rr0R']['r010'] = r010E; $_SESSION['ne']++; }
 	$r001 = strtolower($r001); 
-	$r003 = Cl34N($r003);
-	$r005 = Cl34N($r005); 
+	$r003 = limpia($r003);
+	$r005 = limpia($r005); 
 	
 	if($_SESSION['ne'] == 0){
 
@@ -57,7 +57,7 @@ if ($axc0 == 'r3gu') {
 			$p4r4 = '';
 			$ax = 'insertar';
 			$fg = ['xXUIDTPXx' => $tm];
-			$xXUNVrSXx = x3J3cU74DB('xXUNVrSXx', $fg, $ax, $p4r4);
+			$xXUNVrSXx = ejecutaDB('xXUNVrSXx', $fg, $ax, $p4r4);
 			unset($SQA);
 			$FRGF = md5(rand(0,1000));
 			$SQA = array(
@@ -91,7 +91,7 @@ if ($axc0 == 'r3gu') {
 				'u5hFR8ir5' => $tm,
 				'xXUNVrSXx' => $xXUNVrSXx
 			);
-			$u = x3J3cU74DB('u5u405', $SQA, $ax, $p4r4);
+			$u = ejecutaDB('u5u405', $SQA, $ax, $p4r4);
 			include('../escen78/iDi0m45/es_MX/i_8i74c0r4.php');
 			$_SESSION['m3ns4J3'] = lbl_8i7_r001.$r001;
 			$bi = bi74c0('regu5u', $_SESSION['m3ns4J3'], $u);
@@ -164,7 +164,7 @@ if ($axc0 == 'r3gu') {
 					'p3rXo3PRs' => 1,
 					'p3rXoFPRs' => $tm
 				];
-				x3J3cU74DB('p3rXo70R64D0s', $fg, $ax, $p4r4);
+				ejecutaDB('p3rXo70R64D0s', $fg, $ax, $p4r4);
 				echo 'se agrego permiso: '.$value.' al usuario: '.$u.'<br>';
 			}
 			/// ---
@@ -192,7 +192,7 @@ if ($axc0 == 'r3gu') {
 					'xXUNVrSXx' => $xXUNVrSXx
 				];	
 			
-				$eee = x3J3cU74DB('eMpR3sA5', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$eee = ejecutaDB('eMpR3sA5', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 			
 			/// ---
 				$axc0 = 'insertar'; 
@@ -208,14 +208,14 @@ if ($axc0 == 'r3gu') {
 
 			/// ---
 				
-				$ffflo0 = x3J3cU74DB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$ffflo0 = ejecutaDB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 				unset($sQl_d474_4rr4y);
 				$sQl_d474_4rr4y = [
 					'r3F3mP00' => $eee,
 					'r3FFloO00' => $ffflo0,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];		
-				$fff = x3J3cU74DB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$fff = ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 			/// ---
 			unset($yarra);
@@ -227,7 +227,7 @@ if ($axc0 == 'r3gu') {
 				'UEFTxTU' => $tm,
 			];
 			$axc0 = 'insertar';
-			x3J3cU74DB('r3l3UEF', $yarra, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3UEF', $yarra, $axc0, $p4r4m37r05);
 				
 			/// ---
 				$axc0 = 'insertar';
@@ -242,7 +242,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				x3J3cU74DB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -255,7 +255,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				x3J3cU74DB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -268,7 +268,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				x3J3cU74DB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -281,7 +281,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				x3J3cU74DB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 			/// ---
 				$axc0 = 'insertar';
@@ -295,7 +295,7 @@ if ($axc0 == 'r3gu') {
 					's3R_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				x3J3cU74DB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -307,7 +307,7 @@ if ($axc0 == 'r3gu') {
 					's3R_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				x3J3cU74DB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 			
 			/// ---
@@ -756,7 +756,7 @@ if ($axc0 == 'r3gu') {
 		if($m3ns4J3 != ''){ $r3 .= '&m3ns4J3='.$eCry($m3ns4J3);}
 	}
 	
-	r3Diri6ir($r3);
+	llevame($r3);
 }
 
 echo '<pre>'; print_r($fg); echo '</pre>';

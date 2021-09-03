@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 //$axc0 = $dCry($axc0);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 if($axc0 === "svasg" || $axc0 === 'BrrS' || $axc0 === 'BrrA' || $axc0 === 'DrK' || $axc0 === 'cEfs' || $axc0 === '54v3c0nFi6' || $axc0 === 'mo0DStruX' || $axc0 === 'Ac7Vs7'){
 	include('ccnnxx547.php');
@@ -110,7 +110,7 @@ if($axc0 === 'asNxV'){
 		include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_817_as_01;
     $_SESSION['m3n3Rr0R'] = 'si';
-		r3Diri6ir('v75t4?axc0=v3hiXs');
+		llevame('v75t4?axc0=v3hiXs');
 	}
 	
 	/*
@@ -118,7 +118,7 @@ if($axc0 === 'asNxV'){
 	$axc0 = 'actualizar';
 	$p4r4m37r05 = "u5hID8ir5 = '".$cc_x002."' ";
 	$sQl_d474_4rr4y = ['config_7im3Bl0' => $cc_x001];		
-	x3J3cU74DB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+	ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 	
 	include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 	include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_c0Nfi6.php');
@@ -128,7 +128,7 @@ if($axc0 === 'asNxV'){
 	bi74c0('actC0nF', $m3ns4J3, '');
 	$_SESSION['m3ns4J3'] = $m3ns4J3;
 
-	r3Diri6ir('../v75t4?axc0=c0Nfi6');*/
+	llevame('../v75t4?axc0=c0Nfi6');*/
 }
 elseif($axc0 === 'svasg'){
 	$axc0 = 'actualizar';
@@ -138,7 +138,7 @@ elseif($axc0 === 'svasg'){
 			'xV3hiEDOXu7l0s' => 4,
 			//'xV3hiUIDXu7l0s' => $r_001
 		];		
-		x3J3cU74DB('v3hiXu7l0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('v3hiXu7l0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		
 		$C002 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = $r_001";
@@ -154,7 +154,7 @@ elseif($axc0 === 'svasg'){
 			];		
 			$p4r4m37r05 = '';
 			$axc0 = 'insertar';
-			x3J3cU74DB('r3l3UEF', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3UEF', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		}
 		else{
 			unset($sQl_d474_4rr4y);
@@ -163,7 +163,7 @@ elseif($axc0 === 'svasg'){
 			];		
 			$p4r4m37r05 = "UEFUxTU = '".$r_001."'";
 			$axc0 = 'actualizar';
-			x3J3cU74DB('r3l3UEF', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3UEF', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		}
 
 		$_SESSION['m3ns4J3'] = 'Se Asigno el Auto: '.$r_002.' al usuario: '.$r_001;
@@ -173,11 +173,11 @@ elseif($axc0 === 'svasg'){
 
 	if($r_003 == 'xux'){
 		
-		r3Diri6ir('../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($r_001));
+		llevame('../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($r_001));
 	}
 	elseif($r_003 == 'v3h'){
 		
-		r3Diri6ir('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($r_002));
+		llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($r_002));
 	}
 	
 }

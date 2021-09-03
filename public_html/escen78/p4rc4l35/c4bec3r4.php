@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="dist/css/fonts/poppins/poppins.css?family=Poppins:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <!--<link rel="stylesheet" href="dist/css/fontawesome.css">-->
-  <link rel="stylesheet" href="plugins/fontawesome/css/all.css">
+  <link rel="stylesheet" href="plugins/Fontawesome_pro_v6/css/all.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="dist/css/estilos.css">

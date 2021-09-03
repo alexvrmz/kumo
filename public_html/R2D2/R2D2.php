@@ -276,7 +276,7 @@ if($axc0 == 'x012'){
 			'xkDRCms' => $DRcD,
 			'xXUNVrSXx' => $xx02
 		];		
-		x3J3cU74DB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 
 /*	$C013 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = $frm10 AND xkTLLms = 1 ORDER BY xkIDms DESC LIMIT 1 ";
@@ -334,7 +334,7 @@ if($axc0 == 'x012'){
 			'xkDRCms' => $xkDRCms,
 			'xXUNVrSXx' => $xx02
 		];		
-		x3J3cU74DB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);*/
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);*/
 
 
 

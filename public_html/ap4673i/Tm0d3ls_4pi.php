@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 //$axc0 = $dCry($axc0);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 if($axc0 === "Tm0d3ls_9i45" || $axc0 === '5u540l_04' || $axc0 === '10300' || $axc0 === '10400'){
 	include('ccnnxx547.php');
@@ -60,7 +60,7 @@ elseif($axc0 === "Tm0d3ls_9i88"){
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de modelo a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('v75t4?axc0=Tm0d3ls');
+    llevame('v75t4?axc0=Tm0d3ls');
   }
  
 }
@@ -95,7 +95,7 @@ elseif ($axc0 === 'Tm0d3ls_9i45') {
 							'j5uBxD35x' => $pp_xx001,
 							'j5uBxMiMgx' => $newFileName,
 						];		
-						x3J3cU74DB('m0d3loS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+						ejecutaDB('m0d3loS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 						$_SESSION['m3ns4J3'] = lbl_8i7_x0301.$pp_xx001;
 						bi74c0('3dtm0del', $_SESSION['m3ns4J3'], '');
 
@@ -121,7 +121,7 @@ elseif ($axc0 === 'Tm0d3ls_9i45') {
 					'j5uBxD35x' => $pp_xx001,
 					'j5uBxMiMgx' => '',
 				];		
-				x3J3cU74DB('m0d3loS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('m0d3loS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 						
 				$_SESSION['m3ns4J3'] = lbl_8i7_x0305.$pp_xx001;
 				bi74c0('3dtm0del', $_SESSION['m3ns4J3'], '');
@@ -140,7 +140,7 @@ elseif ($axc0 === 'Tm0d3ls_9i45') {
 
 			unset($sQl_d474_4rr4y);
 			$sQl_d474_4rr4y = ['m4rCxD35c5s' => $pp_xx001];		
-			x3J3cU74DB('m4rC45v3Hi', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('m4rC45v3Hi', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 				
 			$_SESSION['m3ns4J3'] = lbl_8i7_x0305.$pp_xx001;
 			bi74c0('3dtmK', $_SESSION['m3ns4J3'], '');
@@ -152,7 +152,7 @@ elseif ($axc0 === 'Tm0d3ls_9i45') {
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0300;
 	}
-  r3Diri6ir('../v75t4?axc0=Tm0d3ls&cfr='.$eCry($pp_xx003));
+  llevame('../v75t4?axc0=Tm0d3ls&cfr='.$eCry($pp_xx003));
 
 
 
@@ -212,7 +212,7 @@ elseif ($axc0 == '5u540l_04') {
 											 'u5h8ir5_iDi' => $u5h8ir5_iDi
 											];		
       $axc0 = 'insertar';
-			x3J3cU74DB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 											
 			include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 			$_SESSION['m3ns4J3'] = lbl_8i7_x002.$pp_xx005_add;
@@ -230,7 +230,7 @@ elseif ($axc0 == '5u540l_04') {
 											 'p3rXoFPRs' => date('Y-m-d H:i:s')
 											];		
       $axc0 = 'insertar';
-			x3J3cU74DB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);							
+			ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);							
 		}
 		else{
 			include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
@@ -241,7 +241,7 @@ elseif ($axc0 == '5u540l_04') {
 
 		
 	}
-	r3Diri6ir('../v75t4?axc0=5u540l');
+	llevame('../v75t4?axc0=5u540l');
 }
 /// --- axc0 suspender usuario
 elseif ($axc0 === '10300') {
@@ -253,7 +253,7 @@ elseif ($axc0 === '10300') {
 		$sQl_d474_4rr4y = ['u5hOn8ir5' => 0,
 											 'u5hOn44P8ir5' => 0
 											];		
-		x3J3cU74DB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x008.$u5h8ir5nm;
@@ -266,7 +266,7 @@ elseif ($axc0 === '10300') {
 		bi74c0('susPu5u2', $_SESSION['m3ns4J3'], '');
     
 	}
-  r3Diri6ir('../v75t4?axc0=5u540l');
+  llevame('../v75t4?axc0=5u540l');
 	
 }
 /// --- axc0 activar usuario
@@ -279,7 +279,7 @@ elseif ($axc0 === '10400') {
 		$sQl_d474_4rr4y = ['u5hOn8ir5' => 1,
 											 'u5hOn44P8ir5' => 0
 											];		
-		x3J3cU74DB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x010.$u5h8ir5nm;
@@ -292,6 +292,6 @@ elseif ($axc0 === '10400') {
 		bi74c0('4ctPu5u2', $_SESSION['m3ns4J3'], '');
     
 	}
-  r3Diri6ir('../v75t4?axc0=5u540l');
+  llevame('../v75t4?axc0=5u540l');
 	
 }

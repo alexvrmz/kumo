@@ -9,7 +9,7 @@ include ('ap4673i/ccnnxx547.php');
 include ('ap4673i/fncnes5632.php');
  
 if(!isset($_SESSION['xx_001'])){
-	header("location:lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 
 include ('escen78/iDi0m45/'.$iDi['u5h8ir5_iDi'].'/iDi.php');
@@ -17,7 +17,7 @@ include ('escen78/iDi0m45/'.$iDi['u5h8ir5_iDi'].'/iDi.php');
 $fjkj = $_SESSION['session_look'];
 if ($fjkj === true) {
    	if($axc0 != 'l00k5cR3n'){
-			r3Diri6ir('v75t4?axc0=l00k5cR3n');
+			llevame('v75t4?axc0=l00k5cR3n');
 		}
 }
 
@@ -35,15 +35,15 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 	$today = getdate();
 	$hora=$today["hours"];
 	if ($hora<12) {
-		$saludo = '<i class="fa-duotone fa-sun fa-lg" style="color: #ffef00; text-shadow: 0 0 5px #000;"></i>'.lbl_bi3nv3nid4_1;
+		$saludo = '<i class="fad fa-sun fa-lg" style="color: #ffef00; text-shadow: 0 0 5px #000;"></i>'.lbl_bi3nv3nid4_1;
 	}elseif($hora<19){
-		$saludo = '<i class="fa-duotone fa-cloud-sun fa-lg" style="color: #faff50; text-shadow: 0 0 5px #000;"></i>'.lbl_bi3nv3nid4_2;
+		$saludo = '<i class="fad fa-cloud-sun fa-lg" style="color: #faff50; text-shadow: 0 0 5px #000;"></i>'.lbl_bi3nv3nid4_2;
 	}else{ 
-		$saludo = '<i class="fa-duotone fa-moon fa-lg" style="color: blue; text-shadow: 0 0 5px #000;"></i>'.lbl_bi3nv3nid4_3; 
+		$saludo = '<i class="fad fa-moon fa-lg" style="color: blue; text-shadow: 0 0 5px #000;"></i>'.lbl_bi3nv3nid4_3; 
 	}
 
 	if(!isset($_SESSION['xx_001'])){
-		header("location:lgaccs25.php?axc0=x001&m3ns4J3=".$m3ns4J3); // --- r3Diri6ir a login si no hay sesión ---
+		header("location:lgaccs25.php?axc0=x001&m3ns4J3=".$m3ns4J3); // --- llevame a login si no hay sesión ---
 	}
 
 	if($axc0 == '5u250e'){ /// --- Dash

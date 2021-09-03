@@ -6,12 +6,12 @@
 	if(!isset($_SESSION['xx_001'])){
 			
 		echo 'no hay sesión';
-		header("location:lgaccs25?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+		header("location:lgaccs25?axc0=x001"); // --- llevame a login si no hay sesión ---
 			
 	} else{
 		
 		echo 'hay sesión<br>';
-		header("location:v75t4?axc0=5u250e"); // --- r3Diri6ir si hay sesión ---
+		header("location:v75t4?axc0=5u250e"); // --- llevame si hay sesión ---
 			
 	}
 

@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 //$axc0 = $dCry($axc0);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
@@ -351,15 +351,15 @@ elseif ($axc0 == 'eMprxXx21') {
 		$_SESSION['err'] ++;
 	}
 		
-	$pp_xx002 = Cl34N($pp_xx002);
-	$pp_xx003 = Cl34N($pp_xx003);
-	$pp_xx004 = Cl34N($pp_xx004);
-	$pp_xx005 = Cl34N($pp_xx005);
-	$pp_xx006 = Cl34N($pp_xx006);
-	$pp_xx007 = Cl34N($pp_xx007);
+	$pp_xx002 = limpia($pp_xx002);
+	$pp_xx003 = limpia($pp_xx003);
+	$pp_xx004 = limpia($pp_xx004);
+	$pp_xx005 = limpia($pp_xx005);
+	$pp_xx006 = limpia($pp_xx006);
+	$pp_xx007 = limpia($pp_xx007);
 	$pp_xx012 = strtoupper($pp_xx012);
-	$pp_xx013 = Cl34N($pp_xx013);
-	$pp_xx014 = Cl34N($pp_xx014);
+	$pp_xx013 = limpia($pp_xx013);
+	$pp_xx014 = limpia($pp_xx014);
 	$pp_xx015 = strtolower($pp_xx015);
 	
 	if($_SESSION['m3n3Rr0R'] != 'si'){
@@ -407,7 +407,7 @@ elseif ($axc0 == 'eMprxXx21') {
 			'xXUNVrSXx' => $xXUNVrSXx
 		];	
 		
-		$ne = x3J3cU74DB('eMpR3sA5', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$ne = ejecutaDB('eMpR3sA5', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0121.$pp_xx003;
 		bi74c0('addEmpR', $_SESSION['m3ns4J3'], '');
@@ -425,7 +425,7 @@ elseif ($axc0 == 'eMprxXx21') {
 				'r3FFloO00' => $ex17
 			];	
 			$axc0 = 'insertar';
-				x3J3cU74DB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		}
 
 		unset($px001); unset($px002);	unset($px003);	unset($px004);	unset($px005); unset($px006);	unset($px007); unset($px008);
@@ -447,7 +447,7 @@ elseif ($axc0 == 'eMprxXx21') {
 		/*$rl .= '&px009='.$eCry($pp_xx009);*/	$rl .= '&px010='.$eCry($pp_xx010); 	$rl .= '&px011='.$eCry($pp_xx011);	$rl .= '&px012='.$eCry($pp_xx012);
 		$rl .= '&px013='.$eCry($pp_xx013);	$rl .= '&px014='.$eCry($pp_xx014);	$rl .= '&px015='.$eCry($pp_xx015);	$rl .= '&px016='.$eCry($pp_xx016).'&px017='.$eCry($pp_xx017);
 	}
-	r3Diri6ir($rl);
+	llevame($rl);
 }
 elseif($axc0 == 'emPr3Edi7'){
 	if(!empty($eMpr3)){
@@ -484,7 +484,7 @@ elseif($axc0 == 'emPr3Edi7'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta ID de Empresa';
 		$rl = 'v75t4?axc0=eMpr35As';
-		r3Diri6ir($rl);
+		llevame($rl);
 	}
 }
 elseif($axc0 == 'sV3EMp'){
@@ -492,7 +492,7 @@ elseif($axc0 == 'sV3EMp'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta el ID de Empresa';
 		$rl = '../v75t4?axc0=eMpr35As';
-		r3Diri6ir($rl);
+		llevame($rl);
 	}
 	else{
 		
@@ -548,16 +548,16 @@ elseif($axc0 == 'sV3EMp'){
 			unset($_SESSION['tXFrm']['frm_014']);
 		}
 	
-		$frm_001 = Cl34N($frm_001);
-		$frm_002 = Cl34N($frm_002);
-		$frm_003 = Cl34N($frm_003);
+		$frm_001 = limpia($frm_001);
+		$frm_002 = limpia($frm_002);
+		$frm_003 = limpia($frm_003);
 		$frm_003 = strtoupper($frm_003);
-		$frm_004 = Cl34N($frm_004);
-		$frm_005 = Cl34N($frm_005);
-		$frm_006 = Cl34N($frm_006);
-		$frm_007 = Cl34N($frm_007);
-		$frm_012 = Cl34N($frm_012);
-		$frm_013 = Cl34N($frm_013);
+		$frm_004 = limpia($frm_004);
+		$frm_005 = limpia($frm_005);
+		$frm_006 = limpia($frm_006);
+		$frm_007 = limpia($frm_007);
+		$frm_012 = limpia($frm_012);
+		$frm_013 = limpia($frm_013);
 		$frm_014 = strtolower($frm_014);
 	
 		if($_SESSION['m3n3Rr0R_num'] === 0){
@@ -608,7 +608,7 @@ elseif($axc0 == 'sV3EMp'){
 				$p4r4m37r05 = "eMIDEm = $eMpr3";
 				$axc0 = "actualizar";
 				echo '<pre>';print_r($aRrr4y);echo '</pre>';
-				x3J3cU74DB('eMpR3sA5', $aRrr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('eMpR3sA5', $aRrr4y, $axc0, $p4r4m37r05);
 				$_SESSION['m3ns4J3'] = 'Se actualizo la empresa '.dCry2($frm_001);
 				bi74c0('eDTEmpR', $_SESSION['m3ns4J3'], '');
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
@@ -636,7 +636,7 @@ elseif($axc0 == 'sV3EMp'){
 			$rl .= '&frm_003='.$eCry($frm_003).'&frm_006='.$eCry($frm_006).'&frm_009='.$eCry($frm_009).'&frm_012='.$eCry($frm_012);
 			$rl .= '&frm_013='.$eCry($frm_013).'&frm_014='.$eCry($frm_014).'&frm_015='.$eCry($frm_015);	
 		}
-		r3Diri6ir($rl);
+		llevame($rl);
 	}
 	//echo $rl;
 

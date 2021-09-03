@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 if($axc0 === "50210"){
 	include('ccnnxx547.php');
@@ -29,7 +29,7 @@ if ($axc0 === '50210') {
                        'u5hOn44P8ir5' => 1,
 											 //'u5hpV8ir5' => 0
 											];		
-		x3J3cU74DB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		
 		$p4r4m37r05 = "L4v3s_id = '$IDLL'";
 		unset($sQl_d474_4rr4y);
@@ -37,7 +37,7 @@ if ($axc0 === '50210') {
 		$sQl_d474_4rr4y = [
 			'L4v3s_ff' => $FF
 		];
-		x3J3cU74DB('L4v3s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('L4v3s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 		
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
@@ -52,7 +52,7 @@ if ($axc0 === '50210') {
 		bi74c0('gN7kn2', $_SESSION['m3ns4J3'], '');
     
 	}
-	r3Diri6ir('../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm));
+	llevame('../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm));
 	
 }
 elseif ($axc0 === '50200') {

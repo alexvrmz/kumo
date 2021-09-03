@@ -29,7 +29,7 @@ if($axc0 == 'x002'){
 
 }
 
-elseif(isset($_SESSION['xx_001']) && $axc0 != 'x006' && $axc0 != 'x001' ){ // ---- sesión iniciada, r3Diri6ir a index ----
+elseif(isset($_SESSION['xx_001']) && $axc0 != 'x006' && $axc0 != 'x001' ){ // ---- sesión iniciada, llevame a index ----
 
 	header("location: index.php");
 
@@ -112,11 +112,11 @@ elseif($axc0 == 'x005'){ // --- Validar datos ---
 		$U = $_SESSION['u5hID8ir5'];
 		Bin4kuru($d3s, $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 
-		r3Diri6ir('v75t4?axc0=5u250e');
+		llevame('v75t4?axc0=5u250e');
 	} else{ 
 		//	include('ap4673i/fncnes5632.php');
 		$m3ns4J3	= 'El usuario y/o Contraseña son Incorrectos!!!';
-		r3Diri6ir('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
+		llevame('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
 
 	}
 
@@ -135,12 +135,12 @@ elseif($axc0 == 'x006'){
 	if($d5tg5['u5hpW8ir5'] == $psEcdDn45_xS){
 
 		$_SESSION['session_look'] = false;
-		r3Diri6ir($_SESSION['url_previa']);
+		llevame($_SESSION['url_previa']);
 
 	}else{
 		
 		$_SESSION['m3ns4J3'] = 'Contraseña Incorrecta';
-		r3Diri6ir('v75t4?axc0=l00k5cR3n');
+		llevame('v75t4?axc0=l00k5cR3n');
 	}
 
 }
@@ -161,21 +161,21 @@ elseif($axc0 == 'x007'){
 			$fg = [
 				'u5hOn8ir5' => 1
 			];
-			x3J3cU74DB('u5u405', $fg, $ax, $p4r4);
+			ejecutaDB('u5u405', $fg, $ax, $p4r4);
 			$m3ns4J3 = 'Tu cuenta se Activo con Exito!, ingresa tus credenciales.';
-    	r3Diri6ir('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
+    	llevame('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
 		}
 		else{
 			$m3ns4J3 = 'Enlace no Valido! 1<br>';
 			$_SESSION['m3n3Rr0R'] = 'si';
-    	r3Diri6ir('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
+    	llevame('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
 		}
 
 	}
 	else{
 		$m3ns4J3 = 'Enlace no Valido! 2';
 		$_SESSION['m3n3Rr0R'] = 'si';
-    r3Diri6ir('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
+    llevame('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
 	}
 
 }
@@ -241,11 +241,11 @@ elseif($axc0 == 'x008'){ // --- Validar datos FB---
 		$U = $_SESSION['u5hID8ir5'];
 		Bin4kuru($d3s, $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 
-		r3Diri6ir('v75t4?axc0=5u250e');
+		llevame('v75t4?axc0=5u250e');
 	} else{ 
 		//	include('ap4673i/fncnes5632.php');
 		$m3ns4J3	= $pp_xx005;
-		r3Diri6ir('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
+		llevame('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
 
 	}
 

@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
       ];
       $accion = 'actualizar';
       $parametros = 'u5hID8ir5 = '.$id;
-			x3J3cU74DB('u5u405', $arr, $accion, $parametros);
+			ejecutaDB('u5u405', $arr, $accion, $parametros);
       echo 'Se vinculo la cuenta';
     }
 		/*$query = "INSERT INTO student(name,email,fb_Id,profilePictureUrl) VALUES ('".$name."','".$email."','".$fb_Id."','".$profilePictureUrl."')";

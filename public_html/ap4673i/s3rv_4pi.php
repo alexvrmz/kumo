@@ -3,7 +3,7 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- r3Diri6ir a login si no hay sesión ---
+	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
@@ -54,7 +54,7 @@ elseif($axc0 === '4dds3r'){
 			$_SESSION['tXFrm']['pt5_xx04'] = 'El campo Otro debe ser númerico.';
 		}
 
-		$pt5_xx01 = Cl34N($pt5_xx01);
+		$pt5_xx01 = limpia($pt5_xx01);
 
 		if($_SESSION['m3n3Rr0R_num'] == 0){
 		$axc0 = 'insertar'; 
@@ -69,7 +69,7 @@ elseif($axc0 === '4dds3r'){
 				's3R_xDini' => 0,
 				'xXUNVrSXx' => $xXUNVrSXx
 			];
-			x3J3cU74DB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 			bi74c0('adds3rv', 'el usuario agrego el servicio '.$pt5_xx01.' con exito', '');
 			$_SESSION['m3ns4J3'] = 'Se agrego el servicio: '.$pt5_xx01;
@@ -86,7 +86,7 @@ elseif($axc0 === '4dds3r'){
 		$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
 		$rl = '../v75t4?axc0=s3rv';
 	}
-	r3Diri6ir($rl);
+	llevame($rl);
 }
 elseif($axc0 === 's3rv3Dt'){
 	if(!empty($pXRoI)){
@@ -107,7 +107,7 @@ elseif($axc0 === 's3rv3Dt'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta el ID de Servicio';
 		$rl = '../v75t4?axc0=s3rv';
-		r3Diri6ir($rl);
+		llevame($rl);
 	}
 }
 elseif($axc0 === 'sV3S3rv'){
@@ -135,9 +135,9 @@ elseif($axc0 === 'sV3S3rv'){
 			$_SESSION['tXFrm']['frm_002'] = 'El campo Estado es obligatorio';
 		}
 		
-		$frm_001 = Cl34N($frm_001);
-		$frm_002 = Cl34N($frm_002);
-		$frm_003 = Cl34N($frm_003);
+		$frm_001 = limpia($frm_001);
+		$frm_002 = limpia($frm_002);
+		$frm_003 = limpia($frm_003);
 		
 		if($_SESSION['m3n3Rr0R_num'] == 0){
 			$axc0 = 'actualizar';
@@ -161,7 +161,7 @@ elseif($axc0 === 'sV3S3rv'){
 			}
 			print_r($sQl_d474_4rr4y);
 			$p4r4m37r05 = "s3R_xDID = $pXRoI";
-			x3J3cU74DB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 			bi74c0('eDts3rv', 'el usuario edito el servicio '.$frm_001.' con exito', '');
 			$_SESSION['m3ns4J3'] = 'Datos Actualizados con exito!';
 			$rl = '../v75t4?axc0=s3rv';
@@ -171,5 +171,5 @@ elseif($axc0 === 'sV3S3rv'){
 			$_SESSION['m3ns4J3'] = 'Verifica los datos';
 			$rl = '../v75t4?axc0=s3rv3Dt&pXRoI='.$eCry($pXRoI).'&frm_001='.$eCry($frm_001).'&frm_002='.$eCry($frm_002).'&frm_003='.$eCry($frm_003).'&frm_006='.$eCry($frm_006);
 		}
-	r3Diri6ir($rl);
+	llevame($rl);
 }
