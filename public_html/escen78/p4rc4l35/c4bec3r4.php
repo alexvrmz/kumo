@@ -34,5 +34,7 @@
   <script src="plugins/toastr/toastr.min.js"></script>
   <script src="plugins/jquery/jquery.min.js"></script>
 	Site wrapper -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960218161476043"
+     crossorigin="anonymous"></script>
 	<div class="wrapper">
     <?php $brr4 = str_replace('accent', 'card', $iDi['config_accent']); ?>
