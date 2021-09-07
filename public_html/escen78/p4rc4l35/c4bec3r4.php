@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="propeller" content="4f2629dc422985311cae5baeefebd7c3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="refresh" content="<?php // / $_SESSION['MAX_SESSION_TIEMPO']/2 ?>">
   <title>KUMO 雲 | <?= lbl_7i7uL0 ?></title>

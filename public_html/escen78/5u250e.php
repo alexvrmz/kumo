@@ -92,7 +92,7 @@ include('p4rc4l35/7i7ul0.php');
                 <p><?= usuarioRegistrado ?></p>
             </div>
             <div class="icon">
-              <i class="fad fa-user"></i>
+              <i class="fad fa-user-astronaut"></i>
             </div>
               <a href="v75t4?axc0=5u540l" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -102,7 +102,7 @@ include('p4rc4l35/7i7ul0.php');
                   <p><?= usuariosRegistrados ?></p>
             </div>
             <div class="icon">
-              <i class="fad fa-users"></i>
+              <i class="fad fa-user-astronaut"></i>
             </div>
               <a href="v75t4?axc0=5u540l" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -112,7 +112,7 @@ include('p4rc4l35/7i7ul0.php');
                     <p><?= usuariosRegistrados ?></p>
                     </div>
           <div class="icon">
-            <i class="fad fa-users"></i>
+            <i class="fad fa-user-astronaut"></i>
           </div>
             <a href="v75t4?axc0=5u540l" class="small-box-footer"><?= agrergarUno ?><i class="fas fa-arrow-circle-right"></i></a>
         </div>
