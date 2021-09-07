@@ -326,13 +326,32 @@ include('p4rc4l35/7i7ul0.php');
 
 
             </div>
+            
           </div>
           <!--/.card-body -->
+
+         
         </div>
+
+        <script type="text/javascript">
+            atOptions = {
+              'key' : 'abd0f6a20a26d349d295f4d6dd323474',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://writtenanonymousgum.com/abd0f6a20a26d349d295f4d6dd323474/invoke.js"></scr' + 'ipt>');
+          </script>
+
+
                   </div>
 
 
                   </div>
+
+      <?php if($_SESSION['publicidad'] == 1){ echo add728x90(); } ?>
+
           
       <!-- /.card -->
     <?php if(v4lID44x50("700-015", $u5u4i0) == TRUE){ /// --- vincular auto ?>

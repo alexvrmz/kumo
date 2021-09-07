@@ -925,5 +925,22 @@ function calcularEdad($fecha){
   return $edad;
 }
 
+function add728x90(){ 
+  $codigo = "<div class=\"callout callout-info col-12 text-center\">";
+  $codigo .= "<p><i class=\"fad fa-ad\"></i> Patrocinadores</p>";
+  $codigo .= "<script type=\"text/javascript\">";
+  $codigo .=  "atOptions = {";
+  $codigo .=  " 'key' : '95c3337887f2a21fd7fd04c86e9cdc1c',";
+  $codigo .=  " 'format' : 'iframe',";
+  $codigo .=  " 'height' : 90,";
+  $codigo .=  " 'width' : 728,";
+  $codigo .=  " 'params' : {}";
+  $codigo .=  "};";
+  $codigo .=  "document.write('<scr' + 'ipt type=\"text/javascript\" src=\"http' + (location.protocol === 'https:' ? 's' : '') + '://writtenanonymousgum.com/95c3337887f2a21fd7fd04c86e9cdc1c/invoke.js\"></scr' + 'ipt>');";
+  $codigo .=  "</script>";
+  $codigo .= "</div>";
+  return $codigo;
+}
+
 ?>
 

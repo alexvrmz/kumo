@@ -94,6 +94,7 @@ elseif($axc0 == 'x005'){ // --- Validar datos ---
 		$_SESSION['config_sidebar'] = $d4705['config_sidebar'];
 		$_SESSION['config_brand'] = $d4705['config_brand'];
 		$_SESSION['xXUNVrSXx'] = $d4705['xXUNVrSXx'];
+		$_SESSION['publicidad'] = $d4705['usuario_publicidad'];
 
 		mkdir('tmp/'.$_SESSION['xXUNVrSXx'], 0777, true);
 		

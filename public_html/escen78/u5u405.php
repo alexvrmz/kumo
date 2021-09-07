@@ -50,6 +50,7 @@ include('p4rc4l35/7i7ul0.php');
         </div>
       </div>
 
+      <?php if($_SESSION['publicidad'] == 1){ echo add728x90(); } ?>
       
 
       <?php if($nu == 0){ ?>
@@ -118,6 +119,9 @@ include('p4rc4l35/7i7ul0.php');
         <!-- /.card-footer-->
       </div>
     <?php } ?>
+
+    <?php if($_SESSION['publicidad'] == 1){ echo add728x90(); } ?>
+
         
       <!-- /.card -->
     <?php if(v4lID44x50("500-002", $u5u4i0) == TRUE){ /// --- AGREGAR USUARIOS ?>

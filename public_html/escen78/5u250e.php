@@ -127,8 +127,16 @@ include('p4rc4l35/7i7ul0.php');
   <?php } ?>
 
  <?php // <script>(function(d,z,s){s.src='//'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('rndhaunteran.com',4504857,document.createElement('script'))</script> ?>
- <script async="async" data-cfasync="false" src="//pl16580976.effectivecpmgate.com/7c589f257de7d25cbf6578213c86c4e3/invoke.js"></script>
-<div id="container-7c589f257de7d25cbf6578213c86c4e3"></div>
+
+
+
+
+<?php if($_SESSION['publicidad'] == 1){ echo add728x90(); ?> 
+  <script type='text/javascript' src='//writtenanonymousgum.com/1d/07/e2/1d07e2804630f80d0665034474aa45ea.js'></script>
+<?php } ?>
+
+
+<script type='text/javascript' src='//pl16580984.effectivecpmgate.com/1d/07/e2/1d07e2804630f80d0665034474aa45ea.js'></script>
 
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960218161476043"

@@ -269,6 +269,8 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <!-- /.card -->
 
+      <?php if($_SESSION['publicidad'] == 1){ echo add728x90(); } ?>
+      
 
       <div class="card <?= $brr4 ?> card-outline">
         <div class="card-header">
@@ -320,7 +322,8 @@ include('p4rc4l35/7i7ul0.php');
         <!-- /.card-footer-->
       </div>
 
-
+      <?php if($_SESSION['publicidad'] == 1){ echo add728x90(); } ?>
+      
 
 
       <div class="modal fade" id="modal-nuevo">
