@@ -16,7 +16,7 @@ $_SESSION['session_look'] = true;
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition lockscreen" style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('dist/img/fondo-vel.jpeg');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
+<body class="hold-transition lockscreen" style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos ?><?= fondoRandom() ?>'); height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
 <!-- Automatic element centering -->
 <div class="lockscreen-wrapper" style="background-color: #00000014;margin-top: 10%;" >
   <div class="lockscreen-logo" >
@@ -59,7 +59,7 @@ $_SESSION['session_look'] = true;
   
   </div>
   <div class="lockscreen-footer text-center">
-    Copyright &copy; 2021 <b><a href="#" class="text-black">noPixcua Mieke</a></b><br>
+    Copyright &copy; 2021 <b><a href="https://kumo.click" class="text-black">kumo.click</a></b><br>
     Todos los Derechos Reservados.
   </div>
 </div>

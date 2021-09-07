@@ -48,7 +48,7 @@ include('p4rc4l35/7i7ul0.php');
                 <h5 class="widget-user-desc text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $mascotaEspecie ?> / <?= $sexo[$mascota['mascota_sexo']] ?></h5>
               </div>
               <div class="widget-user-image">
-                <img class="img-circle" src="<?=$flis ?>" alt="Foto Mascota" style="width: 250px;height: 250px;border-radius: 160px;border: 10px solid #666;margin-left: -85px;margin-top: 26px;">
+                <img class="img-circle" src="<?=$flis ?>" alt="Foto Mascota" style="width: 250px;height: 250px;border-radius: 160px;border: 10px solid #666;margin-left: -85px;margin-top: 26px;object-fit: cover;">
               </div>
               <div class="card-footer">
                 <div class="row">

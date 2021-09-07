@@ -27,11 +27,11 @@ if($axc0 === "pR0VxD"){
 		/*$px019 = $dCry($px019); */
 	}
 
-	$C001 = "SELECT * FROM pR0xV3D WHERE xXUNVrSXx = $xXUNVrSXx";
+	$C001 = "SELECT * FROM proveedores WHERE xXUNVrSXx = $xXUNVrSXx";
 	$S001 = $cnnx4s->query($C001) or die ("Fallo al consultar proveedores: ".$C001);
 	$LDP = [];
 	while ($DDP = $S001->fetch_array()) {
-		$xPrIDx = $DDP['pR0id'];
+		$xPrIDx = $DDP['prov_id'];
 		$xPrNICx = dCry2($DDP['pR0nic']);
 		$xPrRZx = dCry2($DDP['pR0RZ']);
 		$xPrRFCx = $DDP['pR0RFC'];
@@ -138,7 +138,7 @@ elseif ($axc0 == 'aDdPr0') {
 		$_SESSION['err'] ++;
 	}
 	else{
-		$SQ3s725 = "SELECT pR0RFC FROM pR0xV3D WHERE pR0RFC = '".$pp_xx012."' AND xXUNVrSXx = $xXUNVrSXx";
+		$SQ3s725 = "SELECT pR0RFC FROM proveedores WHERE pR0RFC = '".$pp_xx012."' AND xXUNVrSXx = $xXUNVrSXx";
 		$CQ3s725 = $cnnx4s->query($SQ3s725) or die ("Falló listado de proveedores" . $SQ3s725);
 		$ckRfse = $CQ3s725->num_rows;
 		if($ckRfse != 0){
@@ -338,7 +338,7 @@ elseif ($axc0 == 'aDdPr0') {
 		print_r($sQl_d474_4rr4y);
 		echo '</pre>';*/
 		
-		$np = ejecutaDB('pR0xV3D', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$np = ejecutaDB('proveedores', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0122.$pp_xx003;
 		bi74c0('addPr0', $_SESSION['m3ns4J3'], '');
@@ -432,10 +432,10 @@ elseif($axc0 == 'pr0VxVW' || $axc0 == 'pr0VxDT'){
 		$frm_013 = $dCry($frm_013);	$frm_014 = $dCry($frm_014);	$frm_015 = $dCry($frm_015);	
 
 		$pXRoI = $dCry($pXRoI);
-		$C002 = "SELECT * FROM pR0xV3D WHERE pR0id = $pXRoI";
+		$C002 = "SELECT * FROM proveedores WHERE prov_id = $pXRoI";
 		$S002 = $cnnx4s->query($C002) or die ("Fallo al consultar proveedor: ".$C002);
 		$DP = $S002->fetch_assoc();
-		$xPxIDH = $DP['pR0id'];
+		$xPxIDH = $DP['prov_id'];
 		$xPxNICH = $DP['pR0nic']; if($xPxNICH != ''){ $xPxNICH = dCry2($DP['pR0nic']); }
 		$xPxRZH = $DP['pR0RZ']; if($xPxRZH != ''){ $xPxRZH = dCry2($DP['pR0RZ']); }
 		$xPxRFCH = $DP['pR0RFC'];
@@ -664,13 +664,13 @@ elseif($axc0 == 'sV3DT'){
 	
 		if($_SESSION['m3n3Rr0R_num'] === 0){
 
-			$C003 = "SELECT pR0id, pR0nic, pR0RZ, pR0RFC FROM pR0xV3D"; // WHERE pR0nic LIKE '%$frm_001%' OR pR0RZ LIKE '%$frm_002%' OR pR0RFC LIKE '%$frm_003%'"
+			$C003 = "SELECT prov_id, pR0nic, pR0RZ, pR0RFC FROM proveedores"; // WHERE pR0nic LIKE '%$frm_001%' OR pR0RZ LIKE '%$frm_002%' OR pR0RFC LIKE '%$frm_003%'"
 			$S003 = $cnnx4s->query($C003) or die ("Fallo al consultar proveedores: ".$C003);
 			while ($DDPV = $S003->fetch_array()) {
 				$pNIcxD = dCry2($DDPV['pR0nic']);
 				$pRzxD = dCry2($DDPV['pR0RZ']);
 				$pRFcxD = $DDPV['pR0RFC'];
-				$pIDxD = $DDPV['pR0id'];
+				$pIDxD = $DDPV['prov_id'];
 				if($pRFcxD == $frm_003 && $pXRoI != $pIDxD){
 					$_SESSION['tXFrm']['frm_003'] = 'El RFC es Ya esta registrado '.$pRFcxD.' == '.$frm_003.' && '.$pXRoI.' == '.$pIDxD;
 					$_SESSION['m3n3Rr0R_num']++;
@@ -707,10 +707,10 @@ elseif($axc0 == 'sV3DT'){
 					'pR0MAL' => $frm_014,
 					'pR0ACT' => $frm_015
 				];
-				$p4r4m37r05 = "pR0id = $pXRoI";
+				$p4r4m37r05 = "prov_id = $pXRoI";
 				$axc0 = "actualizar";
 				echo '<pre>';print_r($aRrr4y);echo '</pre>';
-				ejecutaDB('pR0xV3D', $aRrr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('proveedores', $aRrr4y, $axc0, $p4r4m37r05);
 				$_SESSION['m3ns4J3'] = 'Se actualizo el proveedor '.dCry2($frm_001);
 				bi74c0('eDTPr0V', $_SESSION['m3ns4J3'], '');
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
@@ -775,7 +775,7 @@ elseif($axc0 == 'Ac7r3L'){
 	if(in_array("ninguno", $pp_xx020)){	$ex20 = 1;	}	elseif(in_array("todos", $pp_xx020)){	$ex20 = 2;	}	else{	$ex20 = 3;	}
 
 	$axc0 = 'actualizar';
-	$p4r4m37r05 = 'pR0id = '.$pp_xx015;//"u5hID8ir5 = '$u5h8ir5nm'"; 
+	$p4r4m37r05 = 'prov_id = '.$pp_xx015;//"u5hID8ir5 = '$u5h8ir5nm'"; 
 	unset($sQl_d474_4rr4y); 
 	$sQl_d474_4rr4y = [
 		'pR0TV' => $ex19,
@@ -784,7 +784,7 @@ elseif($axc0 == 'Ac7r3L'){
 		'pR0TM' => $ex18,
 	];	
 		
-	ejecutaDB('pR0xV3D', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+	ejecutaDB('proveedores', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
 
 	$C015 = "SELECT * FROM r3l3PM WHERE rFPiDk = $pp_xx015";
 	$S015 = $cnnx4s->query($C015) or die ("Fallo al seleccionar Relacion Marca: ".$C015);

@@ -83,7 +83,7 @@ if($axc0 === "bin4kuru"){
 		}
 
 		if(!empty($kuPIDx)){
-			$C008 = "SELECT pR0nic FROM pR0xV3D WHERE pR0id = $kuPIDx";
+			$C008 = "SELECT pR0nic FROM proveedores WHERE prov_id = $kuPIDx";
 			$S008 = $cnnx4s->query($C008) or die ("Fallo al seleccionar proveedor: ".$C008);
 			$DDp = $S008->fetch_assoc();
 			if($S008->num_rows == 0){

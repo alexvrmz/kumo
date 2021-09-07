@@ -14,14 +14,50 @@ include('p4rc4l35/7i7ul0.php');
     <div class="row">
            
       <div class="col-lg-3 col-6">
-        <div class="small-box bg-pink">
+        <div class="small-box bg-cyan">
+          <div class="inner">
+            <h3><?= $nM ?></h3>
+            <?php if($nM == 1){ ?>
+                <p><?= mascotaRegistrada ?></p>
+            </div>
+            <div class="icon">
+              <i class="fad fa-rabbit" style="--fa-secondary-opacity: 1.0; --fa-primary-color: grey; --fa-secondary-color: white;"></i>
+            </div>
+              <a href="v75t4?axc0=mascotas" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+            <?php }
+            elseif($nM > 1) { ?>
+                  <p><?= mascotasRegistradas ?></p>
+            </div>
+            <div class="icon">
+              <i class="fad fa-rabbit" style="--fa-secondary-opacity: 1.0; --fa-primary-color: grey; --fa-secondary-color: white;"></i>
+            </div>
+              <a href="v75t4?axc0=mascotas" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <?php }
+            elseif($nM == 0) {?>
+                    <p><?= mascotasRegistradas ?></p>
+                    </div>
+          <div class="icon">
+            <i class="fad fa-rabbit" style="--fa-secondary-opacity: 1.0; --fa-primary-color: grey; --fa-secondary-color: white;"></i>
+          </div>
+            <a href="v75t4?axc0=mascotas" class="small-box-footer"><?= agrergarUno ?><i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <?php } ?>
+    
+    
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-success">
           <div class="inner">
             <h3><?= $nP ?></h3>
             <?php if($nP == 1){ ?>
                 <p><?= proveedorRegistrado ?></p>
             </div>
             <div class="icon">
-              <i class="fad fa-truck-loading"></i>
+              <i class="fad fa-shipping-fast" ></i>
             </div>
               <a href="v75t4?axc0=pR0VxD" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -31,7 +67,7 @@ include('p4rc4l35/7i7ul0.php');
                   <p><?= proveedoresRegistrados ?></p>
             </div>
             <div class="icon">
-              <i class="fad fa-truck-loading"></i>
+              <i class="fad fa-shipping-fast"></i>
             </div>
               <a href="v75t4?axc0=pR0VxD" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -41,7 +77,7 @@ include('p4rc4l35/7i7ul0.php');
                     <p><?= proveedoresRegistrados ?></p>
                     </div>
           <div class="icon">
-            <i class="fad fa-truck-loading"></i>
+            <i class="fad fa-shipping-fast" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #2b6eaa; --fa-secondary-color: #605e5e;"></i>
           </div>
             <a href="v75t4?axc0=pR0VxD" class="small-box-footer"><?= agrergarUno ?><i class="fas fa-arrow-circle-right"></i></a>
         </div>
@@ -82,6 +118,10 @@ include('p4rc4l35/7i7ul0.php');
         </div>
       </div>
       <?php } ?>
+
+
+      
+
 
     </div>
   <?php } ?>

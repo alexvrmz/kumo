@@ -5,12 +5,16 @@ define('lbl_1erc0n73','Algun día pondremos algo aqui!');
 
 /// --- Mi escritorio
 define('ver', 'Ver '); 
-define('usuarioRegistrado', 'Usuario Registrado');
-define('usuariosRegistrados', 'Usuarios Registrados');
+define('usuarioRegistrado', 'Usuario');
+define('usuariosRegistrados', 'Usuarios');
 define('agrergarUno', 'Agregar Uno!'); 
-define('proveedorRegistrado', 'Proveedor Registrado'); 
-define('proveedoresRegistrados', 'Proveedores Registrados');
+define('proveedorRegistrado', 'Proveedor'); 
+define('proveedoresRegistrados', 'Proveedores');
 define('actualizacionesSistema', 'Mira las Actualizaciones del Sistema');
+define('mascotaRegistrada', 'Mascota');
+define('mascotasRegistradas', 'Mascotas');
+
+
 
 
 /// ---- js de botones tabla

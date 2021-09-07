@@ -1036,7 +1036,7 @@ elseif($axc0 == 'xkmtr4G'){
 	while ($DuP = $S011->fetch_array()) {
 		$xIDP = $DuP['r3fPiDs'];
 		$xIDS = $DuP['r3fSiDs'];
-		$C012 = "SELECT pR0id, pR0nic, pR0RFC FROM pR0xV3D WHERE pR0id = $xIDP";
+		$C012 = "SELECT prov_id, pR0nic, pR0RFC FROM proveedores WHERE prov_id = $xIDP";
 		$S012 = $cnnx4s->query($C012) or die ("Fallo al consultar proveedor: ".$C012);
 		$DuPD = $S012->fetch_assoc();
 		$xPDE = dCry2($DuPD['pR0nic']);

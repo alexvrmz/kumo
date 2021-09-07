@@ -13,8 +13,17 @@ if($axc0 === "5u540l_03"){
 
 $nU = 0; 
 $nP = 0; 
+$nM = 0;
 
 $C016 = "SELECT u5hID8ir5 FROM u5u405 WHERE xXUNVrSXx = $xXUNVrSXx";
 $S016 = $cnnx4s->query($C016) or die ("Fallo al seleccionar Usuarios: ".$C016);
 $nU = $S016->num_rows;
+
+$C017 = "SELECT mascota_id FROM mascotas WHERE mascota_universo = $xXUNVrSXx";
+$S017 = $cnnx4s->query($C017) or die ("Fallo al seleccionar Mascotas: ".$C017);
+$nM = $S017->num_rows;
+
+$C018 = "SELECT prov_id FROM proveedores WHERE xXUNVrSXx = $xXUNVrSXx";
+$S018 = $cnnx4s->query($C018) or die ("Fallo al seleccionar Proveedores: ".$C018);
+$nP = $S018->num_rows;
 ?>

@@ -26,10 +26,10 @@ if($axc0 === 'N3wTr4'){
 		if($nDRT != 0){
 			while ($DdR = $S001->fetch_array()) {
 				$xPIDx = $DdR['r3fPiDt'];
-				$C002 = "SELECT pR0nic, pR0id FROM pR0xV3D WHERE pR0id = $xPIDx AND pR0ACT = 1";
+				$C002 = "SELECT pR0nic, prov_id FROM proveedores WHERE prov_id = $xPIDx AND pR0ACT = 1";
 				$S002 = $cnnx4s->query($C002) or die ("Fallo al seleccionar provedor 1 : ".$C002);
 				while ($DdP = $S002->fetch_array()) {
-					$xpD = $DdP['pR0id'];
+					$xpD = $DdP['prov_id'];
 					$xpN = dCry2($DdP['pR0nic']);
 					unset($el3);
 					$el3 = [
@@ -42,10 +42,10 @@ if($axc0 === 'N3wTr4'){
 			}
 		}
 		else{
-			$C002 = "SELECT pR0nic, pR0id FROM pR0xV3D WHERE pR0TT = 2 AND pR0ACT = 1";
+			$C002 = "SELECT pR0nic, prov_id FROM proveedores WHERE pR0TT = 2 AND pR0ACT = 1";
 			$S002 = $cnnx4s->query($C002) or die ("Fallo al seleccionar provedor 2 : ".$C002);
 			while ($DdP = $S002->fetch_array()) {
-				$xpD = $DdP['pR0id'];
+				$xpD = $DdP['prov_id'];
 				$xpN = dCry2($DdP['pR0nic']);
 				unset($el3);
 				$el3 = [
@@ -230,7 +230,7 @@ elseif($axc0 === 'Tr4V'){
 			unset($attr);
 			$xidPf = $DdPS['r3fPiDt'];
 			$xidTf = $DdPS['r3fTiDt'];
-			$C010 = "SELECT pR0id, pR0nic FROM pR0xV3D WHERE pR0id = $xidPf";
+			$C010 = "SELECT prov_id, pR0nic FROM proveedores WHERE prov_id = $xidPf";
 			$S010 = $cnnx4s->query($C010) or die ("Fallo al consultar proveedor: ".$C010);
 			$DdlP = $S010->fetch_assoc();
 			$idpDFes = dCry2($DdlP['pR0nic']);
@@ -252,10 +252,10 @@ elseif($axc0 === 'Tr4V'){
 		$LDP = [];
 		while ($DdR = $S001->fetch_array()) {
 			$xPIDx = $DdR['r3fPiDt'];
-			$C002 = "SELECT pR0nic, pR0id FROM pR0xV3D WHERE pR0id = $xPIDx AND pR0ACT = 1";
+			$C002 = "SELECT pR0nic, prov_id FROM proveedores WHERE prov_id = $xPIDx AND pR0ACT = 1";
 			$S002 = $cnnx4s->query($C002) or die ("Fallo al seleccionar provedor: ".$C002);
 			while ($DdP = $S002->fetch_array()) {
-				$xpD = $DdP['pR0id'];
+				$xpD = $DdP['prov_id'];
 				$xpN = dCry2($DdP['pR0nic']);
 				unset($el3);
 				$el3 = [
@@ -267,7 +267,7 @@ elseif($axc0 === 'Tr4V'){
 			}
 		}
 
-	  $C005 = "SELECT pR0nic, pR0id FROM pR0xV3D WHERE pR0id = $xFPrOn";
+	  $C005 = "SELECT pR0nic, prov_id FROM proveedores WHERE prov_id = $xFPrOn";
 		$S005 = $cnnx4s->query($C005) or die ("Fallo al seleccionar proveedor: ".$C005);
 		$DdPT = $S005->fetch_assoc();
 		$xFDesPROn = dCry2($DdPT['pR0nic']);
