@@ -10,13 +10,13 @@ include('p4rc4l35/7i7ul0.php');
 
       <div class="alert alert-success alert-dismissible" v-if="successMessage">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h5><i class="icon fa-duotone fa-check"></i> Exito!</h5>
+        <h5><i class="icon fad fa-check"></i> Exito!</h5>
         {{successMessage}}
       </div>
 
       <div class="alert alert-danger alert-dismissible" v-if="errorMessage">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h5><i class="icon fa-duotone fa-ban"></i> Error!</h5>
+        <h5><i class="icon fad fa-ban"></i> Error!</h5>
         {{errorMessage}}
       </div>
 
@@ -26,11 +26,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
             
           </div>
@@ -39,32 +39,32 @@ include('p4rc4l35/7i7ul0.php');
           
           <div class="card-body p-0" style="text-align: center;">            
               <button class="btn btn-app bg-info" @click="cargarInstancias();">
-                <i class="fa-duotone fa-building"></i>
+                <i class="fad fa-building"></i>
                 <big><b>{{num_ins}}</b></big> Total
               </button>
             
               <button class="btn btn-app bg-success" @click="ins_activas();">
-                <i class="fa-duotone fa-toggle-on"></i>
+                <i class="fad fa-toggle-on"></i>
                 <big><b>{{num_ins_on}}</b></big> Activas
               </button>
 
               <button class="btn btn-app bg-danger" @click="ins_inactivas();">
-                <i class="fa-duotone fa-toggle-off"></i>
+                <i class="fad fa-toggle-off"></i>
                 <big><b>{{num_ins_off}}</b></big> Inactivas
               </button>
 
               <button class="btn btn-app" style="background-color: #00f4ff; color: grey;" @click="ins_codero();">
-                <i class="fa-duotone fa-server"></i>
+                <i class="fad fa-server"></i>
                 <big><b>{{num_ins_codero}}</b></big> Codero
               </button>
 
               <button class="btn btn-app bg-warning" @click="ins_ovh();">
-                <i class="fa-duotone fa-server"></i>
+                <i class="fad fa-server"></i>
                 <big><b>{{num_ins_ovh}}</b></big> OVH
               </button>
 
               <button class="btn btn-app" style="background-color: #6610f2; color: white;" @click="ins_jupiter();">
-                <i class="fa-duotone fa-server"></i>
+                <i class="fad fa-server"></i>
                 <big><b>{{num_ins_jup}}</b></big> Jupiter
               </button><br>
               
@@ -83,7 +83,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="card-header">
           <h3 class="card-title">Listado de Instancias {{titulo}}</h3>
           <div class="card-tools">
-           <button class="btn btn-success"><i class="fa-duotone fa-plus"></i> Instancia</button>
+           <button class="btn btn-success"><i class="fad fa-plus"></i> Instancia</button>
             
           </div>
           
@@ -166,7 +166,7 @@ include('p4rc4l35/7i7ul0.php');
                         </div>
                       </td>
                       <td>
-                        <button type="button" data-toggle="modal" data-target="#modal-default" class="btn btn-block bg-gradient-warning btn-xs" @click="showingeditModal = true; selectInstancia(instancia);"><i class="fa-duotone fa-edit"></i></button>
+                        <button type="button" data-toggle="modal" data-target="#modal-default" class="btn btn-block bg-gradient-warning btn-xs" @click="showingeditModal = true; selectInstancia(instancia);"><i class="fad fa-edit"></i></button>
                       </td>
                     </tr>
                   </tbody>
@@ -262,8 +262,8 @@ include('p4rc4l35/7i7ul0.php');
 
             </div>
             <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> </button>
-              <button type="submit" class="btn btn-success" @click="showingeditModal = false; updateInstancia();" data-dismiss="modal"><i class="fa-duotone fa-save"></i></button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> </button>
+              <button type="submit" class="btn btn-success" @click="showingeditModal = false; updateInstancia();" data-dismiss="modal"><i class="fad fa-save"></i></button>
             </div>
           </div>
           <!-- /.modal-content -->

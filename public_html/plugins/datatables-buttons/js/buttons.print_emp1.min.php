@@ -20,7 +20,7 @@
   i.ext.buttons.print = {
       className: "buttons-print",
       text: function(b) {
-          return b.i18n('buttons.print', '<i class="fa-duotone fa-print"></i> <?= lbl_prt ?>')
+          return b.i18n('buttons.print', '<i class="fad fa-print"></i> <?= lbl_prt ?>')
       },
       action: function(b, a, c, h) {
           var b = a.buttons.exportData(e.extend({

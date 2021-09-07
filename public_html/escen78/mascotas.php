@@ -16,11 +16,11 @@ include('p4rc4l35/7i7ul0.php');
       <div class="card-body">
         <div class="card-body p-0">
           <div class="btn-group" role="group">
-            <?php if(isset($_SESSION['formMascotas'])){ ?> 
-              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" ><i class="fad fa-paw"></i> <?= btn_46r364rU5u4ri0 ?></button>
-            <?php }else{ ?>
+            <?php if(isset($_SESSION['formMascota']) == true){ ?>
               <a data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" ><i class="fad fa-paw"></i> <?= continuarFormulario ?></a>
               <a href="ap4673i/mascotas_api?axc0=borrarFormulario" class="btn bg-gradient-danger btn-app" style="padding-top: 6px;" ><i class="fad fa-trash"></i> <?= eliminarFormulario ?></a>
+            <?php }elseif(isset($_SESSION['formMascota']) == false){ ?>
+              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" ><i class="fad fa-paw"></i> <?= btn_46r364rU5u4ri0 ?></button>
             <?php } ?>
           </div>
         </div>
@@ -32,49 +32,63 @@ include('p4rc4l35/7i7ul0.php');
           <h3 class="profile-username text-center"><?= listadoMascotas ?></h3>  
         </div>
         <div class="card-body">
-          <table class="table table-bordered table-hover table-responsive" id="example1">
-            <thead>
-              <tr>
-                <th ><?= id ?></th>
-                <th><?= nombre ?></th>
-                <th><?= especie ?></th>
-                <th ><?= raza ?></th>
-                <th ><?= esteril ?></th>
-                <th ><?= sexo ?></th>
-                <th ><?= color ?></th>
-                <th><?= edad ?></th>
-                <th><?= nacimiento ?></th>
-                <th ><?= sistema ?></th>
-                <th ><?= acciones ?></th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($LdMascotas as $key => $mascota) { ?>
+          <?php if($numMascotas == 0){ ?>
+            <div class="alert alert-info alert-dismissible">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+              <h3><i class="icon fad fa-cat-space fa-2x"></i> Upsss!</h3>
+              <h4>No encontre ninguna mascota por aquí, agrega <a data-toggle="modal" data-target="#modal-nuevo">una!!!</a></h4>
+            </div>
+          <?php }else { ?>
+            <table class="table table-bordered table-hover table-responsive" id="example1">
+              <thead>
                 <tr>
-                  <td><?= $mascota['mascotaID'] ?></td>
-                  <td><?= $mascota['mascotaNombre'] ?></td>
-                  <td><?= $mascota['mascotaEspecie'] ?></td>
-                  <td><?= $mascota['mascotaRaza'] ?></td>
-                  <td><?= $estadoSexual[$mascota['mascotaEsteril']] ?></td>
-                  <td><?= $sexo[$mascota['mascotaSexo']] ?></td>
-                  <td><?= $colores[$mascota['mascotaColor']] ?></td>
-                  <td class="corta-texto"><?= $edad->format('%Y').' '.anhos/*.', '.$edad->format('%m') ?> Meses y <?= $edad->format('%d')*/ ?></td>
-                  <td ><?= $mascota['mascotaNacimiento'] ?></td>
-                  <td class="corta-texto"><?= $mascota['mascotaSistema'] ?></td>
-                  <td style="text-align: center;">
-                    <div class="btn-group" role="group">
-                      <?php if(v4lID44x50("200-004", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
-                        <a href="v75t4?axc0=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
-                      <?php } ?>
-                      <?php if(v4lID44x50("200-003", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
-                        <a href="v75t4?axc0=formularioMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
-                      <?php } ?>
-                    </div>
-                  </td>
+                  <th ><?= id ?></th>
+                  <th ><?= foto ?></th>
+                  <th><?= nombre ?></th>
+                  <th><?= especie ?></th>
+                  <th ><?= raza ?></th>
+                  <th ><?= esteril ?></th>
+                  <th ><?= sexo ?></th>
+                  <th ><?= color ?></th>
+                  <th><?= edad ?></th>
+                  <th><?= nacimiento ?></th>
+                  <th ><?= sistema ?></th>
+                  <th ><?= acciones ?></th>
                 </tr>
-              <?php } ?>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <?php foreach ($LdMascotas as $key => $mascota) { ?>
+                  <tr>
+                    <td><?= $mascota['mascotaID'] ?></td>
+                    <td style="text-align: center;">
+                      <a href="v75t4?axc0=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>">
+                        <img class="direct-chat-img" style="margin-top: -9px;padding-left: 0px;margin-left: 16px;" src="<?= $mascota['mascotaFoto'] ?>" alt="n/d">
+                      </a>
+                    </td>
+                    <td><?= $mascota['mascotaNombre'] ?></td>
+                    <td class="corta-texto"><?= $mascota['mascotaEspecie'] ?></td>
+                    <td class="corta-texto"><?= $mascota['mascotaRaza'] ?></td>
+                    <td><?= $estadoSexual[$mascota['mascotaEsteril']] ?></td>
+                    <td><?= $sexo[$mascota['mascotaSexo']] ?></td>
+                    <td class="corta-texto"><?= $colores[$mascota['mascotaColor']] ?></td>
+                    <td class="corta-texto"><?= $mascota['mascotaEdad'] ?></td>
+                    <td ><?= $mascota['mascotaNacimiento'] ?></td>
+                    <td class="corta-texto"><?= $mascota['mascotaSistema'] ?></td>
+                    <td style="text-align: center;">
+                      <div class="btn-group" role="group">
+                        <?php if(v4lID44x50("200-004", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
+                          <a href="v75t4?axc0=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
+                        <?php } ?>
+                        <?php if(v4lID44x50("200-003", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
+                          <a href="v75t4?axc0=editarMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
+                        <?php } ?>
+                      </div>
+                    </td>
+                  </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          <?php } ?>
         </div>
 
         
@@ -86,7 +100,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade " id="modal-nuevo">
         <div class="modal-dialog ">
           <div class="modal-content <?= $brr4 ?> card-outline">
-            <form method="POST" action="ap4673i/mascotas_api?axc0=procesaMascota" name="nuevaMascota">  
+            <form method="POST" action="ap4673i/mascotas_api?axc0=procesaMascota" name="nuevaMascota" enctype="multipart/form-data">  
             
               <div class="modal-header">
                 <h4 class="modal-title"><i class="fad fa-paw"></i> <?= nuevaMascota ?></h4>
@@ -108,9 +122,6 @@ include('p4rc4l35/7i7ul0.php');
                     </div>
                   <?php } ?>
 
-                    
-                     
-
                   <div class="form-group">
                     <label for="mascotaNombre"><?= nombre ?>*</label>
                     <input type="text" class="form-control" id="mascotaNombre" name="mascotaNombre" value="<?= $_SESSION['formMascota']['mascotaNombre'] ?>">
@@ -120,7 +131,7 @@ include('p4rc4l35/7i7ul0.php');
                     <label for="mascotaEspecie"><?= especie ?>*</label>
                     <select class="form-control" id="mascotaEspecie" name="mascotaEspecie" required onchange="this.form.submit()">
                       <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($listaEspecies as $key => $especie) { ?>
+                      <?php foreach (listaSelectEspecies() as $key => $especie) { ?>
                         <option value="<?= $especie['especieID'] ?>" <?= $select = $_SESSION['formMascota']['mascotaEspecie'] == $especie['especieID'] ? 'selected':'' ?>><?= $especie['especieDescripcion'] ?></option>
                       <?php } ?>
                     </select>
@@ -185,6 +196,11 @@ include('p4rc4l35/7i7ul0.php');
                       <?php } ?>
                     </select>
                   </div>  
+
+                  <div class="form-group">
+                    <label for="mascotaFoto"><?= foto ?></label>
+                    <input type="file" class="form-control" id="mascotaFoto" name="mascotaFoto">
+                  </div>
                   
                   
                 
@@ -255,7 +271,7 @@ unset($_SESSION['m3n3Rr0R_num']);
       });
     });
   </script>
-<?php if(!isset($_SESSION['formMascotas'])){ ?>
+<?php if(isset($_SESSION['formMascota']) == true){ ?>
   <script type="text/javascript">
     $(window).on('load', function() {
       $('#modal-nuevo').modal('show');

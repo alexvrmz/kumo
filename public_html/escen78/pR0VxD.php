@@ -10,14 +10,14 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div> 
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
           <?php if(v4lID44x50("1600-001", $u5u4i0) == TRUE){ /// --- AGREGAR Proveedores ?>
-            <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fa-duotone fa-truck-loading"></i> <br><?= btn_46r364rU5u4ri0 ?></button>
+            <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-truck-loading"></i> <br><?= btn_46r364rU5u4ri0 ?></button>
           <?php } ?>
         </div>
       </div> 
@@ -28,7 +28,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="col-12">
           <div class="alert alert-info alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h5><i class="icon fa-duotone fa-traffic-cone"></i><?= lbl_3mp1 ?></h5>
+            <h5><i class="icon fad fa-traffic-cone"></i><?= lbl_3mp1 ?></h5>
             <?= lbl_3mp2 ?> 
           </div>
         </div>
@@ -76,10 +76,10 @@ include('p4rc4l35/7i7ul0.php');
                                   <td>
                                     <div class="row">
                                         <?php if(v4lID44x50("1600-002", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=pr0VxDT&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-warning btn-flat btn-xs corta-texto"><i class="fa-duotone fa-edit"></i> <?= lbl_2mp4 ?></a>
+                                          <a href="v75t4?axc0=pr0VxDT&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-warning btn-flat btn-xs corta-texto"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
                                         <?php } ?>
                                         <?php if(v4lID44x50("1600-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=pr0VxVW&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-info btn-flat btn-xs corta-texto"><i class="fa-duotone fa-view"></i> <?= lbl_2mp3 ?></a>
+                                          <a href="v75t4?axc0=pr0VxVW&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-info btn-flat btn-xs corta-texto"><i class="fad fa-view"></i> <?= lbl_2mp3 ?></a>
                                         <?php } ?>
                                     </div>
                                   </td>
@@ -261,13 +261,13 @@ include('p4rc4l35/7i7ul0.php');
 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
                 
                 <button type="submit" class="btn btn-success"> 
                   <?php if(!empty($px019)){ ?>
-                    <i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?>
+                    <i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?>
                   <?php } else { ?>
-                    <i class="fa-duotone fa-arrow-right"></i> Continuar
+                    <i class="fad fa-arrow-right"></i> Continuar
                   <?php } ?>
                 </button>
               </div>

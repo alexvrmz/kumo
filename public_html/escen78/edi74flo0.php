@@ -15,13 +15,13 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_acx0 ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div>
       </div>
       <div class="card-body">
         <button class="btn btn-app bg-success" onclick="window.history.go(-1); return false;">
-          <i class="fa-duotone fa-arrow-left"></i> <?= btn_r36r354r ?>
+          <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
         </button>   
       </div>
     </div>
@@ -32,7 +32,7 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div>
       </div>
@@ -70,12 +70,12 @@ include('p4rc4l35/7i7ul0.php');
                           $iuh = ''; $csc = 'btn-warning'; $uish = ''; $href = '';
                         }
                         else{ 
-                          $iuh = 'indigo'; $csc = ''; $uish = '<i class="fa-duotone fa-trash"></i>';
+                          $iuh = 'indigo'; $csc = ''; $uish = '<i class="fad fa-trash"></i>';
                           $href = 'href="ap4673i/x7l07iLl4_4pi.php?axc0=d3lr3l&r3l4='.$eCry($value['_FLORID']).'&flo0='.$eCry($flo0).'&eMp4='.$eCry($value['_FLO3ID']).'"';
                         } ?>
                   <a <?= $href ?> type="button" class="btn btn-xs <?= $csc ?>" style="background-color: <?= $iuh ?>; color: white;"><?= $value['_FLONME'] ?> <?= $uish ?></a>
                 <?php } ?>
-                <button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-empresa"><?= btn_agEm ?><i class="fa-duotone fa-plus"></i> </button>
+                <button type="button" class="btn btn-xs btn-success" data-toggle="modal" data-target="#modal-empresa"><?= btn_agEm ?><i class="fad fa-plus"></i> </button>
                   
           
               </div><p>&nbsp;</p>
@@ -84,7 +84,7 @@ include('p4rc4l35/7i7ul0.php');
                             
               <div class="col-sm-12">
                 <input type="hidden" name="gju8UUy" id="gju8UUy" value="<?= $u5h34r5['_xIDyvU'] ?>">
-                <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4r ?></button>
+                <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_6u4rD4r ?></button>
               </div>
             </div>             
           
@@ -130,8 +130,8 @@ include('p4rc4l35/7i7ul0.php');
               </div>
               <input type="hidden" name="gju8UUy" id="gju8UUy" value="<?= $u5h34r5['_xIDyvU'] ?>">
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
-              <button type="submit" class="btn btn-success"><i class="fa-duotone fa-link"></i> <?= btn_n3w6u4rD4r ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+              <button type="submit" class="btn btn-success"><i class="fad fa-link"></i> <?= btn_n3w6u4rD4r ?></button>
               
               </div>
            </form> 

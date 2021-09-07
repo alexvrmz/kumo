@@ -11,7 +11,7 @@ include('p4rc4l35/7i7ul0.php');
           <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
           </div>
         </div>
@@ -31,7 +31,7 @@ include('p4rc4l35/7i7ul0.php');
             Mostrando<?php if(!empty($_SESSION['fil_FHI'])) { ?> Rango de Fechas Seleccionado (<?= $NM ?> Movimientos) <?php } else { ?> Recientes (<?= $NM ?> Movimientos) <?php } ?></h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
           </div>
         </div>
@@ -44,7 +44,7 @@ include('p4rc4l35/7i7ul0.php');
                   <div class="input-group date" id="fil_FHI" data-target-input="nearest">
                     <input type="text" class="form-control datetimepicker-input" data-target="#fil_FHI" name="fil_FHI" id="fil_FHI" value="<?php if(!empty($_SESSION['fil_FHI'])){ echo $_SESSION['fil_FHI']; } ?>" required/>
                     <div class="input-group-append" data-target="#fil_FHI" data-toggle="datetimepicker">
-                      <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                      <div class="input-group-text"><i class="fad fa-calendar"></i></div>
                     </div>
                   </div>
                 </div>
@@ -55,7 +55,7 @@ include('p4rc4l35/7i7ul0.php');
                   <div class="input-group date" id="fil_FHF" data-target-input="nearest">
                     <input type="text" class="form-control datetimepicker-input" data-target="#fil_FHF" name="fil_FHF" id="fil_FHF" value="<?php if(!empty($_SESSION['fil_FHF'])){ echo $_SESSION['fil_FHF']; } ?>" required/>
                     <div class="input-group-append" data-target="#fil_FHF" data-toggle="datetimepicker">
-                      <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                      <div class="input-group-text"><i class="fad fa-calendar"></i></div>
                     </div>
                   </div>
                 </div>
@@ -195,11 +195,11 @@ include('p4rc4l35/7i7ul0.php');
                       <?php if(v4lID44x50("700-009", $u5u4i0) == TRUE){ /// --- agreg km ?>
                         <td class="corta-texto text-center">
                           <?php if(v4lID44x50("700-009", $u5u4i0) == TRUE){ /// --- agreg km ?>
-                            <?php /*<a href="ap4673i/v3hiCs_4pi.php?axc0=EdI7kM&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-km"><i class="fa-duotone fa-edit"></i></a> */?>
-                            <button class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-<?= $i2 ?>"><i class="fa-duotone fa-edit"></i></button>
+                            <?php /*<a href="ap4673i/v3hiCs_4pi.php?axc0=EdI7kM&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-km"><i class="fad fa-edit"></i></a> */?>
+                            <button class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-<?= $i2 ?>"><i class="fad fa-edit"></i></button>
                           <?php } ?>
                           <?php if(v4lID44x50("700-010", $u5u4i0) == TRUE){ /// --- eliminar km ?>
-                            <a href="ap4673i/v3hiCs_4pi.php?axc0=d3letkm&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-danger btn-xs"><i class="fa-duotone fa-trash"></i></a>
+                            <a href="ap4673i/v3hiCs_4pi.php?axc0=d3letkm&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-danger btn-xs"><i class="fad fa-trash"></i></a>
                           <?php } ?>
                         </td>
                       <?php } ?>
@@ -232,8 +232,8 @@ include('p4rc4l35/7i7ul0.php');
                   </div>
                 </div>
                 <div class="modal-footer justify-content-between">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_C4nC3L4raD ?></button>    
-                  <button type="submit" class="btn btn-success" ><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4raD ?></button>                  
+                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_C4nC3L4raD ?></button>    
+                  <button type="submit" class="btn btn-success" ><i class="fad fa-save"></i> <?= btn_6u4rD4raD ?></button>                  
                 </div>
               </form>
             </div>
@@ -261,7 +261,7 @@ include('p4rc4l35/7i7ul0.php');
                       <div class="col-12">
                         <div class="alert alert-warning alert-dismissible">
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                          <h5><i class="icon fa-duotone fa-traffic-cone"></i>Por favor verifica <?= $_SESSION['NERR_hY778'] ?> Errore(s) </h5>
+                          <h5><i class="icon fad fa-traffic-cone"></i>Por favor verifica <?= $_SESSION['NERR_hY778'] ?> Errore(s) </h5>
                           <ul>
                             <?php foreach ($_SESSION['MSGF_hY778'] as $key => $value) { ?>
                               <li><?= $value ?></li>
@@ -310,7 +310,7 @@ include('p4rc4l35/7i7ul0.php');
                       <div class="input-group date" id="frm_rgcmb010" data-target-input="nearest">
                         <input type="text" class="form-control datetimepicker-input" data-target="#frm_rgcmb010" name="frm_rgcmb010" id="frm_rgcmb010" value="<?php if(!empty($_SESSION['FRM_hY778']['frm_rgcmb010'])) { echo $_SESSION['FRM_hY778']['frm_rgcmb010']; } ?>" required/>
                         <div class="input-group-append" data-target="#frm_rgcmb010" data-toggle="datetimepicker">
-                          <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                          <div class="input-group-text"><i class="fad fa-calendar"></i></div>
                         </div>
                       </div>
                     </div>
@@ -342,8 +342,8 @@ include('p4rc4l35/7i7ul0.php');
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> Cerrar</button>    
-                  <button type="submit" class="btn btn-success" ><i class="fa-duotone fa-save"></i> Guardar</button>                  
+                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> Cerrar</button>    
+                  <button type="submit" class="btn btn-success" ><i class="fad fa-save"></i> Guardar</button>                  
                 </div>
               </form>
             </div>
@@ -385,8 +385,8 @@ include('p4rc4l35/7i7ul0.php');
  
                   </div>
                   <div class="modal-footer justify-content-between">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> Cancelar</button>    
-                    <button type="submit" class="btn btn-success" ><i class="fa-duotone fa-save"></i> Guardar</button>                  
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> Cancelar</button>    
+                    <button type="submit" class="btn btn-success" ><i class="fad fa-save"></i> Guardar</button>                  
                   </div>
                 </form>
               </div>
@@ -546,15 +546,15 @@ include('p4rc4l35/3p1416e.php');
       $('#frm_rgcmb010').datetimepicker({
         format: 'YYYY-MM-DD HH:mm:ss',
         icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
+          time: 'fad fa-clock-o',
+          date: 'fad fa-calendar',
+          up: 'fad fa-arrow-up',
+          down: 'fad fa-arrow-down',
+          previous: 'fad fa-chevron-left',
+          next: 'fad fa-chevron-right',
+          today: 'fad fa-calendar-day',
+          clear: 'fad fa-trash',
+          close: 'fad fa-times'
         },
         calendarWeeks: true,
         locale: 'es',
@@ -569,15 +569,15 @@ include('p4rc4l35/3p1416e.php');
       $('#fil_FHF').datetimepicker({
         format: 'YYYY-MM-DD',
         icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
+          time: 'fad fa-clock-o',
+          date: 'fad fa-calendar',
+          up: 'fad fa-arrow-up',
+          down: 'fad fa-arrow-down',
+          previous: 'fad fa-chevron-left',
+          next: 'fad fa-chevron-right',
+          today: 'fad fa-calendar-day',
+          clear: 'fad fa-trash',
+          close: 'fad fa-times'
         },
         calendarWeeks: true,
         locale: 'es',
@@ -592,15 +592,15 @@ include('p4rc4l35/3p1416e.php');
       $('#fil_FHI').datetimepicker({
         format: 'YYYY-MM-DD',
         icons: {
-          time: 'fa-duotone fa-clock-o',
-          date: 'fa-duotone fa-calendar',
-          up: 'fa-duotone fa-arrow-up',
-          down: 'fa-duotone fa-arrow-down',
-          previous: 'fa-duotone fa-chevron-left',
-          next: 'fa-duotone fa-chevron-right',
-          today: 'fa-duotone fa-calendar-day',
-          clear: 'fa-duotone fa-trash',
-          close: 'fa-duotone fa-times'
+          time: 'fad fa-clock-o',
+          date: 'fad fa-calendar',
+          up: 'fad fa-arrow-up',
+          down: 'fad fa-arrow-down',
+          previous: 'fad fa-chevron-left',
+          next: 'fad fa-chevron-right',
+          today: 'fad fa-calendar-day',
+          clear: 'fad fa-trash',
+          close: 'fad fa-times'
         },
         calendarWeeks: true,
         locale: 'es',

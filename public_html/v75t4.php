@@ -207,6 +207,43 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
   }
+  elseif($axc0 == 'editarMascota'){
+    if(v4lID44x50("200-003", $u5u4i0) == TRUE){
+      
+      // ---- Marcar la sección en el menú ---
+      $menu_mascotas_editar = 'active';
+      $menu_mascotas_abierto = 'menu-open';
+      $menu_mascotas = 'active';
+      
+      // --- BACKEND ----
+      include('ap4673i/mascotas_api.php');
+      include('escen78/mascotas_editar.php');
+      
+    }
+    else{
+      $_SESSION['m3ns4J3'] = 'No tienes acceso a este Módulo';
+      $_SESSION['m3n3Rr0R'] = 'si';
+      include('escen78/404.php');
+    }
+  }
+  elseif($axc0 == 'fichaMascota'){
+    if(v4lID44x50("200-004", $u5u4i0) == TRUE){
+      
+      // ---- Marcar la sección en el menú ---
+      $menu_mascotas_ficha = 'active';
+      $menu_mascotas_abierto = 'menu-open';
+      $menu_mascotas = 'active';
+      // --- BACKEND ----
+      include('ap4673i/mascotas_api.php');
+      include('escen78/mascota_ficha.php');
+      
+    }
+    else{
+      $_SESSION['m3ns4J3'] = 'No tienes acceso a este Módulo';
+      $_SESSION['m3n3Rr0R'] = 'si';
+      include('escen78/404.php');
+    }
+  }
   elseif($axc0 == 's3rv'){ /// --- axc0 Servicios
 		/// --- ACCESO MODULO PERMISOS 
 		if(v4lID44x50("1300-001", $u5u4i0) == TRUE){

@@ -4,6 +4,21 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
+
+
+
+Tipos de Individuos 
+1 usuarios
+2 mascotas
+3 clientes
+4 proveedores
+
+Tipos de Documentos
+
+1 Foto Principal Mascota
+
+
+
 NoPixcua Mieke es un sistema desarrollado con la intencion principal de llevar el control de vehículos particulares y de flotillas.
 # Pendientes 2021/08/05!
 columna importe en documentos de tramite

@@ -45,7 +45,7 @@ define('lbl_m0d', 'Modelo');
 define('lbl_t4b3Di74r', 'Editar');
 define('lbl_emp', 'Empresa');
 define('lbl_flo', 'Flota');
-define('lbl_ft', '<i class="fa-duotone fa-car-side"></i>');
+define('lbl_ft', '<i class="fad fa-car-side"></i>');
 
 define('lbl_dpsitvncul2', 'Dispositivo Vinculado');
 

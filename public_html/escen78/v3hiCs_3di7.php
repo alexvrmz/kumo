@@ -15,13 +15,13 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_acx0 ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div>
       </div> 
       <div class="card-body">
         <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($u5h34r5['v3hiIDXu']) ?>" class="btn btn-app bg-success">
-          <i class="fa-duotone fa-arrow-left"></i><br> <?= btn_r36r354r ?>
+          <i class="fad fa-arrow-left"></i><br> <?= btn_r36r354r ?>
         </a>   
       </div>
     </div>
@@ -32,7 +32,7 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div>
       </div>
@@ -235,7 +235,7 @@ include('p4rc4l35/7i7ul0.php');
  
               <div class="col-sm-12">
                 <input type="hidden" name="gju8UUy" id="gju8UUy" value="<?= $u5h34r5['v3hiIDXu'] ?>">
-                <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save" id="sb" name="sb" value="ok"></i> <?= btn_6u4rD4r ?></button>
+                <button type="submit" class="btn btn-success"><i class="fad fa-save" id="sb" name="sb" value="ok"></i> <?= btn_6u4rD4r ?></button>
               </div>
             </div>             
           

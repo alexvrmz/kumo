@@ -49,7 +49,7 @@ include('p4rc4l35/7i7ul0.php');
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <strong><i class="fa-duotone fa-book mr-1"></i> Education</strong>
+                <strong><i class="fad fa-book mr-1"></i> Education</strong>
 
                 <p class="text-muted">
                   B.S. in Computer Science from the University of Tennessee at Knoxville
@@ -57,13 +57,13 @@ include('p4rc4l35/7i7ul0.php');
 
                 <hr>
 
-                <strong><i class="fa-duotone fa-map-marker-alt mr-1"></i> Location</strong>
+                <strong><i class="fad fa-map-marker-alt mr-1"></i> Location</strong>
 
                 <p class="text-muted">Malibu, California</p>
 
                 <hr>
 
-                <strong><i class="fa-duotone fa-pencil-alt mr-1"></i> Skills</strong>
+                <strong><i class="fad fa-pencil-alt mr-1"></i> Skills</strong>
 
                 <p class="text-muted">
                   <span class="tag tag-danger">UI Design</span>
@@ -102,7 +102,7 @@ include('p4rc4l35/7i7ul0.php');
                         <img class="img-circle img-bordered-sm" src="dist/img/user1-128x128.jpg" alt="user image">
                         <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
-                          <a href="#" class="float-right btn-tool"><i class="fa-duotone fa-times"></i></a>
+                          <a href="#" class="float-right btn-tool"><i class="fad fa-times"></i></a>
                         </span>
                         <span class="description">Shared publicly - 7:30 PM today</span>
                       </div>
@@ -116,7 +116,7 @@ include('p4rc4l35/7i7ul0.php');
                       </p>
 
                       <p>
-                        <a href="#" class="link-black text-sm mr-2"><i class="fa-duotone fa-share mr-1"></i> Share</a>
+                        <a href="#" class="link-black text-sm mr-2"><i class="fad fa-share mr-1"></i> Share</a>
                         <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
                         <span class="float-right">
                           <a href="#" class="link-black text-sm">
@@ -135,7 +135,7 @@ include('p4rc4l35/7i7ul0.php');
                         <img class="img-circle img-bordered-sm" src="dist/img/user7-128x128.jpg" alt="User Image">
                         <span class="username">
                           <a href="#">Sarah Ross</a>
-                          <a href="#" class="float-right btn-tool"><i class="fa-duotone fa-times"></i></a>
+                          <a href="#" class="float-right btn-tool"><i class="fad fa-times"></i></a>
                         </span>
                         <span class="description">Sent you a message - 3 days ago</span>
                       </div>
@@ -165,7 +165,7 @@ include('p4rc4l35/7i7ul0.php');
                         <img class="img-circle img-bordered-sm" src="dist/img/user6-128x128.jpg" alt="User Image">
                         <span class="username">
                           <a href="#">Adam Jones</a>
-                          <a href="#" class="float-right btn-tool"><i class="fa-duotone fa-times"></i></a>
+                          <a href="#" class="float-right btn-tool"><i class="fad fa-times"></i></a>
                         </span>
                         <span class="description">Posted 5 photos - 5 days ago</span>
                       </div>
@@ -195,7 +195,7 @@ include('p4rc4l35/7i7ul0.php');
                       <!-- /.row -->
 
                       <p>
-                        <a href="#" class="link-black text-sm mr-2"><i class="fa-duotone fa-share mr-1"></i> Share</a>
+                        <a href="#" class="link-black text-sm mr-2"><i class="fad fa-share mr-1"></i> Share</a>
                         <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
                         <span class="float-right">
                           <a href="#" class="link-black text-sm">
@@ -221,7 +221,7 @@ include('p4rc4l35/7i7ul0.php');
                       <!-- /.timeline-label -->
                       <!-- timeline item -->
                       <div>
-                        <i class="fa-duotone fa-envelope bg-primary"></i>
+                        <i class="fad fa-envelope bg-primary"></i>
 
                         <div class="timeline-item">
                           <span class="time"><i class="far fa-clock"></i> 12:05</span>
@@ -243,7 +243,7 @@ include('p4rc4l35/7i7ul0.php');
                       <!-- END timeline item -->
                       <!-- timeline item -->
                       <div>
-                        <i class="fa-duotone fa-user bg-info"></i>
+                        <i class="fad fa-user bg-info"></i>
 
                         <div class="timeline-item">
                           <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
@@ -255,7 +255,7 @@ include('p4rc4l35/7i7ul0.php');
                       <!-- END timeline item -->
                       <!-- timeline item -->
                       <div>
-                        <i class="fa-duotone fa-comments bg-warning"></i>
+                        <i class="fad fa-comments bg-warning"></i>
 
                         <div class="timeline-item">
                           <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
@@ -282,7 +282,7 @@ include('p4rc4l35/7i7ul0.php');
                       <!-- /.timeline-label -->
                       <!-- timeline item -->
                       <div>
-                        <i class="fa-duotone fa-camera bg-purple"></i>
+                        <i class="fad fa-camera bg-purple"></i>
 
                         <div class="timeline-item">
                           <span class="time"><i class="far fa-clock"></i> 2 days ago</span>

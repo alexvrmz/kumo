@@ -14,11 +14,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!--  
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>--> 
           </div>
         </div>
@@ -28,20 +28,20 @@ include('p4rc4l35/7i7ul0.php');
             <!--
             <a class="btn btn-app bg-success" href="#">
               <span class="badge bg-danger"><?= $num_usr ?></span>
-              <i class="fa-duotone fa-users"></i> <?= lbl_7074l ?>
+              <i class="fad fa-users"></i> <?= lbl_7074l ?>
             </a>   
           
             <a class="btn btn-app bg-success" href="#">
               <span class="badge bg-danger"><?= $num_usr_on ?></span>
-              <i class="fa-duotone fa-users"></i> <?= lbl_4c7iv05 ?>
+              <i class="fad fa-users"></i> <?= lbl_4c7iv05 ?>
             </a>
 
             <a class="btn btn-app bg-danger" href="#">
               <span class="badge bg-warning"><?= $num_usr_off ?></span>
-              <i class="fa-duotone fa-users-slash"></i> <?= lbl_iN4c7iv05 ?>
+              <i class="fad fa-users-slash"></i> <?= lbl_iN4c7iv05 ?>
             </a>-->
             <?php if(v4lID44x50("500-002", $u5u4i0) == TRUE){ /// --- AGREGAR USUARIOS ?>
-              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fa-duotone fa-user-plus"></i> <?= btn_46r364rU5u4ri0 ?></button>
+              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-user-plus"></i> <?= btn_46r364rU5u4ri0 ?></button>
             <?php } ?>
 
 
@@ -56,7 +56,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="col-12">
           <div class="alert alert-info alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h5><i class="icon fa-duotone fa-traffic-cone"></i> Info</h5>
+            <h5><i class="icon fad fa-traffic-cone"></i> Info</h5>
             No existen usuarios registrados
           </div>
         </div>
@@ -67,7 +67,7 @@ include('p4rc4l35/7i7ul0.php');
             <h3 class="card-title"><?= lbl_li574D4u5u4ri0 ?></h3>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                <i class="fa-duotone fa-minus"></i>
+                <i class="fad fa-minus"></i>
               </button>
             </div>
           </div>
@@ -100,7 +100,7 @@ include('p4rc4l35/7i7ul0.php');
                         <td><?= $u5h34r5['xuus'] ?></td>
                         <?php if(v4lID44x50("500-003", $u5u4i0) == TRUE){ /// --- EDITAR USUARIOS ?>
                           <td>
-                            <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['xuid']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fa-duotone fa-edit"></i></a>
+                            <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['xuid']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           </td>
                         <?php } ?>
                       </tr>
@@ -190,7 +190,7 @@ include('p4rc4l35/7i7ul0.php');
                     <div class="input-group mb-3" id="cxxt453_add">
                       <input class="form-control <?= $v ?>" type="password" id="cxxt453_add" name="cxxt453_add" value="<?php if($cxxt453_add == ''){ echo g3n_ps(); }else{ echo $cxxt453_add; } ?>">
                       <div class="input-group-append">
-                        <a href="" class="input-group-text"><i class="fa-duotone fa-eye-slash" aria-hidden="true"></i></a>
+                        <a href="" class="input-group-text"><i class="fad fa-eye-slash" aria-hidden="true"></i></a>
                       </div>
                     </div>
                   </div>
@@ -238,8 +238,8 @@ include('p4rc4l35/7i7ul0.php');
 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
-              <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+              <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
               
               </div>
            </form> 

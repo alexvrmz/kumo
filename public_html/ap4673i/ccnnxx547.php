@@ -27,4 +27,4 @@ $dRV = $iDi['config_rDven'];
 
 
 ////------ Varibles de configuracion
-$carpetaFondos = "dist/img/wallpappers/";
+$carpetaFondos = "dist/img/wallpappers/animals/";

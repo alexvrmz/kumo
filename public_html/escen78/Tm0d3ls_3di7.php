@@ -17,14 +17,14 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>           
           </div>
         </div>
         <div class="card-body">
           
               <a href="v75t4?axc0=xmRc4s" class="btn btn-app bg-success">
-                <i class="fa-duotone fa-arrow-left"></i> <?= btn_r36r354r ?>
+                <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
               </a>   
         </div>
       </div>
@@ -37,7 +37,7 @@ include('p4rc4l35/7i7ul0.php');
           <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
           </div>
         </div>
@@ -80,7 +80,7 @@ include('p4rc4l35/7i7ul0.php');
                 <div class="col-sm-12">
                   <input type="hidden" name="mk76id" id="mk76id" value="<?= $u5h34r5['xBxIDu'] ?>">
                   <input type="hidden" name="pp_xx003" id="pp_xx003" value="<?= $u5h34r5['xBxMIDu'] ?>">
-                  <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4r ?></button>
+                  <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_6u4rD4r ?></button>
                 </div>
               </div>  
 

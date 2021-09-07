@@ -14,7 +14,7 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
            
           </div>
@@ -24,7 +24,7 @@ include('p4rc4l35/7i7ul0.php');
           <div class="card-body p-0">        
             
             <?php if(v4lID44x50("900-002", $u5u4i0) == TRUE){ /// --- AGREGAR MARCA ?>
-              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fa-duotone fa-car-building"></i> <?= btn_46r364rU5u4ri0 ?></button>
+              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-car-building"></i> <?= btn_46r364rU5u4ri0 ?></button>
             <?php } ?>
 
 
@@ -120,8 +120,8 @@ include('p4rc4l35/7i7ul0.php');
 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
-              <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+              <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
               
               </div>
            </form> 

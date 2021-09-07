@@ -9,13 +9,13 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div> 
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
-          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($xcIDV3Hs) ?>"><i class="fa-duotone fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
+          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($xcIDV3Hs) ?>"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@ include('p4rc4l35/7i7ul0.php');
             <div class="col-12">
               <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <h5><i class="icon fa-duotone fa-traffic-cone"></i>Por favor verifica <?= $_SESSION['m3n3Rr0R_num'] ?> Errore(s) </h5>
+                <h5><i class="icon fad fa-traffic-cone"></i>Por favor verifica <?= $_SESSION['m3n3Rr0R_num'] ?> Errore(s) </h5>
                 <ul>
                   <?php foreach ($_SESSION['tXFrm'] as $key => $value) { ?>
                     <li><?= $value ?></li>
@@ -50,7 +50,7 @@ include('p4rc4l35/7i7ul0.php');
             <div class="input-group date" id="frm_x002" data-target-input="nearest">
               <input type="text" class="form-control datetimepicker-input" data-target="#frm_x002" name="frm_x002" id="frm_x002" required/>
               <div class="input-group-append" data-target="#frm_x002" data-toggle="datetimepicker">
-                <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                <div class="input-group-text"><i class="fad fa-calendar"></i></div>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ include('p4rc4l35/7i7ul0.php');
             <div class="input-group date" id="frm_x003" data-target-input="nearest">
               <input type="text" class="form-control datetimepicker-input" data-target="#frm_x003" name="frm_x003" id="frm_x003"/>
               <div class="input-group-append" data-target="#frm_x003" data-toggle="datetimepicker">
-                <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                <div class="input-group-text"><i class="fad fa-calendar"></i></div>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ include('p4rc4l35/7i7ul0.php');
           <input type="hidden" name="rr" id="rr" value="<?= $rr ?>" required>
 
           <div class="modal-footer justify-content-between">
-            <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
+            <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
           </div>
         </form> 
         <!-- /.card-body -->

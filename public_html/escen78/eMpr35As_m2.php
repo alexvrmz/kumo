@@ -10,23 +10,23 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div> 
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
           <?php if(v4lID44x50("1100-002", $u5u4i0) == TRUE){ /// --- AGREGAR Empresas ?>
-            <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fa-duotone fa-building"></i> <?= btn_46r364rU5u4ri0 ?></button>
+            <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-building"></i> <?= btn_46r364rU5u4ri0 ?></button>
           <?php } ?>
           <?php if($vst == 1){ ?>
             <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
-              <i class="fa-duotone fa-list-alt"></i> Ver Lista
+              <i class="fad fa-list-alt"></i> Ver Lista
             </a> 
           <?php }
                 else { ?>
             <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
-              <i class="fa-duotone fa-file-invoice"></i> Ver Cartas
+              <i class="fad fa-file-invoice"></i> Ver Cartas
             </a> 
           <?php } ?>
         </div>
@@ -45,7 +45,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="col-12">
           <div class="alert alert-info alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h5><i class="icon fa-duotone fa-info"></i><?= lbl_3mp1 ?></h5>
+            <h5><i class="icon fad fa-info"></i><?= lbl_3mp1 ?></h5>
             <?= lbl_3mp2 ?> 
           </div>
         </div>
@@ -63,10 +63,10 @@ include('p4rc4l35/7i7ul0.php');
                         </div>                          
                         <div class="btn-group">
                           <?php if(v4lID44x50("1100-004", $u5u4i0) == TRUE){ ?>
-                            <a href="v75t4?axc0=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fa-duotone fa-eye"></i><?= lbl_2mp3 ?></a>
+                            <a href="v75t4?axc0=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i><?= lbl_2mp3 ?></a>
                           <?php } ?>
                           <?php if(v4lID44x50("1100-003", $u5u4i0) == TRUE){ ?>
-                            <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fa-duotone fa-edit"></i><?= lbl_2mp4 ?></a>
+                            <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i><?= lbl_2mp4 ?></a>
                           <?php } ?>
                         </div>       
                         <div class="card-footer" style="padding-top: 5px;">
@@ -124,12 +124,12 @@ include('p4rc4l35/7i7ul0.php');
                                       <div class="col-6">
                                  
                                         <?php if(v4lID44x50("1100-004", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fa-duotone fa-eye"></i> <?= lbl_2mp3 ?></a>
+                                          <a href="v75t4?axc0=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fad fa-eye"></i> <?= lbl_2mp3 ?></a>
                                         <?php } ?>
                                       </div>
                                       <div class="col-6">
                                         <?php if(v4lID44x50("1100-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fa-duotone fa-edit"></i> <?= lbl_2mp4 ?></a>
+                                          <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
                                         <?php } ?>
                                       </div>
                                     </div>
@@ -188,28 +188,28 @@ include('p4rc4l35/7i7ul0.php');
                                   <td>
                                     <?php $href = 'ap4673i/v3hiCs_4pi.php?axc0=Eda70&Ah76G='.$eCry($u5h34r5['IDXu7l0s']).'&lIi='.$eCry($u5h34r5['3C0Xu7l0s']).'&sdFR=';
                                           if($u5h34r5['eD0'] == 1){
-                                            $tt = '<i class="fa-duotone fa-key"></i> '.lbl_Atab015;             $btn = 'success';
-                                            $ax1 = '<i class="fa-duotone fa-garage-open"></i> '.lbl_Atab016;    $hfr1 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg1 = 'bg-warning';
-                                            $ax2 = '<i class="fa-duotone fa-ban"></i> '.lbl_Atab017;            $hfr2 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg2 = 'bg-danger';
-                                            $ax3 = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $tt = '<i class="fad fa-key"></i> '.lbl_Atab015;             $btn = 'success';
+                                            $ax1 = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;    $hfr1 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg1 = 'bg-warning';
+                                            $ax2 = '<i class="fad fa-ban"></i> '.lbl_Atab017;            $hfr2 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg2 = 'bg-danger';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 2){  
-                                            $tt = '<i class="fa-duotone fa-garage-open"></i> '.lbl_Atab016;     $btn = 'warning';
-                                            $ax1 = '<i class="fa-duotone fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
-                                            $ax2 = '<i class="fa-duotone fa-ban"></i> '.lbl_Atab017;            $hfr2 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg2 = 'bg-danger';
-                                            $ax3 = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $tt = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;     $btn = 'warning';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax2 = '<i class="fad fa-ban"></i> '.lbl_Atab017;            $hfr2 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg2 = 'bg-danger';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 3){
-                                            $tt = '<i class="fa-duotone fa-ban"></i> '.lbl_Atab017;             $btn = 'danger';
-                                            $ax1 = '<i class="fa-duotone fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
-                                            $ax2 = '<i class="fa-duotone fa-garage-open"></i> '.lbl_Atab016;    $hfr2 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg2 = 'bg-warning';
-                                            $ax3 = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $tt = '<i class="fad fa-ban"></i> '.lbl_Atab017;             $btn = 'danger';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax2 = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;    $hfr2 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg2 = 'bg-warning';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 4){
-                                            $tt = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_Atab018;   $btn = 'info';
-                                            $ax1 = '<i class="fa-duotone fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
-                                            $ax2 = '<i class="fa-duotone fa-garage-open"></i> '.lbl_Atab016;    $hfr2 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg2 = 'bg-warning';
-                                            $ax3 = '<i class="fa-duotone fa-ban"></i> '.lbl_Atab017;            $hfr3 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg3 = 'bg-danger';
+                                            $tt = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;   $btn = 'info';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax2 = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;    $hfr2 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg2 = 'bg-warning';
+                                            $ax3 = '<i class="fad fa-ban"></i> '.lbl_Atab017;            $hfr3 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg3 = 'bg-danger';
                                           }
                                     ?>
                                     <div class="btn-group" style="width: 85%;">
@@ -394,8 +394,8 @@ include('p4rc4l35/7i7ul0.php');
 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
-                <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+                <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
               </div>
             </form> 
             <?php unset($_SESSION['m3ns4j3Frm']); ?>

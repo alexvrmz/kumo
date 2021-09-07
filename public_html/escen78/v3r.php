@@ -14,7 +14,7 @@ include('p4rc4l35/7i7ul0.php');
           <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>       
           </div>
         </div>

@@ -55,7 +55,7 @@ define('lbl_tab001', 'Lista de Autos');
 define('lbl_tab002', 'ID');
 define('lbl_tab003', 'Eco');
 define('lbl_tab004', 'Marca');
-define('lbl_tab005', '<i class="fa-duotone fa-car-side"></i> ');
+define('lbl_tab005', '<i class="fad fa-car-side"></i> ');
 define('lbl_tab006', 'Modelo');
 define('lbl_tab007', 'Año');
 define('lbl_tab008', 'Color');

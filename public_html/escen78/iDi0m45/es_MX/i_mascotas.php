@@ -30,6 +30,8 @@ define('guardar', 'Guardar');
 define('cliente', 'Cliente');
 define('continuarFormulario', 'Abrir Formulario');
 define('eliminarFormulario', 'Eliminar Formulario');
+define('foto', 'Fotogrfía');
+
 
 
 

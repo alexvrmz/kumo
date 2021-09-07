@@ -13,7 +13,7 @@ include('p4rc4l35/7i7ul0.php');
        
         <div class="error-content" style="text-align: center;">
          
-          <h3><i class="fa-duotone fa-exclamation-triangle text-warning"></i><?= lbl_00p5 ?></h3>
+          <h3><i class="fad fa-exclamation-triangle text-warning"></i><?= lbl_00p5 ?></h3>
 
           <p>
             <?= lbl_73x70 ?>

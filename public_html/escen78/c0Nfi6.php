@@ -101,7 +101,7 @@ var getInfo;
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>       
           </div>
         </div>
@@ -141,7 +141,7 @@ var getInfo;
               </div>
               
               <div class="col-lg-12">
-                <button class="btn btn-success" type="submit"><i class="fa-duotone fa-save"></i> <?= btn_sav3 ?></button>
+                <button class="btn btn-success" type="submit"><i class="fad fa-save"></i> <?= btn_sav3 ?></button>
               </div>
               
             </div>

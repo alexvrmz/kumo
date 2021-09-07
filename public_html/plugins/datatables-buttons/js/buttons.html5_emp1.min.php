@@ -240,7 +240,7 @@
   p.ext.buttons.copyHtml5 = {
       className: "buttons-copy buttons-html5",
       text: function(a) {
-          return a.i18n("buttons.copy", '<i class="fa-duotone fa-copy"></i> <?= lbl_copy ?>')
+          return a.i18n("buttons.copy", '<i class="fad fa-copy"></i> <?= lbl_copy ?>')
       },
       action: function(a, b, d, c) {
           this.processing(!0);
@@ -316,7 +316,7 @@
           return f.FileReader !== r && f.Blob
       },
       text: function(a) {
-          return a.i18n("buttons.csv", '<i class="fa-duotone fa-file-csv"></i> <?= lbl_csv ?>')
+          return a.i18n("buttons.csv", '<i class="fad fa-file-csv"></i> <?= lbl_csv ?>')
       },
       action: function(a, b, d, c) {
           this.processing(!0);
@@ -347,7 +347,7 @@
           return f.FileReader !== r && (v || f.JSZip) !== r && !J() && z
       },
       text: function(a) {
-          return a.i18n("buttons.excel", '<i class="fa-duotone fa-file-excel"></i> <?= lbl_excel ?>')
+          return a.i18n("buttons.excel", '<i class="fad fa-file-excel"></i> <?= lbl_excel ?>')
       },
       action: function(a, b, d, c) {
           this.processing(!0);
@@ -519,7 +519,7 @@
               r && (q || f.pdfMake)
       },
       text: function(a) {
-          return a.i18n('buttons.pdf', '<i class="fa-duotone fa-print"></i> <?= lbl_pdf ?>')
+          return a.i18n('buttons.pdf', '<i class="fad fa-print"></i> <?= lbl_pdf ?>')
       },
       action: function(a, b, d, c) {
           this.processing(!0);

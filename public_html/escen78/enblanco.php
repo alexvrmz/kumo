@@ -16,11 +16,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>

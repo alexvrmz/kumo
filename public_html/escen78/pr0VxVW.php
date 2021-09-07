@@ -9,13 +9,13 @@ include('p4rc4l35/7i7ul0.php');
         <h3 class="card-title"><?= lbl_1er7i7u ?></h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fa-duotone fa-minus"></i>
+            <i class="fad fa-minus"></i>
           </button>
         </div> 
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
-          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=pR0VxD"><i class="fa-duotone fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
+          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=pR0VxD"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
         </div>
       </div> 
     </div>
@@ -80,7 +80,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
           <div class="card-body box-profile">
             <?php if(v4lID44x50("1600-002", $u5u4i0) == TRUE){ ?>
-              <a href="v75t4?axc0=pr0VxDT&pXRoI=<?= $eCry($xPxIDH) ?>" class="btn btn-warning btn-block"><i class="fa-duotone fa-file-edit"></i> Editar</a>
+              <a href="v75t4?axc0=pr0VxDT&pXRoI=<?= $eCry($xPxIDH) ?>" class="btn btn-warning btn-block"><i class="fad fa-file-edit"></i> Editar</a>
             <?php } ?>
           </div>
         </div>
@@ -232,13 +232,13 @@ include('p4rc4l35/7i7ul0.php');
                 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
                 
                 <button type="submit" class="btn btn-success"> 
                   <?php if(!empty($px019)){ ?>
-                    <i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?>
+                    <i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?>
                   <?php } else { ?>
-                    <i class="fa-duotone fa-arrow-right"></i> Continuar
+                    <i class="fad fa-arrow-right"></i> Continuar
                   <?php } ?>
                 </button>
               </div>

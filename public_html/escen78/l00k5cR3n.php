@@ -41,7 +41,7 @@ $_SESSION['session_look'] = true;
       <div class="input-group lockscreen-credentials " >
         <input type="password" class="form-control texto-neon-azul" style="background-color: #ffffff30;color: white;" placeholder="Contraseña" name="cdDn45_xS" required>
           <button type="submit" class="btn texto-neon-azul" style="background-color: #0000;box-shadow: 0px 0px 20px #007BFF;" >
-            <i class="fa-duotone fa-arrow-right text-muted"></i>
+            <i class="fad fa-arrow-right text-muted"></i>
           </button>
      
       </div>

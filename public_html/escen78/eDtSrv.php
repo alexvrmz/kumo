@@ -13,7 +13,7 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             
           </div>
@@ -21,7 +21,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="card-body">
           
           <div class="card-body p-0">        
-              <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($vh3iP) ?>" type="button" class="btn bg-gradient-success btn-app"><i class="fa-duotone fa-arrow-left"></i> <?= btn_46r364rm0Du ?></a>
+              <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($vh3iP) ?>" type="button" class="btn bg-gradient-success btn-app"><i class="fad fa-arrow-left"></i> <?= btn_46r364rm0Du ?></a>
           </div>
 
         </div>
@@ -34,7 +34,7 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
         
           </div>
@@ -50,11 +50,11 @@ include('p4rc4l35/7i7ul0.php');
                 <span class="badge badge-danger">Este servicio no esta Vigente</span>
               <?php } ?>
               <br>
-              <?php if($DdSs[0]['ddFil'] == 'error2' || $DdSs[0]['ddFil'] == 'Error' || $DdSs[0]['ddFil'] == ''){ $txb = '<i class="fa-duotone fa-upload"></i> Subir'; $TYU = 'btn-success';?>
-                  <i class="fa-duotone fa-file-times" style="color: red; font-size: 6rem; margin-bottom: 20px; margin-top: 20px;"></i><br>
-              <?php }else{ $txb = '<i class="fa-duotone fa-upload"></i> Cambiar'; $TYU = 'btn-warning'; ?>
-                  <a href="tmp/<?= $_SESSION['u5hID8ir5'] ?>/<?= $DdSs[0]['ddFil'] ?>" target="_blank"><i class="fa-duotone fa-file-check" style="color: green; font-size: 6rem; margin-bottom: 20px; margin-top: 20px;"></i></a><br>
-                  <a href="tmp/<?= $_SESSION['u5hID8ir5'] ?>/<?= $DdSs[0]['ddFil'] ?>" target="_blank" class="btn btn-info btn-sm"><i class="fa-duotone fa-eye"></i> Ver</a>
+              <?php if($DdSs[0]['ddFil'] == 'error2' || $DdSs[0]['ddFil'] == 'Error' || $DdSs[0]['ddFil'] == ''){ $txb = '<i class="fad fa-upload"></i> Subir'; $TYU = 'btn-success';?>
+                  <i class="fad fa-file-times" style="color: red; font-size: 6rem; margin-bottom: 20px; margin-top: 20px;"></i><br>
+              <?php }else{ $txb = '<i class="fad fa-upload"></i> Cambiar'; $TYU = 'btn-warning'; ?>
+                  <a href="tmp/<?= $_SESSION['u5hID8ir5'] ?>/<?= $DdSs[0]['ddFil'] ?>" target="_blank"><i class="fad fa-file-check" style="color: green; font-size: 6rem; margin-bottom: 20px; margin-top: 20px;"></i></a><br>
+                  <a href="tmp/<?= $_SESSION['u5hID8ir5'] ?>/<?= $DdSs[0]['ddFil'] ?>" target="_blank" class="btn btn-info btn-sm"><i class="fad fa-eye"></i> Ver</a>
               <?php } ?>
               <?php if(v4lID44x50("1300-103", $u5u4i0) == TRUE){ ?>
                 <div class="btn <?= $TYU ?> btn-sm" id="mostrar-super-contenido"><?= $txb ?></div><br>
@@ -82,7 +82,7 @@ include('p4rc4l35/7i7ul0.php');
               <div class="input-group date" id="xDsSx003"  data-target-input="nearest">
                 <input type="text" class="form-control datetimepicker-input" data-target="#xDsSx003" name="xDsSx003" value="<?= $DdSs[0]['ddFD'] ?>"/>
                 <div class="input-group-append" data-target="#xDsSx003" data-toggle="datetimepicker">
-                  <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                  <div class="input-group-text"><i class="fad fa-calendar"></i></div>
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ include('p4rc4l35/7i7ul0.php');
               <div class="input-group date" id="xDsSx004" name="xDsSx004" data-target-input="nearest">
                 <input type="text" class="form-control datetimepicker-input" data-target="#xDsSx004" name="xDsSx004"value="<?= $DdSs[0]['ddFV'] ?>" />
                 <div class="input-group-append" data-target="#xDsSx004" data-toggle="datetimepicker">
-                  <div class="input-group-text"><i class="fa-duotone fa-calendar"></i></div>
+                  <div class="input-group-text"><i class="fad fa-calendar"></i></div>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ include('p4rc4l35/7i7ul0.php');
             <input type="hidden" value="<?= $DdSs[0]['ddCA'] ?>" name="ddCA" id="ddCA">
             <input type="hidden" value="<?= $DdSs[0]['ddFil'] ?>" name="ddFil" id="ddFil">
 
-            <button type="submit" class="btn btn-success btn-sm"><i class="fa-duotone fa-save"></i> Guardar </button>
+            <button type="submit" class="btn btn-success btn-sm"><i class="fad fa-save"></i> Guardar </button>
             
           </form>
         </div>

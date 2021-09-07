@@ -14,24 +14,24 @@ include('p4rc4l35/7i7ul0.php');
               </h3>             
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
           </div>
         </div>
         <div class="card-body">
           <div class="card-body p-0">    
-            <a href="v75t4?axc0=eMpr35As" class="btn bg-success btn-app"><i class="fa-duotone fa-arrow-left"></i> <?= btn_r3g ?></a>            
+            <a href="v75t4?axc0=eMpr35As" class="btn bg-success btn-app"><i class="fad fa-arrow-left"></i> <?= btn_r3g ?></a>            
             <?php if(v4lID44x50("1200-002", $u5u4i0) == TRUE){ /// --- Agregar flota?>
-              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fa-duotone fa-folder-plus"></i> <?= btn_46r364rm0Du ?></button>
+              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-folder-plus"></i> <?= btn_46r364rm0Du ?></button>
             <?php } ?>
             <?php if($vst == 1){ ?>
             <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
-              <i class="fa-duotone fa-list-alt"></i> Ver Lista
+              <i class="fad fa-list-alt"></i> Ver Lista
             </a> 
           <?php }
                 else { ?>
             <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
-              <i class="fa-duotone fa-file-invoice"></i> Ver Cartas
+              <i class="fad fa-file-invoice"></i> Ver Cartas
             </a> 
           <?php } ?>
 
@@ -107,7 +107,7 @@ include('p4rc4l35/7i7ul0.php');
                     <div class="col-12">
                       <div class="alert alert-warning alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h5><i class="icon fa-duotone fa-traffic-cone"></i> Alerta!</h5>
+                        <h5><i class="icon fad fa-traffic-cone"></i> Alerta!</h5>
                         No tienes ninguna Flota registrada <?php if($eMpr3 != ''){ echo 'en esta empresa'; } ?>, por favor agrega una.
                       </div>
                     </div>
@@ -135,10 +135,10 @@ include('p4rc4l35/7i7ul0.php');
                                 </div>
                                 <div class="btn-group">
                                   <?php if(v4lID44x50("1200-004", $u5u4i0) == TRUE){ ?>
-                                    <a href="v75t4?axc0=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fa-duotone fa-eye"></i> Ver</a>
+                                    <a href="v75t4?axc0=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i> Ver</a>
                                   <?php } ?>
                                   <?php if(v4lID44x50("1200-003", $u5u4i0) == TRUE){ ?>
-                                    <a href="v75t4?axc0=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fa-duotone fa-edit"></i> Editar</a>
+                                    <a href="v75t4?axc0=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i> Editar</a>
                                   <?php } ?>
                                 </div> 
                                   
@@ -230,12 +230,12 @@ include('p4rc4l35/7i7ul0.php');
                                       
                                  
                                         <?php if(v4lID44x50("1200-004", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat btn-xs" ><i class="fa-duotone fa-eye"></i> Ver</a>
+                                          <a href="v75t4?axc0=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat btn-xs" ><i class="fad fa-eye"></i> Ver</a>
                                         <?php } ?>
                                       
                                       
                                         <?php if(v4lID44x50("1200-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat btn-xs"><i class="fa-duotone fa-edit"></i> Editar</a>
+                                          <a href="v75t4?axc0=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat btn-xs"><i class="fad fa-edit"></i> Editar</a>
                                         <?php } ?>
                                      
                                     </div> 
@@ -262,7 +262,7 @@ include('p4rc4l35/7i7ul0.php');
               <div class="col-12">
                   <div class="alert alert-warning alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fa-duotone fa-traffic-cone"></i> Alerta!</h5>
+                    <h5><i class="icon fad fa-traffic-cone"></i> Alerta!</h5>
                       No hay Operadores asignados a esta Flota.
                   </div>
                 </div>
@@ -299,7 +299,7 @@ include('p4rc4l35/7i7ul0.php');
                                       <td><?= $u5h34r5['u5hUS8ir5'] ?></td>
                                       <td>
                                         <?php if(v4lID44x50("500-003", $u5u4i0) == TRUE){ /// --- EDITAR USUARIOS ?>
-                                          <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fa-duotone fa-edit"></i></a>
+                                          <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                                         <?php } ?>
                                       </tr>
                               <?php } ?>    
@@ -341,7 +341,7 @@ include('p4rc4l35/7i7ul0.php');
                       <div class="col-12">
                         <div class="alert alert-info alert-dismissible">
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                          <h5><i class="icon fa-duotone fa-traffic-cone"></i> Alerta!</h5>
+                          <h5><i class="icon fad fa-traffic-cone"></i> Alerta!</h5>
                           No tienes ninguna Empresa registrada, por favor agrega una.
                         </div>
                       </div>
@@ -372,8 +372,8 @@ include('p4rc4l35/7i7ul0.php');
                 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_C4nC3L4raD ?></button>
-              <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4raD ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_C4nC3L4raD ?></button>
+              <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_6u4rD4raD ?></button>
               
               </div>
             </form>

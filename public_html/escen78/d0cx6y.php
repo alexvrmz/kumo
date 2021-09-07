@@ -13,11 +13,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!--  
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>
@@ -44,11 +44,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>
@@ -88,7 +88,7 @@ include('p4rc4l35/7i7ul0.php');
                         </td>
                         <?php if(v4lID44x50("1400-101", $u5u4i0) == TRUE){ /// --- Editar tramite tipo ?>
                           <td>
-                              <a href="v75t4?axc0=Tr43Dt&pXRoI=<?= $eCry($P3r70y7['xDID']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fa-duotone fa-edit"></i></a>
+                              <a href="v75t4?axc0=Tr43Dt&pXRoI=<?= $eCry($P3r70y7['xDID']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           </td>
                         <?php } ?>
                       </tr>
@@ -139,8 +139,8 @@ include('p4rc4l35/7i7ul0.php');
                 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_C4nC3L4raD ?></button>
-              <button type="submit" class="btn btn-success" ><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4raD ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_C4nC3L4raD ?></button>
+              <button type="submit" class="btn btn-success" ><i class="fad fa-save"></i> <?= btn_6u4rD4raD ?></button>
               
               </div>
             </form>

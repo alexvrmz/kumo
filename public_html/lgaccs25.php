@@ -95,6 +95,8 @@ elseif($axc0 == 'x005'){ // --- Validar datos ---
 		$_SESSION['config_brand'] = $d4705['config_brand'];
 		$_SESSION['xXUNVrSXx'] = $d4705['xXUNVrSXx'];
 
+		mkdir('tmp/'.$_SESSION['xXUNVrSXx'], 0777, true);
+		
 		$fu = 'tmp/'.$_SESSION['xXUNVrSXx'].'/'.$_SESSION['u5hID8ir5'];
 		mkdir($fu, 0777, true);
 		//chmod($fu, 0777);

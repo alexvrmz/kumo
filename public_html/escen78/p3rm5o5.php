@@ -13,11 +13,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>
@@ -25,7 +25,7 @@ include('p4rc4l35/7i7ul0.php');
           
           <div class="card-body p-0">        
             <?php if(v4lID44x50("300-002", $u5u4i0) == TRUE){ /// --- Agregar PErmisos?>
-              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"@click="app.showingaddModal = true;"><i class="fa-duotone fa-key"></i> <?= btn_46r364rm0Du ?></button>
+              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"@click="app.showingaddModal = true;"><i class="fad fa-key"></i> <?= btn_46r364rm0Du ?></button>
             <?php } ?>
 
 
@@ -44,11 +44,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>
@@ -74,7 +74,7 @@ include('p4rc4l35/7i7ul0.php');
                         <td><?= $P3r70y7['p3ry6nUm3pP'] ?></td>
                         <td>
                           <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
-                            <a href="v75t4?axc0=xu5sdS7l&p3ry6I=<?= $eCry($P3r70y7['p3ry6IDXpP']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fa-duotone fa-edit"></i></a>
+                            <a href="v75t4?axc0=xu5sdS7l&p3ry6I=<?= $eCry($P3r70y7['p3ry6IDXpP']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           <?php } ?>
                         </td>
                       </tr>
@@ -128,8 +128,8 @@ include('p4rc4l35/7i7ul0.php');
                 
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_C4nC3L4raD ?></button>
-              <button type="submit" class="btn btn-success" ><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4raD ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_C4nC3L4raD ?></button>
+              <button type="submit" class="btn btn-success" ><i class="fad fa-save"></i> <?= btn_6u4rD4raD ?></button>
               
               </div>
             </form>

@@ -11,11 +11,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>
@@ -23,7 +23,7 @@ include('p4rc4l35/7i7ul0.php');
           
           <div class="card-body p-0">        
             <?php if(v4lID44x50("300-002", $u5u4i0) == TRUE){ /// --- Agregar PErmisos?>
-              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"@click="app.showingaddModal = true;"><i class="fa-duotone fa-key"></i> <?= btn_46r364rm0Du ?></button>
+              <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"@click="app.showingaddModal = true;"><i class="fad fa-key"></i> <?= btn_46r364rm0Du ?></button>
             <?php } ?>
 
 
@@ -42,11 +42,11 @@ include('p4rc4l35/7i7ul0.php');
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fa-duotone fa-minus"></i>
+              <i class="fad fa-minus"></i>
             </button>
             <!-- 
             <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fa-duotone fa-times"></i>
+              <i class="fad fa-times"></i>
             </button>-->
           </div>
         </div>
@@ -80,13 +80,13 @@ include('p4rc4l35/7i7ul0.php');
                           <?php if($P3r70y7['p3gTh3PRs'] == 1){ ?>
                             <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
                               <a href="ap4673i/p3rm5o5_4pi.php?axc0=psDef4Gg&h7gr=<?= $eCry($P3r70y7['p3gThiDRs']) ?>&u5u4oxX=<?= $eCry($u5u4oxX) ?>&txgt5=<?= $eCry('d3547iV') ?>&f4G55t7=<?= $eCry($P3r70y7['p3gThNmRs']) ?>" class="btn bg-danger btn-xs">
-                                <i class="fa-duotone fa-toggle-off"></i>
+                                <i class="fad fa-toggle-off"></i>
                               </a>
                             <?php } ?>
                           <?php } elseif($P3r70y7['p3gTh3PRs'] == 0) { ?>
                             <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
                               <a href="ap4673i/p3rm5o5_4pi.php?axc0=psDef4Gg&h7gr=<?= $eCry($P3r70y7['p3gThiDRs']) ?>&u5u4oxX=<?= $eCry($u5u4oxX) ?>&txgt5=<?= $eCry('47iV') ?>&f4G55t7=<?= $eCry($P3r70y7['p3gThNmRs']) ?>" class="bt bg-success btn-xs">
-                                <i class="fa-duotone fa-toggle-on"></i>
+                                <i class="fad fa-toggle-on"></i>
                               </a>
                             <?php } ?>
                           <?php } ?>
@@ -157,8 +157,8 @@ include('p4rc4l35/7i7ul0.php');
   
               </div>
               <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_C4nC3L4raD ?></button>
-              <button type="submit" class="btn btn-success" ><i class="fa-duotone fa-save"></i> <?= btn_6u4rD4raD ?></button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_C4nC3L4raD ?></button>
+              <button type="submit" class="btn btn-success" ><i class="fad fa-save"></i> <?= btn_6u4rD4raD ?></button>
               
               </div>
             </form>

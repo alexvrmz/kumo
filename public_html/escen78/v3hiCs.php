@@ -69,7 +69,7 @@ include('p4rc4l35/7i7ul0.php');
                   <div class="card-header">
                     <div class="card-tools">
                       <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                        <i class="fa-duotone fa-minus"></i>
+                        <i class="fad fa-minus"></i>
                       </button>
                     </div>
                   <h3 class="profile-username text-center"><?= $EPAN ?></h3>  
@@ -134,7 +134,7 @@ include('p4rc4l35/7i7ul0.php');
                 <div class="col-12">
                   <div class="alert alert-info alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fa-duotone fa-traffic-cone"></i> <?= lbl_001 ?></h5>
+                    <h5><i class="icon fad fa-traffic-cone"></i> <?= lbl_001 ?></h5>
                     <?= lbl_002 ?> <?php if($flo0 != ''){ echo lbl_003; } ?>, <?= lbl_004 ?>
                   </div>
                 </div>
@@ -160,8 +160,8 @@ include('p4rc4l35/7i7ul0.php');
                           <span class="right badge badge-info"><?= lbl_2 ?></span>
                           <h1 class="card-text" style="font-weight: bold;font-size: 1.6rem;"><?= $u5h34r5['3C0Xu7l0s'] ?></h1> 
                           <div style="font-weight:bold"><?= $u5h34r5['M4rk'] ?> <?= $u5h34r5['m0D3'] ?> <br><?= $u5h34r5['su8Mo'] ?></div> 
-                          <i class="fa-duotone fa-calendar-star" style="color: red;"></i> <?= $u5h34r5['anN0'] ?> | <i class="fa-duotone fa-brush" style="color: #26afbd;"></i> <?= $c0loR3s[$u5h34r5['c0l0rXu']] ?> <br>
-                          <i class="fa-duotone fa-cogs" style="color: #d27a1c;"></i> <?= $tR4nsMixs[$u5h34r5['i7r4N5X']] ?> | <i class="fa-duotone fa-gas-pump" style="color: green;"></i> <?= $m070r3s[$u5h34r5['Mot0rs']] ?><br>
+                          <i class="fad fa-calendar-star" style="color: red;"></i> <?= $u5h34r5['anN0'] ?> | <i class="fad fa-brush" style="color: #26afbd;"></i> <?= $c0loR3s[$u5h34r5['c0l0rXu']] ?> <br>
+                          <i class="fad fa-cogs" style="color: #d27a1c;"></i> <?= $tR4nsMixs[$u5h34r5['i7r4N5X']] ?> | <i class="fad fa-gas-pump" style="color: green;"></i> <?= $m070r3s[$u5h34r5['Mot0rs']] ?><br>
                           <?= lbl_3Mp ?>: <?= $u5h34r5['eMp3'] ?> | <?= lbl_Fl074 ?>: <?= $u5h34r5['fl0t4'] ?>
                         </div>
                         <div class="col-lg-1"></div>
@@ -179,7 +179,7 @@ include('p4rc4l35/7i7ul0.php');
                         </div>
                         <?php if(v4lID44x50("700-004", $u5u4i0) == TRUE){ ?> 
                           <div class="card-body">
-                            <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($u5h34r5['IDXu7l0s']) ?>" class="btn btn-success btn-xs"><i class="fa-duotone fa-garage-open"></i> <?= btn_3dt ?></a>
+                            <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($u5h34r5['IDXu7l0s']) ?>" class="btn btn-success btn-xs"><i class="fad fa-garage-open"></i> <?= btn_3dt ?></a>
                           </div>
                         <?php } ?>
                           
@@ -199,7 +199,7 @@ include('p4rc4l35/7i7ul0.php');
                 <div class="col-12">
                   <div class="alert alert-info alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fa-duotone fa-traffic-cone"></i> <?= lbl_001 ?></h5>
+                    <h5><i class="icon fad fa-traffic-cone"></i> <?= lbl_001 ?></h5>
                     <?= lbl_002 ?> <?php if($flo0 != ''){ echo lbl_003; } ?>, <?= lbl_004 ?>
                   </div>
                 </div>
@@ -244,28 +244,28 @@ include('p4rc4l35/7i7ul0.php');
                                   <td>
                                     <?php $href = 'ap4673i/v3hiCs_4pi.php?axc0=Eda70&Ah76G='.$eCry($u5h34r5['IDXu7l0s']).'&lIi='.$eCry($u5h34r5['3C0Xu7l0s']).'&sdFR=';
                                           if($u5h34r5['eD0'] == 1){
-                                            $tt = '<i class="fa-duotone fa-key"></i> '.lbl_tab015;             $btn = 'success';
-                                            $ax1 = '<i class="fa-duotone fa-garage-open"></i> '.lbl_tab016;    $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(2); $bg1 = 'bg-warning';
-                                            $ax2 = '<i class="fa-duotone fa-ban"></i> '.lbl_tab017;            $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(3); $bg2 = 'bg-danger';
-                                            $ax3 = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_tab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $tt = '<i class="fad fa-key"></i> '.lbl_tab015;             $btn = 'success';
+                                            $ax1 = '<i class="fad fa-garage-open"></i> '.lbl_tab016;    $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(2); $bg1 = 'bg-warning';
+                                            $ax2 = '<i class="fad fa-ban"></i> '.lbl_tab017;            $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(3); $bg2 = 'bg-danger';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_tab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }  
                                           elseif($u5h34r5['eD0'] == 2){  
-                                            $tt = '<i class="fa-duotone fa-garage-open"></i> '.lbl_tab016;     $btn = 'warning';
-                                            $ax1 = '<i class="fa-duotone fa-key"></i>  '.lbl_tab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
-                                            $ax2 = '<i class="fa-duotone fa-ban"></i> '.lbl_tab017;            $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(3); $bg2 = 'bg-danger';
-                                            $ax3 = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_tab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $tt = '<i class="fad fa-garage-open"></i> '.lbl_tab016;     $btn = 'warning';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_tab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax2 = '<i class="fad fa-ban"></i> '.lbl_tab017;            $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(3); $bg2 = 'bg-danger';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_tab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 3){
-                                            $tt = '<i class="fa-duotone fa-ban"></i> '.lbl_tab017;             $btn = 'danger';
-                                            $ax1 = '<i class="fa-duotone fa-key"></i>  '.lbl_tab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
-                                            $ax2 = '<i class="fa-duotone fa-garage-open"></i> '.lbl_tab016;    $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(2); $bg2 = 'bg-warning';
-                                            $ax3 = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_tab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $tt = '<i class="fad fa-ban"></i> '.lbl_tab017;             $btn = 'danger';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_tab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax2 = '<i class="fad fa-garage-open"></i> '.lbl_tab016;    $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(2); $bg2 = 'bg-warning';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_tab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 4){
-                                            $tt = '<i class="fa-duotone fa-user-hard-hat"></i> '.lbl_tab018;   $btn = 'info';
-                                            $ax1 = '<i class="fa-duotone fa-key"></i>  '.lbl_tab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
-                                            $ax2 = '<i class="fa-duotone fa-garage-open"></i> '.lbl_tab016;    $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(2); $bg2 = 'bg-warning';
-                                            $ax3 = '<i class="fa-duotone fa-ban"></i> '.lbl_tab017;            $hfr3 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(3); $bg3 = 'bg-danger';
+                                            $tt = '<i class="fad fa-user-hard-hat"></i> '.lbl_tab018;   $btn = 'info';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_tab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax2 = '<i class="fad fa-garage-open"></i> '.lbl_tab016;    $hfr2 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(2); $bg2 = 'bg-warning';
+                                            $ax3 = '<i class="fad fa-ban"></i> '.lbl_tab017;            $hfr3 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(3); $bg3 = 'bg-danger';
                                           }
                                     ?>
                                     <div class="btn-group" style="width: 85%;">
@@ -315,7 +315,7 @@ include('p4rc4l35/7i7ul0.php');
               <div class="col-12">
                   <div class="alert alert-warning alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                    <h5><i class="icon fa-duotone fa-traffic-cone"></i> <?= lbl_001 ?></h5>
+                    <h5><i class="icon fad fa-traffic-cone"></i> <?= lbl_001 ?></h5>
                       No hay Operadores asignados a esta Flota.
                   </div>
                 </div>
@@ -352,7 +352,7 @@ include('p4rc4l35/7i7ul0.php');
                                       <td><?= $u5h34r5['u5hUS8ir5'] ?></td>
                                       <td>
                                         <?php if(v4lID44x50("500-003", $u5u4i0) == TRUE){ /// --- EDITAR USUARIOS ?>
-                                          <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fa-duotone fa-edit"></i></a>
+                                          <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                                         <?php } ?>
                                       </tr>
                               <?php } ?>    
@@ -410,7 +410,7 @@ include('p4rc4l35/7i7ul0.php');
                       <div class="col-12">
                         <div class="alert alert-info alert-dismissible">
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                          <h5><i class="icon fa-duotone fa-traffic-cone"></i> <?= lbl_001 ?></h5>
+                          <h5><i class="icon fad fa-traffic-cone"></i> <?= lbl_001 ?></h5>
                           <?= lbl_005 ?>
                         </div>
                       </div>
@@ -435,7 +435,7 @@ include('p4rc4l35/7i7ul0.php');
                       <div class="col-12">
                         <div class="alert alert-info alert-dismissible">
                           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                          <h5><i class="icon fa-duotone fa-info"></i> Alerta!</h5>
+                          <h5><i class="icon fad fa-info"></i> Alerta!</h5>
                           No tienes flotas registradas, podras relacionarlos despues.
                         </div>
                       </div> 
@@ -582,8 +582,8 @@ include('p4rc4l35/7i7ul0.php');
 
                 </div>
                 <div class="modal-footer justify-content-between">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
-                <button type="submit" class="btn btn-success"><i class="fa-duotone fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>
+                <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_n3w6u4rD4r ?></button>
                 
                 </div>
             </form> 

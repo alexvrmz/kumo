@@ -11,7 +11,7 @@ include('p4rc4l35/7i7ul0.php');
         <h2 class="headline text-danger">423</h2>
 
         <div class="error-content">
-          <h3><i class="fa-duotone fa-exclamation-triangle text-danger"></i> Oops! Algo esta mal!.</h3>
+          <h3><i class="fad fa-exclamation-triangle text-danger"></i> Oops! Algo esta mal!.</h3>
 
           <p>
           <?= $_SESSION['m3ns4J3']; ?>
@@ -22,7 +22,7 @@ include('p4rc4l35/7i7ul0.php');
               <input type="text" name="search" class="form-control" placeholder="Search">
 
               <div class="input-group-append">
-                <button type="submit" name="submit" class="btn btn-danger"><i class="fa-duotone fa-search"></i>
+                <button type="submit" name="submit" class="btn btn-danger"><i class="fad fa-search"></i>
                 </button>
               </div>
             </div>
