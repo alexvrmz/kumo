@@ -10,20 +10,6 @@ include('p4rc4l35/7i7ul0.php');
     <p><i class="fad fa-bullhorn"></i> <?= actualizacionesSistema ?> <a href="v75t4?axc0=v3r" class="btn btn-info btn-xs">Ver</a></p>
   </div>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960218161476043"
-     crossorigin="anonymous"></script>
-  <!-- largo-adaptable -->
-  <ins class="adsbygoogle"
-      style="display:block"
-      data-ad-client="ca-pub-6960218161476043"
-      data-ad-slot="1683107677"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-  <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-
   <?php if($rll == 0 || $rll == 2 || $rll == 3){ ?>
     <div class="row">
            
@@ -139,6 +125,18 @@ include('p4rc4l35/7i7ul0.php');
 
     </div>
   <?php } ?>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960218161476043"
+     crossorigin="anonymous"></script>
+    <!-- largo-adaptable -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-6960218161476043"
+      data-ad-slot="1683107677"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
   </section>
 </div>
