@@ -126,9 +126,9 @@ include('p4rc4l35/7i7ul0.php');
     </div>
   <?php } ?>
 
-  <script>(function(d,z,s){s.src='//'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('rndhaunteran.com',4504857,document.createElement('script'))</script>
-
-  
+ <?php // <script>(function(d,z,s){s.src='//'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('rndhaunteran.com',4504857,document.createElement('script'))</script> ?>
+ <script async="async" data-cfasync="false" src="//dooloust.net/4/4504870"></script>
+ 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960218161476043"
      crossorigin="anonymous"></script>
     <!-- largo-adaptable -->
