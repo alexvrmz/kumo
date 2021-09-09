@@ -332,9 +332,14 @@ elseif($axc0 == 'fichaMascota'){
 		$gYhNb6 = '../d0cUm3N70s/'.$xXUNVrSXx.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
 		$nmflex = 'tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'].'/'.$fotoMascota['doc_archivo'];
 
-		$carpeta = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/'.$xXUNVrSXx;
+		if($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
+			$carpeta = '/home/app/kumov4/public_html/tmp/'.$xXUNVrSXx;
+		}
+		else{
+			$carpeta = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/'.$xXUNVrSXx;
+		}
 		$r = mkdir($carpeta, 0777)==true?'si':'no';
-		$carpeta = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'];
+		$carpeta = $carpeta.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'];
 		$r = mkdir($carpeta, 0777)==true?'si':'no';
 		chmod('tmp/'.$xXUNVrSXx, 0777);
 		chmod('tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'], 0777);
