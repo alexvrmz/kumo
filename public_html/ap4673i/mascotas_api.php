@@ -338,7 +338,6 @@ elseif($axc0 == 'fichaMascota'){
 		else{
 			$carpeta = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/'.$xXUNVrSXx;
 		}
-		$r = mkdir($carpeta, 0777)==true?'si':'no';
 		$carpeta = $carpeta.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'];
 		$r = mkdir($carpeta, 0777)==true?'si':'no';
 		chmod('tmp/'.$xXUNVrSXx, 0777);

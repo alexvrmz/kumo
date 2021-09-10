@@ -25,6 +25,12 @@ $rll = $iDi['u5hpR0lr5'];
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 $dRV = $iDi['config_rDven'];
 
+if($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
+    $carpeta = '/home/app/kumov4/public_html/tmp/'.$xXUNVrSXx;
+}
+else{
+    $carpeta = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/'.$xXUNVrSXx;
+}
 
 ////------ Varibles de configuracion
 $carpetaFondos = "dist/img/wallpappers/animals/";
