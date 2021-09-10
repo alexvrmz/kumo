@@ -20,6 +20,7 @@ if($axc0 == 'x002'){
 			chmod($Hy6, '0777');
 			unlink($Hy6); 
 	}
+	print_r($Hy65);
 	bi74c0('3xi7e', lbl_8i7_x031.$_SESSION['u5hID8ir5'], ''); 
 
 	session_destroy();
