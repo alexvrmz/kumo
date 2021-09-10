@@ -342,7 +342,7 @@ elseif($axc0 == 'fichaMascota'){
 
 		$carpeta = $baseTemporal.$xXUNVrSXx;
 		
-		$carpeta = $carpeta.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'];
+		$carpeta = $carpeta.'/'.$_SESSION['u5hID8ir5'];
 		$r = mkdir($carpeta, 0777)==true?'si':'no';
 		chmod('tmp/'.$xXUNVrSXx, 0777);
 		chmod('tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'], 0777);
