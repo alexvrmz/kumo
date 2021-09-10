@@ -327,17 +327,21 @@ elseif($axc0 == 'fichaMascota'){
 	$edadCompleta = calcularEdad($mascota['mascota_nacimiento']);
 	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';
 	
+	if($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
+		$baseDocumentos = '/home/app/kumov4/d0cUm3N70s/';
+		$baseTemporal = '/home/app/kumov4/public_html/tmp/';
+	}
+	else{
+		$baseTemporal = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/';
+		$baseDocumentos = '/home/alejandro/alejandro/sitios/kumov4/d0cUm3N70s/';
+	}
 
 	if($fotoMascota['doc_archivo'] != ''){
-		$gYhNb6 = '../d0cUm3N70s/'.$xXUNVrSXx.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
+		$gYhNb6 = $baseDocumentos.$xXUNVrSXx.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
 		$nmflex = 'tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'].'/'.$fotoMascota['doc_archivo'];
 
-		if($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
-			$carpeta = '/home/app/kumov4/public_html/tmp/'.$xXUNVrSXx;
-		}
-		else{
-			$carpeta = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/'.$xXUNVrSXx;
-		}
+		$carpeta = $baseTemporal.$xXUNVrSXx;
+		
 		$carpeta = $carpeta.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'];
 		$r = mkdir($carpeta, 0777)==true?'si':'no';
 		chmod('tmp/'.$xXUNVrSXx, 0777);
