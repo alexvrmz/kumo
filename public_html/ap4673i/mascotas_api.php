@@ -45,7 +45,7 @@ if($axc0 === 'mascotas'){
 		$S005 = $cnnx4s->query($C005) or die ("Fallo al consultar foto de mascota");
 		$fotoMascota = $S005->fetch_assoc();
 		if($fotoMascota != ''){
-			$mascotaFoto = 'tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'].'/'.$fotoMascota['doc_archivo'];
+			$mascotaFoto = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
 		}
 		else{
 			$mascotaFoto = 'dist/img/gato_avatar.jpg';
@@ -72,7 +72,6 @@ if($axc0 === 'mascotas'){
 
 
 	if($_SESSION['formMascota']['mascotaEspecie'] != 'Ninguno' && !empty($_SESSION['formMascota']['mascotaEspecie'])){
-		//echo $_SESSION['formMascota']['mascotaEspecie'];
 		$listaRazas = listaSelectRazas($_SESSION['formMascota']['mascotaEspecie']);
 	}
 
@@ -315,7 +314,7 @@ elseif($axc0 == 'fichaMascota'){
 	$S004 = $cnnx4s->query($C004) or die ("Fallo al seleccionar Mascota");
 	$mascota = $S004->fetch_assoc();
 
-	$C005 = "SELECT doc_archivo FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$mascota['mascota_id']." ORDER BY doc_id ASC";
+	$C005 = "SELECT doc_archivo, doc_id FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$mascota['mascota_id']." ORDER BY doc_id ASC";
 	$S005 = $cnnx4s->query($C005) or die ("Fallo al consultar foto de mascota");
 	$fotoMascota = $S005->fetch_assoc();
 
@@ -326,37 +325,9 @@ elseif($axc0 == 'fichaMascota'){
 
 	$edadCompleta = calcularEdad($mascota['mascota_nacimiento']);
 	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';
-	
-	if($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
-		$baseDocumentos = '/home/app/kumov4/d0cUm3N70s/';
-		$baseTemporal = '/home/app/kumov4/public_html/tmp/';
-	}
-	else{
-		$baseTemporal = '/home/alejandro/alejandro/sitios/kumov4/public_html/tmp/';
-		$baseDocumentos = '/home/alejandro/alejandro/sitios/kumov4/d0cUm3N70s/';
-	}
 
 	if($fotoMascota['doc_archivo'] != ''){
-		$gYhNb6 = $baseDocumentos.$xXUNVrSXx.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
-		$nmflex = 'tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'].'/'.$fotoMascota['doc_archivo'];
-
-		$carpeta = $baseTemporal.$xXUNVrSXx;
-		
-		$carpeta = $carpeta.'/'.$_SESSION['u5hID8ir5'];
-		$r = mkdir($carpeta, 0777)==true?'si':'no';
-		chmod('tmp/'.$xXUNVrSXx, 0777);
-		chmod('tmp/'.$xXUNVrSXx.'/'.$_SESSION['u5hID8ir5'], 0777);
-		if (!file_exists($nmflex)) { 
-			if (!copy($gYhNb6, $nmflex)) { 
-				$flis = 'dist/img/gato_avatar.jpg'; 
-			} 
-			else{ 
-				$flis = $nmflex; 
-			} 
-		} 
-		else{ 
-			$flis = $nmflex; 
-		}
+		$flis = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
 	}
 	else{
 		$flis = 'dist/img/gato_avatar.jpg'; 
