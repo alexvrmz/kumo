@@ -913,7 +913,7 @@ function fondoRandom() {
     closedir($handler);
   }
   $i = rand( 0, $i );
-  //$fondo_aleatorio = array_rand($fondos, 2);
+  //$fondos = array_rand($fondos, 5);
   $fondo = $fondos[$i]['fondo'];
   return $fondo;
 }

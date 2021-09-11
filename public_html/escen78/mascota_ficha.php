@@ -47,8 +47,8 @@ include('p4rc4l35/7i7ul0.php');
                 <h3 class="widget-user-username text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $mascota['mascota_nombre'] ?></h3>
                 <h5 class="widget-user-desc text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $mascotaEspecie ?> / <?= $sexo[$mascota['mascota_sexo']] ?></h5>
               </div>
-              <div class="widget-user-image">
-                <img class="img-circle" src="<?=$flis ?>" alt="Foto Mascota" style="width: 250px;height: 250px;border-radius: 160px;border: 10px solid #666;margin-left: -85px;margin-top: 26px;object-fit: cover;">
+              <div class="widget-user-image" id="pop">
+                <img class="img-circle" id="imageresource" src="<?=$flis ?>" alt="Foto Mascota" style="width: 250px;height: 250px;border-radius: 160px;border: 10px solid #666;margin-left: -85px;margin-top: 26px;object-fit: cover;">
               </div>
               <div class="card-footer">
                 <div class="row">
@@ -102,7 +102,8 @@ include('p4rc4l35/7i7ul0.php');
                   </li>
                                   
                 </ul>
-                           
+                
+
                 <?php if(v4lID44x50("200-003", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
                   <a href="v75t4?axc0=editarMascota&mascotaID=<?= $eCry($mascota['mascota_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> Editar</a>
                 <?php } ?>
@@ -141,6 +142,14 @@ include('p4rc4l35/7i7ul0.php');
     <!-- /.content -->
 
 
+    
+
+<!-- Creates the bootstrap modal where the image will appear -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+        <img src="" id="imagepreview" style="width: 100%; height: 100%;" >
+  </div>
+</div>
 
 
 
@@ -150,3 +159,9 @@ include('p4rc4l35/7i7ul0.php');
 <?php
 include('p4rc4l35/3p1416e.php');
  ?>
+<script>
+  $("#pop").on("click", function() {
+   $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
+   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+});
+</script>

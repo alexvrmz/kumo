@@ -39,21 +39,21 @@ include('p4rc4l35/7i7ul0.php');
               <h4>No encontre ninguna mascota por aquí, agrega <a data-toggle="modal" data-target="#modal-nuevo">una!!!</a></h4>
             </div>
           <?php }else { ?>
-            <table class="table table-bordered table-hover table-responsive" id="example1">
+            <table class="table table-bordered table-hover table-responsive" id="example1" style="border: 0px;">
               <thead>
                 <tr>
-                  <th ><?= id ?></th>
-                  <th ><?= foto ?></th>
-                  <th><?= nombre ?></th>
-                  <th><?= especie ?></th>
-                  <th ><?= raza ?></th>
-                  <th ><?= esteril ?></th>
-                  <th ><?= sexo ?></th>
-                  <th ><?= color ?></th>
-                  <th><?= edad ?></th>
-                  <th><?= nacimiento ?></th>
-                  <th ><?= sistema ?></th>
-                  <th ><?= acciones ?></th>
+                  <th class="corta-texto"><?= id ?> <i class="fad fa-sort-alt"></i></th>
+                  <th ><?= foto ?> </th>
+                  <th  class="corta-texto"><?= nombre ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= especie ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= raza ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= esteril ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= sexo ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= color ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= edad ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= nacimiento ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= sistema ?> <i class="fad fa-sort-alt"></i></th>
+                  <th class="corta-texto"><?= acciones ?></th>
                 </tr>
               </thead>
               <tbody>
@@ -62,7 +62,7 @@ include('p4rc4l35/7i7ul0.php');
                     <td><?= $mascota['mascotaID'] ?></td>
                     <td style="text-align: center;">
                       <a href="v75t4?axc0=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>">
-                        <img class="direct-chat-img" style="margin-top: -9px;padding-left: 0px;margin-left: 16px;" src="<?= $mascota['mascotaFoto'] ?>" alt="n/d">
+                        <img class="direct-chat-img" style="margin-top: -9px;padding-left: 0px;margin-left: 16px;" src="<?= $mascota['mascotaFoto'] ?>" alt="<?= $mascota['mascotaNombre'] ?>">
                       </a>
                     </td>
                     <td><?= $mascota['mascotaNombre'] ?></td>

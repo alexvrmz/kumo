@@ -33,13 +33,13 @@ if($axc0 === 'mascotas'){
 		$raza = $datosRaza['raza_descripcion'];
 
 		$edadCompleta = calcularEdad($mascota['mascota_nacimiento']);
-		$edad = $edadCompleta->format('%Y').' Año(s)';
+		$edad = $edadCompleta->format('%Y');/*.' Año(s)';
 		if($edad == 0){
 			$edad = $edadCompleta->format('%m').' Mes(es)';
 			if($edad == 0){
 				$edad = $edadCompleta->format('%d').' día(s)';
 			}
-		}
+		}*/
 		
 		$C005 = "SELECT doc_archivo FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$mascota['mascota_id']." ORDER BY doc_id ASC";
 		$S005 = $cnnx4s->query($C005) or die ("Fallo al consultar foto de mascota");
