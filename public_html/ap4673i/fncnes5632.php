@@ -187,9 +187,9 @@ function su8iM6($Fxc47374, $Fxd3scR74) {
         };
 
       if($_SERVER['SERVER_NAME'] == 'vet.kumo.click'){
-        $puk3y = file_get_contents('/home/app/kumov4/u5u4ri05/5y5/x0101_pu.pem');
-        $prk3y = file_get_contents('/home/app/kumov4/u5u4ri05/5y5/x0101_pv.pem');
-        $grdV = '/home/app/kumov4/u5u4ri05/';
+        $puk3y = file_get_contents('/home/vet/kumov4/u5u4ri05/5y5/x0101_pu.pem');
+        $prk3y = file_get_contents('/home/vet/kumov4/u5u4ri05/5y5/x0101_pv.pem');
+        $grdV = '/home/vet/kumov4/u5u4ri05/';
       }
       elseif($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '192.168.1.80'){
         $puk3y = file_get_contents('/home/alejandro/sitios/cdr-e/u5u4ri05/5y5/x0101_pu.pem');
