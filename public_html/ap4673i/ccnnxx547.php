@@ -7,7 +7,7 @@ if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '192.168
     $cnnx4s = new mysqli('kumo.click', 'uNh7uH', 'Rjf6ge.Fa', 'kumo_v4');
    // $cnnx4s = new mysqli('localhost', 'uNh7uH', 'Rjf6ge.Fa', 'hiiqwla5x64x');
 }
-elseif($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
+elseif($_SERVER['SERVER_NAME'] == 'vet.kumo.click'){
     $cnnx4s = new mysqli('localhost', 'uNh7uH', 'Rjf6ge.Fa', 'kumo_v4');
 }
 $tildes = $cnnx4s->query("SET NAMES 'utf8'");

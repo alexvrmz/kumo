@@ -186,7 +186,7 @@ function su8iM6($Fxc47374, $Fxd3scR74) {
             return base64_encode(openssl_random_pseudo_bytes(openssl_cipher_iv_length($method)));
         };
 
-      if($_SERVER['SERVER_NAME'] == 'app.kumo.click'){
+      if($_SERVER['SERVER_NAME'] == 'vet.kumo.click'){
         $puk3y = file_get_contents('/home/app/kumov4/u5u4ri05/5y5/x0101_pu.pem');
         $prk3y = file_get_contents('/home/app/kumov4/u5u4ri05/5y5/x0101_pv.pem');
         $grdV = '/home/app/kumov4/u5u4ri05/';
