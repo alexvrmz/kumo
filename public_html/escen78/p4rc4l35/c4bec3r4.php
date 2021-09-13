@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Selector de etiquetas -->
-  <?php if($accion == 'pR0VxD' || $accion == 'pr0VxVW'){ ?>
+  <?php if($accion == 'pR0VxD' || $accion == 'pr0VxVW' || $accion == 'mascotas'){ ?>
     <link href="plugins/select2/css/select2.css" rel="stylesheet" />
   <?php } ?>
 

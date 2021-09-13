@@ -244,6 +244,62 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
   }
+  elseif($accion == 'clientes'){
+    if(v4lID44x50("200-001", $u5u4i0) == TRUE){
+      
+      // ---- Marcar la sección en el menú ---
+      $menu_clientes_t = 'active';
+      $menu_clientes_abierto = 'menu-open';
+      $menu_clientes = 'active';
+      
+      // --- BACKEND ----
+      include('ap4673i/clientes_api.php');
+      include('escen78/clientes.php');
+      
+    }
+    else{
+      $_SESSION['m3ns4J3'] = 'No tienes acceso a este Módulo';
+      $_SESSION['m3n3Rr0R'] = 'si';
+      include('escen78/404.php');
+    }
+  }
+  elseif($accion == 'editarCliente'){
+    if(v4lID44x50("200-003", $u5u4i0) == TRUE){
+      
+      // ---- Marcar la sección en el menú ---
+      $menu_clientes_editar = 'active';
+      $menu_clientes_abierto = 'menu-open';
+      $menu_clientes = 'active';
+      
+      // --- BACKEND ----
+      include('ap4673i/clientes_api.php');
+      include('escen78/clientes_editar.php');
+      
+    }
+    else{
+      $_SESSION['m3ns4J3'] = 'No tienes acceso a este Módulo';
+      $_SESSION['m3n3Rr0R'] = 'si';
+      include('escen78/404.php');
+    }
+  }
+  elseif($accion == 'fichaCliente'){
+    if(v4lID44x50("200-004", $u5u4i0) == TRUE){
+      
+      // ---- Marcar la sección en el menú ---
+      $menu_clientes_ficha = 'active';
+      $menu_clientes_abierto = 'menu-open';
+      $menu_clientes = 'active';
+      // --- BACKEND ----
+      include('ap4673i/clientes_api.php');
+      include('escen78/cliente_ficha.php');
+      
+    }
+    else{
+      $_SESSION['m3ns4J3'] = 'No tienes acceso a este Módulo';
+      $_SESSION['m3n3Rr0R'] = 'si';
+      include('escen78/404.php');
+    }
+  }
   elseif($accion == 's3rv'){ /// --- accion Servicios
 		/// --- ACCESO MODULO PERMISOS 
 		if(v4lID44x50("1300-001", $u5u4i0) == TRUE){

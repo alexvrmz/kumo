@@ -73,6 +73,27 @@ if($accion === 'mascotas'){
 
 	if($_SESSION['formMascota']['mascotaEspecie'] != 'Ninguno' && !empty($_SESSION['formMascota']['mascotaEspecie'])){
 		$listaRazas = listaSelectRazas($_SESSION['formMascota']['mascotaEspecie']);
+	} 
+
+	$C001 = "SELECT * FROM clientes WHERE xXUNVrSXx = $xXUNVrSXx";
+	$S001 = $cnnx4s->query($C001) or die ("Fallo al consultar clientes");
+	$numClientes = $S001->num_rows;
+
+	$LdClientes = [];
+	while ($cliente = $S001->fetch_array()) {
+		unset($datosCliente);
+		
+		$datosCliente = [
+			'clienteID' => $cliente['cliente_id'],
+			'clienteNombre1' => $cliente['cliente_nombre1'],
+			'clienteNombre2' => $cliente['cliente_nombre2'],
+			'clienteApellido1' => $cliente['cliente_apellido1'],
+			'clienteApellido2' => $cliente['cliente_apellido2'],
+			'clienteUsuario' => $cliente['cliente_usuario'],
+			'clienteTel1' => $cliente['cliente_telefono1'],
+			'clienteTel2' => $cliente['cliente_telefono2'],
+		];
+		array_push($LdClientes, $datosCliente);
 	}
 
 }
@@ -100,7 +121,7 @@ elseif($accion == 'procesaMascota'){
 	$mascotaSexo = limpia($mascotaSexo);
 	$mascotaEsteril = limpia($mascotaEsteril);
 	$mascotaColor = limpia($mascotaColor);
-	$mascotaCliente = limpia($mascotaCliente);
+	//$mascotaCliente = limpia($mascotaCliente);
 
 	$_SESSION['mensajeForm'] = [];
 	$_SESSION['formError'] = 0;
@@ -124,7 +145,7 @@ elseif($accion == 'procesaMascota'){
 	$_SESSION['formMascota']['mascotaEsteril'] = $mascotaEsteril;
 	$_SESSION['formMascota']['mascotaColor'] = $mascotaColor;
 	$_SESSION['formMascota']['mascotaNacimiento'] = $mascotaNacimiento;
-	$_SESSION['formMascota']['mascotaCliente'] = $mascotaCliente;
+	$_SESSION['formMascota']['mascotaCliente'] = $mascotaCliente; 
 	if($mascotaCliente == 'Ninguno'){ $mascotaCliente = 0;}
 
 	if($_SESSION['formError'] == 0){
@@ -293,8 +314,10 @@ elseif($accion == 'procesaMascota'){
 	}
 
 
-		
-
+		/*
+echo '<pre>';
+			print_r($_REQUEST);
+			echo '</pre>';*/
 
 
 

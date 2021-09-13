@@ -1,6 +1,6 @@
 <?php
 include('p4rc4l35/c4bec3r4.php');
-include('p4rc4l35/m3nu-p4.php');
+include('p4rc4l35/menu.php');
 include('p4rc4l35/7i7ul0.php');
 ?>
 

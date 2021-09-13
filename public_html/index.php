@@ -27,7 +27,7 @@
 	 * /front							/escen78
 	 * /front/login.php					/escen78/lgaccss25.php
 	 * /front/parciales/cabecera.php	/escen78/p4rc4l35/c4bec4r4.php
-	 * /front/parciales/menu.php		/escen78/p4rc4l35/m3nu-p4.php
+	 * /front/parciales/menu.php		/escen78/p4rc4l35/menu.php
 	 * /front/parciales/7i7ul0.php		/escen78/p4rc4l35/7i7ul0.php
 	 * /front/parciales/pie.php			/escen78/p4rc4l35/3p1416e.php
 	 * /front/usuarios.php				/encen78/u5u405.php

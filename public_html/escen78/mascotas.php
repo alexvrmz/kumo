@@ -1,7 +1,7 @@
 <?php
 include('iDi0m45/'.$iDi['u5h8ir5_iDi'].'/i_mascotas.php');
 include('p4rc4l35/c4bec3r4.php');
-include('p4rc4l35/m3nu-p4.php');
+include('p4rc4l35/menu.php');
 include('p4rc4l35/7i7ul0.php');
 ?>
     <div class="card <?= $brr4 ?> card-outline col-md-12">
@@ -187,15 +187,18 @@ include('p4rc4l35/7i7ul0.php');
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <label for="mascotaCliente"><?= cliente ?></label>
-                    <select class="form-control" id="mascotaCliente" name="mascotaCliente" >
-                      <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($listaClientes as $key => $cliente) { ?>
-                        <option value="<?= $cliente['clienteID'] ?>" <?= $select = $_SESSION['formMascota']['mascotaCliente'] == $cliente['clienteID'] ? 'selected':'' ?>><?= $cliente['clienteNombre'] ?></option>
-                      <?php } ?>
+
+                  <div style="margin-bottom: 16px;">
+                    <label for="mascotaCliente"><?= cliente ?></label><br>
+                    <select class="js-example-basic-multiple1" name="mascotaCliente[]">
+                      <option value="ninguno" <?php if(!empty($_SESSION['formMascota']['mascotaCliente']) && array_keys($_SESSION['formMascota']['mascotaCliente'], 'ninguno')){ echo 'selected'; } ?>>Ninguno</option>    
+                        <?php foreach ($LdClientes as $key => $value) { /*$ca = array_rand($cls, 1);*/?>
+                          <?php if(array_keys($_SESSION['formMascota']['mascotaCliente'], $value['clienteID'])) { $sLt = 'selected'; } ?>
+                            <option value="<?= $value['clienteID'] ?>" <?= $sLt ?>><?= $value['clienteApellido1'] ?> <?= $value['clienteApellido2'] ?> <?= $value['clienteNombre1'] ?> <?= $value['clienteNombre2'] ?></option>
+                          <?php unset($sLt); }  ?>
                     </select>
-                  </div>  
+                  </div>
+
 
                   <div class="form-group">
                     <label for="mascotaFoto"><?= foto ?></label>
@@ -278,3 +281,9 @@ unset($_SESSION['m3n3Rr0R_num']);
     });
   </script>
 <?php } ?>
+<script src="plugins/select2/js/select2.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.js-example-basic-multiple1').select2();
+    });
+  </script>

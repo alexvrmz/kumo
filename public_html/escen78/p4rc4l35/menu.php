@@ -180,6 +180,26 @@
           <?php } ?>
 
           <?php if(v4lID44x50("200-001", $u5u4i0) == TRUE){ /// --- ?>
+            <li class="nav-item <?= $menu_clientes_abierto ?>">
+              <a href="app?accion=clientes" class="nav-link <?= $menu_clientes ?>">
+                <i class="nav-icon fad fa-users"></i>
+                <p>
+                  <?= clientes ?>
+                  <i class="right fad fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="app?accion=clientes" class="nav-link <?= $menu_clientes ?>">
+                    <i class="fad fa-list nav-icon"></i>
+                    <p><?= listadoClientes ?></p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          <?php } ?>
+
+          <?php if(v4lID44x50("200-001", $u5u4i0) == TRUE){ /// --- ?>
             <li class="nav-item <?= $menu_mascotas_abierto ?>">
               <a href="app?accion=mascotas" class="nav-link <?= $menu_mascotas ?>">
                 <i class="nav-icon fad fa-paw"></i>
