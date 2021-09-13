@@ -90,8 +90,7 @@ if($accion === 'mascotas'){
 			'clienteApellido1' => $cliente['cliente_apellido1'],
 			'clienteApellido2' => $cliente['cliente_apellido2'],
 			'clienteUsuario' => $cliente['cliente_usuario'],
-			'clienteTel1' => $cliente['cliente_telefono1'],
-			'clienteTel2' => $cliente['cliente_telefono2'],
+			'clienteTel1' => $cliente['cliente_telefono1']
 		];
 		array_push($LdClientes, $datosCliente);
 	}
@@ -148,6 +147,12 @@ elseif($accion == 'procesaMascota'){
 	$_SESSION['formMascota']['mascotaCliente'] = $mascotaCliente; 
 	if($mascotaCliente == 'Ninguno'){ $mascotaCliente = 0;}
 
+	if(!empty($mascotaCliente) && !in_array("ninguno", $mascotaCliente)){
+		foreach ($mascotaCliente as $key) {
+			$mascotaCliente = $key;
+		}
+	}
+ 
 	if($_SESSION['formError'] == 0){
 		if($editar == 'editar' && $mascotaID != ''){
 			unset($sql_array);

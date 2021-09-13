@@ -194,7 +194,7 @@ include('p4rc4l35/7i7ul0.php');
                       <option value="ninguno" <?php if(!empty($_SESSION['formMascota']['mascotaCliente']) && array_keys($_SESSION['formMascota']['mascotaCliente'], 'ninguno')){ echo 'selected'; } ?>>Ninguno</option>    
                         <?php foreach ($LdClientes as $key => $value) { /*$ca = array_rand($cls, 1);*/?>
                           <?php if(array_keys($_SESSION['formMascota']['mascotaCliente'], $value['clienteID'])) { $sLt = 'selected'; } ?>
-                            <option value="<?= $value['clienteID'] ?>" <?= $sLt ?>><?= $value['clienteApellido1'] ?> <?= $value['clienteApellido2'] ?> <?= $value['clienteNombre1'] ?> <?= $value['clienteNombre2'] ?></option>
+                            <option value="<?= $value['clienteID'] ?>" <?= $sLt ?>><?= $value['clienteApellido1'] ?> <?= $value['clienteApellido2'] ?> <?= $value['clienteNombre1'] ?> <?= $value['clienteNombre2'] ?> | <?= $value['clienteUsuario'] ?> | <?= $value['clienteTel1'] ?></option>
                           <?php unset($sLt); }  ?>
                     </select>
                   </div>

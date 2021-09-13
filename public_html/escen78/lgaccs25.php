@@ -18,8 +18,7 @@
 <body class="hold-transition login-page" 
 style="min-height: 373.2px;background-color: #454d55; color:white;background-image: url('<?= $carpetaFondos ?><?= fondoRandom() ?>');height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;padding-top: 10%;padding-bottom: 10%;">
 <div class="login-box" id="app">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6960218161476043"
-     crossorigin="anonymous"></script>
+  
 <?php /*
 <script>
 var getInfo;
@@ -49,7 +48,7 @@ var getInfo;
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
   function checkLoginState() {
-    FB.getLoginStatus(function(response) {
+    FB.getLoginStatu      s(function(response) {
       statusChangeCallback(response);
     });
   }
