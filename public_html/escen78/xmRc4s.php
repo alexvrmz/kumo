@@ -42,7 +42,7 @@ include('p4rc4l35/7i7ul0.php');
              
             <div class="card-body" style="ali">
               <div class="btn-group">
-                <a href="v75t4?axc0=Tm0d3ls&cfr=<?= $eCry($u5h34r5['rxCxID5']) ?>" type="button" class="btn btn-default btn-flat">
+                <a href="app?accion=Tm0d3ls&cfr=<?= $eCry($u5h34r5['rxCxID5']) ?>" type="button" class="btn btn-default btn-flat">
 
                 <?php if(empty($u5h34r5['rxCxIm463N5'])){
                   echo '<p style="width: 208px;height: 34px; font-weight: bold;position: relative;top: 10px;">'.$u5h34r5['rxCxD35c5'].'</p>';
@@ -55,9 +55,9 @@ include('p4rc4l35/7i7ul0.php');
                       <span class="sr-only">Toggle Dropdown</span>
                     </button>
                     <div class="dropdown-menu" role="menu" style="position: absolute; transform: translate3d(68px, 38px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
-                      <a class="dropdown-item" href="v75t4?axc0=Tm0d3ls&cfr=<?= $eCry($u5h34r5['rxCxID5']) ?>">Ver Modelos</a>
+                      <a class="dropdown-item" href="app?accion=Tm0d3ls&cfr=<?= $eCry($u5h34r5['rxCxID5']) ?>">Ver Modelos</a>
                       <?php if(v4lID44x50("900-003", $u5u4i0) == TRUE){ /// --- editar MARCA ?>
-                        <a class="dropdown-item" href="v75t4?axc0=xmRc4s_o983&mk9ID=<?= $eCry($u5h34r5['rxCxID5']) ?>">Editar</a>
+                        <a class="dropdown-item" href="app?accion=xmRc4s_o983&mk9ID=<?= $eCry($u5h34r5['rxCxID5']) ?>">Editar</a>
                       <?php } ?>
                     </div>
                   </div>
@@ -76,7 +76,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?axc0=5u540l_04">
+            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?accion=5u540l_04">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3wu5u4ri0 ?></h4>
                 

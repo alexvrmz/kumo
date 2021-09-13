@@ -1,15 +1,15 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
-if($axc0 === "svasg" || $axc0 === 'BrrS' || $axc0 === 'BrrA' || $axc0 === 'DrK' || $axc0 === 'cEfs' || $axc0 === '54v3c0nFi6' || $axc0 === 'mo0DStruX' || $axc0 === 'Ac7Vs7'){
+if($accion === "svasg" || $accion === 'BrrS' || $accion === 'BrrA' || $accion === 'DrK' || $accion === 'cEfs' || $accion === '54v3c0nFi6' || $accion === 'mo0DStruX' || $accion === 'Ac7Vs7'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
 }
-if($axc0 === 'asNxV'){
+if($accion === 'asNxV'){
 
 	if($xux != ''){
 		//$xux1 = $xux;
@@ -110,15 +110,15 @@ if($axc0 === 'asNxV'){
 		include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_817_as_01;
     $_SESSION['m3n3Rr0R'] = 'si';
-		llevame('v75t4?axc0=v3hiXs');
+		llevame('app?accion=v3hiXs');
 	}
 	
 	/*
 	unset($sQl_d474_4rr4y);		
-	$axc0 = 'actualizar';
+	$accion = 'actualizar';
 	$p4r4m37r05 = "u5hID8ir5 = '".$cc_x002."' ";
 	$sQl_d474_4rr4y = ['config_7im3Bl0' => $cc_x001];		
-	ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+	ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 	
 	include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 	include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_c0Nfi6.php');
@@ -128,17 +128,17 @@ if($axc0 === 'asNxV'){
 	bi74c0('actC0nF', $m3ns4J3, '');
 	$_SESSION['m3ns4J3'] = $m3ns4J3;
 
-	llevame('../v75t4?axc0=c0Nfi6');*/
+	llevame('../app?accion=c0Nfi6');*/
 }
-elseif($axc0 === 'svasg'){
-	$axc0 = 'actualizar';
+elseif($accion === 'svasg'){
+	$accion = 'actualizar';
 		$p4r4m37r05 = "xV3hiIDXu7l0s = '".$r_002."'";
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = [
 			'xV3hiEDOXu7l0s' => 4,
 			//'xV3hiUIDXu7l0s' => $r_001
 		];		
-		ejecutaDB('v3hiXu7l0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('v3hiXu7l0s', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		
 		$C002 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = $r_001";
@@ -153,8 +153,8 @@ elseif($axc0 === 'svasg'){
 				'UEFVxTU' => $r_002
 			];		
 			$p4r4m37r05 = '';
-			$axc0 = 'insertar';
-			ejecutaDB('r3l3UEF', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			$accion = 'insertar';
+			ejecutaDB('r3l3UEF', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		}
 		else{
 			unset($sQl_d474_4rr4y);
@@ -162,8 +162,8 @@ elseif($axc0 === 'svasg'){
 				'UEFVxTU' => $r_002
 			];		
 			$p4r4m37r05 = "UEFUxTU = '".$r_001."'";
-			$axc0 = 'actualizar';
-			ejecutaDB('r3l3UEF', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			$accion = 'actualizar';
+			ejecutaDB('r3l3UEF', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		}
 
 		$_SESSION['m3ns4J3'] = 'Se Asigno el Auto: '.$r_002.' al usuario: '.$r_001;
@@ -173,11 +173,11 @@ elseif($axc0 === 'svasg'){
 
 	if($r_003 == 'xux'){
 		
-		llevame('../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($r_001));
+		llevame('../app?accion=5u540l_02&u5u4oxX='.$eCry($r_001));
 	}
 	elseif($r_003 == 'v3h'){
 		
-		llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($r_002));
+		llevame('../app?accion=v3hFh4&vh3iP='.$eCry($r_002));
 	}
 	
 }

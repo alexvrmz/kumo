@@ -1,17 +1,17 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
-if($axc0 === "procesaMascota" || $axc0 == 'borrarFormulario'){
+if($accion === "procesaMascota" || $accion == 'borrarFormulario'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
  	include('fncnesF0rM5.php');
 }
 include('mascotasFunciones.php');
-if($axc0 === 'mascotas'){
+if($accion === 'mascotas'){
 	$C001 = "SELECT * FROM mascotas WHERE mascota_universo = $xXUNVrSXx";
 	$S001 = $cnnx4s->query($C001) or die ("Fallo al consultar mascotas");
 	$numMascotas = $S001->num_rows;
@@ -76,7 +76,7 @@ if($axc0 === 'mascotas'){
 	}
 
 }
-elseif($axc0 == 'editarMascota'){
+elseif($accion == 'editarMascota'){
 	if($mascotaID != ''){
 		$mascotaID = $dCry($mascotaID);
 		$C001 = "SELECT * FROM mascotas WHERE mascota_id = $mascotaID";
@@ -89,10 +89,10 @@ elseif($axc0 == 'editarMascota'){
 	else{
 		$_SESSION['m3ns4J3'] = 'No habia ID de mascota a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    llevame('v75t4?axc0=mascotas');
+    llevame('app?accion=mascotas');
 	}
 }
-elseif($axc0 == 'procesaMascota'){
+elseif($accion == 'procesaMascota'){
 
 	$mascotaNombre = limpia($mascotaNombre);
 	$mascotaEspecie = limpia($mascotaEspecie);
@@ -149,8 +149,8 @@ elseif($axc0 == 'procesaMascota'){
 			echo '</pre>';*/
 			ejecutaDB('mascotas', $sql_array, $accion, $paramatros);
 			unset($_SESSION['formMascota']);
-			//Bin4kuru('Se creo la mascota -> ', $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
-			llevame('../v75t4?axc0=fichaMascota&mascotaID='.$eCry($mascotaID));
+			//Bin4kuru('Se creo la mascota -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+			llevame('../app?accion=fichaMascota&mascotaID='.$eCry($mascotaID));
 		}
 		else{
 			unset($sql_array);
@@ -190,14 +190,14 @@ elseif($axc0 == 'procesaMascota'){
 					/*$C009 = "SELECT D0cIDxS FROM D0cUM3n705 WHERE D0cv3HiDxS = $mascotaID AND D0c4c7iv0xS = 1 AND D0c7ip0xS = $do9j";
 					$S009 = $cnnx4s->query($C009) or die ("Fallo al seleccionar documentos: ".$C009);
 					while ($DeD = $S009->fetch_array()) {
-						$axc0 = 'actualizar';
+						$accion = 'actualizar';
 						unset($sql4rr);
 						$ddxID = $DeD['D0cIDxS'];
 						$p4r5 = 'D0cIDxS = '.$ddxID;
 						$sql4rr = [
 							'D0c4c7iv0xS' => 0
 						];
-						ejecutaDB('D0cUM3n705', $sql4rr, $axc0, $p4r5);
+						ejecutaDB('D0cUM3n705', $sql4rr, $accion, $p4r5);
 						bi74c0('4ctTcir', 'Se desactivo la tarjeta de circulación: '.$ddxID, '');
 					}*/
 				
@@ -279,16 +279,16 @@ elseif($axc0 == 'procesaMascota'){
 
 
 			unset($_SESSION['formMascota']);
-			//Bin4kuru('Se creo la mascota -> ', $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
-			llevame('../v75t4?axc0=fichaMascota&mascotaID='.$eCry($mascotaID));
+			//Bin4kuru('Se creo la mascota -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+			llevame('../app?accion=fichaMascota&mascotaID='.$eCry($mascotaID));
 		}
 	}
 	else{
 		if($editar == 'editar' && $mascotaID != ''){
-			llevame('../v75t4?axc0=editarMascota&mascotaID='.$eCry($mascotaID));
+			llevame('../app?accion=editarMascota&mascotaID='.$eCry($mascotaID));
 		}
 		else{
-			llevame('../v75t4?axc0=mascotas');
+			llevame('../app?accion=mascotas');
 		}
 	}
 
@@ -303,13 +303,13 @@ elseif($axc0 == 'procesaMascota'){
 
 
 }
-elseif($axc0 == 'borrarFormulario'){
+elseif($accion == 'borrarFormulario'){
 	unset($_SESSION['formMascota']);
 	unset($_SESSION['formError']);
 	unset($_SESSION['mensajeForm']);
-	llevame('../v75t4?axc0=mascotas');
+	llevame('../app?accion=mascotas');
 }
-elseif($axc0 == 'fichaMascota'){
+elseif($accion == 'fichaMascota'){
 	$C004 = "SELECT * FROM mascotas WHERE mascota_id = ".$dCry($mascotaID)." ";
 	$S004 = $cnnx4s->query($C004) or die ("Fallo al seleccionar Mascota");
 	$mascota = $S004->fetch_assoc();

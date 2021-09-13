@@ -74,7 +74,7 @@ include('p4rc4l35/7i7ul0.php');
                         <td><?= $P3r70y7['p3ry6nUm3pP'] ?></td>
                         <td>
                           <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
-                            <a href="v75t4?axc0=xu5sdS7l&p3ry6I=<?= $eCry($P3r70y7['p3ry6IDXpP']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
+                            <a href="app?accion=xu5sdS7l&p3ry6I=<?= $eCry($P3r70y7['p3ry6IDXpP']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           <?php } ?>
                         </td>
                       </tr>
@@ -95,7 +95,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="post" action="ap4673i/p3rm5o5_4pi.php?axc0=5u5v78Ds" id="n3wp3r">
+            <form method="post" action="ap4673i/p3rm5o5_4pi.php?accion=5u5v78Ds" id="n3wp3r">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w7i7u ?></h4>
                 

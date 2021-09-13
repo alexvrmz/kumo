@@ -3,18 +3,18 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
-if($axc0 === '4dds3r' || $axc0 === 'sV3S3rv'){
+if($accion === '4dds3r' || $accion === 'sV3S3rv'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
  	include('fncnesF0rM5.php');
 }
 
-/// --- axc0 Listado de Usuarios
-if($axc0 === "s3rv"){
+/// --- accion Listado de Usuarios
+if($accion === "s3rv"){
 
 	$C001 = "SELECT * FROM c4TS3rxxV WHERE xXUNVrSXx = $xXUNVrSXx";
 	$S001 = $cnnx4s->query($C001) or die ("Falló listado de servicios: " . $C001);
@@ -34,7 +34,7 @@ if($axc0 === "s3rv"){
 	}	
 
 }
-elseif($axc0 === '4dds3r'){
+elseif($accion === '4dds3r'){
 	if(!empty($pt5_xx01)){
 		$_SESSION['m3n3Rr0R_num'] = 0;
 		unset($_SESSION['tXFrm']);
@@ -57,7 +57,7 @@ elseif($axc0 === '4dds3r'){
 		$pt5_xx01 = limpia($pt5_xx01);
 
 		if($_SESSION['m3n3Rr0R_num'] == 0){
-		$axc0 = 'insertar'; 
+		$accion = 'insertar'; 
 			unset($sQl_d474_4rr4y); 
 			$sQl_d474_4rr4y = [
 				's3R_xDd35' => $pt5_xx01,
@@ -69,26 +69,26 @@ elseif($axc0 === '4dds3r'){
 				's3R_xDini' => 0,
 				'xXUNVrSXx' => $xXUNVrSXx
 			];
-			ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 			bi74c0('adds3rv', 'el usuario agrego el servicio '.$pt5_xx01.' con exito', '');
 			$_SESSION['m3ns4J3'] = 'Se agrego el servicio: '.$pt5_xx01;
-			$rl = '../v75t4?axc0=s3rv';
+			$rl = '../app?accion=s3rv';
 		}
 		else{
 			$_SESSION['m3n3Rr0R']  = 'si';
 			$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
-			$rl = '../v75t4?axc0=s3rv&pt5_xx01='.$eCry($pt5_xx01).'&pt5_xx03='.$eCry($pt5_xx03).'&pt5_xx04='.$eCry($pt5_xx04);
+			$rl = '../app?accion=s3rv&pt5_xx01='.$eCry($pt5_xx01).'&pt5_xx03='.$eCry($pt5_xx03).'&pt5_xx04='.$eCry($pt5_xx04);
 		}
 	}
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
-		$rl = '../v75t4?axc0=s3rv';
+		$rl = '../app?accion=s3rv';
 	}
 	llevame($rl);
 }
-elseif($axc0 === 's3rv3Dt'){
+elseif($accion === 's3rv3Dt'){
 	if(!empty($pXRoI)){
 		$pXRoI = $dCry($pXRoI);
 		$C002 = "SELECT * FROM c4TS3rxxV WHERE s3R_xDID = $pXRoI";
@@ -106,11 +106,11 @@ elseif($axc0 === 's3rv3Dt'){
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta el ID de Servicio';
-		$rl = '../v75t4?axc0=s3rv';
+		$rl = '../app?accion=s3rv';
 		llevame($rl);
 	}
 }
-elseif($axc0 === 'sV3S3rv'){
+elseif($accion === 'sV3S3rv'){
 		
 		$_SESSION['m3n3Rr0R_num'] = 0;
 		unset($_SESSION['m3ns4j3Frm']);
@@ -140,7 +140,7 @@ elseif($axc0 === 'sV3S3rv'){
 		$frm_003 = limpia($frm_003);
 		
 		if($_SESSION['m3n3Rr0R_num'] == 0){
-			$axc0 = 'actualizar';
+			$accion = 'actualizar';
 			unset($sQl_d474_4rr4y); 
 			if($xSrInip0 == 1){
 				$sQl_d474_4rr4y = [
@@ -161,15 +161,15 @@ elseif($axc0 === 'sV3S3rv'){
 			}
 			print_r($sQl_d474_4rr4y);
 			$p4r4m37r05 = "s3R_xDID = $pXRoI";
-			ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 			bi74c0('eDts3rv', 'el usuario edito el servicio '.$frm_001.' con exito', '');
 			$_SESSION['m3ns4J3'] = 'Datos Actualizados con exito!';
-			$rl = '../v75t4?axc0=s3rv';
+			$rl = '../app?accion=s3rv';
 		}
 		else{
 			$_SESSION['m3n3Rr0R']  = 'si';
 			$_SESSION['m3ns4J3'] = 'Verifica los datos';
-			$rl = '../v75t4?axc0=s3rv3Dt&pXRoI='.$eCry($pXRoI).'&frm_001='.$eCry($frm_001).'&frm_002='.$eCry($frm_002).'&frm_003='.$eCry($frm_003).'&frm_006='.$eCry($frm_006);
+			$rl = '../app?accion=s3rv3Dt&pXRoI='.$eCry($pXRoI).'&frm_001='.$eCry($frm_001).'&frm_002='.$eCry($frm_002).'&frm_003='.$eCry($frm_003).'&frm_006='.$eCry($frm_006);
 		}
 	llevame($rl);
 }

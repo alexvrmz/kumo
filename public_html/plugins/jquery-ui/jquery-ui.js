@@ -12692,7 +12692,7 @@ $.widget( "ui.dialog", {
 
 		// If the user has resized the dialog, the .ui-dialog and .ui-dialog-content
 		// divs will both have width and height set, so we need to reset them
-		var nonContentHeight, minContentHeight, maxc0ontentHeight,
+		var nonContentHeight, minContentHeight, maccionontentHeight,
 			options = this.options;
 
 		// Reset content sizing
@@ -12715,14 +12715,14 @@ $.widget( "ui.dialog", {
 		} )
 			.outerHeight();
 		minContentHeight = Math.max( 0, options.minHeight - nonContentHeight );
-		maxc0ontentHeight = typeof options.maxHeight === "number" ?
+		maccionontentHeight = typeof options.maxHeight === "number" ?
 			Math.max( 0, options.maxHeight - nonContentHeight ) :
 			"none";
 
 		if ( options.height === "auto" ) {
 			this.element.css( {
 				minHeight: minContentHeight,
-				maxHeight: maxc0ontentHeight,
+				maxHeight: maccionontentHeight,
 				height: "auto"
 			} );
 		} else {

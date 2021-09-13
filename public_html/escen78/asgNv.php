@@ -20,7 +20,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
         </div>
 
-          <form action="ap4673i/asgNv_4pi.php?axc0=svasg" method="POST">
+          <form action="ap4673i/asgNv_4pi.php?accion=svasg" method="POST">
             <div class="card-body">
               
                 <div class="row">

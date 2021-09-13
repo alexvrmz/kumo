@@ -4,7 +4,7 @@
 date_default_timezone_set("America/Mexico_City");
 setlocale(LC_ALL , 'es_MX.UTF-8');
 
-//include('i_5u250e.php'); /// --- Dashboard
+//include('i_escritorio.php'); /// --- Dashboard
 include('i_m3Nu.php'); /// --- Menu
 define('lbl_3xi70','Exito!');
 define('lbl_3rR0r','Error!');

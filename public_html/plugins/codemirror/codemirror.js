@@ -9038,13 +9038,13 @@
     }
 
     var cutFront = 0, cutEnd = 0;
-    var newTop = newText[0], oldTop = oldText[0], maxc0utFront = Math.min(newTop.length, oldTop.length);
-    while (cutFront < maxc0utFront && newTop.charCodeAt(cutFront) == oldTop.charCodeAt(cutFront))
+    var newTop = newText[0], oldTop = oldText[0], maccionutFront = Math.min(newTop.length, oldTop.length);
+    while (cutFront < maccionutFront && newTop.charCodeAt(cutFront) == oldTop.charCodeAt(cutFront))
       { ++cutFront; }
     var newBot = lst(newText), oldBot = lst(oldText);
-    var maxc0utEnd = Math.min(newBot.length - (newText.length == 1 ? cutFront : 0),
+    var maccionutEnd = Math.min(newBot.length - (newText.length == 1 ? cutFront : 0),
                              oldBot.length - (oldText.length == 1 ? cutFront : 0));
-    while (cutEnd < maxc0utEnd &&
+    while (cutEnd < maccionutEnd &&
            newBot.charCodeAt(newBot.length - cutEnd - 1) == oldBot.charCodeAt(oldBot.length - cutEnd - 1))
       { ++cutEnd; }
     // Try to move start of change to start of selection if ambiguous

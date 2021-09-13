@@ -2,7 +2,7 @@
 foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 session_start(); // --- Validar sesión ---
 
-if($axc0 == 'x002'){
+if($accion == 'x002'){
 	include('ap4673i/ccnnxx547.php');
 	include('ap4673i/fncnes5632.php');
 
@@ -10,10 +10,10 @@ if($axc0 == 'x002'){
   bi74c0('3xi7', lbl_8i7_x028.$_SESSION['u5hID8ir5'], '');
 	
 	include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-	$axc0 = 101;
-	$d3s = eCry2($Bin4kuru[$axc0]);
+	$accion = 101;
+	$d3s = eCry2($Bin4kuru[$accion]);
 	$U = $_SESSION['u5hID8ir5'];
-	Bin4kuru($d3s, $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+	Bin4kuru($d3s, $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 
 	bi74c0('3xi7e', lbl_8i7_x031.$_SESSION['u5hID8ir5'], ''); 
 
@@ -24,14 +24,14 @@ if($axc0 == 'x002'){
 
 }
 
-elseif(isset($_SESSION['xx_001']) && $axc0 != 'x006' && $axc0 != 'x001' ){ // ---- sesión iniciada, llevame a index ----
+elseif(isset($_SESSION['xx_001']) && $accion != 'x006' && $accion != 'x001' ){ // ---- sesión iniciada, llevame a index ----
 
 	header("location: index.php");
 
 }
 
 
-elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión si es redirigido y la sessi´on no existe ---
+elseif($accion == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión si es redirigido y la sessi´on no existe ---
 	include('ap4673i/ccnnxx547.php');
 	include('ap4673i/fncnes5632.php');
 
@@ -41,11 +41,11 @@ elseif($axc0 == 'x001' && !isset($_SESSION['xx_001'])){ // --- Iniciar sesión s
 	include('escen78/lgaccs25.php');
 	
 } 
-elseif($axc0 == 'r3g7r0'){
+elseif($accion == 'r3g7r0'){
 	
 	include('escen78/r3g7r0.php');
 }
-elseif($axc0 == 'x005'){ // --- Validar datos ---
+elseif($accion == 'x005'){ // --- Validar datos ---
 		
 	include 'ap4673i/ccnnxx547.php';
 	include('escen78/iDi0m45/es_MX/i_8i74c0r4.php');
@@ -105,21 +105,21 @@ elseif($axc0 == 'x005'){ // --- Validar datos ---
 		bi74c0('lgaccs25', $m5y6, '');
 		
 		include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-		$axc0 = 100;
-		$d3s = eCry2($Bin4kuru[$axc0]);
+		$accion = 100;
+		$d3s = eCry2($Bin4kuru[$accion]);
 		$U = $_SESSION['u5hID8ir5'];
-		Bin4kuru($d3s, $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+		Bin4kuru($d3s, $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 
-		llevame('v75t4?axc0=5u250e');
+		llevame('app?accion=escritorio');
 	} else{ 
 		//	include('ap4673i/fncnes5632.php');
 		$m3ns4J3	= 'El usuario y/o Contraseña son Incorrectos!!!';
-		llevame('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
+		llevame('lgaccs25?accion=x001&m3ns4J3='.$m3ns4J3.'&err=true');
 
 	}
 
 } 
-elseif($axc0 == 'x006'){ 
+elseif($accion == 'x006'){ 
 
 	include 'ap4673i/ccnnxx547.php';
 	include 'ap4673i/fncnes5632.php';
@@ -138,11 +138,11 @@ elseif($axc0 == 'x006'){
 	}else{
 		
 		$_SESSION['m3ns4J3'] = 'Contraseña Incorrecta';
-		llevame('v75t4?axc0=l00k5cR3n');
+		llevame('app?accion=l00k5cR3n');
 	}
 
 }
-elseif($axc0 == 'x007'){
+elseif($accion == 'x007'){
 	include('ap4673i/ccnnxx547.php');
 	include('ap4673i/fncnes5632.php');
 	
@@ -161,23 +161,23 @@ elseif($axc0 == 'x007'){
 			];
 			ejecutaDB('u5u405', $fg, $ax, $p4r4);
 			$m3ns4J3 = 'Tu cuenta se Activo con Exito!, ingresa tus credenciales.';
-    	llevame('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
+    	llevame('lgaccs25?accion=x001&m3ns4J3='.$eCry($m3ns4J3));
 		}
 		else{
 			$m3ns4J3 = 'Enlace no Valido! 1<br>';
 			$_SESSION['m3n3Rr0R'] = 'si';
-    	llevame('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
+    	llevame('lgaccs25?accion=x001&m3ns4J3='.$eCry($m3ns4J3));
 		}
 
 	}
 	else{
 		$m3ns4J3 = 'Enlace no Valido! 2';
 		$_SESSION['m3n3Rr0R'] = 'si';
-    llevame('lgaccs25?axc0=x001&m3ns4J3='.$eCry($m3ns4J3));
+    llevame('lgaccs25?accion=x001&m3ns4J3='.$eCry($m3ns4J3));
 	}
 
 }
-elseif($axc0 == 'x008'){ // --- Validar datos FB---
+elseif($accion == 'x008'){ // --- Validar datos FB---
 		
 	include 'ap4673i/ccnnxx547.php';
 	include('escen78/iDi0m45/es_MX/i_8i74c0r4.php');
@@ -234,21 +234,21 @@ elseif($axc0 == 'x008'){ // --- Validar datos FB---
 		bi74c0('lgaccs25', $m5y6, '');
 		
 		include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-		$axc0 = 100;
-		$d3s = eCry2($Bin4kuru[$axc0]);
+		$accion = 100;
+		$d3s = eCry2($Bin4kuru[$accion]);
 		$U = $_SESSION['u5hID8ir5'];
-		Bin4kuru($d3s, $axc0, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+		Bin4kuru($d3s, $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 
-		llevame('v75t4?axc0=5u250e');
+		llevame('app?accion=escritorio');
 	} else{ 
 		//	include('ap4673i/fncnes5632.php');
 		$m3ns4J3	= $pp_xx005;
-		llevame('lgaccs25?axc0=x001&m3ns4J3='.$m3ns4J3.'&err=true');
+		llevame('lgaccs25?accion=x001&m3ns4J3='.$m3ns4J3.'&err=true');
 
 	}
 
 } 
 
-if($axc0 == '00001'){
+if($accion == '00001'){
 	echo 'whoami';
 }

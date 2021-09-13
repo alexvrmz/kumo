@@ -15,7 +15,7 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
-          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" href="v75t4?axc0=d0cx6y"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
+          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" href="app?accion=d0cx6y"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ include('p4rc4l35/7i7ul0.php');
         <?php } ?>
         
         <!-- /.card-header -->
-        <form method="POST" action="ap4673i/d0cx6y_4pi?axc0=sV3Tr4">
+        <form method="POST" action="ap4673i/d0cx6y_4pi?accion=sV3Tr4">
           <div class="card-body">
 
             <div class="form-group">

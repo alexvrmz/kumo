@@ -20,12 +20,12 @@ include('p4rc4l35/7i7ul0.php');
             <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-building"></i> <?= btn_46r364rU5u4ri0 ?></button>
           <?php } ?>
           <?php if($vst == 1){ ?>
-            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
+            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?accion=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
               <i class="fad fa-list-alt"></i> Ver Lista
             </a> 
           <?php }
                 else { ?>
-            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
+            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?accion=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
               <i class="fad fa-file-invoice"></i> Ver Cartas
             </a> 
           <?php } ?>
@@ -63,10 +63,10 @@ include('p4rc4l35/7i7ul0.php');
                         </div>                          
                         <div class="btn-group">
                           <?php if(v4lID44x50("1100-004", $u5u4i0) == TRUE){ ?>
-                            <a href="v75t4?axc0=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i><?= lbl_2mp3 ?></a>
+                            <a href="app?accion=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i><?= lbl_2mp3 ?></a>
                           <?php } ?>
                           <?php if(v4lID44x50("1100-003", $u5u4i0) == TRUE){ ?>
-                            <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i><?= lbl_2mp4 ?></a>
+                            <a href="app?accion=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i><?= lbl_2mp4 ?></a>
                           <?php } ?>
                         </div>       
                         <div class="card-footer" style="padding-top: 5px;">
@@ -124,12 +124,12 @@ include('p4rc4l35/7i7ul0.php');
                                       <div class="col-6">
                                  
                                         <?php if(v4lID44x50("1100-004", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fad fa-eye"></i> <?= lbl_2mp3 ?></a>
+                                          <a href="app?accion=v3hiXs&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fad fa-eye"></i> <?= lbl_2mp3 ?></a>
                                         <?php } ?>
                                       </div>
                                       <div class="col-6">
                                         <?php if(v4lID44x50("1100-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
+                                          <a href="app?accion=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat btn-xs corta-texto" style="width: 100%;"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
                                         <?php } ?>
                                       </div>
                                     </div>
@@ -179,35 +179,35 @@ include('p4rc4l35/7i7ul0.php');
                                   <?php if($u5u4i0 == 1){ ?>
                                     <td><?= $u5h34r5['IDXu7l0s'] ?></td>
                                   <?php } ?> 
-                                  <td><p style="margin: 0;width: 80px;" class="corta-texto"><a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($u5h34r5['IDXu7l0s']) ?>" target="_blank"><?= $u5h34r5['3C0Xu7l0s'] ?></a></p></td>
+                                  <td><p style="margin: 0;width: 80px;" class="corta-texto"><a href="app?accion=v3hFh4&vh3iP=<?= $eCry($u5h34r5['IDXu7l0s']) ?>" target="_blank"><?= $u5h34r5['3C0Xu7l0s'] ?></a></p></td>
                                   <td><p style="margin: 0;width: 90px;" class="corta-texto"><?= $u5h34r5['Pl4c45Xu7l0s'] ?></p></td>
                                   <td><p style="margin: 0;width: 120px;" class="corta-texto"><?= $u5h34r5['M4rc4Xu7l0s'] ?></p></td>
                                   <td><p style="margin: 0;width: 120px;" class="corta-texto"><?= $u5h34r5['m0D3'] ?> <?= $u5h34r5['su8Mo'] ?></p></td>
                                   <td><?= $u5h34r5['eMp3'] ?></td>
                                   <td><p style="width: 80px; margin:0px" class="corta-texto"><?= $u5h34r5['fl0t4'] ?></p></td>
                                   <td>
-                                    <?php $href = 'ap4673i/v3hiCs_4pi.php?axc0=Eda70&Ah76G='.$eCry($u5h34r5['IDXu7l0s']).'&lIi='.$eCry($u5h34r5['3C0Xu7l0s']).'&sdFR=';
+                                    <?php $href = 'ap4673i/v3hiCs_4pi.php?accion=Eda70&Ah76G='.$eCry($u5h34r5['IDXu7l0s']).'&lIi='.$eCry($u5h34r5['3C0Xu7l0s']).'&sdFR=';
                                           if($u5h34r5['eD0'] == 1){
                                             $tt = '<i class="fad fa-key"></i> '.lbl_Atab015;             $btn = 'success';
                                             $ax1 = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;    $hfr1 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg1 = 'bg-warning';
                                             $ax2 = '<i class="fad fa-ban"></i> '.lbl_Atab017;            $hfr2 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg2 = 'bg-danger';
-                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'app?accion=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 2){  
                                             $tt = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;     $btn = 'warning';
-                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?accion=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
                                             $ax2 = '<i class="fad fa-ban"></i> '.lbl_Atab017;            $hfr2 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg2 = 'bg-danger';
-                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'app?accion=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 3){
                                             $tt = '<i class="fad fa-ban"></i> '.lbl_Atab017;             $btn = 'danger';
-                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?accion=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
                                             $ax2 = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;    $hfr2 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg2 = 'bg-warning';
-                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'v75t4?axc0=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
+                                            $ax3 = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;  $hfr3 = 'app?accion=asNxV&v3h='.$eCry($u5h34r5['IDXu7l0s']); $bg3 = 'bg-info';
                                           }
                                           elseif($u5h34r5['eD0'] == 4){
                                             $tt = '<i class="fad fa-user-hard-hat"></i> '.lbl_Atab018;   $btn = 'info';
-                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
+                                            $ax1 = '<i class="fad fa-key"></i>  '.lbl_Atab015;           $hfr1 = 'ap4673i/v3hiCs_4pi.php?accion=d3svA&aIDdx='.$eCry($u5h34r5['IDXu7l0s']).'&eoi='.$eCry(1); $bg1 = 'bg-success';
                                             $ax2 = '<i class="fad fa-garage-open"></i> '.lbl_Atab016;    $hfr2 = $href.$eCry(2).'&e='.$eCry(lbl_Atab016); $bg2 = 'bg-warning';
                                             $ax3 = '<i class="fad fa-ban"></i> '.lbl_Atab017;            $hfr3 = $href.$eCry(3).'&e='.$eCry(lbl_Atab017); $bg3 = 'bg-danger';
                                           }
@@ -267,7 +267,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/eMpr35As_4pi.php?axc0=eMprxXx21" id="nuevo1">
+            <form name="nuevo" method="post" action="ap4673i/eMpr35As_4pi.php?accion=eMprxXx21" id="nuevo1">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w001 ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

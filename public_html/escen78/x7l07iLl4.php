@@ -20,17 +20,17 @@ include('p4rc4l35/7i7ul0.php');
         </div>
         <div class="card-body">
           <div class="card-body p-0">    
-            <a href="v75t4?axc0=eMpr35As" class="btn bg-success btn-app"><i class="fad fa-arrow-left"></i> <?= btn_r3g ?></a>            
+            <a href="app?accion=eMpr35As" class="btn bg-success btn-app"><i class="fad fa-arrow-left"></i> <?= btn_r3g ?></a>            
             <?php if(v4lID44x50("1200-002", $u5u4i0) == TRUE){ /// --- Agregar flota?>
               <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-folder-plus"></i> <?= btn_46r364rm0Du ?></button>
             <?php } ?>
             <?php if($vst == 1){ ?>
-            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
+            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?accion=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
               <i class="fad fa-list-alt"></i> Ver Lista
             </a> 
           <?php }
                 else { ?>
-            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
+            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?accion=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
               <i class="fad fa-file-invoice"></i> Ver Cartas
             </a> 
           <?php } ?>
@@ -135,10 +135,10 @@ include('p4rc4l35/7i7ul0.php');
                                 </div>
                                 <div class="btn-group">
                                   <?php if(v4lID44x50("1200-004", $u5u4i0) == TRUE){ ?>
-                                    <a href="v75t4?axc0=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i> Ver</a>
+                                    <a href="app?accion=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i> Ver</a>
                                   <?php } ?>
                                   <?php if(v4lID44x50("1200-003", $u5u4i0) == TRUE){ ?>
-                                    <a href="v75t4?axc0=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i> Editar</a>
+                                    <a href="app?accion=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i> Editar</a>
                                   <?php } ?>
                                 </div> 
                                   
@@ -217,7 +217,7 @@ include('p4rc4l35/7i7ul0.php');
                                       <?php $i = 0;
                                             foreach ($u5h34r5['3mP'] as $key => $value) { ?>
                                         <?php if($i <= 2){ ?>    
-                                          <a href="v75t4?axc0=x7l07iLl4&eMpr3=<?= $eCry($value['nn']) ?>"><span class="right badge badge-info"><?= $value['nm'] ?></span></a>
+                                          <a href="app?accion=x7l07iLl4&eMpr3=<?= $eCry($value['nn']) ?>"><span class="right badge badge-info"><?= $value['nm'] ?></span></a>
                                         <?php $i++;
                                                 } ?>
                                       <?php } $i =0;?>
@@ -230,12 +230,12 @@ include('p4rc4l35/7i7ul0.php');
                                       
                                  
                                         <?php if(v4lID44x50("1200-004", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat btn-xs" ><i class="fad fa-eye"></i> Ver</a>
+                                          <a href="app?accion=v3hiXs&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-info btn-flat btn-xs" ><i class="fad fa-eye"></i> Ver</a>
                                         <?php } ?>
                                       
                                       
                                         <?php if(v4lID44x50("1200-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat btn-xs"><i class="fad fa-edit"></i> Editar</a>
+                                          <a href="app?accion=edi74flo0&flo0=<?= $eCry($u5h34r5['zID7']) ?>" type="button" class="btn btn-warning btn-flat btn-xs"><i class="fad fa-edit"></i> Editar</a>
                                         <?php } ?>
                                      
                                     </div> 
@@ -299,7 +299,7 @@ include('p4rc4l35/7i7ul0.php');
                                       <td><?= $u5h34r5['u5hUS8ir5'] ?></td>
                                       <td>
                                         <?php if(v4lID44x50("500-003", $u5u4i0) == TRUE){ /// --- EDITAR USUARIOS ?>
-                                          <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
+                                          <a href="app?accion=5u540l_02&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" type="button" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                                         <?php } ?>
                                       </tr>
                               <?php } ?>    
@@ -323,7 +323,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="POST" action="ap4673i/x7l07iLl4_4pi.php?axc0=fLo7025" name="nu3v07lo">  
+            <form method="POST" action="ap4673i/x7l07iLl4_4pi.php?accion=fLo7025" name="nu3v07lo">  
             
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_7i7uaD ?></h4>

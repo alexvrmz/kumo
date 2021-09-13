@@ -349,8 +349,8 @@ ul.social li{
                       Para activar tu cuenta,<br>
                       da clic en el botón o copia y pega<br>
                       en la barra de tu navegador:<br>
-                      https://mieke.mx/lgaccs25?axc0=x007&xcd={{r001x2}}&cft={{FRGF}}<br></h3>
-            				<p><a href="https://mieke.mx/lgaccs25?axc0=x007&xcd={{r001x2}}&cft={{FRGF}}" class="btn btn-primary">Activar Mi Cuenta</a></p>
+                      https://mieke.mx/lgaccs25?accion=x007&xcd={{r001x2}}&cft={{FRGF}}<br></h3>
+            				<p><a href="https://mieke.mx/lgaccs25?accion=x007&xcd={{r001x2}}&cft={{FRGF}}" class="btn btn-primary">Activar Mi Cuenta</a></p>
             			</div>
             		</td>
             	</tr>

@@ -9,15 +9,15 @@ include ('ap4673i/ccnnxx547.php');
 include ('ap4673i/fncnes5632.php');
  
 if(!isset($_SESSION['xx_001'])){
-	header("location:lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 
 include ('escen78/iDi0m45/'.$iDi['u5h8ir5_iDi'].'/iDi.php');
 
 $fjkj = $_SESSION['session_look'];
 if ($fjkj === true) {
-   	if($axc0 != 'l00k5cR3n'){
-			llevame('v75t4?axc0=l00k5cR3n');
+   	if($accion != 'l00k5cR3n'){
+			llevame('app?accion=l00k5cR3n');
 		}
 }
 
@@ -25,7 +25,7 @@ if ($fjkj === true) {
 ///----
   //$C004 = "SELECT * FROM "
 
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(v4lID44x50("100-001", $u5u4i0) == TRUE){          
           
 	// ---- Hora actual
@@ -43,21 +43,21 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 	}
 
 	if(!isset($_SESSION['xx_001'])){
-		header("location:lgaccs25.php?axc0=x001&m3ns4J3=".$m3ns4J3); // --- llevame a login si no hay sesión ---
+		header("location:lgaccs25.php?accion=x001&m3ns4J3=".$m3ns4J3); // --- llevame a login si no hay sesión ---
 	}
 
-	if($axc0 == '5u250e'){ /// --- Dash
+	if($accion == 'escritorio'){ /// --- Dash
 		
 		// ---- Marcar la sección en el menú ---
-		$menu_5u250e = 'active';
+		$menu_escritorio = 'active';
     
     // --- BACKEND ----
-		include('ap4673i/5u250e_4pi.php');
-		include('escen78/5u250e.php');
+		include('ap4673i/escritorio_4pi.php');
+		include('escen78/escritorio.php');
 		
 	}
 
-	elseif($axc0 == 'cuenta'){ /// --- Cuenta
+	elseif($accion == 'cuenta'){ /// --- Cuenta
 		
     // ---- Marcar la sección en el menú ---
 		$menu_cuenta = 'active';		
@@ -65,7 +65,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 		// --- BACKEND ----
 		include('escen78/cuenta.php');		
 	}
-	elseif($axc0 == '5u540l'){ /// --- Usuarios
+	elseif($accion == '5u540l'){ /// --- Usuarios
 
     if(v4lID44x50("500-001", $u5u4i0) == TRUE){
       
@@ -86,7 +86,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-	elseif($axc0 == '5u540l_02'){	/// ---Editar usuario
+	elseif($accion == '5u540l_02'){	/// ---Editar usuario
 		if(v4lID44x50("500-003", $u5u4i0) == TRUE){
 			
       // ---- Marcar la sección en el menú ---
@@ -105,7 +105,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-	elseif($axc0 == '50200'){ /// --- Generar Token
+	elseif($accion == '50200'){ /// --- Generar Token
 		if(v4lID44x50("500-006", $u5u4i0) == TRUE){	
 
       // ---- Marcar la sección en el menú ---
@@ -125,7 +125,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-	elseif($axc0 == '5u550l'){	/// --- axc0 Permisos
+	elseif($accion == '5u550l'){	/// --- accion Permisos
 		/// --- ACCESO MODULO PERMISOS
 		if(v4lID44x50("300-004", $u5u4i0) == TRUE){
 
@@ -146,7 +146,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-  elseif($axc0 == '5uXds4H'){	/// --- ver Permisos otorgados
+  elseif($accion == '5uXds4H'){	/// --- ver Permisos otorgados
 		/// --- ACCESO MODULO PERMISOS
 		if(v4lID44x50("300-001", $u5u4i0) == TRUE){
 
@@ -167,7 +167,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-	elseif($axc0 == 'xu5sdS7l'){ /// --- axc0 Permisos
+	elseif($accion == 'xu5sdS7l'){ /// --- accion Permisos
 		/// --- ACCESO MODULO PERMISOS 
 		if(v4lID44x50("300-003", $u5u4i0) == TRUE){
 
@@ -188,7 +188,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-  elseif($axc0 == 'mascotas'){
+  elseif($accion == 'mascotas'){
     if(v4lID44x50("200-001", $u5u4i0) == TRUE){
       
       // ---- Marcar la sección en el menú ---
@@ -207,7 +207,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
   }
-  elseif($axc0 == 'editarMascota'){
+  elseif($accion == 'editarMascota'){
     if(v4lID44x50("200-003", $u5u4i0) == TRUE){
       
       // ---- Marcar la sección en el menú ---
@@ -226,7 +226,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
   }
-  elseif($axc0 == 'fichaMascota'){
+  elseif($accion == 'fichaMascota'){
     if(v4lID44x50("200-004", $u5u4i0) == TRUE){
       
       // ---- Marcar la sección en el menú ---
@@ -244,7 +244,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
   }
-  elseif($axc0 == 's3rv'){ /// --- axc0 Servicios
+  elseif($accion == 's3rv'){ /// --- accion Servicios
 		/// --- ACCESO MODULO PERMISOS 
 		if(v4lID44x50("1300-001", $u5u4i0) == TRUE){
 
@@ -265,7 +265,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-  elseif($axc0 == 's3rv3Dt'){ /// --- editar Servicios (categoria)
+  elseif($accion == 's3rv3Dt'){ /// --- editar Servicios (categoria)
 		/// --- ACCESO MODULO Servicios 
 		if(v4lID44x50("1300-003", $u5u4i0) == TRUE){
 
@@ -286,7 +286,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-  elseif($axc0 == 'Tr43Dt'){ /// --- editar tramites (categoria)
+  elseif($accion == 'Tr43Dt'){ /// --- editar tramites (categoria)
 		/// --- ACCESO MODULO Servicios 
 		if(v4lID44x50("1400-101", $u5u4i0) == TRUE){
 
@@ -307,7 +307,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       include('escen78/404.php');
     }
 	}
-	elseif($axc0 == 'm0d78Os'){
+	elseif($accion == 'm0d78Os'){
 		/// --- ACCESO MODULO MODULOS
 		if(v4lID44x50("400-001", $u5u4i0) == TRUE){
       
@@ -330,7 +330,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'm0d7fdDs'){ /// --- actualizar modulos
+  elseif($accion == 'm0d7fdDs'){ /// --- actualizar modulos
 		/// --- ACCESO MODULO MODULOS
 		if(v4lID44x50("400-003", $u5u4i0) == TRUE){
       
@@ -346,7 +346,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 		}
 		
 	}
-  elseif($axc0 == 'pR0VxD'){ /// --- Proveedores
+  elseif($accion == 'pR0VxD'){ /// --- Proveedores
 		/// --- ACCESO MODULO empresas
 		if(v4lID44x50("1600-000", $u5u4i0) == TRUE){
       
@@ -361,7 +361,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 		}
 		
 	}
-  elseif($axc0 == 'pr0VxVW'){ /// --- Ver Proveedor
+  elseif($accion == 'pr0VxVW'){ /// --- Ver Proveedor
 		if(v4lID44x50("1600-003", $u5u4i0) == TRUE){
       
       // ---- Marcar la sección en el menú ---
@@ -375,7 +375,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 		}
 		
 	}
-  elseif($axc0 == 'pr0VxDT'){ /// --- Editar Proveedor
+  elseif($accion == 'pr0VxDT'){ /// --- Editar Proveedor
 		if(v4lID44x50("1600-002", $u5u4i0) == TRUE){
       
       // ---- Marcar la sección en el menú ---
@@ -389,7 +389,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
 		}
 		
 	}
-  elseif($axc0 == 'eDtSrv'){ /// --- Editar Servicio (documentos)
+  elseif($accion == 'eDtSrv'){ /// --- Editar Servicio (documentos)
 
     if(v4lID44x50("1300-101", $u5u4i0) == TRUE){
       // ---- Marcar la sección en el menú ---
@@ -409,7 +409,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'eDtD'){ /// --- Editar Documentos (documentos)
+  elseif($accion == 'eDtD'){ /// --- Editar Documentos (documentos)
 
     if(v4lID44x50("1400-101", $u5u4i0) == TRUE){
       // ---- Marcar la sección en el menú ---
@@ -429,7 +429,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'Tr4V'){ /// --- ver tramite (documentos)
+  elseif($accion == 'Tr4V'){ /// --- ver tramite (documentos)
 
     if(v4lID44x50("1400-004", $u5u4i0) == TRUE){
       
@@ -444,7 +444,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'N3wTr4'){ /// --- nuevo tramite (documentos)
+  elseif($accion == 'N3wTr4'){ /// --- nuevo tramite (documentos)
 
     if(v4lID44x50("1400-002", $u5u4i0) == TRUE){
       // ---- Marcar la sección en el menú ---
@@ -464,7 +464,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'c0Nfi6'){ /// --- ajustes
+  elseif($accion == 'c0Nfi6'){ /// --- ajustes
 
     if(v4lID44x50("100-002", $u5u4i0) == TRUE){
       		
@@ -481,7 +481,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'v3r'){ /// --- ajustes
+  elseif($accion == 'v3r'){ /// --- ajustes
 
     if(v4lID44x50("100-001", $u5u4i0) == TRUE){
       		
@@ -498,7 +498,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 == 'bin4kuru'){ /// --- Biatcora
+  elseif($accion == 'bin4kuru'){ /// --- Biatcora
 
     if(v4lID44x50("1500-001", $u5u4i0) == TRUE){
       		
@@ -516,7 +516,7 @@ if(v4lID44x50("100-001", $u5u4i0) == TRUE){
     }
 		
 	}
-  elseif($axc0 === 'l00k5cR3n'){ /// --- lookscreen
+  elseif($accion === 'l00k5cR3n'){ /// --- lookscreen
 		/// --- ACCESO MODULO MODULOS
 		
       

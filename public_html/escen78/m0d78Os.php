@@ -79,7 +79,7 @@ include('p4rc4l35/7i7ul0.php');
                         </td>
                         <td>
                           <?php if(v4lID44x50("400-003", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
-                            <a href="v75t4?axc0=m0d7fdDs&m0ft6sV=<?= $eCry($m0Dyg5['m0DxL0_id']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
+                            <a href="app?accion=m0d7fdDs&m0ft6sV=<?= $eCry($m0Dyg5['m0DxL0_id']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           <?php } ?>
                         </td>
                       </tr>
@@ -100,7 +100,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="POST" action="ap4673i/m0d78Os_4pi.php?axc0=m0d7545x" name="nu3v0M0dUl3">  
+            <form method="POST" action="ap4673i/m0d78Os_4pi.php?accion=m0d7545x" name="nu3v0M0dUl3">  
             
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_7i7uaD ?></h4>

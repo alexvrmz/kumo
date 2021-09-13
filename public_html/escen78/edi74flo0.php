@@ -9,7 +9,7 @@ include('p4rc4l35/7i7ul0.php');
   foreach ($d4705m0D as $key => $u5h34r5) { ?>      
     <!-- Main content -->  
 
-    <!-- axc0es -->
+    <!-- acciones -->
     <div class="card <?= $brr4 ?> card-outline">
       <div class="card-header">
         <h3 class="card-title"><?= lbl_acx0 ?></h3>
@@ -25,7 +25,7 @@ include('p4rc4l35/7i7ul0.php');
         </button>   
       </div>
     </div>
-    <!-- axc0es -->
+    <!-- acciones -->
     <!-- Default box -->
     <div class="card <?= $brr4 ?> card-outline col-lg-8">
       <div class="card-header">
@@ -38,7 +38,7 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <div class="card-body">
         <div class="card-body p-0">
-          <form name="edit_user" method="post" action="ap4673i/x7l07iLl4_4pi.php?axc0=eDi7flo0">         
+          <form name="edit_user" method="post" action="ap4673i/x7l07iLl4_4pi.php?accion=eDi7flo0">         
             <div class="row">
               <div class="col-lg-12">
                 <div class="form-group">
@@ -71,7 +71,7 @@ include('p4rc4l35/7i7ul0.php');
                         }
                         else{ 
                           $iuh = 'indigo'; $csc = ''; $uish = '<i class="fad fa-trash"></i>';
-                          $href = 'href="ap4673i/x7l07iLl4_4pi.php?axc0=d3lr3l&r3l4='.$eCry($value['_FLORID']).'&flo0='.$eCry($flo0).'&eMp4='.$eCry($value['_FLO3ID']).'"';
+                          $href = 'href="ap4673i/x7l07iLl4_4pi.php?accion=d3lr3l&r3l4='.$eCry($value['_FLORID']).'&flo0='.$eCry($flo0).'&eMp4='.$eCry($value['_FLO3ID']).'"';
                         } ?>
                   <a <?= $href ?> type="button" class="btn btn-xs <?= $csc ?>" style="background-color: <?= $iuh ?>; color: white;"><?= $value['_FLONME'] ?> <?= $uish ?></a>
                 <?php } ?>
@@ -101,7 +101,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-empresa">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/x7l07iLl4_4pi.php?axc0=aGr3mP">
+            <form name="nuevo" method="post" action="ap4673i/x7l07iLl4_4pi.php?accion=aGr3mP">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_004 ?></h4>
                 

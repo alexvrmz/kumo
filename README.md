@@ -173,7 +173,7 @@ recarga de gasolina tomar km feccha y lityros para hacer compareciones y rendimi
   - Se agrega contador de usuarios en vista escritorio.
   - Se completa el registro de usuario con validacion en formulario, seleccion de rol (pendiente array de permisos a otorgar), 
     al registrar al usuario de crea la relacion de usuario-empresa-flota
-  - Se agrega variable en v75t4 para el rol del usuario
+  - Se agrega variable en app para el rol del usuario
   - Se agrega condicion en escritorio para mostrar dependiendo el rol del usuario.
   - Se agregan permisos al array de administrador
 

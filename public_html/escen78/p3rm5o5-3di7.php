@@ -7,7 +7,7 @@ include('p4rc4l35/7i7ul0.php');
 
 
     <!-- Main content -->
-      <!-- axc0es -->
+      <!-- acciones -->
       <div class="card <?= $brr4 ?> card-outline">
         <div class="card-header">
           <h3 class="card-title"><?= lbl_acx0 ?></h3>
@@ -25,7 +25,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="card-body">
           
           <div class="card-body p-0">     
-            <a href="v75t4?axc0=5u550l" class="btn btn-app bg-success" href="#">
+            <a href="app?accion=5u550l" class="btn btn-app bg-success" href="#">
               <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
             </a>   
   
@@ -33,7 +33,7 @@ include('p4rc4l35/7i7ul0.php');
 
         </div>
       </div>
-      <!-- axc0es -->
+      <!-- acciones -->
       <!-- Default box -->
       <div class="card <?= $brr4 ?> card-outline col-lg-6">
       
@@ -48,7 +48,7 @@ include('p4rc4l35/7i7ul0.php');
         </div>
         <div class="card-body">
           <div class="card-body p-0">
-          <form name="editm0dl" method="post" action="ap4673i/p3rm5o5_4pi.php?axc0=p3rf5Gg">
+          <form name="editm0dl" method="post" action="ap4673i/p3rm5o5_4pi.php?accion=p3rf5Gg">
             <?php
             foreach ($d4705_u5u as $key => $u5h34r5) { ?>            
               <div class="row">

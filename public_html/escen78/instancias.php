@@ -22,7 +22,7 @@ include('p4rc4l35/7i7ul0.php');
 
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">axc0es</h3>
+          <h3 class="card-title">acciones</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -339,7 +339,7 @@ include('p4rc4l35/7i7ul0.php');
       },      
 
       ins_activas: function(){
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=activas')
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=activas')
                 .then(function(response){
                   console.log(response);
                     if (response.data.error) {
@@ -359,7 +359,7 @@ include('p4rc4l35/7i7ul0.php');
                 });
         },
         ins_codero: function(){
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=codero')
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=codero')
                 .then(function(response){
                   console.log(response);
                     if (response.data.error) {
@@ -379,7 +379,7 @@ include('p4rc4l35/7i7ul0.php');
                 });
         },
         ins_ovh: function(){
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=ovh')
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=ovh')
                 .then(function(response){
                   console.log(response);
                     if (response.data.error) {
@@ -399,7 +399,7 @@ include('p4rc4l35/7i7ul0.php');
                 });
         },
         ins_jupiter: function(){
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=jupiter')
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=jupiter')
                 .then(function(response){
                   console.log(response);
                     if (response.data.error) {
@@ -419,7 +419,7 @@ include('p4rc4l35/7i7ul0.php');
                 });
         },
         ins_inactivas: function(){
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=inactivas')
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=inactivas')
                 .then(function(response){
                   console.log(response);
                     if (response.data.error) {
@@ -440,7 +440,7 @@ include('p4rc4l35/7i7ul0.php');
         },
         searchMonitor: function() {
             var keyword = app.toFormData(app.search);
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=buscar', keyword)
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=buscar', keyword)
                 .then(function(response){
                     app.listado_instancias = response.data.listado_instancias;
                     console.log(response);
@@ -454,7 +454,7 @@ include('p4rc4l35/7i7ul0.php');
         },
   
         cargarInstancias: function(){
-            axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=mostrar')
+            axios.post('<?= $axios_url ?>api/instancias_api.php?accion=mostrar')
                 .then(function(response){
                   console.log(response);
                     if (response.data.error) {
@@ -479,7 +479,7 @@ include('p4rc4l35/7i7ul0.php');
 
       updateInstancia: function () {
         var formData = app.toFormData(app.clickedInstancia);
-        axios.post('<?= $axios_url ?>api/instancias_api.php?axc0=actualizar', formData)
+        axios.post('<?= $axios_url ?>api/instancias_api.php?accion=actualizar', formData)
         .then(function (response) {
           console.log(response);
           app.clickedInstancia = {};

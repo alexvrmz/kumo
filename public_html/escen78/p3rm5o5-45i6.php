@@ -79,13 +79,13 @@ include('p4rc4l35/7i7ul0.php');
                         <td>
                           <?php if($P3r70y7['p3gTh3PRs'] == 1){ ?>
                             <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
-                              <a href="ap4673i/p3rm5o5_4pi.php?axc0=psDef4Gg&h7gr=<?= $eCry($P3r70y7['p3gThiDRs']) ?>&u5u4oxX=<?= $eCry($u5u4oxX) ?>&txgt5=<?= $eCry('d3547iV') ?>&f4G55t7=<?= $eCry($P3r70y7['p3gThNmRs']) ?>" class="btn bg-danger btn-xs">
+                              <a href="ap4673i/p3rm5o5_4pi.php?accion=psDef4Gg&h7gr=<?= $eCry($P3r70y7['p3gThiDRs']) ?>&u5u4oxX=<?= $eCry($u5u4oxX) ?>&txgt5=<?= $eCry('d3547iV') ?>&f4G55t7=<?= $eCry($P3r70y7['p3gThNmRs']) ?>" class="btn bg-danger btn-xs">
                                 <i class="fad fa-toggle-off"></i>
                               </a>
                             <?php } ?>
                           <?php } elseif($P3r70y7['p3gTh3PRs'] == 0) { ?>
                             <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
-                              <a href="ap4673i/p3rm5o5_4pi.php?axc0=psDef4Gg&h7gr=<?= $eCry($P3r70y7['p3gThiDRs']) ?>&u5u4oxX=<?= $eCry($u5u4oxX) ?>&txgt5=<?= $eCry('47iV') ?>&f4G55t7=<?= $eCry($P3r70y7['p3gThNmRs']) ?>" class="bt bg-success btn-xs">
+                              <a href="ap4673i/p3rm5o5_4pi.php?accion=psDef4Gg&h7gr=<?= $eCry($P3r70y7['p3gThiDRs']) ?>&u5u4oxX=<?= $eCry($u5u4oxX) ?>&txgt5=<?= $eCry('47iV') ?>&f4G55t7=<?= $eCry($P3r70y7['p3gThNmRs']) ?>" class="bt bg-success btn-xs">
                                 <i class="fad fa-toggle-on"></i>
                               </a>
                             <?php } ?>
@@ -117,7 +117,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="post" action="ap4673i/p3rm5o5_4pi.php?axc0=sD4xG5d5" id="n3whp3r">
+            <form method="post" action="ap4673i/p3rm5o5_4pi.php?accion=sD4xG5d5" id="n3whp3r">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w7i7u ?></h4>
                 

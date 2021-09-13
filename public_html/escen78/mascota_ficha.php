@@ -10,7 +10,7 @@ include('p4rc4l35/7i7ul0.php');
 
     <div class="container-fluid">
     <!-- Main content -->
-      <!-- axc0es -->
+      <!-- acciones -->
       <div class="card <?= $brr4 ?> card-outline">
         <div class="card-header">
           <h3 class="card-title"><?= acciones ?></h3>
@@ -28,7 +28,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="card-body">
           
           <div class="card-body p-0">     
-            <a href="v75t4?axc0=mascotas" class="btn btn-app bg-success">
+            <a href="app?accion=mascotas" class="btn btn-app bg-success">
               <i class="fad fa-arrow-left"></i> <?= regresar ?>
             </a>   
   
@@ -36,7 +36,7 @@ include('p4rc4l35/7i7ul0.php');
 
         </div>
       </div>
-      <!-- axc0es -->
+      <!-- acciones -->
       <div class="row">
 
           <div class="col-md-12">
@@ -105,7 +105,7 @@ include('p4rc4l35/7i7ul0.php');
                 
 
                 <?php if(v4lID44x50("200-003", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
-                  <a href="v75t4?axc0=editarMascota&mascotaID=<?= $eCry($mascota['mascota_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> Editar</a>
+                  <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascota_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> Editar</a>
                 <?php } ?>
 
                 

@@ -76,10 +76,10 @@ include('p4rc4l35/7i7ul0.php');
                                   <td>
                                     <div class="row">
                                         <?php if(v4lID44x50("1600-002", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=pr0VxDT&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-warning btn-flat btn-xs corta-texto"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
+                                          <a href="app?accion=pr0VxDT&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-warning btn-flat btn-xs corta-texto"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
                                         <?php } ?>
                                         <?php if(v4lID44x50("1600-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=pr0VxVW&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-info btn-flat btn-xs corta-texto"><i class="fad fa-view"></i> <?= lbl_2mp3 ?></a>
+                                          <a href="app?accion=pr0VxVW&pXRoI=<?= $eCry($u5h34r5['xPrIDx']) ?>" type="button" class="col-6 btn btn-info btn-flat btn-xs corta-texto"><i class="fad fa-view"></i> <?= lbl_2mp3 ?></a>
                                         <?php } ?>
                                     </div>
                                   </td>
@@ -99,7 +99,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/pR0VxD_4pi?axc0=aDdPr0" id="nuevo1">
+            <form name="nuevo" method="post" action="ap4673i/pR0VxD_4pi?accion=aDdPr0" id="nuevo1">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w001 ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

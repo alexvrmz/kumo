@@ -3,16 +3,16 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 
-if($axc0 === 'eDtSpp'){
+if($accion === 'eDtSpp'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
 }
 
-/// --- axc0 Listado de Usuarios
-if($axc0 === "eDtSrv"){
+/// --- accion Listado de Usuarios
+if($accion === "eDtSrv"){
 
 	if(!empty($SidxD) && !empty($vh3iP)){
 		$SidxD = $dCry($SidxD);
@@ -61,10 +61,10 @@ if($axc0 === "eDtSrv"){
 	else{
 		//$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'No se encontro ID de Servicio y/o Vehiculo';
-		llevame('v75t4?axc0=5u250e');
+		llevame('app?accion=escritorio');
 	}
 }
-elseif($axc0 == 'eDtSpp'){
+elseif($accion == 'eDtSpp'){
 	if($xDsSx008 !== '' && $xDsSx005 !== '' && $xDsSx004 !== ''){
 	include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 	if (isset($_FILES['xDsSx007']) && $_FILES['xDsSx007']['error'] === UPLOAD_ERR_OK)	{
@@ -118,7 +118,7 @@ elseif($axc0 == 'eDtSpp'){
 		
 		
 		
-		$axc0 = "actualizar";
+		$accion = "actualizar";
 		unset($sql_arr);
 		$p4r4 = "D0cIDxS =".$xDsSx008;
 		$xDsSx001 = eCry2($xDsSx001);
@@ -147,14 +147,14 @@ elseif($axc0 == 'eDtSpp'){
 		echo '<pre>';
 		print_r($_FILES['xDsSx007']);
 		echo '</pre>';
-		ejecutaDB('D0cUM3n705', $sql_arr, $axc0, $p4r4);
+		ejecutaDB('D0cUM3n705', $sql_arr, $accion, $p4r4);
 		bi74c0('4ct-s3r', 'Se actualizo el servicio:'.$xDsSx008, '');
 		$_SESSION['m3ns4J3'] = 'Se actualizo el servicio con exito!';
-		llevame('../v75t4?axc0=eDtSrv&SidxD='.$eCry($xDsSx008).'&vh3iP='.$eCry($vh3iP));
+		llevame('../app?accion=eDtSrv&SidxD='.$eCry($xDsSx008).'&vh3iP='.$eCry($vh3iP));
 	}
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'No se encontro ID de Servicio y/o Vehiculo';
-		llevame('../v75t4?axc0=5u250e');
+		llevame('../app?accion=escritorio');
 	}
 }

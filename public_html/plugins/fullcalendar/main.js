@@ -11651,7 +11651,7 @@ var FullCalendar = (function (exports) {
     }(BaseComponent));
 
     function computeFgSegPlacement(// for one row. TODO: print mode?
-    cellModels, segs, dayMaxEvents, dayMaxEventRows, eventHeights, maxc0ontentHeight, colCnt, eventOrderSpecs) {
+    cellModels, segs, dayMaxEvents, dayMaxEventRows, eventHeights, maccionontentHeight, colCnt, eventOrderSpecs) {
         var colPlacements = []; // if event spans multiple cols, its present in each col
         var moreCnts = []; // by-col
         var segIsHidden = {};
@@ -11671,7 +11671,7 @@ var FullCalendar = (function (exports) {
             placeSeg(seg, eventHeight || 0); // will keep colPlacements sorted by top
         }
         if (dayMaxEvents === true || dayMaxEventRows === true) {
-            limitByMaxHeight(moreCnts, segIsHidden, colPlacements, maxc0ontentHeight); // populates moreCnts/segIsHidden
+            limitByMaxHeight(moreCnts, segIsHidden, colPlacements, maccionontentHeight); // populates moreCnts/segIsHidden
         }
         else if (typeof dayMaxEvents === 'number') {
             limitByMaxEvents(moreCnts, segIsHidden, colPlacements, dayMaxEvents); // populates moreCnts/segIsHidden
@@ -11794,9 +11794,9 @@ var FullCalendar = (function (exports) {
         }
         return segs;
     }
-    function limitByMaxHeight(hiddenCnts, segIsHidden, colPlacements, maxc0ontentHeight) {
+    function limitByMaxHeight(hiddenCnts, segIsHidden, colPlacements, maccionontentHeight) {
         limitEvents(hiddenCnts, segIsHidden, colPlacements, true, function (placement) {
-            return placement.bottom <= maxc0ontentHeight;
+            return placement.bottom <= maccionontentHeight;
         });
     }
     function limitByMaxEvents(hiddenCnts, segIsHidden, colPlacements, dayMaxEvents) {
@@ -11900,7 +11900,7 @@ var FullCalendar = (function (exports) {
             _this.rootElRef = createRef();
             _this.state = {
                 framePositions: null,
-                maxc0ontentHeight: null,
+                maccionontentHeight: null,
                 segHeights: {}
             };
             return _this;
@@ -11913,7 +11913,7 @@ var FullCalendar = (function (exports) {
             var bgEventSegsByCol = splitSegsByFirstCol(props.bgEventSegs, colCnt);
             var highlightSegsByCol = splitSegsByFirstCol(this.getHighlightSegs(), colCnt);
             var mirrorSegsByCol = splitSegsByFirstCol(this.getMirrorSegs(), colCnt);
-            var _b = computeFgSegPlacement(props.cells, props.fgEventSegs, props.dayMaxEvents, props.dayMaxEventRows, state.segHeights, state.maxc0ontentHeight, colCnt, context.options.eventOrder), paddingBottoms = _b.paddingBottoms, segsByFirstCol = _b.segsByFirstCol, segsByEachCol = _b.segsByEachCol, segIsHidden = _b.segIsHidden, segTops = _b.segTops, segMarginTops = _b.segMarginTops, moreCnts = _b.moreCnts, moreTops = _b.moreTops;
+            var _b = computeFgSegPlacement(props.cells, props.fgEventSegs, props.dayMaxEvents, props.dayMaxEventRows, state.segHeights, state.maccionontentHeight, colCnt, context.options.eventOrder), paddingBottoms = _b.paddingBottoms, segsByFirstCol = _b.segsByFirstCol, segsByEachCol = _b.segsByEachCol, segIsHidden = _b.segIsHidden, segTops = _b.segTops, segMarginTops = _b.segMarginTops, moreCnts = _b.moreCnts, moreTops = _b.moreTops;
             var selectedInstanceHash = // TODO: messy way to compute this
              (props.eventDrag && props.eventDrag.affectedInstances) ||
                 (props.eventResize && props.eventResize.affectedInstances) ||
@@ -12050,14 +12050,14 @@ var FullCalendar = (function (exports) {
                 var limitByContentHeight = props.dayMaxEvents === true || props.dayMaxEventRows === true;
                 this.setState({
                     segHeights: this.computeSegHeights(),
-                    maxc0ontentHeight: limitByContentHeight ? this.computeMaxc0ontentHeight() : null
+                    maccionontentHeight: limitByContentHeight ? this.computeMaccionontentHeight() : null
                 });
             }
         };
         TableRow.prototype.computeSegHeights = function () {
             return mapHash(this.segHarnessRefs.currentMap, function (eventHarnessEl) { return (eventHarnessEl.getBoundingClientRect().height); });
         };
-        TableRow.prototype.computeMaxc0ontentHeight = function () {
+        TableRow.prototype.computeMaccionontentHeight = function () {
             var firstKey = this.props.cells[0].key;
             var cellEl = this.cellElRefs.currentMap[firstKey];
             var fcContainerEl = this.fgElRefs.currentMap[firstKey];

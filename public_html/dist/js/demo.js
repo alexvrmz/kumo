@@ -422,7 +422,7 @@
   function aLs(color){
     $.ajax({
       type: "POST",
-      url: "ap4673i/c0Nfi6_4pi.php?axc0=aLs",
+      url: "ap4673i/c0Nfi6_4pi.php?accion=aLs",
       data: {
         color: color,
         usr: '<?php echo $u5u4i0; ?>'

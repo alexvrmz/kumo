@@ -67,13 +67,13 @@ include('p4rc4l35/7i7ul0.php');
                     <?php
                     foreach ($LDNS as $xs4f => $P3r70y7) { ?>                   
                       <tr>
-                        <td><a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhes']) ?>" target="_blank"><i class="fad fa-<?= $P3r70y7['dNIxCos'] ?>"></i> <?= $P3r70y7['xmD3ss'] ?></a></td>                        
-                        <td><a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhes']) ?>" target="_blank"><?= $P3r70y7['xmVhePs'] ?></a></td>
+                        <td><a href="app?accion=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhes']) ?>" target="_blank"><i class="fad fa-<?= $P3r70y7['dNIxCos'] ?>"></i> <?= $P3r70y7['xmD3ss'] ?></a></td>                        
+                        <td><a href="app?accion=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhes']) ?>" target="_blank"><?= $P3r70y7['xmVhePs'] ?></a></td>
                         <td><?= $P3r70y7['xmFeFs'] ?></td>
                         <td><span class="badge badge-<?= $P3r70y7['classs'] ?>"><?= $P3r70y7['xTXVxs'] ?> <?php if($P3r70y7['xdDcVEDs'] != 0) { ?><?= $P3r70y7['xdDcVEDs'] ?> dia(s)<?php } ?></span></td>
                         <td>
                           <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
-                            <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhes']) ?>" class="btn btn-block bg-gradient-info btn-xs"><i class="fad fa-eye"></i></a>
+                            <a href="app?accion=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhes']) ?>" class="btn btn-block bg-gradient-info btn-xs"><i class="fad fa-eye"></i></a>
                           <?php } ?>
                         </td>
                       </tr>
@@ -94,7 +94,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="post" action="ap4673i/s3rv_4pi?axc0=4dds3r" id="n3wp3r">
+            <form method="post" action="ap4673i/s3rv_4pi?accion=4dds3r" id="n3wp3r">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w7i7u ?></h4>
                 

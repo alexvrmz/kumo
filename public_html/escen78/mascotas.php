@@ -18,7 +18,7 @@ include('p4rc4l35/7i7ul0.php');
           <div class="btn-group" role="group">
             <?php if(isset($_SESSION['formMascota']) == true){ ?>
               <a data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" ><i class="fad fa-paw"></i> <?= continuarFormulario ?></a>
-              <a href="ap4673i/mascotas_api?axc0=borrarFormulario" class="btn bg-gradient-danger btn-app" style="padding-top: 6px;" ><i class="fad fa-trash"></i> <?= eliminarFormulario ?></a>
+              <a href="ap4673i/mascotas_api?accion=borrarFormulario" class="btn bg-gradient-danger btn-app" style="padding-top: 6px;" ><i class="fad fa-trash"></i> <?= eliminarFormulario ?></a>
             <?php }elseif(isset($_SESSION['formMascota']) == false){ ?>
               <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-success btn-app" style="padding-top: 6px;" ><i class="fad fa-paw"></i> <?= btn_46r364rU5u4ri0 ?></button>
             <?php } ?>
@@ -61,7 +61,7 @@ include('p4rc4l35/7i7ul0.php');
                   <tr>
                     <td><?= $mascota['mascotaID'] ?></td>
                     <td style="text-align: center;">
-                      <a href="v75t4?axc0=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>">
+                      <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>">
                         <img class="direct-chat-img" style="margin-top: -9px;padding-left: 0px;margin-left: 16px;" src="<?= $mascota['mascotaFoto'] ?>" alt="<?= $mascota['mascotaNombre'] ?>">
                       </a>
                     </td>
@@ -77,10 +77,10 @@ include('p4rc4l35/7i7ul0.php');
                     <td style="text-align: center;">
                       <div class="btn-group" role="group">
                         <?php if(v4lID44x50("200-004", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
-                          <a href="v75t4?axc0=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
+                          <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
                         <?php } ?>
                         <?php if(v4lID44x50("200-003", $u5u4i0) == TRUE){ /// --- Editar Modulo ?>
-                          <a href="v75t4?axc0=editarMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
+                          <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
                         <?php } ?>
                       </div>
                     </td>
@@ -100,7 +100,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade " id="modal-nuevo">
         <div class="modal-dialog ">
           <div class="modal-content <?= $brr4 ?> card-outline">
-            <form method="POST" action="ap4673i/mascotas_api?axc0=procesaMascota" name="nuevaMascota" enctype="multipart/form-data">  
+            <form method="POST" action="ap4673i/mascotas_api?accion=procesaMascota" name="nuevaMascota" enctype="multipart/form-data">  
             
               <div class="modal-header">
                 <h4 class="modal-title"><i class="fad fa-paw"></i> <?= nuevaMascota ?></h4>

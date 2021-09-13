@@ -37,7 +37,7 @@ $_SESSION['session_look'] = true;
     <!-- /.lockscreen-image -->
 
     <!-- lockscreen credentials (contains the form) -->
-    <form method="post" action="lgaccs25.php?axc0=x006">
+    <form method="post" action="lgaccs25.php?accion=x006">
       <div class="input-group lockscreen-credentials " >
         <input type="password" class="form-control texto-neon-azul" style="background-color: #ffffff30;color: white;" placeholder="Contraseña" name="cdDn45_xS" required>
           <button type="submit" class="btn texto-neon-azul" style="background-color: #0000;box-shadow: 0px 0px 20px #007BFF;" >
@@ -55,7 +55,7 @@ $_SESSION['session_look'] = true;
   </div>
   <div class="text-center" style="text-align: center;">
  
-      <a href="lgaccs25.php?axc0=x002">O Salir para ingresar con otro usuario.</a>
+      <a href="lgaccs25.php?accion=x002">O Salir para ingresar con otro usuario.</a>
   
   </div>
   <div class="lockscreen-footer text-center">

@@ -37,7 +37,7 @@ include ('ap4673i/fncnes5632.php');
                 </ul>
             </div>
           <?php } ?>
-      <form action="ap4673i/r3gu_4pi.php?axc0=r3gu" method="post" id="quickForm">
+      <form action="ap4673i/r3gu_4pi.php?accion=r3gu" method="post" id="quickForm">
 
         <div class="form-group">
           <label for="r001" >Correo Eléctronico*</label>

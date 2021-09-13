@@ -10,7 +10,7 @@ include('p4rc4l35/7i7ul0.php');
     <!-- Main content -->
     
 
-      <!-- axc0es -->
+      <!-- acciones -->
       <div class="card <?= $brr4 ?> card-outline col-lg-6">
         <div class="card-header">
           <h3 class="card-title"><?= lbl_acx0 ?></h3>
@@ -23,12 +23,12 @@ include('p4rc4l35/7i7ul0.php');
         </div>
         <div class="card-body">
           
-              <a href="v75t4?axc0=xmRc4s" class="btn btn-app bg-success">
+              <a href="app?accion=xmRc4s" class="btn btn-app bg-success">
                 <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
               </a>   
         </div>
       </div>
-      <!-- axc0es -->
+      <!-- acciones -->
       <!-- Default box -->
       <div class="card <?= $brr4 ?> card-outline col-lg-6">
       
@@ -43,7 +43,7 @@ include('p4rc4l35/7i7ul0.php');
         </div>
         <div class="card-body">
           <div class="card-body p-0">
-          <form name="edit_user" method="post" action="ap4673i/Tm0d3ls_4pi.php?axc0=Tm0d3ls_9i45" enctype="multipart/form-data">
+          <form name="edit_user" method="post" action="ap4673i/Tm0d3ls_4pi.php?accion=Tm0d3ls_9i45" enctype="multipart/form-data">
                  
               <div class="row">
                 <div class="col-12"> 

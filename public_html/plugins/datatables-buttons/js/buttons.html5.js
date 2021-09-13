@@ -67,7 +67,7 @@ DataTable.Buttons.jszip = function (_) {
  * FileSaver.js dependency
  */
 
-/*jslint bitwise: true, indent: 4, laxbreak: true, laxc0omma: true, smarttabs: true, plusplus: true */
+/*jslint bitwise: true, indent: 4, laxbreak: true, laccionomma: true, smarttabs: true, plusplus: true */
 
 var _saveAs = (function(view) {
 	"use strict";

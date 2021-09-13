@@ -75,7 +75,7 @@ include('p4rc4l35/7i7ul0.php');
             
             <div class="card-body">
               <?php if(v4lID44x50("1000-003", $u5u4i0) == TRUE){ /// --- AGREGAR MODELO ?>
-                <a href="v75t4?axc0=Tm0d3ls_9i88&cfr99=<?= $eCry($u5h34r5['KuBIDx']) ?>" class="btn btn-warning btn-xs" ><i class="fad fa-edit"></i>Editar</a>
+                <a href="app?accion=Tm0d3ls_9i88&cfr99=<?= $eCry($u5h34r5['KuBIDx']) ?>" class="btn btn-warning btn-xs" ><i class="fad fa-edit"></i>Editar</a>
               <?php } ?>
             </div>
           </div>
@@ -92,7 +92,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?axc0=5u540l_04">
+            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?accion=5u540l_04">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3wu5u4ri0 ?></h4>
                 

@@ -9177,7 +9177,7 @@ function ajaxHandleResponses( s, jqXHR, responses ) {
 /* Chain conversions given the request and the original response
  * Also sets the responseXXX fields on the jqXHR instance
  */
-function ajaxc0onvert( s, response, jqXHR, isSuccess ) {
+function ajacciononvert( s, response, jqXHR, isSuccess ) {
 	var conv2, current, conv, tmp, prev,
 		converters = {},
 
@@ -9733,7 +9733,7 @@ jQuery.extend( {
 			}
 
 			// Convert no matter what (that way responseXXX fields are always set)
-			response = ajaxc0onvert( s, response, jqXHR, isSuccess );
+			response = ajacciononvert( s, response, jqXHR, isSuccess );
 
 			// If successful, handle type chaining
 			if ( isSuccess ) {
@@ -9801,7 +9801,7 @@ jQuery.extend( {
 			completeDeferred.fireWith( callbackContext, [ jqXHR, statusText ] );
 
 			if ( fireGlobals ) {
-				globalEventContext.trigger( "ajaxc0omplete", [ jqXHR, s ] );
+				globalEventContext.trigger( "ajaccionomplete", [ jqXHR, s ] );
 
 				// Handle the global AJAX counter
 				if ( !( --jQuery.active ) ) {
@@ -10688,7 +10688,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 jQuery.each( [
 	"ajaxStart",
 	"ajaxStop",
-	"ajaxc0omplete",
+	"ajaccionomplete",
 	"ajaxError",
 	"ajaxSuccess",
 	"ajaxSend"

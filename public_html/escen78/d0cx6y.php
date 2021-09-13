@@ -88,7 +88,7 @@ include('p4rc4l35/7i7ul0.php');
                         </td>
                         <?php if(v4lID44x50("1400-101", $u5u4i0) == TRUE){ /// --- Editar tramite tipo ?>
                           <td>
-                              <a href="v75t4?axc0=Tr43Dt&pXRoI=<?= $eCry($P3r70y7['xDID']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
+                              <a href="app?accion=Tr43Dt&pXRoI=<?= $eCry($P3r70y7['xDID']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           </td>
                         <?php } ?>
                       </tr>
@@ -109,7 +109,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="post" action="ap4673i/d0cx6y_4pi?axc0=4ddd0C" id="n3wp3r">
+            <form method="post" action="ap4673i/d0cx6y_4pi?accion=4ddd0C" id="n3wp3r">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w7i7u ?></h4>
                 

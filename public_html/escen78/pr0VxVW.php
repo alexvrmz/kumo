@@ -15,7 +15,7 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
-          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=pR0VxD"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
+          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="app?accion=pR0VxD"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
         </div>
       </div> 
     </div>
@@ -80,7 +80,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
           <div class="card-body box-profile">
             <?php if(v4lID44x50("1600-002", $u5u4i0) == TRUE){ ?>
-              <a href="v75t4?axc0=pr0VxDT&pXRoI=<?= $eCry($xPxIDH) ?>" class="btn btn-warning btn-block"><i class="fad fa-file-edit"></i> Editar</a>
+              <a href="app?accion=pr0VxDT&pXRoI=<?= $eCry($xPxIDH) ?>" class="btn btn-warning btn-block"><i class="fad fa-file-edit"></i> Editar</a>
             <?php } ?>
           </div>
         </div>
@@ -167,7 +167,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-rels">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/pR0VxD_4pi?axc0=Ac7r3L" id="nuevo1">
+            <form name="nuevo" method="post" action="ap4673i/pR0VxD_4pi?accion=Ac7r3L" id="nuevo1">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w001 ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

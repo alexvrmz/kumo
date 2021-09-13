@@ -9,7 +9,7 @@ include('p4rc4l35/7i7ul0.php');
   foreach ($d4705_u5u as $key => $u5h34r5) { ?>      
     <!-- Main content -->  
 
-    <!-- axc0es -->
+    <!-- acciones -->
     <div class="card <?= $brr4 ?> card-outline">
       <div class="card-header">
         <h3 class="card-title"><?= lbl_acx0 ?></h3>
@@ -20,12 +20,12 @@ include('p4rc4l35/7i7ul0.php');
         </div>
       </div> 
       <div class="card-body">
-        <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($u5h34r5['v3hiIDXu']) ?>" class="btn btn-app bg-success">
+        <a href="app?accion=v3hFh4&vh3iP=<?= $eCry($u5h34r5['v3hiIDXu']) ?>" class="btn btn-app bg-success">
           <i class="fad fa-arrow-left"></i><br> <?= btn_r36r354r ?>
         </a>   
       </div>
     </div>
-    <!-- axc0es -->
+    <!-- acciones -->
     <!-- Default box -->
     <div class="card <?= $brr4 ?> card-outline col-lg-8">
       <div class="card-header">
@@ -38,7 +38,7 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <div class="card-body">
         <div class="card-body p-0">
-          <form name="edit_user" method="post" action="ap4673i/v3hiCs_4pi.php?axc0=ghYtD85">         
+          <form name="edit_user" method="post" action="ap4673i/v3hiCs_4pi.php?accion=ghYtD85">         
             <div class="row">
               <?php if(!empty($_SESSION['m3ns4j3Frm'])){ ?>
                 Por favor verifica <?= $_SESSION['err'] ?> pendiete(s):<p>

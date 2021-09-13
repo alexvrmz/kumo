@@ -105,7 +105,7 @@ var getInfo;
             </button>       
           </div>
         </div>
-        <form action="ap4673i/c0Nfi6_4pi.php?axc0=54v3c0nFi6" method="POST">
+        <form action="ap4673i/c0Nfi6_4pi.php?accion=54v3c0nFi6" method="POST">
           <div class="card-body">
             <div class="row">
 

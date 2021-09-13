@@ -67,13 +67,13 @@ include('p4rc4l35/7i7ul0.php');
                     <?php
                     foreach ($LDNT as $xs4f => $P3r70y7) { ?>                   
                       <tr>
-                        <td><a href="v75t4?axc0=Tr4V&xDI4Rt=<?= $eCry($P3r70y7['xmCeI']) ?>&xIDS=<?= $eCry($P3r70y7['xmIeD']) ?>&xcIDV3Hs=<?= $eCry($P3r70y7['xmVhe']) ?>" target="_blank"><i class="fad fa-<?= $P3r70y7['dNIxCo'] ?>"></i> <?= $P3r70y7['xmD3s'] ?></a></td>                        
-                        <td><a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhe']) ?>" target="_blank"><?= $P3r70y7['xmVheP'] ?></a></td>
+                        <td><a href="app?accion=Tr4V&xDI4Rt=<?= $eCry($P3r70y7['xmCeI']) ?>&xIDS=<?= $eCry($P3r70y7['xmIeD']) ?>&xcIDV3Hs=<?= $eCry($P3r70y7['xmVhe']) ?>" target="_blank"><i class="fad fa-<?= $P3r70y7['dNIxCo'] ?>"></i> <?= $P3r70y7['xmD3s'] ?></a></td>                        
+                        <td><a href="app?accion=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhe']) ?>" target="_blank"><?= $P3r70y7['xmVheP'] ?></a></td>
                         <td><?= $P3r70y7['xmFeF'] ?></td>
                         <td><span class="badge badge-<?= $P3r70y7['class'] ?>"><?= $P3r70y7['xTXVx'] ?> <?php if($P3r70y7['xdDcVED'] != 0) { ?><?= $P3r70y7['xdDcVED'] ?> dia(s)<?php } ?></span></td>
                         <td>
                           <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
-                            <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhe']) ?>" class="btn btn-block bg-gradient-info btn-xs"><i class="fad fa-eye"></i></a>
+                            <a href="app?accion=v3hFh4&vh3iP=<?= $eCry($P3r70y7['xmVhe']) ?>" class="btn btn-block bg-gradient-info btn-xs"><i class="fad fa-eye"></i></a>
                           <?php } ?>
                         </td>
                       </tr>
@@ -94,7 +94,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="post" action="ap4673i/s3rv_4pi?axc0=4dds3r" id="n3wp3r">
+            <form method="post" action="ap4673i/s3rv_4pi?accion=4dds3r" id="n3wp3r">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w7i7u ?></h4>
                 

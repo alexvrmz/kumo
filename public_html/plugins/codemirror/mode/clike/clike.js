@@ -758,10 +758,10 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
                 "gl_FrontLightModelProduct gl_BackLightModelProduct " +
                 "gl_TextureColor gl_EyePlaneS gl_EyePlaneT gl_EyePlaneR gl_EyePlaneQ " +
                 "gl_FogParameters " +
-                "gl_MaxLights gl_Maxc0lipPlanes gl_MaxTextureUnits gl_MaxTextureCoords " +
+                "gl_MaxLights gl_MaccionlipPlanes gl_MaxTextureUnits gl_MaxTextureCoords " +
                 "gl_MaxVertexAttribs gl_MaxVertexUniformComponents gl_MaxVaryingFloats " +
                 "gl_MaxVertexTextureImageUnits gl_MaxTextureImageUnits " +
-                "gl_MaxFragmentUniformComponents gl_Maxc0ombineTextureImageUnits " +
+                "gl_MaxFragmentUniformComponents gl_MaccionombineTextureImageUnits " +
                 "gl_MaxDrawBuffers"),
     indentSwitch: false,
     hooks: {"#": cppHook},

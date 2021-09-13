@@ -3,17 +3,17 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
-if($axc0 === '4dds3r' || $axc0 === 'sV3S3rv'){
+if($accion === '4dds3r' || $accion === 'sV3S3rv'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
  	include('fncnesF0rM5.php');
 }
 
-if($axc0 == 'v3r'){
+if($accion == 'v3r'){
 	$C001 = "SELECT version, fecha FROM features GROUP BY version ORDER BY version DESC";
 	$S001 = $cnnx4s->query($C001) or die ("Fallo al consultar caracteristicas: ".$C001);
 	$LDC = [];

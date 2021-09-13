@@ -7,7 +7,7 @@ include('p4rc4l35/7i7ul0.php');
 
 
     <!-- Main content -->
-      <!-- axc0es -->
+      <!-- acciones -->
       <div class="card <?= $brr4 ?> card-outline">
         <div class="card-header">
           <h3 class="card-title"><?= acciones ?></h3>
@@ -25,7 +25,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="card-body">
           
           <div class="card-body p-0">     
-            <a href="v75t4?axc0=mascotas" class="btn btn-app bg-success">
+            <a href="app?accion=mascotas" class="btn btn-app bg-success">
               <i class="fad fa-arrow-left"></i> <?= regresar ?>
             </a>   
   
@@ -33,7 +33,7 @@ include('p4rc4l35/7i7ul0.php');
 
         </div>
       </div>
-      <!-- axc0es -->
+      <!-- acciones -->
       <!-- Default box -->
       <div class="card <?= $brr4 ?> card-outline col-lg-6">
       
@@ -48,7 +48,7 @@ include('p4rc4l35/7i7ul0.php');
         </div>
         <div class="card-body">
           <div class="card-body p-0">
-            <form method="POST" action="ap4673i/mascotas_api?axc0=procesaMascota" name="nuevaMascota">  
+            <form method="POST" action="ap4673i/mascotas_api?accion=procesaMascota" name="nuevaMascota">  
               
                   <?php if(!empty($_SESSION['mensajeForm'])){ ?>
                     <div class="alert alert-warning alert-dismissible">

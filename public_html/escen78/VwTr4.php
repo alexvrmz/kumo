@@ -15,7 +15,7 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
-          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($xcIDV3Hs) ?>"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
+          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="app?accion=v3hFh4&vh3iP=<?= $eCry($xcIDV3Hs) ?>"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
         </div>
       </div>
     </div>
@@ -136,7 +136,7 @@ include('p4rc4l35/7i7ul0.php');
                   <?php } ?>
 
                   <?php if(v4lID44x50("1400-002", $u5u4i0) == TRUE){ ?>
-                    <a href="v75t4?axc0=N3wTr4&rr=<?= $eCry($xIDS) ?>&xDI4Rt=<?= $eCry($xDI4Rt) ?>&xcIDV3Hs=<?= $eCry($xcIDV3Hs) ?>" class="btn btn-success float-right btn-sm" style="margin-right: 5px;margin-bottom: 20px;">
+                    <a href="app?accion=N3wTr4&rr=<?= $eCry($xIDS) ?>&xDI4Rt=<?= $eCry($xDI4Rt) ?>&xcIDV3Hs=<?= $eCry($xcIDV3Hs) ?>" class="btn btn-success float-right btn-sm" style="margin-right: 5px;margin-bottom: 20px;">
                       <i class="fad fa-redo"></i> Reemplazar
                     </a>
                   <?php } ?>
@@ -208,7 +208,7 @@ include('p4rc4l35/7i7ul0.php');
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form method="POST" action="ap4673i/N3wTr4_4pi?axc0=ad4DcTr4" enctype="multipart/form-data">
+                      <form method="POST" action="ap4673i/N3wTr4_4pi?accion=ad4DcTr4" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="fmrd_001">Nombre*</label>
                             <input type="text" class="form-control" id="fmrd_001" name="fmrd_001" required>
@@ -301,7 +301,7 @@ include('p4rc4l35/7i7ul0.php');
                       </div>
                     <?php } ?>
 
-                      <form method="POST" action="ap4673i/N3wTr4_4pi?axc0=edTDcTr4" enctype="multipart/form-data">
+                      <form method="POST" action="ap4673i/N3wTr4_4pi?accion=edTDcTr4" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <label for="fmrd_002">Número / Folio</label>
@@ -342,7 +342,7 @@ include('p4rc4l35/7i7ul0.php');
                           <div class="alert alert-warning alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                             <h5><i class="icon fad fa-traffic-cone"></i> Alerta!</h5>
-                            Aún no has registrado ningun proveedor, <a href="v75t4?axc0=pR0VxD" target="_blank">Agrega uno!</a>, 
+                            Aún no has registrado ningun proveedor, <a href="app?accion=pR0VxD" target="_blank">Agrega uno!</a>, 
                             regresa y <a href="#">Actualiza la página</a>
                           </div>
                         <?php } else { ?>
@@ -400,7 +400,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
         <?php } ?>
         
-        <form name="nuevo" method="post" action="ap4673i/N3wTr4_4pi?axc0=tR4Add" enctype="multipart/form-data">
+        <form name="nuevo" method="post" action="ap4673i/N3wTr4_4pi?accion=tR4Add" enctype="multipart/form-data">
           <div class="form-group">
             <label for="frm_x001">Número de Trámite*</label>
             <input type="text" class="form-control" id="frm_x001" name="frm_x001" required disabled value="<?= $xFNSOn ?>">

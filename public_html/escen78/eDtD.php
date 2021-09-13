@@ -21,7 +21,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="card-body">
           
           <div class="card-body p-0">        
-              <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($vh3iP) ?>" type="button" class="btn bg-gradient-success btn-app"><i class="fad fa-arrow-left"></i> <?= btn_46r364rm0Du ?></a>
+              <a href="app?accion=v3hFh4&vh3iP=<?= $eCry($vh3iP) ?>" type="button" class="btn bg-gradient-success btn-app"><i class="fad fa-arrow-left"></i> <?= btn_46r364rm0Du ?></a>
           </div>
 
         </div>
@@ -42,7 +42,7 @@ include('p4rc4l35/7i7ul0.php');
         
 
         <div class="card-body">
-          <form method="POST" action="ap4673i/eDtD_4pi?axc0=eDtDpp" id="form1" enctype="multipart/form-data">
+          <form method="POST" action="ap4673i/eDtD_4pi?accion=eDtDpp" id="form1" enctype="multipart/form-data">
             <div style="text-align: center;">
               <?php if($DdSs[0]['ddVaCt'] == 1){ ?>
                 <span class="badge badge-success">Este documento se encuentra Vigente</span>

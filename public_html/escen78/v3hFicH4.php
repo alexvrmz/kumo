@@ -12,7 +12,7 @@ include('p4rc4l35/7i7ul0.php');
 
       <div class="container-fluid">
 
-        <!-- axc0es -->
+        <!-- acciones -->
         <div class="card <?= $brr4 ?> card-outline">
           <div class="card-header">
             <h3 class="card-title"><?= lbl_acx0 ?></h3>
@@ -24,13 +24,13 @@ include('p4rc4l35/7i7ul0.php');
           </div>
           <div class="card-body">
            
-                <a href="v75t4?axc0=v3hiXs" class="btn btn-app bg-success" style="padding-top: 6px;">
+                <a href="app?accion=v3hiXs" class="btn btn-app bg-success" style="padding-top: 6px;">
                   <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
                 </a> 
                      
           </div>
         </div>
-        <!-- axc0es -->
+        <!-- acciones -->
         
         <div class="row">
           <div class="col-md-3">
@@ -116,7 +116,7 @@ include('p4rc4l35/7i7ul0.php');
                            
 
                 <?php if(v4lID44x50("700-003", $u5u4i0) == TRUE){ ?>
-                  <a href="v75t4?axc0=v3hFh4_sd04&gju8UUy=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" class="btn btn-warning btn-block"><i class="fa-duotone fa-file-edit"></i> Editar</a>
+                  <a href="app?accion=v3hFh4_sd04&gju8UUy=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" class="btn btn-warning btn-block"><i class="fa-duotone fa-file-edit"></i> Editar</a>
                 <?php } ?>
               </div>
        
@@ -165,8 +165,8 @@ include('p4rc4l35/7i7ul0.php');
                           <td>
                 
                             <div class="btn-group">
-                              <a href="v75t4?axc0=5u540l_02&u5u4oxX=<?= $eCry($DU['u5hID8ir5']) ?>" type="button" class="btn btn-warning btn-flat btn-xs" title="Editar"><i class="fa-duotone fa-edit"></i></a>
-                              <a href="ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>&uxu=<?= $eCry($DU['u5hID8ir5']) ?>&r3l=<?= $eCry($ddrid) ?>" type="button" class="btn btn-danger btn-flat btn-xs"><i class="fa-duotone fa-unlink" title="Desasignar"></i></a>
+                              <a href="app?accion=5u540l_02&u5u4oxX=<?= $eCry($DU['u5hID8ir5']) ?>" type="button" class="btn btn-warning btn-flat btn-xs" title="Editar"><i class="fa-duotone fa-edit"></i></a>
+                              <a href="ap4673i/v3hiCs_4pi.php?accion=d3svA&aIDdx=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>&uxu=<?= $eCry($DU['u5hID8ir5']) ?>&r3l=<?= $eCry($ddrid) ?>" type="button" class="btn btn-danger btn-flat btn-xs"><i class="fa-duotone fa-unlink" title="Desasignar"></i></a>
                             </div>
 
                           </td>
@@ -230,7 +230,7 @@ include('p4rc4l35/7i7ul0.php');
                                 <a class="info-box-number"><?= number_format($t4rgt7[0]['xkkm7rGms'], 0, '', ',') ?></a>
                                 <div class="row">
                                   <?php if(v4lID44x50("700-008", $u5u4i0) == TRUE){ ?>                      
-                                  <a href="v75t4?axc0=xkmtr4G&vh3UjI6Did=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" class="btn btn-info btn-xs col-6"><i class="fa-duotone fa-info"></i></a>
+                                  <a href="app?accion=xkmtr4G&vh3UjI6Did=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" class="btn btn-info btn-xs col-6"><i class="fa-duotone fa-info"></i></a>
                                   <?php } ?>
                                   <?php if(v4lID44x50("700-007", $u5u4i0) == TRUE){ ?>
                                     <a class="btn btn-success btn-xs col-6" data-toggle="modal" data-target="#modal-km"><i class="fa-duotone fa-redo"></i></a>
@@ -276,7 +276,7 @@ include('p4rc4l35/7i7ul0.php');
                                 <a class="info-box-number"><?php if($xCRN == 0){ ?>N/D<?php }else{ ?><?= number_format($xCRN, 2, '.', ',') ?> Km/Lt <?php } ?></a>
                                 <div class="row">
                                   <?php if(v4lID44x50("700-008", $u5u4i0) == TRUE){ ?>                      
-                                  <a href="v75t4?axc0=xkmtr4G&vh3UjI6Did=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" class="btn btn-info btn-xs col-12"><i class="fa-duotone fa-info"></i></a>
+                                  <a href="app?accion=xkmtr4G&vh3UjI6Did=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" class="btn btn-info btn-xs col-12"><i class="fa-duotone fa-info"></i></a>
                                   <?php } ?>
                                   <?php /*if(v4lID44x50("700-007", $u5u4i0) == TRUE){ ?>
                                     <a class="btn btn-success btn-xs col-6" data-toggle="modal" data-target="#modal-cmb"><i class="fa-duotone fa-redo"></i></a>
@@ -299,7 +299,7 @@ include('p4rc4l35/7i7ul0.php');
                                 <span class="info-box-text">Combustible</span>
                                 <a class="info-box-number" style="color: red;">Pendiente</a>                                
                                   <?php if(v4lID44x50("700-007", $u5u4i0) == TRUE){ ?>
-                                    <a class="btn btn-danger btn-xs" href="v75t4?axc0=xkmtr4G&vh3UjI6Did=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" <?php /*data-toggle="modal" data-target="#modal-cmb"*/ ?> ><i class="fa-duotone fa-redo"></i></a>
+                                    <a class="btn btn-danger btn-xs" href="app?accion=xkmtr4G&vh3UjI6Did=<?= $eCry($u5hy68[0]['IDXu7l0s']) ?>" <?php /*data-toggle="modal" data-target="#modal-cmb"*/ ?> ><i class="fa-duotone fa-redo"></i></a>
                                   <?php } ?>                    
                               
                               </div>
@@ -337,7 +337,7 @@ include('p4rc4l35/7i7ul0.php');
                               $cf = 'color: white;';
                               $tx7 = $value['xD3S'].'<br>Pendiente';
                               if(v4lID44x50("1400-002", $u5u4i0) == TRUE){
-                                $btn = '<a class="btn btn-success btn-xs" href="v75t4?axc0=N3wTr4&xDI4Rt='.$eCry($value['xdDc4t']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-upload"></i></a>';
+                                $btn = '<a class="btn btn-success btn-xs" href="app?accion=N3wTr4&xDI4Rt='.$eCry($value['xdDc4t']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-upload"></i></a>';
                               }else{ $btn = '';}
                             }
                             elseif($value['pd'] == true && $value['vnc'] == TRUE){
@@ -352,7 +352,7 @@ include('p4rc4l35/7i7ul0.php');
                               $btn = '<div class="row">';
                               $btn .= '<div class="col-6"><a class="info-box-number" style="margin-top: -5px;">'.$value['xTrFFs'].'</a></div>';
                               if(v4lID44x50("1400-004", $u5u4i0) == TRUE){
-                                $btn .= '<a class="btn btn-info btn-xs col-6" href="v75t4?axc0=Tr4V&xIDS='.$eCry($value['xIDS']).'&xDI4Rt='.$eCry($value['xdDc4t']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-info"></i></a>';
+                                $btn .= '<a class="btn btn-info btn-xs col-6" href="app?accion=Tr4V&xIDS='.$eCry($value['xIDS']).'&xDI4Rt='.$eCry($value['xdDc4t']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-info"></i></a>';
                              }
                               $btn .= '</div>';
                             } 
@@ -368,7 +368,7 @@ include('p4rc4l35/7i7ul0.php');
                               $btn = '<div class="row">';
                               $btn .= '<div class="col-6"><a class="info-box-number" style="'.$cf.' margin-top: -5px;">'.$value['xTrFFs'].'</a></div>';
                               if(v4lID44x50("1400-004", $u5u4i0) == TRUE){
-                                  $btn .= '<a class="btn btn-info btn-xs col-6" href="v75t4?axc0=Tr4V&xDI4Rt='.$eCry($value['xdDc4t']).'&xIDS='.$eCry($value['xIDS']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-info"></i></a>';
+                                  $btn .= '<a class="btn btn-info btn-xs col-6" href="app?accion=Tr4V&xDI4Rt='.$eCry($value['xdDc4t']).'&xIDS='.$eCry($value['xIDS']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-info"></i></a>';
                               }
                               $btn .= '</div>';
                             }
@@ -378,7 +378,7 @@ include('p4rc4l35/7i7ul0.php');
                               $btn = '<div class="row">';
                               $btn .= '<div class="col-6"><a class="info-box-number" style="margin-top: -5px;">'.$value['xTrFFs'].'</a></div>';
                               if(v4lID44x50("1400-004", $u5u4i0) == TRUE){
-                                $btn .= '<a class="btn btn-info btn-xs col-6" href="v75t4?axc0=Tr4V&xDI4Rt='.$eCry($value['xdDc4t']).'&xIDS='.$eCry($value['xIDS']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-info"></i></a>';
+                                $btn .= '<a class="btn btn-info btn-xs col-6" href="app?accion=Tr4V&xDI4Rt='.$eCry($value['xdDc4t']).'&xIDS='.$eCry($value['xIDS']).'&xcIDV3Hs='.$eCry($u5hy68[0]['IDXu7l0s']).'"><i class="fa-duotone fa-info"></i></a>';
                               }
                               $btn .= '</div>';
                               $cf = '';
@@ -579,7 +579,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="modal fade" id="modal-d0c5">
           <div class="modal-dialog">
             <div class="modal-content"> 
-              <form name="nuevo" method="post" action="ap4673i/v3hiCs_4pi.php?axc0=jHyytR3" enctype="multipart/form-data">
+              <form name="nuevo" method="post" action="ap4673i/v3hiCs_4pi.php?accion=jHyytR3" enctype="multipart/form-data">
                 <div class="modal-header">
                   <h4 class="modal-title"><?= lbl_d0k5 ?></h4>
                   
@@ -660,7 +660,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="modal fade" id="modal-km">
           <div class="modal-dialog">
             <div class="modal-content"> 
-              <form name="km" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=hY776">
+              <form name="km" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=hY776">
                 <div class="modal-header">
                   <h4 class="modal-title"><?= lbl_ttarkm ?></h4>                   
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -696,7 +696,7 @@ include('p4rc4l35/7i7ul0.php');
         <?php /*<div class="modal fade" id="modal-cmb">
           <div class="modal-dialog">
             <div class="modal-content"> 
-              <form name="cmb" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=hY778" enctype="multipart/form-data">
+              <form name="cmb" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=hY778" enctype="multipart/form-data">
                 <div class="modal-header">
                   <h4 class="modal-title">Recarga de Combustible</h4>                   
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -815,7 +815,7 @@ include('p4rc4l35/7i7ul0.php');
           <div class="modal fade" id="modal-U<?= $value['xdDc4t'] ?>">
             <div class="modal-dialog">
               <div class="modal-content"> 
-                <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=d0CvAdd" enctype="multipart/form-data">
+                <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=d0CvAdd" enctype="multipart/form-data">
                   <div class="modal-header">
                     <h4 class="modal-title"><?= $value['xdDd35'] ?></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -882,7 +882,7 @@ include('p4rc4l35/7i7ul0.php');
           <div class="modal fade" id="modal-view-U<?= $value['xdDc4t'] ?>">
                   <div class="modal-dialog">
                     <div class="modal-content"> 
-                      <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=d0CvAdd" enctype="multipart/form-data">
+                      <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=d0CvAdd" enctype="multipart/form-data">
                         <div class="modal-header">
                           <h4 class="modal-title"><?= $value['xdDd35'] ?></h4>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -959,7 +959,7 @@ include('p4rc4l35/7i7ul0.php');
                         <div class="modal-footer justify-content-between">
                           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> Cerrar</button>
                           <?php if(v4lID44x50("1400-003", $u5u4i0) == TRUE){ ?>
-                            <a href="v75t4?axc0=eDtD&DidxD=<?= $eCry($value['xdDcID']) ?>&vh3iP=<?= $eCry($vh3iP) ?>" class="btn btn-warning" id="editar" name="editar"><i class="fa-duotone fa-edit"></i> Editar</a>
+                            <a href="app?accion=eDtD&DidxD=<?= $eCry($value['xdDcID']) ?>&vh3iP=<?= $eCry($vh3iP) ?>" class="btn btn-warning" id="editar" name="editar"><i class="fa-duotone fa-edit"></i> Editar</a>
                           <?php } ?>
                         </div>
                     </form> 
@@ -985,7 +985,7 @@ include('p4rc4l35/7i7ul0.php');
                 <div class="modal fade" id="modal-<?= $value['xDID'] ?>">
                   <div class="modal-dialog">
                     <div class="modal-content"> 
-                      <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=s3RvAdd" enctype="multipart/form-data"> 
+                      <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=s3RvAdd" enctype="multipart/form-data"> 
                         <div class="modal-header">
                           <h4 class="modal-title"><?= $value['xDd35'] ?></h4>
                           
@@ -1059,7 +1059,7 @@ include('p4rc4l35/7i7ul0.php');
                 <div class="modal fade" id="modal-view-<?= $value['xDID'] ?>">
                   <div class="modal-dialog">
                     <div class="modal-content"> 
-                      <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=s3RvAdd" enctype="multipart/form-data">
+                      <form name="nuevo" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=s3RvAdd" enctype="multipart/form-data">
                         <div class="modal-header">
                           <h4 class="modal-title"><?= $value['xDd35'] ?></h4>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -1136,7 +1136,7 @@ include('p4rc4l35/7i7ul0.php');
                         <div class="modal-footer justify-content-between">
                           <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa-duotone fa-times"></i> Cerrar</button>
                           <?php if(v4lID44x50("1300-101", $u5u4i0) == TRUE){ ?>
-                            <a href="v75t4?axc0=eDtSrv&SidxD=<?= $eCry($value['xDcID']) ?>&vh3iP=<?= $eCry($vh3iP) ?>" class="btn btn-warning" id="editar" name="editar"><i class="fa-duotone fa-edit"></i> Editar</a>
+                            <a href="app?accion=eDtSrv&SidxD=<?= $eCry($value['xDcID']) ?>&vh3iP=<?= $eCry($vh3iP) ?>" class="btn btn-warning" id="editar" name="editar"><i class="fa-duotone fa-edit"></i> Editar</a>
                           <?php } ?>
                         </div>
                     </form> 

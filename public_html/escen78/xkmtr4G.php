@@ -16,7 +16,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
         </div>
         <div class="card-body">
-          <a href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($vh3UjI6Did) ?>" class="btn btn-app bg-success" style="padding-top: 5px;">
+          <a href="app?accion=v3hFh4&vh3iP=<?= $eCry($vh3UjI6Did) ?>" class="btn btn-app bg-success" style="padding-top: 5px;">
             <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
           </a>  
           <?php if(v4lID44x50("700-007", $u5u4i0) == TRUE){ /// --- Agregar PErmisos?>
@@ -36,7 +36,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
         </div>
         <div class="card-body">
-          <form method="POST" action="v75t4?axc0=xkmtr4G&vh3UjI6Did=<?= $eCry($vh3UjI6Did) ?>">
+          <form method="POST" action="app?accion=xkmtr4G&vh3UjI6Did=<?= $eCry($vh3UjI6Did) ?>">
             <div class="row">
               <div class="col-4">
                 <div class="form-group">
@@ -69,7 +69,7 @@ include('p4rc4l35/7i7ul0.php');
               <div class="col-2">
                 <div class="form-group">
                   <label>Borrar</label><br>
-                  <a href="v75t4?axc0=xkmtr4G&vh3UjI6Did=<?= $eCry($vh3UjI6Did) ?>&trash=<?= $eCry(1) ?>" class="btn btn-danger btn-sm"><i class="fad fa-trash"></i></a>
+                  <a href="app?accion=xkmtr4G&vh3UjI6Did=<?= $eCry($vh3UjI6Did) ?>&trash=<?= $eCry(1) ?>" class="btn btn-danger btn-sm"><i class="fad fa-trash"></i></a>
                 </div>
               </div>
             </div>
@@ -195,11 +195,11 @@ include('p4rc4l35/7i7ul0.php');
                       <?php if(v4lID44x50("700-009", $u5u4i0) == TRUE){ /// --- agreg km ?>
                         <td class="corta-texto text-center">
                           <?php if(v4lID44x50("700-009", $u5u4i0) == TRUE){ /// --- agreg km ?>
-                            <?php /*<a href="ap4673i/v3hiCs_4pi.php?axc0=EdI7kM&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-km"><i class="fad fa-edit"></i></a> */?>
+                            <?php /*<a href="ap4673i/v3hiCs_4pi.php?accion=EdI7kM&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-km"><i class="fad fa-edit"></i></a> */?>
                             <button class="btn bg-gradient-warning btn-xs" data-toggle="modal" data-target="#modal-<?= $i2 ?>"><i class="fad fa-edit"></i></button>
                           <?php } ?>
                           <?php if(v4lID44x50("700-010", $u5u4i0) == TRUE){ /// --- eliminar km ?>
-                            <a href="ap4673i/v3hiCs_4pi.php?axc0=d3letkm&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-danger btn-xs"><i class="fad fa-trash"></i></a>
+                            <a href="ap4673i/v3hiCs_4pi.php?accion=d3letkm&vh3id=<?= $eCry($vh3UjI6Did) ?>&p3ry6I=<?= $eCry($P3r70y7['vIDdO']) ?>" class="btn bg-gradient-danger btn-xs"><i class="fad fa-trash"></i></a>
                           <?php } ?>
                         </td>
                       <?php } ?>
@@ -214,7 +214,7 @@ include('p4rc4l35/7i7ul0.php');
         <div class="modal fade" id="modal-km">
           <div class="modal-dialog">
             <div class="modal-content"> 
-              <form name="km" method="post" action="ap4673i/v3hiCs_4pi.php?axc0=hY776">
+              <form name="km" method="post" action="ap4673i/v3hiCs_4pi.php?accion=hY776">
                 <div class="modal-header">
                   <h4 class="modal-title"><?= lbl_ttarkm ?></h4>                   
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -244,7 +244,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-cmb">
           <div class="modal-dialog">
             <div class="modal-content"> 
-              <form name="cmb" method="post" action="ap4673i/v3hFicH4_4pi.php?axc0=hY778" enctype="multipart/form-data">
+              <form name="cmb" method="post" action="ap4673i/v3hFicH4_4pi.php?accion=hY778" enctype="multipart/form-data">
                 <div class="modal-header">
                   <h4 class="modal-title">Recarga de Combustible</h4>                   
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -364,7 +364,7 @@ include('p4rc4l35/7i7ul0.php');
           <div class="modal fade" id="modal-<?= $i ?>">
             <div class="modal-dialog">
               <div class="modal-content"> 
-                <form name="km" method="post" action="ap4673i/v3hiCs_4pi.php?axc0=EdI7kM">
+                <form name="km" method="post" action="ap4673i/v3hiCs_4pi.php?accion=EdI7kM">
                   <div class="modal-header">
                     <h4 class="modal-title"><?= lbl_ttarkm ?></h4>                   
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">

@@ -89,7 +89,7 @@ include('p4rc4l35/7i7ul0.php');
                         <!--<td><?= $tPV[$P3r70y7['xDtv']] ?></td>-->
                         <?php if(v4lID44x50("1300-003", $u5u4i0) == TRUE){ /// --- Editar Permisos ?>
                           <td>
-                              <a href="v75t4?axc0=s3rv3Dt&pXRoI=<?= $eCry($P3r70y7['xDID']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
+                              <a href="app?accion=s3rv3Dt&pXRoI=<?= $eCry($P3r70y7['xDID']) ?>" class="btn btn-block bg-gradient-warning btn-xs"><i class="fad fa-edit"></i></a>
                           </td>
                         <?php } ?>
                       </tr>
@@ -110,7 +110,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content">
-            <form method="post" action="ap4673i/s3rv_4pi?axc0=4dds3r" id="n3wp3r">
+            <form method="post" action="ap4673i/s3rv_4pi?accion=4dds3r" id="n3wp3r">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w7i7u ?></h4>
                 

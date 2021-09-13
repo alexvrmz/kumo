@@ -1,19 +1,19 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
-if($axc0 === "5u540l_03" || $axc0 === '5u540l_04' || $axc0 === '10300' || $axc0 === '10400' || $axc0 === 'r3gu'){
+if($accion === "5u540l_03" || $accion === '5u540l_04' || $accion === '10300' || $accion === '10400' || $accion === 'r3gu'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
  	include('fncnesF0rM5.php');
 }
-/// --- axc0 Listado de usuarios
-if($axc0 === "5u540l"){
+/// --- accion Listado de usuarios
+if($accion === "5u540l"){
 	if($pp_xx001_add != ''){ $pp_xx001_add = $dCry($pp_xx001_add); }
 	if($pp_xx002_add != ''){ $pp_xx002_add = $dCry($pp_xx002_add); }
 	if($pp_xx003_add != ''){ $pp_xx003_add = $dCry($pp_xx003_add); }
@@ -65,7 +65,7 @@ if($axc0 === "5u540l"){
 		include('escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		//$_SESSION['m3n3Rr0R']  = 'si';
 		//$_SESSION['m3ns4J3'] = lbl_8i7_U014;
-		$hr = 'v75t4?axc0=5u250e';
+		$hr = 'app?accion=escritorio';
 		//llevame($hr);
 	}
 	else{ 
@@ -78,8 +78,8 @@ if($axc0 === "5u540l"){
 		}
 	}
 }
-/// --- axc0 Consultar Datos de un usuario
-elseif($axc0 === "5u540l_02"){
+/// --- accion Consultar Datos de un usuario
+elseif($accion === "5u540l_02"){
 	$u5u4oxX = $dCry($u5u4oxX);
 	if(!empty($u5u4oxX)){
     // --- Consulta para datos de usuario
@@ -132,12 +132,12 @@ elseif($axc0 === "5u540l_02"){
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de usuario a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    llevame('v75t4?axc0=5u540l');
+    llevame('app?accion=5u540l');
   }
  
 }
-/// --- axc0 Actualizar Usuario en BD
-elseif ($axc0 === '5u540l_03') {
+/// --- accion Actualizar Usuario en BD
+elseif ($accion === '5u540l_03') {
 	unset($_SESSION['m3ns4j3Frm']);
 	$_SESSION['m3ns4j3Frm'] = [];
 	$_SESSION['err'] = 0;
@@ -236,7 +236,7 @@ elseif ($axc0 === '5u540l_03') {
 			//if($pp_xx005 != ''){ $pp_xx005 = eCry2($pp_xx005); }
 			if($cxxt453 != ''){ $cxxt453 = md5($cxxt453); }
 
-			$axc0 = 'actualizar';
+			$accion = 'actualizar';
 			$p455wMd5 = $cxxt453;
 			$cxxt_A533n = $eCry($u5h34r5_pass_ase);
 			$p4r4m37r05 = "u5hID8ir5 = '$u5h8ir5nm'"; 
@@ -251,7 +251,7 @@ elseif ($axc0 === '5u540l_03') {
 												'u5hUS8ir5' => $pp_xx005
 												];		
 
-				$xidu = ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$xidu = ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 				
 
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
@@ -259,9 +259,9 @@ elseif ($axc0 === '5u540l_03') {
 				bi74c0('3dtu5u', $_SESSION['m3ns4J3'], '');
 				
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-				$axc0 = 203;
-				$d3s = eCry2($Bin4kuru[$axc0]);
-				Bin4kuru($d3s, $axc0, $V=0, $u5h8ir5nm, $F=0, $E=0, $D=0, $P=0);
+				$accion = 203;
+				$d3s = eCry2($Bin4kuru[$accion]);
+				Bin4kuru($d3s, $accion, $V=0, $u5h8ir5nm, $F=0, $E=0, $D=0, $P=0);
 
 			}
 			elseif ($p455wMd5 != '') {
@@ -272,7 +272,7 @@ elseif ($axc0 === '5u540l_03') {
 												'u5hUS8ir5' => $pp_xx005,
 												'u5hpW8ir5' => $p455wMd5
 												];		
-				$xidu = ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$xidu = ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 				$_SESSION['m3ns4J3'] = lbl_8i7_x005.$pp_xx005;
 				bi74c0('3dtu5u2', $_SESSION['m3ns4J3'], '');
@@ -295,14 +295,14 @@ elseif ($axc0 === '5u540l_03') {
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x007.$pp_xx005;	
 		bi74c0('3dtu5u4', $_SESSION['m3ns4J3'], '');
-    $r = '../v75t4?axc0=5u540l';
+    $r = '../app?accion=5u540l';
 	}*/
 
 	if($_SESSION['err'] == 0){
-		$r = '../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm);
+		$r = '../app?accion=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm);
 	}
 	else{
-		$r = '../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm);
+		$r = '../app?accion=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm);
 		if(!empty($pp_xx001)){ $r .= '&pp_xx001='.$eCry($pp_xx001);	}
 		if(!empty($pp_xx002)){ $r .= '&pp_xx002='.$eCry($pp_xx002);	}
 		if(!empty($pp_xx003)){ $r .= '&pp_xx003='.$eCry($pp_xx003);	}
@@ -317,8 +317,8 @@ elseif ($axc0 === '5u540l_03') {
 	llevame($r);
 
 }
-/// --- axc0 agregar usuario
-elseif ($axc0 == '5u540l_04') {
+/// --- accion agregar usuario
+elseif ($accion == '5u540l_04') {
 
 	unset($_SESSION['m3ns4j3Frm']);
 	$_SESSION['m3ns4j3Frm'] = [];
@@ -473,9 +473,9 @@ elseif ($axc0 == '5u540l_04') {
 			$_SESSION['cxxt453_add'] = $cxxt453_add;
 			
 			include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-			$axc0 = 200;
-			$d3s = eCry2($Bin4kuru[$axc0]);
-			Bin4kuru($d3s, $axc0, $V=0, $xidu, $F=0, $E=0, $D=0, $P=0);
+			$accion = 200;
+			$d3s = eCry2($Bin4kuru[$accion]);
+			Bin4kuru($d3s, $accion, $V=0, $xidu, $F=0, $E=0, $D=0, $P=0);
 
 			bi74c0('addu5u', $_SESSION['m3ns4J3'], '');
 
@@ -486,8 +486,8 @@ elseif ($axc0 == '5u540l_04') {
 				'UEFVxTU' => 0,
 				'UEFTxTU' => $u5hFR8ir5,
 			];
-			$axc0 = 'insertar';
-			ejecutaDB('r3l3UEF', $yarra, $axc0, $p4r4m37r05);
+			$accion = 'insertar';
+			ejecutaDB('r3l3UEF', $yarra, $accion, $p4r4m37r05);
 
 			$p3rm5admin = [
 				1 => '100-001',
@@ -542,10 +542,10 @@ elseif ($axc0 == '5u540l_04') {
 
 	
 	if($xidu != ''){
-		$r = '../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($xidu);
+		$r = '../app?accion=5u540l_02&u5u4oxX='.$eCry($xidu);
 	}
 	else{
-		$r = '../v75t4?axc0=5u540l';
+		$r = '../app?accion=5u540l';
 		if(!empty($pp_xx001_add)){ $r .= '&pp_xx001_add='.$eCry($pp_xx001_add);	}
 		if(!empty($pp_xx002_add)){ $r .= '&pp_xx002_add='.$eCry($pp_xx002_add);	}
 		if(!empty($pp_xx003_add)){ $r .= '&pp_xx003_add='.$eCry($pp_xx003_add);	}
@@ -559,22 +559,22 @@ elseif ($axc0 == '5u540l_04') {
 	}
 	llevame($r);
 }
-/// --- axc0 suspender usuario
-elseif ($axc0 === '10300') {
+/// --- accion suspender usuario
+elseif ($accion === '10300') {
 	$u5h8ir5nm = $dCry($u5h8ir5nm);
 	if(!empty($u5h8ir5nm)){
-		$axc0 = 'actualizar';
+		$accion = 'actualizar';
 		$p4r4m37r05 = "u5hID8ir5 = '$u5h8ir5nm'"; 
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = ['u5hOn8ir5' => 0,
 											 'u5hOn44P8ir5' => 0
 											];		
-		ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-		$axc0 = 201;
-		$d3s = eCry2($Bin4kuru[$axc0]);
-		Bin4kuru($d3s, $axc0, $V=0, $u5h8ir5nm, $F=0, $E=0, $D=0, $P=0);
+		$accion = 201;
+		$d3s = eCry2($Bin4kuru[$accion]);
+		Bin4kuru($d3s, $accion, $V=0, $u5h8ir5nm, $F=0, $E=0, $D=0, $P=0);
 
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
@@ -588,29 +588,29 @@ elseif ($axc0 === '10300') {
 		bi74c0('susPu5u2', $_SESSION['m3ns4J3'], '');
     
 	}
-  llevame('../v75t4?axc0=5u540l');
+  llevame('../app?accion=5u540l');
 	
 }
-/// --- axc0 activar usuario
-elseif ($axc0 === '10400') {
+/// --- accion activar usuario
+elseif ($accion === '10400') {
 	$u5h8ir5nm = $dCry($u5h8ir5nm);
 	if(!empty($u5h8ir5nm)){
-		$axc0 = 'actualizar';
+		$accion = 'actualizar';
 		$p4r4m37r05 = "u5hID8ir5 = '$u5h8ir5nm'"; 
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = ['u5hOn8ir5' => 1,
 											 'u5hOn44P8ir5' => 0
 											];		
-		ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x010.$u5h8ir5nm;
 		bi74c0('4ctPu5u', $_SESSION['m3ns4J3'], '');
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-		$axc0 = 202; 
-		$d3s = eCry2($Bin4kuru[$axc0]);
-		Bin4kuru($d3s, $axc0, $V=0, $u5h8ir5nm, $F=0, $E=0, $D=0, $P=0);
+		$accion = 202; 
+		$d3s = eCry2($Bin4kuru[$accion]);
+		Bin4kuru($d3s, $accion, $V=0, $u5h8ir5nm, $F=0, $E=0, $D=0, $P=0);
 	}
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
@@ -619,6 +619,6 @@ elseif ($axc0 === '10400') {
 		bi74c0('4ctPu5u2', $_SESSION['m3ns4J3'], '');
     
 	}
-  llevame('../v75t4?axc0=5u540l');
+  llevame('../app?accion=5u540l');
 	
 }

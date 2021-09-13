@@ -2917,8 +2917,8 @@
       var vim = cm.state.vim;
       var includeLineBreak = vim.insertMode || vim.visualMode;
       var line = Math.min(Math.max(cm.firstLine(), cur.line), cm.lastLine() );
-      var maxc0h = lineLength(cm, line) - 1 + !!includeLineBreak;
-      var ch = Math.min(Math.max(0, cur.ch), maxc0h);
+      var maccionh = lineLength(cm, line) - 1 + !!includeLineBreak;
+      var ch = Math.min(Math.max(0, cur.ch), maccionh);
       return Pos(line, ch);
     }
     function copyArgs(args) {

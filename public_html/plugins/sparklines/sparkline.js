@@ -44,7 +44,7 @@
     lineWidth: 1.5,
     startColor: "transparent",
     endColor: "black",
-    maxc0olor: "transparent",
+    maccionolor: "transparent",
     minColor: "transparent",
     minValue: null,
     maxValue: null,
@@ -197,7 +197,7 @@
     dot(this.options.startColor, this.options.startLine, offsetX + (points.length == 1 ? width / 2 : 0), y(0));
     dot(this.options.endColor, this.options.endLine, offsetX + (points.length == 1 ? width / 2 : width), y(points.length-1));
     dot(this.options.minColor, this.options.minLine, minX + (points.length == 1 ? width / 2 : 0), y(points.indexOf(minValue)));
-    dot(this.options.maxc0olor, this.options.maxLine, maxX + (points.length == 1 ? width / 2 : 0), y(points.indexOf(maxValue)));
+    dot(this.options.maccionolor, this.options.maxLine, maxX + (points.length == 1 ? width / 2 : 0), y(points.indexOf(maxValue)));
 
     //line(this.options.averageLine, )
   }

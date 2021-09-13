@@ -1,19 +1,19 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
-if($axc0 === "eMprxXx21" || $axc0 == "sV3EMp"){
+if($accion === "eMprxXx21" || $accion == "sV3EMp"){
 	include('ccnnxx547.php');
  	include('fncnesF0rM5.php');
  	include('fncnes5632.php');
 }
-if($axc0 === "eMpr35As" ){
+if($accion === "eMpr35As" ){
 	$u5u = $_SESSION['u5hID8ir5'];
 	$flo0 = $dCry($flo0);
 	
@@ -226,8 +226,8 @@ if($axc0 === "eMpr35As" ){
 	
 }
 
-/// --- axc0 agregar Empresa
-elseif ($axc0 == 'eMprxXx21') {
+/// --- accion agregar Empresa
+elseif ($accion == 'eMprxXx21') {
 	/// --- las partes de pp007 comentadas corresponden a colonias cuando esten en bd (2021/05/26)
 	$_SESSION['err'] = 0;
 	unset($_SESSION['m3ns4j3Frm']);
@@ -382,7 +382,7 @@ elseif ($axc0 == 'eMprxXx21') {
 		$ex16 = $_SESSION['u5hID8ir5'];
 		$ex17 = $pp_xx017;
 
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = '';//"u5hID8ir5 = '$u5h8ir5nm'"; 
 		unset($sQl_d474_4rr4y); 
 		$f = date('Y-m-d H:i:s');
@@ -407,15 +407,15 @@ elseif ($axc0 == 'eMprxXx21') {
 			'xXUNVrSXx' => $xXUNVrSXx
 		];	
 		
-		$ne = ejecutaDB('eMpR3sA5', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$ne = ejecutaDB('eMpR3sA5', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0121.$pp_xx003;
 		bi74c0('addEmpR', $_SESSION['m3ns4J3'], '');
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-		$axc0 = 300;
-		$d3s = eCry2($Bin4kuru[$axc0]);
-		Bin4kuru($d3s, $axc0, $V=0, $U=0, $F=0, $ne, $D=0, $P=0);
+		$accion = 300;
+		$d3s = eCry2($Bin4kuru[$accion]);
+		Bin4kuru($d3s, $accion, $V=0, $U=0, $F=0, $ne, $D=0, $P=0);
 		
 		$brr4 = true;
 		if($pp_xx017 != ''){
@@ -424,8 +424,8 @@ elseif ($axc0 == 'eMprxXx21') {
 				'r3F3mP00' => $ne,
 				'r3FFloO00' => $ex17
 			];	
-			$axc0 = 'insertar';
-				ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			$accion = 'insertar';
+				ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		}
 
 		unset($px001); unset($px002);	unset($px003);	unset($px004);	unset($px005); unset($px006);	unset($px007); unset($px008);
@@ -435,10 +435,10 @@ elseif ($axc0 == 'eMprxXx21') {
 	
 
 	if($pp_xx017 != ''){
-		$rl = '../v75t4?axc0=eMpr35As&flo0='.$eCry($pp_xx017);
+		$rl = '../app?accion=eMpr35As&flo0='.$eCry($pp_xx017);
 	}
 	else {
-		$rl = '../v75t4?axc0=eMpr35As';
+		$rl = '../app?accion=eMpr35As';
 	}
 
 	if($brr4 == false){
@@ -449,7 +449,7 @@ elseif ($axc0 == 'eMprxXx21') {
 	}
 	llevame($rl);
 }
-elseif($axc0 == 'emPr3Edi7'){
+elseif($accion == 'emPr3Edi7'){
 	if(!empty($eMpr3)){
 		$frm_001 = $dCry($frm_001);	$frm_004 = $dCry($frm_004);	$frm_007 = $dCry($frm_007);	$frm_010 = $dCry($frm_010);
 		$frm_002 = $dCry($frm_002);	$frm_005 = $dCry($frm_005);	$frm_008 = $dCry($frm_008);	$frm_011 = $dCry($frm_011);
@@ -483,15 +483,15 @@ elseif($axc0 == 'emPr3Edi7'){
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta ID de Empresa';
-		$rl = 'v75t4?axc0=eMpr35As';
+		$rl = 'app?accion=eMpr35As';
 		llevame($rl);
 	}
 }
-elseif($axc0 == 'sV3EMp'){
+elseif($accion == 'sV3EMp'){
 	if($eMpr3 == ''){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta el ID de Empresa';
-		$rl = '../v75t4?axc0=eMpr35As';
+		$rl = '../app?accion=eMpr35As';
 		llevame($rl);
 	}
 	else{
@@ -606,29 +606,29 @@ elseif($axc0 == 'sV3EMp'){
 					'eMACTEm' => $frm_015
 				];
 				$p4r4m37r05 = "eMIDEm = $eMpr3";
-				$axc0 = "actualizar";
+				$accion = "actualizar";
 				echo '<pre>';print_r($aRrr4y);echo '</pre>';
-				ejecutaDB('eMpR3sA5', $aRrr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('eMpR3sA5', $aRrr4y, $accion, $p4r4m37r05);
 				$_SESSION['m3ns4J3'] = 'Se actualizo la empresa '.dCry2($frm_001);
 				bi74c0('eDTEmpR', $_SESSION['m3ns4J3'], '');
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-				$axc0 = 301;
-				$d3s = eCry2($Bin4kuru[$axc0]);
-				Bin4kuru($d3s, $axc0, $V=0, $U=0, $F=0, $eMpr3, $D=0, $P=0);
+				$accion = 301;
+				$d3s = eCry2($Bin4kuru[$accion]);
+				Bin4kuru($d3s, $accion, $V=0, $U=0, $F=0, $eMpr3, $D=0, $P=0);
 
-				$rl = '../v75t4?axc0=emPr3Edi7&eMpr3='.$eCry($eMpr3);
+				$rl = '../app?accion=emPr3Edi7&eMpr3='.$eCry($eMpr3);
 				$exc = TRUE;
 			}
 			else{
 				$_SESSION['m3n3Rr0R']  = 'si';
 				$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
-				$rl = '../v75t4?axc0=emPr3Edi7&eMpr3='.$eCry($eMpr3);
+				$rl = '../app?accion=emPr3Edi7&eMpr3='.$eCry($eMpr3);
 			}
 		}	
 		else{
 			$_SESSION['m3n3Rr0R']  = 'si';
 			$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
-			$rl = '../v75t4?axc0=emPr3Edi7&eMpr3='.$eCry($eMpr3);
+			$rl = '../app?accion=emPr3Edi7&eMpr3='.$eCry($eMpr3);
 		}
 		if($exc != TRUE){
 			$rl .= '&frm_001='.$eCry($frm_001).'&frm_004='.$eCry($frm_004).'&frm_007='.$eCry($frm_007).'&frm_010='.$eCry($frm_010);

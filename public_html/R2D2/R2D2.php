@@ -4,12 +4,12 @@ include('../ap4673i/ccnnxx547.php');
 include('../ap4673i/fncnes5632.php');
 header("Access-Control-Allow-Origin: *");
 //error_reporting(0);
-if($axc0 == 'x006' /*|| $axc0 == 'x005'*/){
+if($accion == 'x006' /*|| $accion == 'x005'*/){
 	$ps3Nc = md5($psbxX012s);
-	//if($axc0 == 'x005'){
+	//if($accion == 'x005'){
 		$Q001 = "SELECT * FROM u5u405 WHERE u5hUS8ir5 = '$pp_xx005' AND u5hpW8ir5 = '$ps3Nc' AND u5hOn8ir5 = 1 /*AND u5hOn44P8ir5 = 1*/";
 	/*}
-	elseif($axc0 == 'x006'){
+	elseif($accion == 'x006'){
 		$Q001 = "SELECT * FROM u5u405 WHERE u5hUS8ir5 = '$pp_xx005' AND u5hpW8ir5 = '$ps3Nc' AND u5hOn8ir5 = 1 AND u5hOn44P8ir5 = 1";
 	}*/
 	$S001 = $cnnx4s->query($Q001) or die ("Fallo al selecccionar datos de usuario");
@@ -138,7 +138,7 @@ if($axc0 == 'x006' /*|| $axc0 == 'x005'*/){
 	}
 }
 
-if($axc0 == 'x009'){
+if($accion == 'x009'){
 	header('Cache-Control: no-cache, must-revalidate');
 	require_once ('../../PHP_Compat-1.6.0a3/Compat/Function/file_get_contents.php');
   $data = php_compat_file_get_contents('php://input');
@@ -155,7 +155,7 @@ if($axc0 == 'x009'){
   }
 }
 
-if($axc0 == 'x012'){
+if($accion == 'x012'){
 	/*echo 'Kilimetraje: '.base64_decode($frm01).'<br>';
 	echo 'Importe: '.base64_decode($frm02).'<br>';
 	echo '# Ticket: '.base64_decode($frm03).'<br>';
@@ -255,7 +255,7 @@ if($axc0 == 'x012'){
 			}
 			
 		
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = ""; 
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = [
@@ -276,7 +276,7 @@ if($axc0 == 'x012'){
 			'xkDRCms' => $DRcD,
 			'xXUNVrSXx' => $xx02
 		];		
-		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 
 /*	$C013 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = $frm10 AND xkTLLms = 1 ORDER BY xkIDms DESC LIMIT 1 ";
@@ -284,7 +284,7 @@ if($axc0 == 'x012'){
 	$DdKMA = $S013->fetch_assoc();
 	$CdKMTK = $DdKMA['xkkm7rGms'];
 
-	$axc0 = 'insertar';
+	$accion = 'insertar';
 
 	$xkDRCms = $frm01 - $CdKMTK;
 	$vsHLLA = $S013->num_rows;
@@ -334,7 +334,7 @@ if($axc0 == 'x012'){
 			'xkDRCms' => $xkDRCms,
 			'xXUNVrSXx' => $xx02
 		];		
-		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);*/
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $accion, $p4r4m37r05);*/
 
 
 

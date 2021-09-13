@@ -20,12 +20,12 @@ include('p4rc4l35/7i7ul0.php');
             <button type="button" data-toggle="modal" data-target="#modal-nuevo" class="btn bg-gradient-info btn-app" @click="app.showingaddModal = true;"><i class="fad fa-building"></i> <?= btn_46r364rU5u4ri0 ?></button>
           <?php } ?>
           <?php if($vst == 1){ ?>
-            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
+            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?accion=Ac7Vs7&kjhu=<?= $eCry(2) ?>&huy=<?= $eCry($u5u4i0) ?>">
               <i class="fad fa-list-alt"></i> Ver Lista
             </a> 
           <?php }
                 else { ?>
-            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?axc0=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
+            <a class="btn btn-app bg-primary" href="ap4673i/c0Nfi6_4pi.php?accion=Ac7Vs7&kjhu=<?= $eCry(1) ?>&huy=<?= $eCry($u5u4i0) ?>">
               <i class="fad fa-file-invoice"></i> Ver Cartas
             </a> 
           <?php } ?>
@@ -57,10 +57,10 @@ include('p4rc4l35/7i7ul0.php');
                               </div>                          
                               <div class="btn-group">
                                 <?php if(v4lID44x50("1100-004", $u5u4i0) == TRUE){ ?>
-                                  <a href="v75t4?axc0=x7l07iLl4&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i><?= lbl_2mp3 ?></a>
+                                  <a href="app?accion=x7l07iLl4&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat" style="width: 100%;"><i class="fad fa-eye"></i><?= lbl_2mp3 ?></a>
                                 <?php } ?>
                                 <?php if(v4lID44x50("1100-003", $u5u4i0) == TRUE){ ?>
-                                  <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i><?= lbl_2mp4 ?></a>
+                                  <a href="app?accion=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat" style="width: 100%;"><i class="fad fa-edit"></i><?= lbl_2mp4 ?></a>
                                 <?php } ?>
                               </div>       
                               <div class="card-footer" style="padding-top: 5px;">
@@ -118,12 +118,12 @@ include('p4rc4l35/7i7ul0.php');
                                       <div class="col-6">
                                  
                                         <?php if(v4lID44x50("1100-004", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=x7l07iLl4&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat btn-xs corta-texto"><i class="fad fa-eye"></i> <?= lbl_2mp3 ?></a>
+                                          <a href="app?accion=x7l07iLl4&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-info btn-flat btn-xs corta-texto"><i class="fad fa-eye"></i> <?= lbl_2mp3 ?></a>
                                         <?php } ?>
                                       </div>
                                       <div class="col-6">
                                         <?php if(v4lID44x50("1100-003", $u5u4i0) == TRUE){ ?>
-                                          <a href="v75t4?axc0=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat btn-xs corta-texto"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
+                                          <a href="app?accion=emPr3Edi7&eMpr3=<?= $eCry($u5h34r5['XrIDEx']) ?>" type="button" class="btn btn-warning btn-flat btn-xs corta-texto"><i class="fad fa-edit"></i> <?= lbl_2mp4 ?></a>
                                         <?php } ?>
                                       </div> 
                                     </div>
@@ -149,7 +149,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal-nuevo">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/eMpr35As_4pi.php?axc0=eMprxXx21" id="nuevo1">
+            <form name="nuevo" method="post" action="ap4673i/eMpr35As_4pi.php?accion=eMprxXx21" id="nuevo1">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3w001 ?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

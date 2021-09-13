@@ -1,20 +1,20 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
 
-if($axc0 === '1054800' || $axc0 === 'hY776' || $axc0 === 'hY778' || $axc0 === 's3RvAdd' || $axc0 == 'd0CvAdd'){
+if($accion === '1054800' || $accion === 'hY776' || $accion === 'hY778' || $accion === 's3RvAdd' || $accion == 'd0CvAdd'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php'); 
  	include('fncnesF0rM5.php');
 }
 
-/// --- axc0 datos de Auto
-if($axc0 === "v3hFh4"){
+/// --- accion datos de Auto
+if($accion === "v3hFh4"){
 	 
 	// --- Consulta para listado de Autos
 	$vh3iP = $dCry($vh3iP);
@@ -510,7 +510,7 @@ if($axc0 === "v3hFh4"){
 		}*/
 	
 }
-elseif($axc0 === 's3RvAdd'){
+elseif($accion === 's3RvAdd'){
 	if(!empty($ags_x001) && !empty($ags_x006) && !empty($ags_x007) && !empty($ags_x004) && !empty($ags_x008)){
 
 		$C004 = "SELECT * FROM D0cUM3n705 WHERE D0cv3HiDxS = $ags_x006 AND D0cS3RxS = $ags_x007 AND D0c4c7iv0xS = 1";
@@ -520,9 +520,9 @@ elseif($axc0 === 's3RvAdd'){
 			$ar = [
 				'D0c4c7iv0xS' => 0
 			];
-			$axc0 = 'actualizar';
+			$accion = 'actualizar';
 			$p4r4 = 'D0cIDxS = '.$idD;
-			ejecutaDB('D0cUM3n705', $ar, $axc0, $p4r4);
+			ejecutaDB('D0cUM3n705', $ar, $accion, $p4r4);
 			bi74c0('4ct-s3r-'.$idD, 'Se desactivo el documento:'.$idD, '');
 		}
 
@@ -580,7 +580,7 @@ elseif($axc0 === 's3RvAdd'){
 	
 
 
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = ""; 
 		$ags_x002 = eCry2($ags_x002);
 		$ags_x005 = eCry2($ags_x005);
@@ -600,7 +600,7 @@ elseif($axc0 === 's3RvAdd'){
 			'D0cALTxS' => $ags_x009,
 			'xXUNVrSXx' => $xXUNVrSXx
 		];		
-		ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		$_SESSION['m3ns4J3'] = 'Se Agrego el Servicio: '.$DSEV;
 		bi74c0('4ct-s3r-'.$ags_x007, $_SESSION['m3ns4J3'], '');
@@ -609,10 +609,10 @@ elseif($axc0 === 's3RvAdd'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Faltan datos';
 	}
-	llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($ags_x006));
+	llevame('../app?accion=v3hFh4&vh3iP='.$eCry($ags_x006));
 
 }
-elseif($axc0 === 'd0CvAdd'){
+elseif($accion === 'd0CvAdd'){
 	if(!empty($agd_x001) && !empty($agd_x006) && !empty($agd_x007) && !empty($agd_x004) && !empty($agd_x008) && !empty($agd_x010)){
 
 		$C004 = "SELECT * FROM D0cUM3n705 WHERE D0cv3HiDxS = $agd_x006 AND D0c7ip0xS = $agd_x007 AND D0c4c7iv0xS = 1";
@@ -622,9 +622,9 @@ elseif($axc0 === 'd0CvAdd'){
 			$ar = [
 				'D0c4c7iv0xS' => 0
 			];
-			$axc0 = 'actualizar';
+			$accion = 'actualizar';
 			$p4r4 = 'D0cIDxS = '.$idD;
-			ejecutaDB('D0cUM3n705', $ar, $axc0, $p4r4);
+			ejecutaDB('D0cUM3n705', $ar, $accion, $p4r4);
 			bi74c0('4ct-d0c-'.$idD, 'Se desactivo el documento:'.$idD, '');
 		}
 
@@ -681,7 +681,7 @@ elseif($axc0 === 'd0CvAdd'){
 	
 
 
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = ""; 
 		$agd_x001 = eCry2($agd_x001);
 		$agd_x005 = eCry2($agd_x005);
@@ -701,7 +701,7 @@ elseif($axc0 === 'd0CvAdd'){
 		echo '<pre>';
 		print_r($sQl_d474_4rr4y);
 		echo '</pre>';
-		ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('D0cUM3n705', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		$_SESSION['m3ns4J3'] = 'Se actualizo con exito el documento';
 		bi74c0('4ct-d0c-'.$agd_x007, $_SESSION['m3ns4J3'], '');
@@ -710,11 +710,11 @@ elseif($axc0 === 'd0CvAdd'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Faltan datos';
 	}
-	llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($agd_x006));
+	llevame('../app?accion=v3hFh4&vh3iP='.$eCry($agd_x006));
 
 }
 
-elseif($axc0 === '1054800'){
+elseif($accion === '1054800'){
 	if(!empty($gh77)){
 		$gh77 = $dCry($gh77);
     $fileName = basename($gh77);
@@ -737,9 +737,9 @@ elseif($axc0 === '1054800'){
     }
 	}
 }
-elseif($axc0 === 'hY776'){
+elseif($accion === 'hY776'){
 	if(!empty($pp_xx0100)){
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = ""; 
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = ['xkkm7rGms' => $pp_xx0100,
@@ -749,7 +749,7 @@ elseif($axc0 === 'hY776'){
 											 'xku5uIDms' => $pp_xx0102,
 		  									'xXUNVrSXx' => $xXUNVrSXx
 											];		
-		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0400.$pp_xx0100;
@@ -760,9 +760,9 @@ elseif($axc0 === 'hY776'){
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = 'Falta el Kilometraje';
 	}
-	llevame('../v75t4?axc0=v3hFh4&vh3iP='.$eCry($pp_xx0101));
+	llevame('../app?accion=v3hFh4&vh3iP='.$eCry($pp_xx0101));
 }
-elseif($axc0 === 'hY778'){
+elseif($accion === 'hY778'){
 	$_SESSION['NERR_hY778'] = 0;
 	$_SESSION['MSGF_hY778'] = [];
 	$_SESSION['FRM_hY778'] = [];
@@ -946,7 +946,7 @@ elseif($axc0 === 'hY778'){
 			}
 			
 		
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = ""; 
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = [
@@ -967,7 +967,7 @@ elseif($axc0 === 'hY778'){
 			'xkDRCms' => $DRcD,
 			'xXUNVrSXx' => $xXUNVrSXx
 		];		
-		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0400.$pp_xx0100;
 		bi74c0('4ctKm', $_SESSION['m3ns4J3'], '');
@@ -979,7 +979,7 @@ elseif($axc0 === 'hY778'){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Por favor revisa la información';
 	}
-	llevame('../v75t4?axc0=xkmtr4G&vh3UjI6Did='.$eCry($frm_rgcmb007));
+	llevame('../app?accion=xkmtr4G&vh3UjI6Did='.$eCry($frm_rgcmb007));
 	/*echo '<pre>';
 	print_r($sQl_d474_4rr4y);
 	echo '</pre>';*/

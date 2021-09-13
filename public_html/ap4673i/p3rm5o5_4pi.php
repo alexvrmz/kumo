@@ -3,16 +3,16 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 
-if($axc0 === "5u5v78Ds" || $axc0 === 'p3rf5Gg' || $axc0 === 'sD4xG5d5' || $axc0 == 'psDef4Gg'){
+if($accion === "5u5v78Ds" || $accion === 'p3rf5Gg' || $accion === 'sD4xG5d5' || $accion == 'psDef4Gg'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
 }
 
-/// --- axc0 Listado de Usuarios
-if($axc0 === "5u550l"){
+/// --- accion Listado de Usuarios
+if($accion === "5u550l"){
 
 	// --- Consulta para listado de modulos
 	$Qm0d78Os = "SELECT * FROM m0d78Os";
@@ -53,35 +53,35 @@ if($axc0 === "5u550l"){
 	
 
 }
-elseif ($axc0 == '5u5v78Ds') {
+elseif ($accion == '5u5v78Ds') {
 
 	if(!empty($pt5_xx01)){
 
-    $axc0 = 'insertar';
+    $accion = 'insertar';
 		unset($sQl_d474_4rr4y); 
 		$sQl_d474_4rr4y = ['p3ry6d35cRXx' => $pt5_xx01,
 											 'p3ry6m0DuXx' => $pt5_xx02,
 											 'p3ry6nUm3Xx' => $pt5_xx03
 											];		
-    ejecutaDB('p3rM5sx_e', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('p3rM5sx_e', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
     
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x024.$pt5_xx01;
 		bi74c0('p3r4r', $_SESSION['m3ns4J3'], '');
 
-    llevame('../v75t4?axc0=5u550l');
+    llevame('../app?accion=5u550l');
 	}
   else{
     $_SESSION['m3n3Rr0R'] = 'si';
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x025;
 		bi74c0('p3r4r2', $_SESSION['m3ns4J3'], '');
-    llevame('../v75t4?axc0=5u550l');
+    llevame('../app?accion=5u550l');
   }
 
 }
 
-elseif ($axc0 == 'xu5sdS7l') { /// --- Accion cargar datos de permiso
+elseif ($accion == 'xu5sdS7l') { /// --- Accion cargar datos de permiso
 	$p3ry6I = $dCry($p3ry6I);
 	if(!empty($p3ry6I)){
     // --- Consulta para datos de usuario
@@ -101,16 +101,16 @@ elseif ($axc0 == 'xu5sdS7l') { /// --- Accion cargar datos de permiso
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de permiso a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    llevame('v75t4?axc0=5u540l');
+    llevame('app?accion=5u540l');
   }
 		
 }
 
 
-elseif ($axc0 == 'p3rf5Gg') { /// --- Accion actualizar
+elseif ($accion == 'p3rf5Gg') { /// --- Accion actualizar
 
 	if(!empty($pp_xx004)){
-		$axc0 = 'actualizar';
+		$accion = 'actualizar';
 		$p4r4m37r05 = "p3ry6IDXx = '$pp_xx004'"; 
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = ['p3ry6d35cRXx' => $pp_xx001,
@@ -119,12 +119,12 @@ elseif ($axc0 == 'p3rf5Gg') { /// --- Accion actualizar
 											];		
 		
 
-		ejecutaDB('p3rM5sx_e', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('p3rM5sx_e', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
     $_SESSION['m3ns4J3'] = lbl_8i7_x026.$pp_xx004;
 		bi74c0('4c7p3r', $_SESSION['m3ns4J3'], '');
-		llevame('../v75t4?axc0=5u550l');
+		llevame('../app?accion=5u550l');
 
 	}
   else {
@@ -133,11 +133,11 @@ elseif ($axc0 == 'p3rf5Gg') { /// --- Accion actualizar
     $_SESSION['m3ns4J3'] = lbl_8i7_x027.$pp_xx004;
 		bi74c0('4c7p3r2', $_SESSION['m3ns4J3'], '');
 
-    llevame('../v75t4?axc0=5u550l');
+    llevame('../app?accion=5u550l');
   }
 		
 }
-elseif ($axc0 === '5uXds4H') {
+elseif ($accion === '5uXds4H') {
 	$u5u4oxX = $dCry($u5u4oxX);
 	if(!empty($u5u4oxX)){
     // --- Consulta para permisos de usuario
@@ -184,10 +184,10 @@ elseif ($axc0 === '5uXds4H') {
   else{
     $_SESSION['m3ns4J3'] = 'No habia ID de permiso a editar! (m-01).';
     $_SESSION['m3n3Rr0R'] = 'si';
-    llevame('v75t4?axc0=5u540l');
+    llevame('app?accion=5u540l');
   }
 }
-elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
+elseif ($accion === 'sD4xG5d5') { /// --- carga permisos por modulo
 	if($pt5_xx02 != '' && ($pt5_xx05 == '' ||  $pt5_xx05 == 'nada')){
     // --- Consulta para permisos de usuario
     $q5u5xXd = "SELECT * FROM p3rM5sx_e WHERE p3ry6m0DuXx = '".$pt5_xx02."' ";
@@ -207,25 +207,25 @@ elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
 		unset($_SESSION['pt5_xx05']);
 		$_SESSION['pt5_xx05'] = $d4705_u5u;
 		
-		llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
+		llevame('../app?accion=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
 		/// --- guardar en SESSION los permisos de modulo
   }
 	elseif($pt5_xx05 != '' || $pt5_xx05 != 'nada'){
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		unset($sQl_d474_4rr4y);
 		$sQl_d474_4rr4y = ['p3rXoNmRs' => $pt5_xx05,
 											 'p3rXou5Rs' => $pt5_xx04,
 											 'p3rXo3PRs' => 1,
 											 'p3rXoFPRs' => date("Y-m-d H:i:s")
 											];		
-    ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+    ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		$_SESSION['m3n3Rr0R'] = 'no';
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x014.$pt5_xx05.' / '.$pt5_xx04;
 		bi74c0('4ddP3rm', $_SESSION['m3ns4J3'], '');
 		unset($_SESSION['pt5_xx02']);
 		unset($_SESSION['pt5_xx05']);
-		llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
+		llevame('../app?accion=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
 		
 	}
   else{
@@ -233,18 +233,18 @@ elseif ($axc0 === 'sD4xG5d5') { /// --- carga permisos por modulo
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x015;
 		bi74c0('4ddP3rm2', $_SESSION['m3ns4J3'], '');
-    llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
+    llevame('../app?accion=5uXds4H&u5u4oxX='.$eCry($pt5_xx04));
   }
 }
 
-elseif ($axc0 == 'psDef4Gg') { /// --- Accion actualizar estado permiso
+elseif ($accion == 'psDef4Gg') { /// --- Accion actualizar estado permiso
 	$h7gr =  $dCry($h7gr);
 	$txgt5 = $dCry($txgt5);
 	$u5u4oxX = $dCry($u5u4oxX);
 	$f4G55t7 = $dCry($f4G55t7);
 
 	if(!empty($h7gr)){
-		$axc0 = 'actualizar';
+		$accion = 'actualizar';
 		$p4r4m37r05 = "p3rXoiDRs = '$h7gr'"; //-- id
 		unset($sQl_d474_4rr4y);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
@@ -256,13 +256,13 @@ elseif ($axc0 == 'psDef4Gg') { /// --- Accion actualizar estado permiso
 											];		
 		
 
-		ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('p3rXo70R64D0s', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		
 		$_SESSION['m3ns4J3'] = $ssx.lbl_8i7_x016.' '.$h7gr;
 		bi74c0('3dtP3rm', $_SESSION['m3ns4J3'], '');
 
-    llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
+    llevame('../app?accion=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
 
 	}
   else {
@@ -270,7 +270,7 @@ elseif ($axc0 == 'psDef4Gg') { /// --- Accion actualizar estado permiso
     $_SESSION['m3ns4J3'] = lbl_8i7_x019;
     $_SESSION['m3n3Rr0R'] = 'si';
 		bi74c0('3dtP3rm2', $_SESSION['m3ns4J3'], '');
-    llevame('../v75t4?axc0=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
+    llevame('../app?accion=5uXds4H&u5u4oxX='.$eCry($u5u4oxX));
   }
 		
 }

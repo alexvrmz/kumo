@@ -100,11 +100,11 @@ var getInfo;
       xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
           //document.getElementById('response').innerHTML = xmlhttp.responseText;
-          //window.location.href = 'https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id;
+          //window.location.href = 'https://app.kumo.click/lgaccs25?accion=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id;
         };
       }
       xmlhttp.send(loginData);
-      document.getElementById('status').innerHTML = '<a href="https://app.kumo.click/lgaccs25?axc0=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id+'">Iniciar con Facebook</a>';
+      document.getElementById('status').innerHTML = '<a href="https://app.kumo.click/lgaccs25?accion=x008&pp_xx005='+xmlhttp.responseText+'&fb_id='+response.id+'">Iniciar con Facebook</a>';
       //document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name +"<br> Email : "+ response.usuariom +"<br> Profile Id :  "+ response.id +"<br> Profile Url : "+ response.picture.data.url +'!';
       //window.location.href = 'logindata.php?nombre='+response.name+'&mail='+response.email+'&id='+ response.id+'&foto='+response.picture.data.url;
      });
@@ -130,7 +130,7 @@ var getInfo;
   <div >
     <div>
       <p class="login-box-msg" style="font-weight: bold;">Ingresa tus datos para iniciar sesión</p>
-      <form id="inicioSesion" autosomplete="off" method="POST" action="lgaccs25?axc0=x005" class="form">
+      <form id="inicioSesion" autosomplete="off" method="POST" action="lgaccs25?accion=x005" class="form">
       <div id="printMe"></div>
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Usuario" name="pp_xx005" style="background-color: #ffffff94;color: black; font-weight: bold;" required>
@@ -176,10 +176,10 @@ var getInfo;
       </div>*/ ?>
 
       <p class="mb-1">
-        <a href="lgaccs25?axc0=p3rMps" style="font-weight: bold; color: white;">Perdi mi contraseña</a>
+        <a href="lgaccs25?accion=p3rMps" style="font-weight: bold; color: white;">Perdi mi contraseña</a>
       </p>
       <p class="mb-0">
-        <a href="lgaccs25?axc0=r3g7r0" class="text-center" style="font-weight: bold; color: white;">Registrarme</a>
+        <a href="lgaccs25?accion=r3g7r0" class="text-center" style="font-weight: bold; color: white;">Registrarme</a>
       </p>
     </form>
     </div>

@@ -3,15 +3,15 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 
 session_start(); 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 
-if($axc0 === 'eDtDpp'){
+if($accion === 'eDtDpp'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
 }
 
-if($axc0 === "bin4kuru"){
+if($accion === "bin4kuru"){
 	$U = $_SESSION['u5hID8ir5'];
 	$H = date('Y-m-d');
 	$C001 = "SELECT * FROM 1Bin4kuru WHERE kuRuUSIDBiN = $U AND kuRuTIMBiN LIKE '$H%' ORDER BY kuRuTIMBiN DESC";

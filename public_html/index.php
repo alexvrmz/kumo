@@ -6,12 +6,12 @@
 	if(!isset($_SESSION['xx_001'])){
 			
 		echo 'no hay sesión';
-		header("location:lgaccs25?axc0=x001"); // --- llevame a login si no hay sesión ---
+		header("location:lgaccs25?accion=x001"); // --- llevame a login si no hay sesión ---
 			
 	} else{
 		
 		echo 'hay sesión<br>';
-		header("location:v75t4?axc0=5u250e"); // --- llevame si hay sesión ---
+		header("location:app?accion=escritorio"); // --- llevame si hay sesión ---
 			
 	}
 
@@ -19,7 +19,7 @@
 	/***********************************************************
 	 * NOMBRE DE ARCHIVOS ALTERNOS
 	 * ANTES						AHORA
-	 * inicio.php						v75t4.php
+	 * inicio.php						app.php
 	 * login.php						lgaccss25.php
 	 * /api								/ap4673i
 	 * conexion.php						ccnnxx547.php
@@ -46,12 +46,12 @@
 	 * 
 	 * permisos						5u550l
 	 * 
-	 * dashboard					5u250e
+	 * dashboard					escritorio
 	 * 
 	 * $_SESSION['usr']				$_SESSION['xx_001']
 	 * 
 	 * ACCIONES
-	 * accion=						axc0
+	 * accion=						accion
 	 * 
 	 * entrar						x001
 	 * salir						x002

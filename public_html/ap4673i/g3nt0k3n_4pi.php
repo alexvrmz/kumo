@@ -3,14 +3,14 @@ foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
 
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
-if($axc0 === "50210"){
+if($accion === "50210"){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
 }
-/// --- axc0 Generar Token
-if ($axc0 === '50210') {
+/// --- accion Generar Token
+if ($accion === '50210') {
 	if(!empty($u5h8ir5nm)){
 		$u5h8ir5nm = $dCry($u5h8ir5nm);
 
@@ -19,7 +19,7 @@ if ($axc0 === '50210') {
 		$DU = $S001->fetch_assoc();
 		$IDLL = $DU['u5hpV8ir5'];
 
-		$axc0 = 'actualizar';
+		$accion = 'actualizar';
 		$p4r4m37r05 = "u5hID8ir5 = '$u5h8ir5nm'"; 
     /*$cadenaToken = $id_dispositivo.'.'.$nombre_dispositivo;
     $tokenGenerado = base64_encode($cadenaToken);*/
@@ -29,7 +29,7 @@ if ($axc0 === '50210') {
                        'u5hOn44P8ir5' => 1,
 											 //'u5hpV8ir5' => 0
 											];		
-		ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		
 		$p4r4m37r05 = "L4v3s_id = '$IDLL'";
 		unset($sQl_d474_4rr4y);
@@ -37,7 +37,7 @@ if ($axc0 === '50210') {
 		$sQl_d474_4rr4y = [
 			'L4v3s_ff' => $FF
 		];
-		ejecutaDB('L4v3s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		ejecutaDB('L4v3s', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 		
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
@@ -52,10 +52,10 @@ if ($axc0 === '50210') {
 		bi74c0('gN7kn2', $_SESSION['m3ns4J3'], '');
     
 	}
-	llevame('../v75t4?axc0=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm));
+	llevame('../app?accion=5u540l_02&u5u4oxX='.$eCry($u5h8ir5nm));
 	
 }
-elseif ($axc0 === '50200') {
+elseif ($accion === '50200') {
 	$u5u4oxX = $dCry($u5u4oxX);
 	// --- Consulta para datos de usuario
 	$q5u5xXd = "SELECT * FROM u5u405 WHERE u5hID8ir5 = '".$u5u4oxX."' ";

@@ -4,17 +4,17 @@ include('ap4673i/ccnnxx547.php');
 include('ap4673i/fncnes5632.php');
 header("Access-Control-Allow-Origin: *");
 //error_reporting(0);
-if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
+if($ue == true && $accion == 'x005' || $accion == 'x006'){
 	$ps3Nc = md5($psbxX012s);
-	if($axc0 == 'x005'){
+	if($accion == 'x005'){
 		$Q001 = "SELECT * FROM u5u405 WHERE u5hUS8ir5 = '$pp_xx005' AND u5hpW8ir5 = '$ps3Nc' AND u5hOn8ir5 = 1 AND u5hOn44P8ir5 = 0";
 	}
-	elseif($axc0 == 'x006'){
+	elseif($accion == 'x006'){
 		$Q001 = "SELECT * FROM u5u405 WHERE u5hUS8ir5 = '$pp_xx005' AND u5hpW8ir5 = '$ps3Nc' AND u5hOn8ir5 = 1 AND u5hOn44P8ir5 = 1";
 	}
 	$S001 = $cnnx4s->query($Q001) or die ("Fallo al selecccionar datos de usuario");
 	$res = [];
-	if($axc0 == 'x005'){
+	if($accion == 'x005'){
 		$dispositivo = explode("_-_-_", $pp_xx100);
  	 	$dispositivo_id = $dispositivo[0];
   	$dispositivo_nombre = $dispositivo[1];
@@ -22,7 +22,7 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 	$pp_xx101 = str_replace(" ", "+", $pp_xx101);
 	if($DU = $S001->fetch_assoc()){
 		$uxx = $DU['u5hID8ir5'];
-		if($axc0 == 'x005'){
+		if($accion == 'x005'){
 
 			$Q008 = "SELECT * FROM L4v3s WHERE L4v3s_pv LIKE '%".$pp_xx101."%' ";
 			$S008 = $cnnx4s->query($Q008) or die ("Fallo al seleccionar llaves");
@@ -62,9 +62,9 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 													 'L4v3s_fc' => $tmx
 													];	
 	
-				$axc0 = "insertar";
+				$accion = "insertar";
 				unset($p4r4m37r05);
-				$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 				
 			/*	unset($sQl_d474_4rr4y);
@@ -79,8 +79,8 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 					'L4v3s_fc' => NULL,
 					'L4v3s_uid' => $uxx,
 				];
-				$axc0 = "insertar";
-				$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, $axc0, '');*/
+				$accion = "insertar";
+				$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, $accion, '');*/
 				//$idLl = ejecutaDB('L4v3s', $sQl_d474_4rr4y, 'insertar', '');
 
 				unset($sQl_d474_4rr4y);
@@ -92,14 +92,14 @@ if($ue == true && $axc0 == 'x005' || $axc0 == 'x006'){
 					//'u5hDpNm8ir5' => $dispositivo_nombre,
 				];	
 				$p4r4m37r05 = "u5hUS8ir5 = '$pp_xx005'"; 
-				$axc0 = "actualizar";
-				ejecutaDB('u5u405', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$accion = "actualizar";
+				ejecutaDB('u5u405', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 				
 			}
 			$LLSC = $pp_xx101;
 			$LLLL = $pp_xx100;
 		}
-		elseif($axc0 == 'x006'){
+		elseif($accion == 'x006'){
 			$Q008 = "SELECT * FROM L4v3s WHERE L4v3s_id = '".$DU['u5hpV8ir5']."' ";
 			$S008 = $cnnx4s->query($Q008) or die ("Fallo al seleccionar llaves");
 			$DLL = $S008->fetch_assoc();

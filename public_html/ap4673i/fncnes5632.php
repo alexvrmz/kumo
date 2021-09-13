@@ -123,7 +123,7 @@ function bi74c0($Fxc47374, $Fxd3scR74, $u53) {
   }
 }
 
-function Bin4kuru($d3s=0, $axc0=0, $V=0, $U=0, $F=0, $E=0, $D=0, $P=0) {
+function Bin4kuru($d3s=0, $accion=0, $V=0, $U=0, $F=0, $E=0, $D=0, $P=0) {
   $Fxf3ch474 = date("Y-m-d H:i:s");
   $data = [];
   $Fx5u53r74 = $_SESSION['u5hID8ir5'];
@@ -137,7 +137,7 @@ function Bin4kuru($d3s=0, $axc0=0, $V=0, $U=0, $F=0, $E=0, $D=0, $P=0) {
     'kuRuFLIDBiN' => $F,
     'kuRuDIDBiN' => $D,
     'kuRuPIDBiN' => $P,
-    'kuRuAXIBiN' => $axc0,
+    'kuRuAXIBiN' => $accion,
     'kuRuTIMBiN' => $Fxf3ch474
   ];
   if(ejecutaDB('1Bin4kuru', $data, 'insertar', $paramtros)){
@@ -913,7 +913,6 @@ function fondoRandom() {
     closedir($handler);
   }
   $i = rand( 0, $i );
-  //$fondos = array_rand($fondos, 5);
   $fondo = $fondos[$i]['fondo'];
   return $fondo;
 }

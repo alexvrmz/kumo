@@ -14,7 +14,7 @@ include('p4rc4l35/7i7ul0.php');
       <?php } else { ?>
         <div class="col-12">
       <?php } ?>
-          <!-- axc0es -->
+          <!-- acciones -->
           <div class="card <?= $brr4 ?> card-outline col-md-12 col-sm-12">
             <div class="card-header">
                 <h3 class="card-title"><?= lbl_acx0 ?></h3>
@@ -26,17 +26,17 @@ include('p4rc4l35/7i7ul0.php');
             </div>
             <div class="card-body">
                         
-                    <a href="v75t4?axc0=5u540l" class="btn btn-app bg-success">
+                    <a href="app?accion=5u540l" class="btn btn-app bg-success">
                       <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
                     </a>   
 
                   <?php if(v4lID44x50("500-004", $u5u4i0) == TRUE): /// --- permiso suspender usuario ?>
                     <?php if($u5h34r5['u5hOn8ir5'] == '1'){ ?>
-                      <a href="ap4673i/u5u405_4pi.php?axc0=10300&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-danger">
+                      <a href="ap4673i/u5u405_4pi.php?accion=10300&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-danger">
                         <i class="fad fa-user-slash"></i> <?= btn_5u5p3Nd3R ?>
                       </a>
                     <?php } elseif($u5h34r5['u5hOn8ir5'] == '0') { ?>
-                      <a href="ap4673i/u5u405_4pi.php?axc0=10400&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-success">
+                      <a href="ap4673i/u5u405_4pi.php?accion=10400&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-success">
                         <i class="fad fa-user"></i> <?= btn_d355u5p3Nd3R ?>
                       </a>
                     <?php } ?>
@@ -50,27 +50,27 @@ include('p4rc4l35/7i7ul0.php');
                   <?php //endif; ?>
 
                   <?php if(v4lID44x50("500-006", $u5u4i0) == TRUE && $u5h34r5['u5hOn44P8ir5'] == 0): /// --- generar Token ?>
-                          <a href="ap4673i/g3nt0k3n_4pi.php?axc0=50210&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p02 ?></a>
+                          <a href="ap4673i/g3nt0k3n_4pi.php?accion=50210&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p02 ?></a>
                   <?php endif; ?>
 
                   <?php if(v4lID44x50("300-003", $u5u4i0) == TRUE): /// --- editar permisos ?>
                     
-                      <a href="v75t4?axc0=5uXds4H&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-warning"><i class="fad fa-key"></i> <?= btn_p3rm505 ?></a>
+                      <a href="app?accion=5uXds4H&u5u4oxX=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-warning"><i class="fad fa-key"></i> <?= btn_p3rm505 ?></a>
                     
                   <?php endif; ?> 
                   <?php if(v4lID44x50("700-015", $u5u4i0) == TRUE && $ea == false): /// --- vincular auto ?>
                     
-                    <a href="v75t4?axc0=asNxV&xux=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-purple" ><i class="fad fa-car-side"></i> <?= btn_linkaut ?></a>
+                    <a href="app?accion=asNxV&xux=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-app bg-purple" ><i class="fad fa-car-side"></i> <?= btn_linkaut ?></a>
                   
                   <?php endif; ?>
             
             </div>
           </div>
-          <!-- axc0es -->
+          <!-- acciones -->
         </div>
       <?php if($u5h34r5['u5hOn44P8ir5'] == 1){ ?>
         <div class="col-md-6">
-          <!-- axc0es -->
+          <!-- acciones -->
           <?php if($u5h34r5['u5hOn44P8ir5'] == 1){ ?>
             <div class="card <?= $brr4 ?> card-outline col-md-12 col-sm-12">
               <div class="card-header">
@@ -91,14 +91,14 @@ include('p4rc4l35/7i7ul0.php');
                     <b>ID Dispositivo:</b> <a><?= $u5h34r5['dis66'] ?></a><br>
                     <a href="#" class="btn bg-blue btn-flat btn-xs disabled" title="Proximamente..."><i class="fad fa-history"></i> Ver Historial</a>
                     <?php if(v4lID44x50("500-006", $u5u4i0) == TRUE): /// --- generar Token ?>
-                      <a href="ap4673i/g3nt0k3n_4pi.php?axc0=50210&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-flat btn-xs bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p0 ?></a>
+                      <a href="ap4673i/g3nt0k3n_4pi.php?accion=50210&u5h8ir5nm=<?= $eCry($u5h34r5['u5hID8ir5']) ?>" class="btn btn-flat btn-xs bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p0 ?></a>
                     <?php endif; ?>
                   </div>
                 </div>               
               </div>
             </div>
           <?php } ?>
-          <!-- axc0es -->
+          <!-- acciones -->
         </div>
       <?php } ?>
 
@@ -160,8 +160,8 @@ include('p4rc4l35/7i7ul0.php');
                       <td>
             
                         <div class="btn-group"> 
-                          <a href="v75t4?axc0=v3hFh4_sd04&gju8UUy=<?= $eCry($vXIDxv) ?>" type="button" class="btn btn-warning btn-flat btn-xs" title="Editar"><i class="fad fa-edit"></i></a>
-                          <a href="ap4673i/v3hiCs_4pi.php?axc0=d3svA&aIDdx=<?= $eCry($vXIDxv) ?>&uxu=<?= $eCry($u5h34r5['u5hID8ir5']) ?>&r3l=<?= $eCry($xDridn) ?>" type="button" class="btn btn-danger btn-flat btn-xs"><i class="fad fa-unlink" title="Desasignar"></i></a>
+                          <a href="app?accion=v3hFh4_sd04&gju8UUy=<?= $eCry($vXIDxv) ?>" type="button" class="btn btn-warning btn-flat btn-xs" title="Editar"><i class="fad fa-edit"></i></a>
+                          <a href="ap4673i/v3hiCs_4pi.php?accion=d3svA&aIDdx=<?= $eCry($vXIDxv) ?>&uxu=<?= $eCry($u5h34r5['u5hID8ir5']) ?>&r3l=<?= $eCry($xDridn) ?>" type="button" class="btn btn-danger btn-flat btn-xs"><i class="fad fa-unlink" title="Desasignar"></i></a>
                         </div>
 
                       </td>
@@ -201,7 +201,7 @@ include('p4rc4l35/7i7ul0.php');
                   </ul>
                 <?php } ?>
 
-              <form name="edit_user" method="post" action="ap4673i/u5u405_4pi.php?axc0=5u540l_03">
+              <form name="edit_user" method="post" action="ap4673i/u5u405_4pi.php?accion=5u540l_03">
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
@@ -358,7 +358,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="asign">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?axc0=5u540l_04">
+            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?accion=5u540l_04">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_asigau ?></h4>
                 
@@ -367,7 +367,7 @@ include('p4rc4l35/7i7ul0.php');
                 </button>
               </div>
               <div class="modal-body">
-                <form action="ap4673i/v3hiCs_4pi.php?axc0=assBtf" method="POST">
+                <form action="ap4673i/v3hiCs_4pi.php?accion=assBtf" method="POST">
                   <!--<pre>
                     <?php print_r($lV); ?>
                   </pre>-->
@@ -457,7 +457,7 @@ include('p4rc4l35/7i7ul0.php');
       <div class="modal fade" id="modal_llvs">
         <div class="modal-dialog">
           <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?axc0=5u540l_04">
+            <form name="nuevo" method="post" action="ap4673i/u5u405_4pi.php?accion=5u540l_04">
               <div class="modal-header">
                 <h4 class="modal-title"><?= lbl_n3wu5u4ri0 ?></h4>
                 

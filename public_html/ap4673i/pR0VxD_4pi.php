@@ -1,17 +1,17 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
 $xXUNVrSXx = $_SESSION['xXUNVrSXx'];
-if($axc0 === "aDdPr0" || $axc0 === 'sV3DT' || $axc0 === 'Ac7r3L'){
+if($accion === "aDdPr0" || $accion === 'sV3DT' || $accion === 'Ac7r3L'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
  	include('fncnesF0rM5.php');
 }
-if($axc0 === "pR0VxD"){
+if($accion === "pR0VxD"){
 	$u5u = $_SESSION['u5hID8ir5'];
 	if($px001 != ''){
 		$px017 = json_decode($px017);
@@ -120,8 +120,8 @@ if($axc0 === "pR0VxD"){
 		
 }
 
-/// --- axc0 agregar Proveedor
-elseif ($axc0 == 'aDdPr0') {
+/// --- accion agregar Proveedor
+elseif ($accion == 'aDdPr0') {
 	/// --- las partes de pp007 comentadas corresponden a colonias cuando esten en bd (2021/05/26)
 	$_SESSION['err'] = 0;
 	unset($_SESSION['m3ns4j3Frm']);
@@ -306,7 +306,7 @@ elseif ($axc0 == 'aDdPr0') {
 		if($pp_xx019 == "['ninguno']"){	$ex19 = 1;	}	elseif($pp_xx019 == "['todos']"){	$ex19 = 2;	}	else{	$ex19 = 3;	}
 		if($pp_xx020 == "['ninguno']"){	$ex20 = 1;	}	elseif($pp_xx020 == "['todos']"){	$ex20 = 2;	}	else{	$ex20 = 3;	}*/
 
-		$axc0 = 'insertar';
+		$accion = 'insertar';
 		$p4r4m37r05 = '';//"u5hID8ir5 = '$u5h8ir5nm'"; 
 		unset($sQl_d474_4rr4y); 
 		$f = date('Y-m-d H:i:s');
@@ -338,16 +338,16 @@ elseif ($axc0 == 'aDdPr0') {
 		print_r($sQl_d474_4rr4y);
 		echo '</pre>';*/
 		
-		$np = ejecutaDB('proveedores', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$np = ejecutaDB('proveedores', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_8i74c0r4.php');
 		$_SESSION['m3ns4J3'] = lbl_8i7_x0122.$pp_xx003;
 		bi74c0('addPr0', $_SESSION['m3ns4J3'], '');
 
 		include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-		$axc0 = 600;
-		$d3s = eCry2($Bin4kuru[$axc0]);
-		Bin4kuru($d3s, $axc0, $V=0, $U=0, $F=0, $E=0, $D=0, $np);
-		$axc0 = 'insertar';
+		$accion = 600;
+		$d3s = eCry2($Bin4kuru[$accion]);
+		Bin4kuru($d3s, $accion, $V=0, $U=0, $F=0, $E=0, $D=0, $np);
+		$accion = 'insertar';
 
 		if(!empty($pp_xx017) && !in_array("todos", $pp_xx017) && !in_array("ninguno", $pp_xx017)){
 			foreach ($pp_xx017 as $key) {
@@ -357,7 +357,7 @@ elseif ($axc0 == 'aDdPr0') {
 					'r3fSiDs' => $key,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];	
-				ejecutaDB('r3l3PSr', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('r3l3PSr', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 			}
 		}
 
@@ -369,7 +369,7 @@ elseif ($axc0 == 'aDdPr0') {
 					'r3fTiDt' => $key,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];	
-				ejecutaDB('r3l3PTr', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('r3l3PTr', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 			}
 		}
 
@@ -381,7 +381,7 @@ elseif ($axc0 == 'aDdPr0') {
 					'rFMiDk' => $key,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];	
-				ejecutaDB('r3l3PM', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('r3l3PM', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 			}
 		}
 
@@ -394,7 +394,7 @@ elseif ($axc0 == 'aDdPr0') {
 						'r3TViDu' => $key,
 						'xXUNVrSXx' => $xXUNVrSXx
 					];	
-					ejecutaDB('r3l3PTV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+					ejecutaDB('r3l3PTV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 				}
 			
 		}
@@ -407,7 +407,7 @@ elseif ($axc0 == 'aDdPr0') {
 	
 
 	if($brr4 == false){
-		$rl = '../v75t4?axc0=pR0VxD';
+		$rl = '../app?accion=pR0VxD';
 		$pp_xx017 = json_encode($pp_xx017);
 		$pp_xx018 = json_encode($pp_xx018);
 		$pp_xx019 = json_encode($pp_xx019);
@@ -419,12 +419,12 @@ elseif ($axc0 == 'aDdPr0') {
 		$rl .= '&px017='.$pp_xx017;	$rl .= '&px018='.$pp_xx018;	$rl .= '&px019='.$pp_xx019; $rl .= '&px020='.$pp_xx020;
 	}
 	elseif($brr4 == true){
-		$rl = '../v75t4?axc0=pr0VxVW&pXRoI='.$eCry($np);
+		$rl = '../app?accion=pr0VxVW&pXRoI='.$eCry($np);
 	}
 	llevame($rl);
 	//print_r($pp_xx017);
 }
-elseif($axc0 == 'pr0VxVW' || $axc0 == 'pr0VxDT'){
+elseif($accion == 'pr0VxVW' || $accion == 'pr0VxDT'){
 	if(!empty($pXRoI)){
 		$frm_001 = $dCry($frm_001);	$frm_004 = $dCry($frm_004);	$frm_007 = $dCry($frm_007);	$frm_010 = $dCry($frm_010);
 		$frm_002 = $dCry($frm_002);	$frm_005 = $dCry($frm_005);	$frm_008 = $dCry($frm_008);	$frm_011 = $dCry($frm_011);
@@ -581,15 +581,15 @@ elseif($axc0 == 'pr0VxVW' || $axc0 == 'pr0VxDT'){
 	else{
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta ID de Proveedor';
-		$rl = 'v75t4?axc0=pR0VxD';
+		$rl = 'app?accion=pR0VxD';
 		llevame($rl);
 	}
 }
-elseif($axc0 == 'sV3DT'){
+elseif($accion == 'sV3DT'){
 	if($pXRoI == ''){
 		$_SESSION['m3n3Rr0R']  = 'si';
 		$_SESSION['m3ns4J3'] = 'Falta el ID de Proveedor';
-		$rl = '../v75t4?axc0=pR0VxD';
+		$rl = '../app?accion=pR0VxD';
 		llevame($rl);
 	}
 	else{
@@ -708,29 +708,29 @@ elseif($axc0 == 'sV3DT'){
 					'pR0ACT' => $frm_015
 				];
 				$p4r4m37r05 = "prov_id = $pXRoI";
-				$axc0 = "actualizar";
+				$accion = "actualizar";
 				echo '<pre>';print_r($aRrr4y);echo '</pre>';
-				ejecutaDB('proveedores', $aRrr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('proveedores', $aRrr4y, $accion, $p4r4m37r05);
 				$_SESSION['m3ns4J3'] = 'Se actualizo el proveedor '.dCry2($frm_001);
 				bi74c0('eDTPr0V', $_SESSION['m3ns4J3'], '');
 				include('../escen78/iDi0m45/'.$_SESSION['iDi0m4'].'/i_Bin4kuru.php');
-				$axc0 = 602;
-				$d3s = eCry2($Bin4kuru[$axc0]);
-				Bin4kuru($d3s, $axc0, $V=0, $U=0, $F=0, $E=0, $D=0, $pXRoI);
+				$accion = 602;
+				$d3s = eCry2($Bin4kuru[$accion]);
+				Bin4kuru($d3s, $accion, $V=0, $U=0, $F=0, $E=0, $D=0, $pXRoI);
 
 				$exc = TRUE;
-				$rl = '../v75t4?axc0=pr0VxDT&pXRoI='.$eCry($pXRoI);
+				$rl = '../app?accion=pr0VxDT&pXRoI='.$eCry($pXRoI);
 			}
 			else{
 				$_SESSION['m3n3Rr0R']  = 'si';
 				$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
-				$rl = '../v75t4?axc0=pr0VxDT&pXRoI='.$eCry($pXRoI);
+				$rl = '../app?accion=pr0VxDT&pXRoI='.$eCry($pXRoI);
 			}
 		}	
 		else{
 			$_SESSION['m3n3Rr0R']  = 'si';
 			$_SESSION['m3ns4J3'] = 'Revisa los Campos indicados';
-			$rl = '../v75t4?axc0=pr0VxDT&pXRoI='.$eCry($pXRoI);
+			$rl = '../app?accion=pr0VxDT&pXRoI='.$eCry($pXRoI);
 		}
 		if($exc != TRUE){
 			$rl .= '&frm_001='.$eCry($frm_001).'&frm_004='.$eCry($frm_004).'&frm_007='.$eCry($frm_007).'&frm_010='.$eCry($frm_010);
@@ -743,7 +743,7 @@ elseif($axc0 == 'sV3DT'){
 	//echo $rl;
 
 }
-elseif($axc0 == 'Ac7r3L'){
+elseif($accion == 'Ac7r3L'){
 
 	if(empty($pp_xx019)){
 		$_SESSION['m3ns4j3Frm'][] = 'Selecciona Tipo de Vehiculo';
@@ -774,7 +774,7 @@ elseif($axc0 == 'Ac7r3L'){
 	if(in_array("ninguno", $pp_xx019)){	$ex19 = 1;	}	elseif(in_array("todos", $pp_xx019)){	$ex19 = 2;	}	else{	$ex19 = 3;	}
 	if(in_array("ninguno", $pp_xx020)){	$ex20 = 1;	}	elseif(in_array("todos", $pp_xx020)){	$ex20 = 2;	}	else{	$ex20 = 3;	}
 
-	$axc0 = 'actualizar';
+	$accion = 'actualizar';
 	$p4r4m37r05 = 'prov_id = '.$pp_xx015;//"u5hID8ir5 = '$u5h8ir5nm'"; 
 	unset($sQl_d474_4rr4y); 
 	$sQl_d474_4rr4y = [
@@ -784,7 +784,7 @@ elseif($axc0 == 'Ac7r3L'){
 		'pR0TM' => $ex18,
 	];	
 		
-	ejecutaDB('proveedores', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+	ejecutaDB('proveedores', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 	$C015 = "SELECT * FROM r3l3PM WHERE rFPiDk = $pp_xx015";
 	$S015 = $cnnx4s->query($C015) or die ("Fallo al seleccionar Relacion Marca: ".$C015);
@@ -792,8 +792,8 @@ elseif($axc0 == 'Ac7r3L'){
 		$iduY = $LDDM['rFPiDk'];
 		$p4r4m37r05 = 'rFPiDk = "'.$iduY.'"'; 
 		unset($sQl_d474_4rr4y);
-		$axc0 = 'eliminar';
-		ejecutaDB('r3l3PM', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$accion = 'eliminar';
+		ejecutaDB('r3l3PM', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 	}
 
 	$C016 = "SELECT * FROM r3l3PSr WHERE r3fPiDs = $pp_xx015";
@@ -802,8 +802,8 @@ elseif($axc0 == 'Ac7r3L'){
 		$iduY2 = $LDDS['r3fPiDs'];
 		$p4r4m37r05 = 'r3fPiDs = "'.$iduY2.'"'; 
 		unset($sQl_d474_4rr4y);
-		$axc0 = 'eliminar';
-		ejecutaDB('r3l3PSr', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$accion = 'eliminar';
+		ejecutaDB('r3l3PSr', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 	}
 
 	$C017 = "SELECT * FROM r3l3PTr WHERE r3fPiDt = $pp_xx015";
@@ -812,8 +812,8 @@ elseif($axc0 == 'Ac7r3L'){
 		$iduY3 = $LDDT['r3fPiDt'];
 		$p4r4m37r05 = 'r3fPiDt = "'.$iduY3.'"'; 
 		unset($sQl_d474_4rr4y);
-		$axc0 = 'eliminar';
-		ejecutaDB('r3l3PTr', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$accion = 'eliminar';
+		ejecutaDB('r3l3PTr', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 	}
 
 	$C018 = "SELECT * FROM r3l3PTV WHERE r3PiDu = $pp_xx015";
@@ -822,11 +822,11 @@ elseif($axc0 == 'Ac7r3L'){
 		$iduY4 = $LDDV['r3PiDu'];
 		$p4r4m37r05 = 'r3PiDu = "'.$iduY4.'"'; 
 		unset($sQl_d474_4rr4y);
-		$axc0 = 'eliminar';
-		ejecutaDB('r3l3PTV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+		$accion = 'eliminar';
+		ejecutaDB('r3l3PTV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 	}
 
-	$axc0 = 'insertar';
+	$accion = 'insertar';
 
 	if(!empty($pp_xx017) && !in_array("todos", $pp_xx017) && !in_array("ninguno", $pp_xx017)){
 		foreach ($pp_xx017 as $key) {
@@ -836,7 +836,7 @@ elseif($axc0 == 'Ac7r3L'){
 				'r3fSiDs' => $key,
 				'xXUNVrSXx' => $xXUNVrSXx
 			];	
-			ejecutaDB('r3l3PSr', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3PSr', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		}
 	}
 
@@ -848,7 +848,7 @@ elseif($axc0 == 'Ac7r3L'){
 				'r3fTiDt' => $key,
 				'xXUNVrSXx' => $xXUNVrSXx
 			];	
-			ejecutaDB('r3l3PTr', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3PTr', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		}
 	}
 
@@ -860,7 +860,7 @@ elseif($axc0 == 'Ac7r3L'){
 				'rFMiDk' => $key,
 				'xXUNVrSXx' => $xXUNVrSXx
 			];	
-			ejecutaDB('r3l3PM', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+			ejecutaDB('r3l3PM', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 		}
 	}
 
@@ -873,11 +873,11 @@ elseif($axc0 == 'Ac7r3L'){
 					'r3TViDu' => $key,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];	
-				ejecutaDB('r3l3PTV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('r3l3PTV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 			}
 		
 	}
-	llevame('../v75t4?axc0=pr0VxVW&pXRoI='.$eCry($pp_xx015));
+	llevame('../app?accion=pr0VxVW&pXRoI='.$eCry($pp_xx015));
 
 }
 //echo '<pre>';

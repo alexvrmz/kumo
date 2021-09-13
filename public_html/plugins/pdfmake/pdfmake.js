@@ -14428,7 +14428,7 @@ var BROKEN_CLASSOF = classof(create(NumberPrototype)) == NUMBER;
 // https://tc39.github.io/ecma262/#sec-tonumber
 var toNumber = function (argument) {
   var it = toPrimitive(argument, false);
-  var first, third, radix, maxc0ode, digits, length, index, code;
+  var first, third, radix, maccionode, digits, length, index, code;
   if (typeof it == 'string' && it.length > 2) {
     it = trim(it);
     first = it.charCodeAt(0);
@@ -14437,8 +14437,8 @@ var toNumber = function (argument) {
       if (third === 88 || third === 120) return NaN; // Number('+0x1') should be NaN, old V8 fix
     } else if (first === 48) {
       switch (it.charCodeAt(1)) {
-        case 66: case 98: radix = 2; maxc0ode = 49; break; // fast equal of /^0b[01]+$/i
-        case 79: case 111: radix = 8; maxc0ode = 55; break; // fast equal of /^0o[0-7]+$/i
+        case 66: case 98: radix = 2; maccionode = 49; break; // fast equal of /^0b[01]+$/i
+        case 79: case 111: radix = 8; maccionode = 55; break; // fast equal of /^0o[0-7]+$/i
         default: return +it;
       }
       digits = it.slice(2);
@@ -14447,7 +14447,7 @@ var toNumber = function (argument) {
         code = digits.charCodeAt(index);
         // parseInt parses a string to a first unavailable symbol
         // but ToNumber should return NaN if a string contains unavailable symbols
-        if (code < 48 || code > maxc0ode) return NaN;
+        if (code < 48 || code > maccionode) return NaN;
       } return parseInt(digits, radix);
     }
   } return +it;
@@ -22185,12 +22185,12 @@ function fromByteArray (uint8) {
   var len = uint8.length
   var extraBytes = len % 3 // if we have 1 byte left, pad 2 bytes
   var parts = []
-  var maxc0hunkLength = 16383 // must be multiple of 3
+  var maccionhunkLength = 16383 // must be multiple of 3
 
   // go through the array every three bytes, we'll deal with trailing stuff later
-  for (var i = 0, len2 = len - extraBytes; i < len2; i += maxc0hunkLength) {
+  for (var i = 0, len2 = len - extraBytes; i < len2; i += maccionhunkLength) {
     parts.push(encodeChunk(
-      uint8, i, (i + maxc0hunkLength) > len2 ? len2 : (i + maxc0hunkLength)
+      uint8, i, (i + maccionhunkLength) > len2 ? len2 : (i + maccionhunkLength)
     ))
   }
 
@@ -40079,9 +40079,9 @@ var maxp = new r.Struct({
   version: r.int32,
   numGlyphs: r.uint16, // The number of glyphs in the font
   maxPoints: r.uint16, // Maximum points in a non-composite glyph
-  maxc0ontours: r.uint16, // Maximum contours in a non-composite glyph
-  maxc0omponentPoints: r.uint16, // Maximum points in a composite glyph
-  maxc0omponentContours: r.uint16, // Maximum contours in a composite glyph
+  maccionontours: r.uint16, // Maximum contours in a non-composite glyph
+  maccionomponentPoints: r.uint16, // Maximum points in a composite glyph
+  maccionomponentContours: r.uint16, // Maximum contours in a composite glyph
   maxZones: r.uint16, // 1 if instructions do not use the twilight zone, 2 otherwise
   maxTwilightPoints: r.uint16, // Maximum points used in Z0
   maxStorage: r.uint16, // Number of Storage Area locations
@@ -40089,8 +40089,8 @@ var maxp = new r.Struct({
   maxInstructionDefs: r.uint16, // Number of IDEFs
   maxStackElements: r.uint16, // Maximum stack depth
   maxSizeOfInstructions: r.uint16, // Maximum byte count for glyph instructions
-  maxc0omponentElements: r.uint16, // Maximum number of components referenced at “top level” for any composite glyph
-  maxc0omponentDepth: r.uint16 // Maximum levels of recursion; 1 for simple components
+  maccionomponentElements: r.uint16, // Maximum number of components referenced at “top level” for any composite glyph
+  maccionomponentDepth: r.uint16 // Maximum levels of recursion; 1 for simple components
 });
 
 /**
@@ -40420,7 +40420,7 @@ var OS2 = new r.VersionedStruct(r.uint16, {
     capHeight: r.int16,
     defaultChar: r.uint16,
     breakChar: r.uint16,
-    maxc0ontent: r.uint16
+    maccionontent: r.uint16
   },
 
   5: {
@@ -40435,7 +40435,7 @@ var OS2 = new r.VersionedStruct(r.uint16, {
     capHeight: r.int16,
     defaultChar: r.uint16,
     breakChar: r.uint16,
-    maxc0ontent: r.uint16,
+    maccionontent: r.uint16,
 
     usLowerOpticalPointSize: r.uint16,
     usUpperOpticalPointSize: r.uint16
@@ -42156,14 +42156,14 @@ var BaseValues = new r.Struct({
 var FeatMinMaxRecord = new r.Struct({
   tag: new r.String(4), // 4-byte feature identification tag-must match FeatureTag in FeatureList
   minCoord: new r.Pointer(r.uint16, BaseCoord, { type: 'parent' }), // May be NULL
-  maxc0oord: new r.Pointer(r.uint16, BaseCoord, { type: 'parent' }) // May be NULL
+  maccionoord: new r.Pointer(r.uint16, BaseCoord, { type: 'parent' }) // May be NULL
 });
 
 var MinMax = new r.Struct({
   minCoord: new r.Pointer(r.uint16, BaseCoord), // May be NULL
-  maxc0oord: new r.Pointer(r.uint16, BaseCoord), // May be NULL
-  featMinMaxc0ount: r.uint16, // May be 0
-  featMinMaxRecords: new r.Array(FeatMinMaxRecord, 'featMinMaxc0ount') // In alphabetical order
+  maccionoord: new r.Pointer(r.uint16, BaseCoord), // May be NULL
+  featMinMaccionount: r.uint16, // May be 0
+  featMinMaxRecords: new r.Array(FeatMinMaxRecord, 'featMinMaccionount') // In alphabetical order
 });
 
 var BaseLangSysRecord = new r.Struct({
@@ -46270,11 +46270,11 @@ function reorderGlyphs(glyphs, verb, firstGlyph, lastGlyph) {
       return swap(glyphs, [firstGlyph, 0], [lastGlyph, 2], false, true);
 
     case 8:
-      // axc0D => CDxA
+      // accionD => CDxA
       return swap(glyphs, [firstGlyph, 1], [lastGlyph, 2]);
 
     case 9:
-      // axc0D => DCxA
+      // accionD => DCxA
       return swap(glyphs, [firstGlyph, 1], [lastGlyph, 2], false, true);
 
     case 10:
@@ -61207,11 +61207,11 @@ function fromByteArray(uint8) {
   var extraBytes = len % 3; // if we have 1 byte left, pad 2 bytes
 
   var parts = [];
-  var maxc0hunkLength = 16383; // must be multiple of 3
+  var maccionhunkLength = 16383; // must be multiple of 3
   // go through the array every three bytes, we'll deal with trailing stuff later
 
-  for (var i = 0, len2 = len - extraBytes; i < len2; i += maxc0hunkLength) {
-    parts.push(encodeChunk(uint8, i, i + maxc0hunkLength > len2 ? len2 : i + maxc0hunkLength));
+  for (var i = 0, len2 = len - extraBytes; i < len2; i += maccionhunkLength) {
+    parts.push(encodeChunk(uint8, i, i + maccionhunkLength > len2 ? len2 : i + maccionhunkLength));
   } // pad the end with zeros, but make sure to not forget the extra bytes
 
 
@@ -63226,12 +63226,12 @@ function fromByteArray (uint8) {
   var len = uint8.length
   var extraBytes = len % 3 // if we have 1 byte left, pad 2 bytes
   var parts = []
-  var maxc0hunkLength = 16383 // must be multiple of 3
+  var maccionhunkLength = 16383 // must be multiple of 3
 
   // go through the array every three bytes, we'll deal with trailing stuff later
-  for (var i = 0, len2 = len - extraBytes; i < len2; i += maxc0hunkLength) {
+  for (var i = 0, len2 = len - extraBytes; i < len2; i += maccionhunkLength) {
     parts.push(encodeChunk(
-      uint8, i, (i + maxc0hunkLength) > len2 ? len2 : (i + maxc0hunkLength)
+      uint8, i, (i + maccionhunkLength) > len2 ? len2 : (i + maccionhunkLength)
     ))
   }
 
@@ -65532,15 +65532,15 @@ LayoutBuilder.prototype.buildNextLine = function (textNode) {
 
 		if (!inline.noWrap && inline.text.length > 1 && inline.width > line.getAvailableWidth()) {
 			var widthPerChar = inline.width / inline.text.length;
-			var maxc0hars = Math.floor(line.getAvailableWidth() / widthPerChar);
-			if (maxc0hars < 1) {
-				maxc0hars = 1;
+			var maccionhars = Math.floor(line.getAvailableWidth() / widthPerChar);
+			if (maccionhars < 1) {
+				maccionhars = 1;
 			}
-			if (maxc0hars < inline.text.length) {
+			if (maccionhars < inline.text.length) {
 				var newInline = cloneInline(inline);
 
-				newInline.text = inline.text.substr(maxc0hars);
-				inline.text = inline.text.substr(0, maxc0hars);
+				newInline.text = inline.text.substr(maccionhars);
+				inline.text = inline.text.substr(0, maccionhars);
 
 				newInline.width = textTools.widthOfString(newInline.text, newInline.font, newInline.fontSize, newInline.characterSpacing, newInline.fontFeatures);
 				inline.width = textTools.widthOfString(inline.text, inline.font, inline.fontSize, inline.characterSpacing, inline.fontFeatures);

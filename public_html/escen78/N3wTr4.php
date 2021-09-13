@@ -15,7 +15,7 @@ include('p4rc4l35/7i7ul0.php');
       </div>
       <div class="card-body">
         <div class="card-body p-0">         
-          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="v75t4?axc0=v3hFh4&vh3iP=<?= $eCry($xcIDV3Hs) ?>"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
+          <a type="button" class="btn bg-gradient-success btn-app" style="padding-top: 6px;"href="app?accion=v3hFh4&vh3iP=<?= $eCry($xcIDV3Hs) ?>"><i class="fad fa-arrow-left"></i> <br><?= btn_46r364rU5u4ri0 ?></a>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ include('p4rc4l35/7i7ul0.php');
           </div>
         <?php } ?>
         
-        <form name="nuevo" method="post" action="ap4673i/N3wTr4_4pi?axc0=tR4Add" enctype="multipart/form-data">
+        <form name="nuevo" method="post" action="ap4673i/N3wTr4_4pi?accion=tR4Add" enctype="multipart/form-data">
           <div class="form-group">
             <label for="frm_x001">Número de Trámite*</label>
             <input type="text" class="form-control" id="frm_x001" name="frm_x001" required>

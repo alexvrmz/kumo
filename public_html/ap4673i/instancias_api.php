@@ -4,9 +4,9 @@ foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
 header("Content-type: application/json");
 session_start();
 if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }
-if ($axc0 == 'actualizar') {
+if ($accion == 'actualizar') {
 
 
 		$result = $cnnx4s->query("UPDATE b64_instancias SET nombre_instancia = '$instancia_nombre', servidor_instancia = '$instancia_servidor', fecha_ssl_instancia = '$instancia_ssl', prefijo_instancias = '$instancia_prefijo', subdominio_instancia = '$instancia_subdominio' WHERE id_instancia ='$instancia_id'");
@@ -24,11 +24,11 @@ if ($axc0 == 'actualizar') {
 		}
 }
 
-if(isset($_GET['axc0'])){
-	$axc0=$_GET['axc0'];
+if(isset($_GET['accion'])){
+	$accion=$_GET['accion'];
 }
 
-if($axc0=='mostrar'){
+if($accion=='mostrar'){
 	$sql = "SELECT * FROM b64_instancias ORDER BY nombre_instancia ASC";
 	$query_todas = $cnnx4s->query($sql);
 	$listado_instancias = array();
@@ -36,7 +36,7 @@ if($axc0=='mostrar'){
 	while($lista_instancias = $query_todas->fetch_array()){
 		
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,
@@ -81,7 +81,7 @@ if($axc0=='mostrar'){
 	$res['titulo'] = '';
 }
 
-if($axc0=='buscar'){
+if($accion=='buscar'){
 	$keyword=$_POST['keyword'];
 	$sql="select * from b64_instancias where nombre_instancia like '%$keyword%' or servidor_instancia like '%$keyword%'";
 	$query = $cnnx4s->query($sql);
@@ -89,7 +89,7 @@ if($axc0=='buscar'){
 
 	while($lista_instancias = $query->fetch_array()){
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,
@@ -106,7 +106,7 @@ if($axc0=='buscar'){
 	$res['titulo'] = '';
 }
 
-if($axc0=='activas'){
+if($accion=='activas'){
 	$sql = "SELECT * FROM b64_instancias WHERE activa_instancia = '1' ORDER BY nombre_instancia ASC";
 	$query_activas = $cnnx4s->query($sql);
 	$listado_instancias = array();
@@ -114,7 +114,7 @@ if($axc0=='activas'){
 	while($lista_instancias = $query_activas->fetch_array()){
 		
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,
@@ -159,7 +159,7 @@ if($axc0=='activas'){
 	$res['titulo'] = 'Activas';
 }
 
-if($axc0=='inactivas'){
+if($accion=='inactivas'){
 	$sql = "SELECT * FROM b64_instancias WHERE activa_instancia = '0' ORDER BY nombre_instancia ASC";
 	$query_inactivas = $cnnx4s->query($sql);
 	$listado_instancias = array();
@@ -167,7 +167,7 @@ if($axc0=='inactivas'){
 	while($lista_instancias = $query_inactivas->fetch_array()){
 		
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,
@@ -213,7 +213,7 @@ if($axc0=='inactivas'){
 	$res['titulo'] = 'Inactivas';
 }
 
-if($axc0=='codero'){
+if($accion=='codero'){
 	$sql_codero = "SELECT * FROM b64_instancias WHERE servidor_instancia = 'Codero' ORDER BY nombre_instancia ASC";
 	$consulta_codero = $cnnx4s->query($sql_codero);
 	$listado_instancias = array();
@@ -221,7 +221,7 @@ if($axc0=='codero'){
 	while($lista_instancias = $consulta_codero->fetch_array()){
 		
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,
@@ -267,7 +267,7 @@ if($axc0=='codero'){
 	$res['titulo'] = 'en Servidor Codero';
 }
 
-if($axc0=='ovh'){
+if($accion=='ovh'){
 	$sql_ovh = "SELECT * FROM b64_instancias WHERE servidor_instancia = 'OVH' ORDER BY nombre_instancia ASC";
 	$consulta_ovh = $cnnx4s->query($sql_ovh);
 	$listado_instancias = array();
@@ -275,7 +275,7 @@ if($axc0=='ovh'){
 	while($lista_instancias = $consulta_ovh->fetch_array()){
 		
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,
@@ -321,7 +321,7 @@ if($axc0=='ovh'){
 	$res['titulo'] = 'en Servidor OVH';
 }
 
-if($axc0=='jupiter'){
+if($accion=='jupiter'){
 	$sql_jup = "SELECT * FROM b64_instancias WHERE servidor_instancia = 'Jupiter' ORDER BY nombre_instancia ASC";
 	$consulta_jup = $cnnx4s->query($sql_jup);
 	$listado_instancias = array();
@@ -329,7 +329,7 @@ if($axc0=='jupiter'){
 	while($lista_instancias = $consulta_jup->fetch_array()){
 		
 		$servidor = $lista_instancias['servidor_instancia'];
-		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?axc0=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
+		$url = 'https://'.$lista_instancias['subdominio_instancia'].'.autoshop-easy.com/u5u405.php?accion=ingresar&usuario='.$_SESSION['u5hUS8ir5'].'&clave='.$_SESSION['u5h8ir5_pass_ase'];
 		$x4rr36l0 = array('instancia_id' => $lista_instancias['id_instancia'],
 										 'instancia_nombre' => $lista_instancias['nombre_instancia'],
 										 'instancia_url' => $url,

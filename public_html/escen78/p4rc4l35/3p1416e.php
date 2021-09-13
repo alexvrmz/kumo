@@ -4,7 +4,7 @@
     document.body.appendChild( document.createElement("BR") );
   }
   function inactividad() {
-      window.location.href = "v75t4?axc0=l00k5cR3n";
+      window.location.href = "app?accion=l00k5cR3n";
   }
   var t=null;
   function contadorInactividad() {
@@ -19,7 +19,7 @@
 </script>
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> <a href="v75t4?axc0=v3r">2021.08.28</a>
+      <b>Version</b> <a href="app?accion=v3r">2021.08.28</a>
     </div>
     <strong>Copyright &copy; <?php date('Y'); ?> <a href="http://kumo.click" target="_blank">kumo.click</a>.</strong> Todos los derechos reservados.
   </footer>
@@ -36,7 +36,7 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <?php include('escen78/p4rc4l35/c0nf.php'); ?>
 <!-- Selector de etiquetas -->
-<?php if($axc0 == 'pR0VxD'){ ?>
+<?php if($accion == 'pR0VxD'){ ?>
   <script src="plugins/select2/js/select2.js"></script>
   <script>
     $(document).ready(function() {
@@ -54,7 +54,7 @@
 <!-- Toastr -->
 <script src="plugins/toastr/toastr.min.js"></script>
 
-<?php if($axc0 == 'mascotas' || $axc0 == 'v3hFh4' || $axc0 == 'eDtSrv' || $axc0 == 'eDtD' || $axc0 == 'N3wTr4' || $axc0 == 'Tr4V'){ ?>
+<?php if($accion == 'mascotas' || $accion == 'v3hFh4' || $accion == 'eDtSrv' || $accion == 'eDtD' || $accion == 'N3wTr4' || $accion == 'Tr4V'){ ?>
   <!-- Tempusdominus Bootstrap 4 -->
 
   <script src="plugins/moment/moment.min.js"></script>
@@ -62,7 +62,7 @@
   <script src="plugins/moment/locale/es.js"></script>
 <?php } ?>
 
-<?php if($axc0 === '5u540l'){ ?>
+<?php if($accion === '5u540l'){ ?>
   <script>
     $(document).ready(function() {
     $("#cxxt453_add a").on('click', function(event) {
@@ -81,7 +81,7 @@
   </script>
 <?php } ?>
 
-<?php if($axc0 === 'pR0VxD'){
+<?php if($accion === 'pR0VxD'){
         if($px002 != ''){ ?>
           <script type="text/javascript">
             $(window).on('load', function() {
@@ -161,7 +161,7 @@
   });
 </script>
 
-<?php if($axc0 == 'mascotas' || $axc0 == '5u250e' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os' || $axc0 == 'pR0VxD'){ ?>
+<?php if($accion == 'mascotas' || $accion == 'escritorio' || $accion == '5u550l' || $accion == 'bin4kuru' || $accion == 'm0d78Os' || $accion == 'pR0VxD'){ ?>
   <!-- DataTables  & Plugins -->
   <script src="plugins/datatables/jquery.dataTables.min.js"></script>
   <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -178,8 +178,8 @@
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <?php } ?>
 
-<?php if($axc0 == '5u250e' || $axc0 == '5u550l' || $axc0 == 'bin4kuru' || $axc0 == 'm0d78Os'
-      || $axc0 == 'pR0VxD'){ ?>
+<?php if($accion == 'escritorio' || $accion == '5u550l' || $accion == 'bin4kuru' || $accion == 'm0d78Os'
+      || $accion == 'pR0VxD'){ ?>
   <script>
     $(function () {
       $("#example1").DataTable({
@@ -200,7 +200,7 @@
   </script>
 <?php } ?>
   
-<?php if($axc0 == '5u540l'){ ?>
+<?php if($accion == '5u540l'){ ?>
   <?php if($pp_xx007_add != ''){ ?>
     <script type="text/javascript">
       $(window).on('load', function() {

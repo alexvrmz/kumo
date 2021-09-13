@@ -57,7 +57,7 @@
   function aLs(color){
     $.ajax({
       type: "POST",
-      url: "ap4673i/c0Nfi6_4pi.php?axc0=aLs",
+      url: "ap4673i/c0Nfi6_4pi.php?accion=aLs",
       data: {
         color: color,
         usr: '<?php echo $u5u4i0; ?>'
@@ -73,7 +73,7 @@
   function BrrS(color, cls){
     $.ajax({
       type: "POST",
-      url: "ap4673i/c0Nfi6_4pi.php?axc0=BrrS",
+      url: "ap4673i/c0Nfi6_4pi.php?accion=BrrS",
       data: {
         color: color,
         usr: '<?php echo $u5u4i0; ?>',
@@ -90,7 +90,7 @@
   function BrrA(skin){
     $.ajax({
       type: "POST",
-      url: "ap4673i/c0Nfi6_4pi.php?axc0=BrrA",
+      url: "ap4673i/c0Nfi6_4pi.php?accion=BrrA",
       data: {
         skin: skin,
         usr: '<?php echo $u5u4i0; ?>'
@@ -106,7 +106,7 @@
   function DrK(io){
     $.ajax({
       type: "POST",
-      url: "ap4673i/c0Nfi6_4pi.php?axc0=DrK",
+      url: "ap4673i/c0Nfi6_4pi.php?accion=DrK",
       data: {
         io: io,
         usr: '<?php echo $u5u4i0; ?>'
@@ -122,7 +122,7 @@
   function cEfs(accent_class){
     $.ajax({
       type: "POST",
-      url: "ap4673i/c0Nfi6_4pi.php?axc0=cEfs",
+      url: "ap4673i/c0Nfi6_4pi.php?accion=cEfs",
       data: {
         accent_class: accent_class,
         usr: '<?php echo $u5u4i0; ?>'

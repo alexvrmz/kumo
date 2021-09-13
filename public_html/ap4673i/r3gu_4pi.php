@@ -1,9 +1,9 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;}  //echo $k.' -> '.$v.' | ';
 session_start();
-//$axc0 = $dCry($axc0);
+//$accion = $dCry($accion);
 /*if(!isset($_SESSION['xx_001'])){
-	header("location:../lgaccs25.php?axc0=x001"); // --- llevame a login si no hay sesión ---
+	header("location:../lgaccs25.php?accion=x001"); // --- llevame a login si no hay sesión ---
 }*/
 define('r001E', 'Correo Eléctronico es Obligatorio');
 define('r001E2', 'Correo Eléctronico no es válido');
@@ -17,12 +17,12 @@ define('r008E', 'Selecciona tipo de cuenta');
 define('r010E', 'Selecciona Sexo');
 
 
-if($axc0 == 'r3gu'){
+if($accion == 'r3gu'){
 	include('ccnnxx547.php');
  	include('fncnes5632.php');
  	include('fncnesF0rM5.php');
 }
-if ($axc0 == 'r3gu') {
+if ($accion == 'r3gu') {
   $_SESSION['m3n3Rr0R'] = [];
 	$_SESSION['ne'] = 0;
 	$tm = date("Y-m-d H:i:s");
@@ -168,7 +168,7 @@ if ($axc0 == 'r3gu') {
 				echo 'se agrego permiso: '.$value.' al usuario: '.$u.'<br>';
 			}
 			/// ---
-				$axc0 = 'insertar';
+				$accion = 'insertar';
 				$p4r4m37r05 = '';
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -192,10 +192,10 @@ if ($axc0 == 'r3gu') {
 					'xXUNVrSXx' => $xXUNVrSXx
 				];	
 			
-				$eee = ejecutaDB('eMpR3sA5', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$eee = ejecutaDB('eMpR3sA5', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 			
 			/// ---
-				$axc0 = 'insertar'; 
+				$accion = 'insertar'; 
 				unset($sQl_d474_4rr4y);
 				$sQl_d474_4rr4y = [
 					'xN4m37l0' => eCry2('Mi Flota'),
@@ -208,14 +208,14 @@ if ($axc0 == 'r3gu') {
 
 			/// ---
 				
-				$ffflo0 = ejecutaDB('x7l07', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$ffflo0 = ejecutaDB('x7l07', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 				unset($sQl_d474_4rr4y);
 				$sQl_d474_4rr4y = [
 					'r3F3mP00' => $eee,
 					'r3FFloO00' => $ffflo0,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];		
-				$fff = ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				$fff = ejecutaDB('r3l3mpfl00', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 			/// ---
 			unset($yarra);
@@ -226,11 +226,11 @@ if ($axc0 == 'r3gu') {
 				'UEFVxTU' => 0,
 				'UEFTxTU' => $tm,
 			];
-			$axc0 = 'insertar';
-			ejecutaDB('r3l3UEF', $yarra, $axc0, $p4r4m37r05);
+			$accion = 'insertar';
+			ejecutaDB('r3l3UEF', $yarra, $accion, $p4r4m37r05);
 				
 			/// ---
-				$axc0 = 'insertar';
+				$accion = 'insertar';
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
 					'd0C_xDd35' => 'Tarjeta de Circulación',
@@ -242,7 +242,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -255,7 +255,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -268,7 +268,7 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -281,10 +281,10 @@ if ($axc0 == 'r3gu') {
 					'd0C_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TD0cxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 			/// ---
-				$axc0 = 'insertar';
+				$accion = 'insertar';
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
 					's3R_xDd35' => 'Alineación y balanceo',
@@ -295,7 +295,7 @@ if ($axc0 == 'r3gu') {
 					's3R_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 				unset($sQl_d474_4rr4y); 
 				$sQl_d474_4rr4y = [
@@ -307,7 +307,7 @@ if ($axc0 == 'r3gu') {
 					's3R_xDini' => 1,
 					'xXUNVrSXx' => $xXUNVrSXx
 				];
-				ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $axc0, $p4r4m37r05);
+				ejecutaDB('c4TS3rxxV', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 			
 			/// ---
@@ -660,8 +660,8 @@ if ($axc0 == 'r3gu') {
 																		Para activar tu cuenta,<br>
 																		da clic en el botón o copia y pega<br>
 																		en la barra de tu navegador:<br>
-																		https://mieke.mx/lgaccs25?axc0=x007&xcd='; $men .= $eCry($r001);	$men .= '&cft='; $men .= $FRGF; $men .= '<br></h3>
-																	<p><a href="https://mieke.mx/lgaccs25?axc0=x007&xcd='; $men .= $eCry($r001);	$men .= '&cft='; $men .= $FRGF; $men .= '" class="btn btn-primary">Activar Mi Cuenta</a></p>
+																		https://mieke.mx/lgaccs25?accion=x007&xcd='; $men .= $eCry($r001);	$men .= '&cft='; $men .= $FRGF; $men .= '<br></h3>
+																	<p><a href="https://mieke.mx/lgaccs25?accion=x007&xcd='; $men .= $eCry($r001);	$men .= '&cft='; $men .= $FRGF; $men .= '" class="btn btn-primary">Activar Mi Cuenta</a></p>
 																</div>
 															</td>
 														</tr>
@@ -740,10 +740,10 @@ if ($axc0 == 'r3gu') {
 	}
 
 	if($bi == true){
-		$r3 = '../lgaccs25?axc0=x001&m3ns4J3='.$eCry('Registro Exitoso, solo falta validar tu email, por favor revisa tu correo (si es necesario revisa en SPAM)');
+		$r3 = '../lgaccs25?accion=x001&m3ns4J3='.$eCry('Registro Exitoso, solo falta validar tu email, por favor revisa tu correo (si es necesario revisa en SPAM)');
 	}
 	else{
-	$r3 = '../lgaccs25?axc0=r3g7r0';
+	$r3 = '../lgaccs25?accion=r3g7r0';
 		if($ex == true){ $r3 .= '&m3ns4J3='.$eCry('El usuario '.$r001.' '.' ya esta registrado!.');}
 		if($r001 != ''){ $r3 .= '&r001='.$eCry($r001);}
 		if($r002 != ''){ $r3 .= '&r002='.$eCry($r002);}
