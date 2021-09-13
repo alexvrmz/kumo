@@ -199,7 +199,7 @@ elseif($accion == 'procesaMascota'){
 			echo '</pre>';*/
 			$mascotaID = ejecutaDB('mascotas', $sql_array, $accion, $paramatros);
 			
-			$carpetaMascota = '../../d0cUm3N70s/'.$_SESSION['xXUNVrSXx'].'/mascota-'.$mascotaID;
+			$carpetaMascota = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascotaID;
 			mkdir($carpetaMascota, 0777, true);
 			chmod($carpetaMascota, 0777);
 
@@ -235,7 +235,7 @@ elseif($accion == 'procesaMascota'){
 						$tiempo = time();
 						$newFileName = 'fotoPrincipal-'.$mascotaID. '-'.$tiempo.'.'.$fileExtension;
 
-						$path = '../../d0cUm3N70s/'.$xXUNVrSXx.'/mascota-'.$mascotaID. '/';
+						$path = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascotaID. '/';
 						$dest_path = $path . $newFileName;
 	
 						if(move_uploaded_file($fileTmpPath, $dest_path)) {
