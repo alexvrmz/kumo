@@ -199,9 +199,17 @@ elseif($accion == 'procesaMascota'){
 			echo '</pre>';*/
 			$mascotaID = ejecutaDB('mascotas', $sql_array, $accion, $paramatros);
 			
-			$carpetaMascota = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascotaID;
+			$carpetaMascota = 'docs/'.$xXUNVrSXx.'/';
+			if(mkdir($carpetaMascota)){
+				//echo "<p>La carpeta fue creada</p>";
+				chmod($carpetaMascota, 0777);
+			}
+
+			//mkdir($carpetaMascota, 0777, true);
+
+			/*$carpetaMascota = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascotaID;
 			mkdir($carpetaMascota, 0777, true);
-			chmod($carpetaMascota, 0777);
+			chmod($carpetaMascota, 0777);*/
 
 			if(isset($_FILES['mascotaFoto']) && $_FILES['mascotaFoto'] != ''){
 			
@@ -235,10 +243,10 @@ elseif($accion == 'procesaMascota'){
 						$tiempo = time();
 						$newFileName = 'fotoPrincipal-'.$mascotaID. '-'.$tiempo.'.'.$fileExtension;
 
-						$path = 'documentos/'.$xXUNVrSXx.'/mascota-'.$mascotaID. '/';
+						$path = 'docs/'.$xXUNVrSXx.'/';
 						$dest_path = $path . $newFileName;
 	
-						if(move_uploaded_file($fileTmpPath, $dest_path)) {
+						if(/*move_uploaded_file($fileTmpPath, $dest_path)*/copy($_FILES['mascotaFoto']['tmp_name'], $dest_path)) {
 	
 							$w3bp = 'fotoPrincipal-'.$mascotaID. '-'.$tiempo.'.'.$fileExtension;
 							$w3bpP47h = $path . $w3bp;
