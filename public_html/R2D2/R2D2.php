@@ -1,7 +1,7 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
-include('../ap4673i/ccnnxx547.php');
-include('../ap4673i/fncnes5632.php');
+include('../ApiPHP/conexion.php');
+include('../ApiPHP/funciones.php');
 header("Access-Control-Allow-Origin: *");
 //error_reporting(0);
 if($accion == 'x006' /*|| $accion == 'x005'*/){
@@ -12,46 +12,46 @@ if($accion == 'x006' /*|| $accion == 'x005'*/){
 	elseif($accion == 'x006'){
 		$Q001 = "SELECT * FROM u5u405 WHERE u5hUS8ir5 = '$pp_xx005' AND u5hpW8ir5 = '$ps3Nc' AND u5hOn8ir5 = 1 AND u5hOn44P8ir5 = 1";
 	}*/
-	$S001 = $cnnx4s->query($Q001) or die ("Fallo al selecccionar datos de usuario");
+	$S001 = $conexion->query($Q001) or die ("Fallo al selecccionar datos de usuario");
 	$res = [];
 
 	if($DU = $S001->fetch_assoc()){
 
 		if($DU['u5hOn44P8ir5'] == 1){
 			$aKM1 = [];
-			$uxx = base64_encode($DU['u5hID8ir5']);
+			$uxx = base64_encode($DU['usuarioID']);
 			$uxU = base64_encode($DU['u5hUS8ir5']);
-			if($DU['u5hA18ir5'] != ''){ $A1 = dCry2($DU['u5hA18ir5']); }
-			if($DU['u5hA28ir5'] != ''){ $A2 = dCry2($DU['u5hA28ir5']); }
-			if($DU['u5hN18ir5'] != ''){ $N1 = dCry2($DU['u5hN18ir5']); }
-			if($DU['u5hN28ir5'] != ''){ $N2 = dCry2($DU['u5hN28ir5']); }
+			if($DU['usuarioA1'] != ''){ $A1 = dCry2($DU['usuarioA1']); }
+			if($DU['usuarioA2'] != ''){ $A2 = dCry2($DU['usuarioA2']); }
+			if($DU['usuarioN1'] != ''){ $N1 = dCry2($DU['usuarioN1']); }
+			if($DU['usuarioN2'] != ''){ $N2 = dCry2($DU['usuarioN2']); }
 			$uxN1 = $A1.' '.$A2.' '.$N1.' '.$N2; 
 			$uxN1 = base64_encode($uxN1);
 			$uxRl = base64_encode($DU['u5hpR0lr5']);
-			$xXUNVrSXx = base64_encode($DU['xXUNVrSXx']);
+			$Universo = base64_encode($DU['Universo']);
 
-			$Q002 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = '".$DU['u5hID8ir5']."'";
-			$S002 = $cnnx4s->query($Q002) or die ("Fallo al selecccionar relaciones");
+			$Q002 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = '".$DU['usuarioID']."'";
+			$S002 = $conexion->query($Q002) or die ("Fallo al selecccionar relaciones");
 			$DR = $S002->fetch_assoc();
 			$DRiE = $DR['UEFExTU'];
 			$DRiF = $DR['UEFFxTU'];
 			$DRiV = $DR['UEFVxTU'];
 
 			$Q003 = "SELECT * FROM eMpR3sA5 WHERE eMIDEm = '$DRiE' ";
-			$S003 = $cnnx4s->query($Q003) or die ("Fallo al seleccionar emrpesas");
+			$S003 = $conexion->query($Q003) or die ("Fallo al seleccionar emrpesas");
 			$DE = $S003->fetch_assoc();
 			$eRZm = base64_encode(dCry2($DE['eMRZEm']));
 			$eNIm = base64_encode(dCry2($DE['eMNICEm']));
 
 			$Q004 = "SELECT * FROM x7l07 WHERE xID7l0 = '$DRiF' ";
-			$S004 = $cnnx4s->query($Q004) or die ("Fallo al seleccionar flotas");
+			$S004 = $conexion->query($Q004) or die ("Fallo al seleccionar flotas");
 			$DF = $S004->fetch_assoc();
 			$fN = base64_encode(dCry2($DF['xN4m37l0']));
 
 			if($DRiV != 0){
 				$CCAA = true;
 				$Q005 = "SELECT * FROM v3hiXu7l0s WHERE xV3hiIDXu7l0s = '$DRiV' ";
-				$S005 = $cnnx4s->query($Q005) or die ("Fallo al seleccionar automovil");
+				$S005 = $conexion->query($Q005) or die ("Fallo al seleccionar automovil");
 				$DV = $S005->fetch_assoc();
 
 				$aNECO = base64_encode(dCry2($DV['xV3hi3C0Xu7l0s']));
@@ -59,13 +59,13 @@ if($accion == 'x006' /*|| $accion == 'x005'*/){
 				
 				$aMK = $DV['xV3hiM4rc4Xu7l0s'];
 				$Q006 = "SELECT m4rCxD35c5s FROM m4rC45v3Hi WHERE m4rCxID5s = '$aMK' ";
-				$S006 = $cnnx4s->query($Q006) or die ("Fallo al seleccionar marca");
+				$S006 = $conexion->query($Q006) or die ("Fallo al seleccionar marca");
 				$DMK = $S006->fetch_assoc();
 				$aMK =  base64_encode($DMK['m4rCxD35c5s']);
 
 				$aMD = $DV['xV3hi5uBm4rc4Xu7l0s'];
 				$Q007 = "SELECT j5uBxD35x FROM m0d3loS WHERE j5uBxIDx = '$aMD' ";
-				$S007 = $cnnx4s->query($Q007) or die ("Fallo al seleccionar modelo");
+				$S007 = $conexion->query($Q007) or die ("Fallo al seleccionar modelo");
 				$DMD = $S007->fetch_assoc();
 				$aMD =  base64_encode($DMD['j5uBxD35x']);
 				$aANH = base64_encode($DV['xV3hi4n0Xu7l0s']);
@@ -73,7 +73,7 @@ if($accion == 'x006' /*|| $accion == 'x005'*/){
 				$aKM = $DV['xV3hiIDXu7l0s'];
 				$DRiV = base64_encode($DV['xV3hiIDXu7l0s']);
 				$Q009 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = '$aKM' ORDER BY xkVh3IDms DESC";
-				$S009 = $cnnx4s->query($Q009) or die ("Fallo al seleccionar kilometrajes");
+				$S009 = $conexion->query($Q009) or die ("Fallo al seleccionar kilometrajes");
 				
 				while ($DK = $S009->fetch_array()) {
 					$lstkm = [
@@ -110,7 +110,7 @@ if($accion == 'x006' /*|| $accion == 'x005'*/){
 				'aKM' => $DRiV,
 				'aKM1' => $aKM1,
 				'auKM' => $lstkm,
-				'xuv' => $xXUNVrSXx
+				'xuv' => $Universo
 			];
 			$respuesta = json_encode($res);
 			print_r($respuesta);
@@ -189,7 +189,7 @@ if($accion == 'x012'){
 	$xkPLms = $frm02 / $frm09;
 
 			$C013 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = $frm10 ORDER BY xkIDms DESC";
-			$S013 = $cnnx4s->query($C013) or die ("fallo al consultar kms: ".$C013);
+			$S013 = $conexion->query($C013) or die ("fallo al consultar kms: ".$C013);
 			$LTsPv = $frm09;
 			$i = 0;
 			$IMsPv = $frm02;
@@ -274,13 +274,13 @@ if($accion == 'x012'){
 			'xkCKms' => $xkCKms,
 			'xkRNDms' => $xkRNDms,
 			'xkDRCms' => $DRcD,
-			'xXUNVrSXx' => $xx02
+			'Universo' => $xx02
 		];		
 		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 
 
 /*	$C013 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = $frm10 AND xkTLLms = 1 ORDER BY xkIDms DESC LIMIT 1 ";
-	$S013 = $cnnx4s->query($C013) or die ("fallo al consultar kms: ".$C013);
+	$S013 = $conexion->query($C013) or die ("fallo al consultar kms: ".$C013);
 	$DdKMA = $S013->fetch_assoc();
 	$CdKMTK = $DdKMA['xkkm7rGms'];
 
@@ -301,7 +301,7 @@ if($accion == 'x012'){
 	}
 	else{
 		$C014 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = $frm10 ORDER BY xkIDms DESC LIMIT 1 ";
-		$S014 = $cnnx4s->query($C014) or die ("fallo al consultar kms: ".$C014);
+		$S014 = $conexion->query($C014) or die ("fallo al consultar kms: ".$C014);
 		$DdKMA = $S014->fetch_assoc();
 		$CdKMTK = $DdKMA['xkkm7rGms'];
 		$xkDRCms = $frm01 - $CdKMTK;
@@ -332,7 +332,7 @@ if($accion == 'x012'){
 			'xkCKms' => $xkCKms,
 			'xkRNDms' => $xkRNDms,
 			'xkDRCms' => $xkDRCms,
-			'xXUNVrSXx' => $xx02
+			'Universo' => $xx02
 		];		
 		ejecutaDB('x5KIl0mS', $sQl_d474_4rr4y, $accion, $p4r4m37r05);*/
 

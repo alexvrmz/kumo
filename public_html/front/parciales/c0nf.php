@@ -1,11 +1,8 @@
-/**
- * AdminLTE Demo Menu
- * ------------------
- * You should not use this file in production.
- * This file is for demo purposes only.
- */
+<?php 
 
-/* eslint-disable camelcase */
+
+?>
+<script>
 
 (function ($) {
   'use strict'
@@ -43,9 +40,101 @@
   ]
 
   $container.append(
-    '<h5>Mi Configuración</h5><hr class="mb-2"/>'
+    '<h5><?= lbl_ti8if ?></h5><hr class="mb-2"/>'
   )
-
+  function alert(msg){
+    toastr['success'](msg,'<?= lbl_3xi70 ?>',{
+      closeButton: true, 
+      progressBar: true,
+      newestOnTop: true,
+      showDuration: 1000,
+      hideDuration: 1000,
+      timeOut: 5000,
+      extendedTimeOut: 5000,
+      positionClass: 'toast-top-center'
+    })
+  }
+  function aLs(color){
+    $.ajax({
+      type: "POST",
+      url: "ApiPHP/c0Nfi6_4pi.php?accion=aLs",
+      data: {
+        color: color,
+        usr: '<?php echo $usuario_id; ?>'
+      },
+      success: function(data){
+      // callback function
+      console.log(data)
+      alert(data)
+      }
+    });  
+    return false;
+  }
+  function BrrS(color, cls){
+    $.ajax({
+      type: "POST",
+      url: "ApiPHP/c0Nfi6_4pi.php?accion=BrrS",
+      data: {
+        color: color,
+        usr: '<?php echo $usuario_id; ?>',
+        cls: cls
+      },
+      success: function(data){
+      // callback function
+      console.log(data)
+      alert(data)
+      }
+    });  
+    return false;
+  }
+  function BrrA(skin){
+    $.ajax({
+      type: "POST",
+      url: "ApiPHP/c0Nfi6_4pi.php?accion=BrrA",
+      data: {
+        skin: skin,
+        usr: '<?php echo $usuario_id; ?>'
+      },
+      success: function(data){
+      // callback function
+      console.log(data)
+      alert(data)
+      }
+    });  
+    return false;
+  }
+  function DrK(io){
+    $.ajax({
+      type: "POST",
+      url: "ApiPHP/c0Nfi6_4pi.php?accion=DrK",
+      data: {
+        io: io,
+        usr: '<?php echo $usuario_id; ?>'
+      },
+      success: function(data){
+      // callback function
+      console.log(data)
+      alert(data)
+      }
+    });  
+    return false;
+  }
+  function cEfs(accent_class){
+    $.ajax({
+      type: "POST",
+      url: "ApiPHP/c0Nfi6_4pi.php?accion=cEfs",
+      data: {
+        accent_class: accent_class,
+        usr: '<?php echo $usuario_id; ?>'
+      },
+      success: function(data){
+      alert(data)
+      }
+    });  
+    return false;
+  }
+  
+/*
   var $no_border_checkbox = $('<input />', {
     type: 'checkbox',
     value: 1,
@@ -58,20 +147,8 @@
       $('.main-header').removeClass('border-bottom-0')
     }
   })
-  var $btn_save = $('<input />', {
-    type: 'submit',
-    value: 'Guardar',
-    class: 'btn btn-success'
-  }).on('click', function () {
-    if ($(this).is(':checked')) {
-      $('.main-header').addClass('border-bottom-0')
-    } else {
-      $('.main-header').removeClass('border-bottom-0')
-    }
-  })
-  var $btn_save = $('<div />', { class: 'mb-1' }).append($btn_save).append('')
-  $container.append($btn_save)
-/*
+
+
   var $no_border_container = $('<div />', { class: 'mb-1' }).append($no_border_checkbox).append('<span>No Navbar border</span>')
   $container.append($no_border_container)
 
@@ -248,14 +325,16 @@
   }).on('click', function () {
     if ($(this).is(':checked')) {
       $('body').addClass('dark-mode')
+      DrK(1)
     } else {
       $('body').removeClass('dark-mode')
+      DrK(0)
     }
   })
-  var $dark_mode_container = $('<div />', { class: 'mb-4' }).append($dark_mode_checkbox).append('<span>Dark Mode</span> <span title="beta" class="badge bg-danger">Prueba</span>')
+  var $dark_mode_container = $('<div />', { class: 'mb-4' }).append($dark_mode_checkbox).append('<span><?= lbl_drkm0d ?></span> <span title="beta" class="badge bg-danger"><?= lbl_drkmbt4 ?></span>')
   $container.append($dark_mode_container)
 
-  $container.append('<h6>Barra Superior</h6>')
+  $container.append('<h6><?= lbl_brr4sup ?></h6>')
 
   var $navbar_variants = $('<div />', {
     class: 'd-flex'
@@ -271,11 +350,14 @@
 
     if (navbar_dark_skins.indexOf(color) > -1) {
       $main_header.addClass('navbar-dark')
+      var cls = 'navbar-dark';
     } else {
       $main_header.addClass('navbar-light')
+      var cls = 'navbar-light';
     }
 
     $main_header.addClass(color)
+    BrrS(color, cls)
   })
 
   $navbar_variants.append($navbar_variants_colors)
@@ -355,7 +437,7 @@
     'sidebar-light-olive'
   ]
 
-  /*$container.append('<h6>Accent Color Variants</h6>')
+  $container.append('<h6><?= lbl_c0lo3nF ?></h6>')
   var $accent_variants = $('<div />', {
     class: 'd-flex'
   })
@@ -369,9 +451,10 @@
     })
 
     $body.addClass(accent_class)
-  }))*/
+    cEfs(accent_class)
+  }))
 
-  $container.append('<h6>Menú Izquierdo Obscuro</h6>')
+  $container.append('<h6><?= lbl_m3nizq08 ?></h6>')
   var $sidebar_variants_dark = $('<div />', {
     class: 'd-flex'
   })
@@ -385,9 +468,10 @@
     })
 
     $sidebar.addClass(sidebar_class)
+    BrrA(sidebar_class)
   }))
 
-  $container.append('<h6>Menú Izquierdo Claro</h6>')
+  $container.append('<h6><?= lbl_m3nizqcL ?></h6>')
   var $sidebar_variants_light = $('<div />', {
     class: 'd-flex'
   })
@@ -401,6 +485,7 @@
     })
 
     $sidebar.addClass(sidebar_class)
+    BrrA(sidebar_class)
   }))
 
   var logo_skins = navbar_all_colors
@@ -419,21 +504,7 @@
     })
     
   })
-  function aLs(color){
-    $.ajax({
-      type: "POST",
-      url: "ApiPHP/c0Nfi6_4pi.php?accion=aLs",
-      data: {
-        color: color,
-        usr: '<?php echo $usuario_id; ?>'
-      },
-      success: function(data){
-      // callback function
-      console.log(data)
-  }
-  });  
-  return false;
-  }
+  
 
   $container.append(createSkinBlock(logo_skins, function () {
     var color = $(this).data('color')
@@ -496,3 +567,10 @@
     
   })
 })(jQuery)
+</script>
+
+
+<?php
+
+
+?>

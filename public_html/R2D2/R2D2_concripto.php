@@ -1,7 +1,7 @@
 <?php
 foreach($_REQUEST as $k => $v){$$k=$v;} // echo $k.' -> '.$v.' | ';
-include('ap4673i/ccnnxx547.php');
-include('ap4673i/fncnes5632.php');
+include('ApiPHP/conexion.php');
+include('ApiPHP/funciones.php');
 header("Access-Control-Allow-Origin: *");
 //error_reporting(0);
 if($ue == true && $accion == 'x005' || $accion == 'x006'){
@@ -12,7 +12,7 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 	elseif($accion == 'x006'){
 		$Q001 = "SELECT * FROM u5u405 WHERE u5hUS8ir5 = '$pp_xx005' AND u5hpW8ir5 = '$ps3Nc' AND u5hOn8ir5 = 1 AND u5hOn44P8ir5 = 1";
 	}
-	$S001 = $cnnx4s->query($Q001) or die ("Fallo al selecccionar datos de usuario");
+	$S001 = $conexion->query($Q001) or die ("Fallo al selecccionar datos de usuario");
 	$res = [];
 	if($accion == 'x005'){
 		$dispositivo = explode("_-_-_", $pp_xx100);
@@ -21,11 +21,11 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 	}
 	$pp_xx101 = str_replace(" ", "+", $pp_xx101);
 	if($DU = $S001->fetch_assoc()){
-		$uxx = $DU['u5hID8ir5'];
+		$uxx = $DU['usuarioID'];
 		if($accion == 'x005'){
 
 			$Q008 = "SELECT * FROM L4v3s WHERE L4v3s_pv LIKE '%".$pp_xx101."%' ";
-			$S008 = $cnnx4s->query($Q008) or die ("Fallo al seleccionar llaves");
+			$S008 = $conexion->query($Q008) or die ("Fallo al seleccionar llaves");
 			$DLL = $S008->fetch_assoc();
 			$LLSC = dCry2($DLL['L4v3s_pv']);
 			$LLLL = dCry2($DLL['L4v3s_tknid']);
@@ -101,7 +101,7 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 		}
 		elseif($accion == 'x006'){
 			$Q008 = "SELECT * FROM L4v3s WHERE L4v3s_id = '".$DU['u5hpV8ir5']."' ";
-			$S008 = $cnnx4s->query($Q008) or die ("Fallo al seleccionar llaves");
+			$S008 = $conexion->query($Q008) or die ("Fallo al seleccionar llaves");
 			$DLL = $S008->fetch_assoc();
 			$LLSC = dCry2($DLL['L4v3s_pv']);
 			$LLLL = dCry2($DLL['L4v3s_tknid']);
@@ -123,21 +123,21 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 
 
 		if($err === 205){
-			$uxx = AES_Encrypt($LLLL,$LLSC,$DU['u5hID8ir5']);
+			$uxx = AES_Encrypt($LLLL,$LLSC,$DU['usuarioID']);
 			$uxU = AES_Encrypt($LLLL,$LLSC,$DU['u5hUS8ir5']);
-			$uxN1 = dCry2($DU['u5hA18ir5']).' '.dCry2($DU['u5hA28ir5']).' '.dCry2($DU['u5hN18ir5']).' '.dCry2($DU['u5hN28ir5']);
+			$uxN1 = dCry2($DU['usuarioA1']).' '.dCry2($DU['usuarioA2']).' '.dCry2($DU['usuarioN1']).' '.dCry2($DU['usuarioN2']);
 			$uxN1 = AES_Encrypt($LLLL,$LLSC,$uxN1);
 			$uxRl = AES_Encrypt($LLLL,$LLSC,$DU['u5hpR0lr5']);
 
-			$Q002 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = '".$DU['u5hID8ir5']."'";
-			$S002 = $cnnx4s->query($Q002) or die ("Fallo al selecccionar relaciones");
+			$Q002 = "SELECT * FROM r3l3UEF WHERE UEFUxTU = '".$DU['usuarioID']."'";
+			$S002 = $conexion->query($Q002) or die ("Fallo al selecccionar relaciones");
 			$DR = $S002->fetch_assoc();
 			$DRiE = $DR['UEFExTU'];
 			$DRiF = $DR['UEFFxTU'];
 			$DRiV = $DR['UEFVxTU'];
 
 			$Q003 = "SELECT * FROM eMpR3sA5 WHERE eMIDEm = '$DRiE' ";
-			$S003 = $cnnx4s->query($Q003) or die ("Fallo al seleccionar emrpesas");
+			$S003 = $conexion->query($Q003) or die ("Fallo al seleccionar emrpesas");
 			$DE = $S003->fetch_assoc();
 			$eRZm = dCry2($DE['eMRZEm']);
 			$eNIm = dCry2($DE['eMNICEm']);
@@ -145,7 +145,7 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 			$eNIm = AES_Encrypt($LLLL,$LLSC,$eNIm);
 
 			$Q004 = "SELECT * FROM x7l07 WHERE xID7l0 = '$DRiF' ";
-			$S004 = $cnnx4s->query($Q004) or die ("Fallo al seleccionar flotas");
+			$S004 = $conexion->query($Q004) or die ("Fallo al seleccionar flotas");
 			$DF = $S004->fetch_assoc();
 			$fN = dCry2($DF['xN4m37l0']);
 			$fN = AES_Encrypt($LLLL,$LLSC,$fN);
@@ -153,7 +153,7 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 			if($DRiV != 0){
 				$CCAA = true;
 				$Q005 = "SELECT * FROM v3hiXu7l0s WHERE xV3hiIDXu7l0s = '$DRiV' ";
-				$S005 = $cnnx4s->query($Q005) or die ("Fallo al seleccionar automovil");
+				$S005 = $conexion->query($Q005) or die ("Fallo al seleccionar automovil");
 				$DV = $S005->fetch_assoc();
 
 				$aNECO = dCry2($DV['xV3hi3C0Xu7l0s']);
@@ -163,20 +163,20 @@ if($ue == true && $accion == 'x005' || $accion == 'x006'){
 				
 				$aMK = $DV['xV3hiM4rc4Xu7l0s'];
 				$Q006 = "SELECT m4rCxD35c5s FROM m4rC45v3Hi WHERE m4rCxID5s = '$aMK' ";
-				$S006 = $cnnx4s->query($Q006) or die ("Fallo al seleccionar marca");
+				$S006 = $conexion->query($Q006) or die ("Fallo al seleccionar marca");
 				$DMK = $S006->fetch_assoc();
 				$aMK =  AES_Encrypt($LLLL,$LLSC,$DMK['m4rCxD35c5s']);
 
 				$aMD = $DV['xV3hi5uBm4rc4Xu7l0s'];
 				$Q007 = "SELECT j5uBxD35x FROM m0d3loS WHERE j5uBxIDx = '$aMD' ";
-				$S007 = $cnnx4s->query($Q007) or die ("Fallo al seleccionar modelo");
+				$S007 = $conexion->query($Q007) or die ("Fallo al seleccionar modelo");
 				$DMD = $S007->fetch_assoc();
 				$aMD =  AES_Encrypt($LLLL,$LLSC,$DMD['j5uBxD35x']);
 				$aANH = AES_Encrypt($LLLL,$LLSC,$DV['xV3hi4n0Xu7l0s']);
 
 				$aKM = $DV['xV3hiIDXu7l0s'];
 				$Q009 = "SELECT * FROM x5KIl0mS WHERE xkVh3IDms = '$aKM' ORDER BY xkVh3IDms DESC";
-				$S009 = $cnnx4s->query($Q009) or die ("Fallo al seleccionar kilometrajes");
+				$S009 = $conexion->query($Q009) or die ("Fallo al seleccionar kilometrajes");
 				
 				while ($DK = $S009->fetch_array()) {
 					$lstkm = [
