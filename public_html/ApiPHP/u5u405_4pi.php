@@ -85,7 +85,7 @@ elseif($accion === "5u540l_02"){
     // --- Consulta para datos de usuario
     $q5u5xXd = "SELECT * FROM u5u405 WHERE usuarioID = '".$u5u4oxX."' ";
     $c5u5xXd = $conexion->query($q5u5xXd) or die ("Falló al obtener datos de usuario " . $q5u5xXd);
-    $d4705_u5u = [];
+    $datosUsuario = [];
     while($dU5u4o = $c5u5xXd->fetch_assoc()){
 
 			$SQkdo = "SELECT * FROM L4v3s WHERE L4v3s_id = '".$dU5u4o['u5hpV8ir5']."'";
@@ -124,7 +124,7 @@ elseif($accion === "5u540l_02"){
 											'nEmP' => $nEmP,
 											'nFlO' => $nFlO
           );
-      array_push($d4705_u5u, $x4rr36l0); 
+      array_push($datosUsuario, $x4rr36l0); 
     }
 
 	

@@ -13,7 +13,7 @@ if($accion === "procesaCliente" || $accion == 'borrarFormulario'){
 include('clientesFunciones.php');
 if($accion === 'clientes'){
 	$C001 = "SELECT * FROM clientes WHERE Universo = $Universo";
-	$S001 = $conexion->query($C001) or die ("Fallo al consultar clientes");
+	$S001 = $conexion->query($C001) or die ("Fallo al consultar clientes: ".$C001);
 	$numClientes = $S001->num_rows;
 
 	$LdClientes = [];
@@ -43,8 +43,8 @@ elseif($accion == 'editarCliente'){
 		$C001 = "SELECT * FROM clientes WHERE cliente_id = $clienteID";
 		$S001 = $conexion->query($C001) or die ("Fallo al seleccionar Cliente");
 		$cliente = $S001->fetch_assoc();
-
-		$listaRazas = listaSelectRazas($cliente['cliente_especie']);
+		$sexo = $cliente['cliente_sexo'];
+		//$listaRazas = listaSelectRazas($cliente['cliente_especie']);
 
 	}
 	else{
@@ -60,20 +60,27 @@ elseif($accion == 'procesaCliente'){
 	$clienteApellido1 = limpia($clienteApellido1);
 	$clienteApellido2 = limpia($clienteApellido2);
 	$clienteNI = limpia($clienteNI);
+	//$clienteSexo = limpia($clienteSexo);
+	//$clienteNacimiento = limpia($clienteNacimiento);
 	$clienteNE = limpia($clienteNE);
 	$clienteCalle = limpia($clienteCalle);
 	$clienteColonia = limpia($clienteColonia);
-
+	$clienteMunicipio = 52;
+	$clienteEstado = 255;
+	$clienteCP = limpia($clienteCP);
+	$clientePais = 52;
+	$clienteTelefono1 = '5512771445';
+	$clienteTelefono2 = '5512771489';
 
 	$_SESSION['mensajeForm'] = [];
 	$_SESSION['formError'] = 0;
 	
 	if(empty($clienteNombre1)){ $_SESSION['mensajeForm'][] = 'No has escrito un Nombre'; $_SESSION['formError']++; }
 	if(empty($clienteApellido1)){ $_SESSION['mensajeForm'][] = 'No has escrito Apellido Paterno'; $_SESSION['formError']++; }
-	if(!empty($clienteUsuario) && !v4lEm4Il($clienteUsuario)){ $_SESSION['mensajeForm'][] = 'Email no Valido'; $_SESSION['formError']++; }
-	if(!empty($clienteCP) && !v4l_cp($clienteCP)){ $_SESSION['mensajeForm'][] = 'Código Postal no Válido	'; $_SESSION['formError']++; }
-	if($clienteSexo == 'Ninguno' || empty($clienteSexo)){ $_SESSION['mensajeForm'][] = 'Selecciona el sexo de '.$clienteNombre1; $_SESSION['formError']++; }
-	if($clienteMunicipio == 'Ninguno'){ $clienteMunicipio = 0; }
+	//if(!empty($clienteUsuario) && !v4lEm4Il($clienteUsuario)){ $_SESSION['mensajeForm'][] = 'Email no Valido'; $_SESSION['formError']++; }
+	//if(!empty($clienteCP) && !v4l_cp($clienteCP)){ $_SESSION['mensajeForm'][] = 'Código Postal no Válido	'; $_SESSION['formError']++; }
+	//if($clienteSexo == '' || empty($clienteSexo)){ $_SESSION['mensajeForm'][] = 'Selecciona el sexo de '.$clienteNombre1; $_SESSION['formError']++; }
+	//if($clienteMunicipio == 'Ninguno'){ $clienteMunicipio = 0; }
 	$_SESSION['formCliente'] = [];
 	$_SESSION['formCliente']['clienteNombre1'] = $clienteNombre1;
 	$_SESSION['formCliente']['clienteNombre2'] = $clienteNombre2;
@@ -91,30 +98,41 @@ elseif($accion == 'procesaCliente'){
 	$_SESSION['formCliente']['clienteTelefono2'] = $clienteTelefono2;
 	$_SESSION['formCliente']['clienteSexo'] = $clienteSexo;
 	$_SESSION['formCliente']['clienteNacimiento'] = $clienteNacimiento;
+	$_SESSION['formCliente']['clientePais'] = '52';
 
 	if($_SESSION['formError'] == 0){
 		if($editar == 'editar' && $clienteID != ''){
 			unset($sql_array);
 			$sql_array = [
-				'cliente_nombre' => $clienteNombre,
-				'cliente_especie' => $clienteEspecie,
-				'cliente_raza' => $clienteRaza,
+				'cliente_nombre1' => eCry2($clienteNombre1),
+				'cliente_nombre2' => eCry2($clienteNombre2),
+				'cliente_apellido1' => eCry2($clienteApellido1),
+				'cliente_apellido2' => eCry2($clienteApellido2),
+				'cliente_usuario' => $clienteUsuario,
+				//'cliente_psswd' => $clientePsswd,
+				'cliente_ni' => eCry2($clienteNI),
 				'cliente_sexo' => $clienteSexo,
-				'cliente_esteril' => $clienteEsteril,
-				'cliente_color' => $clienteColor,
+				'cliente_ne' => eCry2($clienteNE),
+				'cliente_calle' => eCry2($clienteCalle),
+				'cliente_colonia' => eCry2($clienteColonia),
+				'cliente_municipio' => $clienteMunicipio,
+				'cliente_estado' => $clienteEstado,
+				'cliente_pais' => $clientePais,
+				'cliente_cp' => $clienteCP,
+				'cliente_telefono1' => eCry2($clienteTelefono1),
+				'cliente_telefono2' => eCry2($clienteTelefono2),
 				'cliente_nacimiento' => $clienteNacimiento,
-				'cliente_dueno' => $clienteCliente,
-				//'cliente_sistema' => date("Y-m-d H:i:s"),
-				//'cliente_universo' => $Universo
+				'cliente_registro' => date("Y-m-d H:i:s"),
+				'Universo' => $Universo
 			];
 			$accion = 'actualizar';
 			$paramatros = 'cliente_id = '.$clienteID;
-			/*echo '<pre>';
+			echo '<pre>';
 			print_r($sql_array);
-			echo '</pre>';*/
+			echo '</pre>';
 			ejecutaDB('clientes', $sql_array, $accion, $paramatros);
 			unset($_SESSION['formCliente']);
-			//Bin4kuru('Se creo la cliente -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+			Bin4kuru('Se creo la cliente -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 			llevame('../app?accion=fichaCliente&clienteID='.$eCry($clienteID));
 		}
 		else{
@@ -166,16 +184,6 @@ elseif($accion == 'procesaCliente'){
 		}
 	}
 
-
-		
-
-
-
-
-
-	
-
-
 }
 elseif($accion == 'borrarFormulario'){
 	unset($_SESSION['formCliente']);
@@ -192,11 +200,6 @@ elseif($accion == 'fichaCliente'){
 	$S005 = $conexion->query($C005) or die ("Fallo al consultar foto de cliente");
 	$fotoCliente = $S005->fetch_assoc();
 
-	$C007 = "SELECT raza_descripcion FROM razas WHERE raza_id = ".$cliente['cliente_raza'];
-	$S007 = $conexion->query($C007) or die ("Fallo al seleccionar raza de cliente");
-	$datoRaza = $S007->fetch_assoc();
-	$clienteRaza = $datoRaza['raza_descripcion'];
-
 	$edadCompleta = calcularEdad($cliente['cliente_nacimiento']);
 	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';
 
@@ -205,11 +208,5 @@ elseif($accion == 'fichaCliente'){
 	}
 	else{
 		$flis = 'dist/img/gato_avatar.jpg'; 
-	}
-
-	$C006 = "SELECT especie_descripcion FROM especies WHERE especie_id = ".$cliente['cliente_especie'];
-	$S006 = $conexion->query($C006) or die ("Fallo al consultar especie");
-	$datoEspecie = $S006->fetch_assoc();
-	$clienteEspecie = $datoEspecie['especie_descripcion'];
-	
+	}	
 }

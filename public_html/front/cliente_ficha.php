@@ -4,7 +4,6 @@ include('parciales/c4bec3r4.php');
 include('parciales/menu.php');
 include('parciales/7i7ul0.php');
 ?>
-
   <section class="content"> 
       
 

@@ -6,10 +6,10 @@ include('parciales/7i7ul0.php');
 ?>
 
 <?php
-            foreach ($d4705_u5u as $key => $u5h34r5) { ?>      
+  foreach ($datosUsuario as $key => $usuario) { ?>      
     <!-- Main content -->
     <div class="row">
-      <?php if($u5h34r5['u5hOn44P8ir5'] == 1){ ?>
+      <?php if($usuario['u5hOn44P8ir5'] == 1){ ?>
         <div class="col-md-6">
       <?php } else { ?>
         <div class="col-12">
@@ -29,49 +29,33 @@ include('parciales/7i7ul0.php');
                     <a href="app?accion=5u540l" class="btn btn-app bg-success">
                       <i class="fad fa-arrow-left"></i> <?= btn_r36r354r ?>
                     </a>   
-
                   <?php if(v4lID44x50("500-004", $usuario_id) == TRUE): /// --- permiso suspender usuario ?>
-                    <?php if($u5h34r5['u5hOn8ir5'] == '1'){ ?>
-                      <a href="ApiPHP/u5u405_4pi.php?accion=10300&u5h8ir5nm=<?= $eCry($u5h34r5['usuarioID']) ?>" class="btn btn-app bg-danger">
+                    <?php if($usuario['u5hOn8ir5'] == '1'){ ?>
+                      <a href="ApiPHP/u5u405_4pi.php?accion=10300&u5h8ir5nm=<?= $eCry($usuario['usuarioID']) ?>" class="btn btn-app bg-danger">
                         <i class="fad fa-user-slash"></i> <?= btn_5u5p3Nd3R ?>
                       </a>
-                    <?php } elseif($u5h34r5['u5hOn8ir5'] == '0') { ?>
-                      <a href="ApiPHP/u5u405_4pi.php?accion=10400&u5h8ir5nm=<?= $eCry($u5h34r5['usuarioID']) ?>" class="btn btn-app bg-success">
+                    <?php } elseif($usuario['u5hOn8ir5'] == '0') { ?>
+                      <a href="ApiPHP/u5u405_4pi.php?accion=10400&u5h8ir5nm=<?= $eCry($usuario['usuarioID']) ?>" class="btn btn-app bg-success">
                         <i class="fad fa-user"></i> <?= btn_d355u5p3Nd3R ?>
                       </a>
                     <?php } ?>
-          
                   <?php endif; ?>
 
-                  <?php //if(v4lID44x50("500-007", $usuario_id) == TRUE): /// --- generar llaves ?>
-                  
-                      <!--<a class="btn btn-app bg-warning disabled"><i class="fad fa-sync-alt"></i> <?= btn_R3s7_llyT ?></a>-->
-                            
-                  <?php //endif; ?>
-
-                  <?php if(v4lID44x50("500-006", $usuario_id) == TRUE && $u5h34r5['u5hOn44P8ir5'] == 0): /// --- generar Token ?>
-                          <a href="ApiPHP/g3nt0k3n_4pi.php?accion=50210&u5h8ir5nm=<?= $eCry($u5h34r5['usuarioID']) ?>" class="btn btn-app bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p02 ?></a>
-                  <?php endif; ?>
+                  <?php /*if(v4lID44x50("500-006", $usuario_id) == TRUE && $usuario['u5hOn44P8ir5'] == 0): /// --- generar Token ?>
+                          <a href="ApiPHP/g3nt0k3n_4pi.php?accion=50210&u5h8ir5nm=<?= $eCry($usuario['usuarioID']) ?>" class="btn btn-app bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p02 ?></a>
+                  <?php endif; */?>
 
                   <?php if(v4lID44x50("300-003", $usuario_id) == TRUE): /// --- editar permisos ?>
-                    
-                      <a href="app?accion=5uXds4H&u5u4oxX=<?= $eCry($u5h34r5['usuarioID']) ?>" class="btn btn-app bg-warning"><i class="fad fa-key"></i> <?= btn_p3rm505 ?></a>
-                    
+                      <a href="app?accion=5uXds4H&u5u4oxX=<?= $eCry($usuario['usuarioID']) ?>" class="btn btn-app bg-warning"><i class="fad fa-key"></i> <?= btn_p3rm505 ?></a>
                   <?php endif; ?> 
-                  <?php if(v4lID44x50("700-015", $usuario_id) == TRUE && $ea == false): /// --- vincular auto ?>
-                    
-                    <a href="app?accion=asNxV&xux=<?= $eCry($u5h34r5['usuarioID']) ?>" class="btn btn-app bg-purple" ><i class="fad fa-car-side"></i> <?= btn_linkaut ?></a>
-                  
-                  <?php endif; ?>
-            
             </div>
           </div>
           <!-- acciones -->
         </div>
-      <?php if($u5h34r5['u5hOn44P8ir5'] == 1){ ?>
+      <?php if($usuario['u5hOn44P8ir5'] == 1){ ?>
         <div class="col-md-6">
           <!-- acciones -->
-          <?php if($u5h34r5['u5hOn44P8ir5'] == 1){ ?>
+          <?php if($usuario['u5hOn44P8ir5'] == 1){ ?>
             <div class="card <?= $brr4 ?> card-outline col-md-12 col-sm-12">
               <div class="card-header">
                 <h3 class="card-title"><?= lbl_dpsitvncul2 ?></h3>
@@ -87,11 +71,11 @@ include('parciales/7i7ul0.php');
                     <i class="fad fa-mobile bg-accent" style="font-size: 60px;"></i>
                   </div>
                   <div class="col-md-10">
-                    <b>Nombre Dispositivo:</b> <a><?= $u5h34r5['sjh77'] ?></a><br>
-                    <b>ID Dispositivo:</b> <a><?= $u5h34r5['dis66'] ?></a><br>
+                    <b>Nombre Dispositivo:</b> <a><?= $usuario['sjh77'] ?></a><br>
+                    <b>ID Dispositivo:</b> <a><?= $usuario['dis66'] ?></a><br>
                     <a href="#" class="btn bg-blue btn-flat btn-xs disabled" title="Proximamente..."><i class="fad fa-history"></i> Ver Historial</a>
                     <?php if(v4lID44x50("500-006", $usuario_id) == TRUE): /// --- generar Token ?>
-                      <a href="ApiPHP/g3nt0k3n_4pi.php?accion=50210&u5h8ir5nm=<?= $eCry($u5h34r5['usuarioID']) ?>" class="btn btn-flat btn-xs bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p0 ?></a>
+                      <a href="ApiPHP/g3nt0k3n_4pi.php?accion=50210&u5h8ir5nm=<?= $eCry($usuario['usuarioID']) ?>" class="btn btn-flat btn-xs bg-purple"><i class="fad fa-sync-alt"></i> <?= btn_07r0Di5p0 ?></a>
                     <?php endif; ?>
                   </div>
                 </div>               
@@ -161,7 +145,7 @@ include('parciales/7i7ul0.php');
             
                         <div class="btn-group"> 
                           <a href="app?accion=v3hFh4_sd04&gju8UUy=<?= $eCry($vXIDxv) ?>" type="button" class="btn btn-warning btn-flat btn-xs" title="Editar"><i class="fad fa-edit"></i></a>
-                          <a href="ApiPHP/v3hiCs_4pi.php?accion=d3svA&aIDdx=<?= $eCry($vXIDxv) ?>&uxu=<?= $eCry($u5h34r5['usuarioID']) ?>&r3l=<?= $eCry($xDridn) ?>" type="button" class="btn btn-danger btn-flat btn-xs"><i class="fad fa-unlink" title="Desasignar"></i></a>
+                          <a href="ApiPHP/v3hiCs_4pi.php?accion=d3svA&aIDdx=<?= $eCry($vXIDxv) ?>&uxu=<?= $eCry($usuario['usuarioID']) ?>&r3l=<?= $eCry($xDridn) ?>" type="button" class="btn btn-danger btn-flat btn-xs"><i class="fad fa-unlink" title="Desasignar"></i></a>
                         </div>
 
                       </td>
@@ -182,7 +166,7 @@ include('parciales/7i7ul0.php');
         <div class="col-md-9">
         <div class="card <?= $brr4 ?> card-outline">
           <div class="card-header">
-            <h3 class="card-title"><?= lbl_1er7i7u ?><?php if($u5h34r5['u5hOn8ir5'] == '0'){ ?> <small><?= lbl_ud53r3r5w; }?></small></h3>
+            <h3 class="card-title"><?= lbl_1er7i7u ?><?php if($usuario['u5hOn8ir5'] == '0'){ ?> <small><?= lbl_ud53r3r5w; }?></small></h3>
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                 <i class="fad fa-minus"></i>
@@ -206,14 +190,14 @@ include('parciales/7i7ul0.php');
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label for="pp_xx001"><?= lbl_n3w1erN0m8r3 ?>*</label>
-                      <?php if($pp_xx001 != ''){ $px001 = $dCry($pp_xx001); } else { $px001 = $u5h34r5['usuarioN1']; } ?>
+                      <?php if($pp_xx001 != ''){ $px001 = $dCry($pp_xx001); } else { $px001 = $usuario['usuarioN1']; } ?>
                       <input type="text" class="form-control" name="pp_xx001" id="pp_xx001" placeholder="Primer Nombre" value="<?= $px001 ?>" <?php //required ?>>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label for="pp_xx002"><?= lbl_n3w2dON0m8r3 ?></label>
-                      <input type="text" class="form-control" name="pp_xx002" id="pp_xx002" placeholder="Segundo Nombre" value="<?= $u5h34r5['usuarioN2'] ?>">
+                      <input type="text" class="form-control" name="pp_xx002" id="pp_xx002" placeholder="Segundo Nombre" value="<?= $usuario['usuarioN2'] ?>">
                     </div>
                   </div>
                 </div>
@@ -222,20 +206,20 @@ include('parciales/7i7ul0.php');
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label for="pp_xx003"><?= lbl_n3w4PP ?>*</label>
-                      <input type="text" class="form-control" name="pp_xx003" id="pp_xx003" placeholder="Apellido Paterno" value="<?= $u5h34r5['usuarioA1'] ?>" <?php //required ?>>
+                      <input type="text" class="form-control" name="pp_xx003" id="pp_xx003" placeholder="Apellido Paterno" value="<?= $usuario['usuarioA1'] ?>" <?php //required ?>>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label for="pp_xx004"><?= lbl_n3w4PM ?></label>
-                      <input type="text" class="form-control" name="pp_xx004" id="pp_xx004" placeholder="Apellido Materno" value="<?= $u5h34r5['usuarioA2'] ?>">
+                      <input type="text" class="form-control" name="pp_xx004" id="pp_xx004" placeholder="Apellido Materno" value="<?= $usuario['usuarioA2'] ?>">
                     </div>
                   </div>
 
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label for="pp_xx005"><?= lbl_n3w3M4il ?>*</label>
-                      <input type="email" class="form-control" name="pp_xx005" id="pp_xx005" placeholder="<?= lbl_n3w3M4il ?>" value="<?= $u5h34r5['u5hUS8ir5'] ?>" <?php //required ?>>
+                      <input type="email" class="form-control" name="pp_xx005" id="pp_xx005" placeholder="<?= lbl_n3w3M4il ?>" value="<?= $usuario['u5hUS8ir5'] ?>" <?php //required ?>>
                     </div>
                   </div>
   
@@ -249,7 +233,7 @@ include('parciales/7i7ul0.php');
                   <!--div class="col-sm-12">
                     <div class="form-group">
                       <label for="pp_xx007"><?= lbl_n3wd8ir ?></label>
-                      <input type="text" class="form-control" name="pp_xx007" id="pp_xx007" disabled value="<?= $u5h34r5['u5hUS8ir5'] ?>">
+                      <input type="text" class="form-control" name="pp_xx007" id="pp_xx007" disabled value="<?= $usuario['u5hUS8ir5'] ?>">
                     </div>
                   </div>--->
                   <?php //if(v4lID44x50("500-005", $usuario_id) == TRUE){ /// --- Permiso ver llaves y token ?>
@@ -266,7 +250,7 @@ include('parciales/7i7ul0.php');
                   <?php //} ?>
 
                   <div class="col-sm-12">
-                    <input type="hidden" name="u5h8ir5nm" id="u5h8ir5nm" value="<?= $u5h34r5['usuarioID'] ?>">
+                    <input type="hidden" name="u5h8ir5nm" id="u5h8ir5nm" value="<?= $usuario['usuarioID'] ?>">
                     <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_6u4rD4r ?></button>
                   </div>
                 </div>  
@@ -281,59 +265,8 @@ include('parciales/7i7ul0.php');
                   </div>
 
 
-
-                  <div class="col-md-3">
-        <div class="card <?= $brr4 ?> card-outline">
-          <div class="card-header">
-            <h3 class="card-title"><?= lbl_1er7i7u2 ?><?php if($u5h34r5['u5hOn8ir5'] == '0'){ ?> <small><?= lbl_ud53r3r5w; }?></small></h3>
-            <div class="card-tools">
-              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                <i class="fad fa-minus"></i>
-              </button>
-            </div>
-          </div>
-          
-          <div class="card-body">
-            <div class="card-body p-0">
-
-            Empresa: <?= $u5h34r5['nEmP'] ?><br>
-              Flota: <?= $u5h34r5['nFlO'] ?>
-
-
-              
-
-              <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#c4mFe"> Cambiar </button>
-              <div class="form-group">
-                <label for="xFL0"><?= emxSsdA ?></label>
-                <select class="form-control" name="XFL0" id="XFL0" <?php //required ?>>
-                  <option value="0" ><?= sleeccx ?></option>
-                  <?php foreach ($LDE as $key => $value) { ?>
-                    <option value="<?= $value['xEID'] ?>" <?php if($u5h34r5['xDeidn'] == $value['xEID']) { echo 'selected'; } ?>><?= $value['xNIc'] ?></option>
-                  <?php } ?>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="XFL1"><?= fl57h ?></label>
-                <select class="form-control" name="XFL1" id="XFL1" <?php //required ?>>
-                  <option value="0" ><?= sleeccx ?></option>
-                  <?php foreach ($LDF as $key => $value) { ?>
-                    <option value="<?= $value['xFID'] ?>" ><?= $value['xFDc'] ?></option>
-                  <?php } ?>
-                </select>
-              </div>
-
-
-
-
-            </div>
-            
-          </div>
-          <!--/.card-body -->
-
-         
-        </div>
-
-        <script type="text/javascript">
+        <div class="col-md-3">
+          <script type="text/javascript">
             atOptions = {
               'key' : 'abd0f6a20a26d349d295f4d6dd323474',
               'format' : 'iframe',
@@ -343,115 +276,10 @@ include('parciales/7i7ul0.php');
             };
             document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://writtenanonymousgum.com/abd0f6a20a26d349d295f4d6dd323474/invoke.js"></scr' + 'ipt>');
           </script>
-
-
-                  </div>
-
-
-                  </div>
+        </div>
+      </div>
 
       <?php if($_SESSION['publicidad'] == 1){ echo add728x90(); } ?>
-
-          
-      <!-- /.card -->
-    <?php if(v4lID44x50("700-015", $usuario_id) == TRUE){ /// --- vincular auto ?>
-      <div class="modal fade" id="asign">
-        <div class="modal-dialog">
-          <div class="modal-content"> 
-            <form name="nuevo" method="post" action="ApiPHP/u5u405_4pi.php?accion=5u540l_04">
-              <div class="modal-header">
-                <h4 class="modal-title"><?= lbl_asigau ?></h4>
-                
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form action="ApiPHP/v3hiCs_4pi.php?accion=assBtf" method="POST">
-                  <!--<pre>
-                    <?php print_r($lV); ?>
-                  </pre>-->
-                  <div class="form-group">
-                    <label for="as_001"><?= lbl_as001 ?></label>
-                    <select class="form-control" name="as_001" id="as_001">
-                      <option value="nada">Selecciona...</option>
-                      <?php foreach ($lV as $key => $value) {?>
-                        <option value="<?= $value['vXIDxv'] ?>"><?= $value['vXECxv'] ?> - <?= $value['vXPLxv'] ?></option>
-                      <?php } ?>
-                    </select>
-                  </div>
-
-                </form>
-              </div>
-              <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>              
-                <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_6u4rD4r ?></button>
-              </div>
-           </form> 
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-
-
-
-      </div>
-    <?php } ?>
-
-
-    <div class="modal fade" id="c4mFe">
-        <div class="modal-dialog">
-          <div class="modal-content"> 
-            <form name="nuevo" method="post" action="#">
-              <div class="modal-header">
-                <h4 class="modal-title"><?= lbl_dasdau ?></h4>
-                
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form action="#" method="POST">
-                  <!--<pre>
-                    <?php print_r($lV); ?>
-                  </pre>-->
-                  <div class="form-group">
-                    <label for="pp_xx007_add">Empresa*</label>
-                    <select class="form-control <?= $v ?>" name="pp_xx007_add" id="pp_xx007_add" onchange="this.form.submit()">
-                      <option value="nada">Selecciona...</option>
-                      <?php foreach (c0nEmP(0,0) as $key => $value) {?>
-                        <option value="<?= $value['XrIDEx'] ?>" <?php if($value['XrIDEx'] === $pp_xx007_add) { echo 'selected'; } ?>><?= dCry2($value['XrNICEx']) ?></option>
-                      <?php } ?>
-                    </select>
-                  </div>
-
-                  
-                  <div class="form-group">
-                    <label for="pp_xx008_add">Flota*</label>
-                    <select class="form-control <?= $v ?>" name="pp_xx008_add" id="pp_xx008_add">
-                      <option value="nada">Selecciona...</option>
-                      <?php foreach (C0nFl0(0, $pp_xx007_add) as $key => $value) {?>
-                        <option value="<?= $value['xfdifx'] ?>" <?php if($value['xfdifx'] === $pp_xx008_add) { echo 'selected'; } ?>><?= $value['xfmnfx'] ?></option>
-                      <?php } ?>
-                    </select>
-                  </div>
-
-                </form>
-              </div>
-              <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= btn_n3wC4nC3L4r ?></button>              
-                <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= btn_6u4rD4r ?></button>
-              </div>
-           </form> 
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-
-
-
-      </div>
-
 
       <!--
       <div class="modal fade" id="modal_llvs">
@@ -472,14 +300,14 @@ include('parciales/7i7ul0.php');
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label for="ll_privada"><?= lbl_lL4v3Pv ?></label>
-                      <textarea class="form-control" rows="3"><?= $u5h34r5['u5h8ir5_llave_privada'] ?></textarea>     
+                      <textarea class="form-control" rows="3"><?= $usuario['u5h8ir5_llave_privada'] ?></textarea>     
                     </div>
                   </div>
 
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label for="ll_publica"><?= lbl_lL4v3Pu ?></label>
-                      <textarea class="form-control" rows="3"><?= $u5h34r5['u5h8ir5_llave_publica'] ?></textarea>            
+                      <textarea class="form-control" rows="3"><?= $usuario['u5h8ir5_llave_publica'] ?></textarea>            
                     </div>
                     
                   </div> 
@@ -487,7 +315,7 @@ include('parciales/7i7ul0.php');
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label for="u5htK8ir5"><?= lbl_70k3n ?></label>
-                      <input type="text" class="form-control" name="u5htK8ir5" id="u5htK8ir5" value="<?= $u5h34r5['u5htK8ir5'] ?>">
+                      <input type="text" class="form-control" name="u5htK8ir5" id="u5htK8ir5" value="<?= $usuario['u5htK8ir5'] ?>">
                     </div>
                   </div>                  
 

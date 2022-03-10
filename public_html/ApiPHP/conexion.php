@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("America/Mexico_City");
 setlocale(LC_MONETARY, 'es_MX');
-//error_reporting(E_ALL ^ E_NOTICE);
+error_reporting(E_ALL ^ E_NOTICE);
 //error_reporting(0);
 if($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME'] == '192.168.1.80' ){
     $conexion = new mysqli('localhost', 'root', '', 'kumoV4');

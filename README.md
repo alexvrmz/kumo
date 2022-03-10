@@ -6,6 +6,64 @@
 
 
 
+[ ] SECCIONES
+  [ ] MI ESCRITORIO
+    [ ] BOX INDIVIDUOS
+      [X] MASCOTAS
+      [X] PROVEEDORES
+      [X] USUARIOS
+  [ ] BITACORA
+  [ ] USUARIOS
+    [ ] AGREGAR USUARIO
+    [ ] EDITAR USUARIO
+      [ ] DATOS DE USUARIO
+        [X] SUSPENDER
+          [ ] MENSAJE DE SUSPENSION EN LOGIN
+        [X] APELLIDO PATERNO
+        [X] APELLIDO MATERNO
+        [X] PRIMER NOMBRE
+        [X] SEGUNDO NOMBRE
+        [X] CORREO ELECTRONICO
+        [X] CONTRASENA
+  [ ] CLIENTES
+    [ ] AGREGAR CLIENTES
+    [ ] VER CLIENTE
+    [ ] EDITAR CLIENTE
+        #Faltan Selects estado, municipio, pais 
+  [ ] MASCOTAS
+  [ ] PROVEEDORES
+  [ ] MODULOS
+    [X] AGREGAR MODULO
+    [X] EDITAR MODULO
+  [ ] PERMISOS
+    [X] AGREGAR PERMISOS
+    [X] EDITAR PERMISOS
+  [ ] MI CONFIGURACION
+    [X] BLOQUEO DE PANTALLA
+    [X] DIAS RECORDATORIO DE DOCUMENTOS
+  [X] BLOQUEO DE PANTALLA
+  [X] MI TEMA
+    [X] MODO OSCURO
+    [X] BARRA SUPERIOR
+    [X] COLOR ENFANSIS
+    [X] MENU IZQUIERDO OSCURO
+    [X] MENU IZQUIERDO CLARO
+    [X] LOGO TIPO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Tipos de Individuos 
 1 usuarios

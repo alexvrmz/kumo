@@ -4,19 +4,28 @@ define('lbl_7i7uL0', 'Editar Datos de Cliente');
 
 define('acciones', 'Acciones');
 define('regresar', 'Regresar');
-define('datosCliente', 'Datos de la Cliente');
+define('direccionCliente', 'Direccion Cliente');
+define('datosCliente', 'Datos de Cliente');
 define('guardar', 'Guardar');
 
 
 
 define('id', 'ID');
-define('nombre', 'Nombre');
-define('especie', 'Especie');
-define('raza', 'Raza');
-define('esteril', 'E. Reproductivo');
+define('nombre1', 'Primer Nombre');
+define('nombre2', 'Segundo Nombre');
+define('apellido1', 'Apellido Paterno');
+define('apellido2', 'Apellido Materno');
+define('masculino', 'Hombre');
+define('femenino', 'Mujer');
+define('usuario', 'Usuario/Correo');
 define('sexo', 'Sexo');
-define('color', 'Pelaje');
-define('edad', 'Edad');
+
+define('calle', 'Calle');
+define('ni', '# Interior');
+define('ne', '# Exterior');
+define('colonia', 'Colonia');
+define('cp', 'Codigo Postal');
+
 define('nacimiento', 'Nacimiento');
 define('sistema', 'Sistema');
 define('acciones', 'Acciones');

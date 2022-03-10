@@ -63,60 +63,40 @@ include('parciales/7i7ul0.php');
                   <?php } ?>
 
                   <div class="form-group">
-                    <label for="clienteNombre"><?= nombre ?>*</label>
-                    <input type="text" class="form-control" id="clienteNombre" name="clienteNombre" value="<?= $clienteNombre = $cliente['cliente_nombre'] != '' ? $cliente['cliente_nombre']:$_SESSION['formCliente']['clienteNombre'] ?>">
+                    <label for="clienteNombre1"><?= nombre1 ?>*</label>
+                    <input type="text" class="form-control" id="clienteNombre1" name="clienteNombre1" value="<?= $clienteNombre1 = $cliente['cliente_nombre1'] != '' ? dCry2($cliente['cliente_nombre1']):$_SESSION['formCliente']['clienteNombre1'] ?>">
                   </div>
 
                   <div class="form-group">
-                    <label for="clienteEspecie"><?= especie ?>*</label>
-                    <select class="form-control" id="clienteEspecie" name="clienteEspecie" required onchange="this.form.submit()">
-                      <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach (listaSelectEspecies() as $key => $especie) { ?>
-                        <option value="<?= $especie['especieID'] ?>" <?= $select = $cliente['cliente_especie'] == $especie['especieID'] ? 'selected':'' ?>><?= $especie['especieDescripcion'] ?></option>
-                      <?php } ?>
-                    </select>
+                    <label for="clienteNombre2"><?= nombre2 ?></label>
+                    <input type="text" class="form-control" id="clienteNombre2" name="clienteNombre2" value="<?= $clienteNombre2 = $cliente['cliente_nombre2'] != '' ? dCry2($cliente['cliente_nombre2']):$_SESSION['formCliente']['clienteNombre2'] ?>">
                   </div>
 
                   <div class="form-group">
-                    <label for="clienteRaza"><?= raza ?>*</label>
-                    <select class="form-control" id="clienteRaza" name="clienteRaza" required>
-                      <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($listaRazas as $key => $raza) { ?>
-                        <option value="<?= $raza['razaID'] ?>" <?= $select = $cliente['cliente_raza'] == $raza['razaID'] ? 'selected':'' ?>><?= $raza['razaDescripcion'] ?></option>
-                      <?php } ?>
-                    </select>
+                    <label for="clienteApellido1"><?= apellido1 ?>*</label>
+                    <input type="text" class="form-control" id="clienteApellido1" name="clienteApellido1" value="<?= $clienteApellido1 = $cliente['cliente_apellido1'] != '' ? dCry2($cliente['cliente_apellido1']):$_SESSION['formCliente']['cliente_apellido1'] ?>">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="clienteApellido2"><?= apellido2 ?></label>
+                    <input type="text" class="form-control" id="clienteApellido2" name="clienteApellido2" value="<?= $clienteApellido2 = $cliente['cliente_apellido2'] != '' ? dCry2($cliente['cliente_apellido2']):$_SESSION['formCliente']['cliente_apellido2'] ?>">
                   </div>
 
                   <div class="form-group">
                     <label for="clienteSexo"><?= sexo ?>*</label>
                     <select class="form-control" id="clienteSexo" name="clienteSexo" required>
                       <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($sexo as $key => $valor) { ?>
-                        <option value="<?= $key ?>" <?= $select = $cliente['cliente_sexo'] == $key ? 'selected':'' ?>><?= $valor ?></option>
-                      <?php } ?>
+                      <option value="1" <?= $select = $cliente['cliente_sexo'] == 1 ? 'selected':'' ?>><?= masculino ?></option>
+                      <option value="2" <?= $select = $cliente['cliente_sexo'] == 2 ? 'selected':'' ?>><?= femenino ?></option>
                     </select>
                   </div>
+
+                  <div class="form-group">
+                    <label for="clienteUsuario"><?= usuario ?></label>
+                    <input type="text" class="form-control" id="clienteUsuario" name="clienteUsuario" value="<?= $clienteUsuario = $cliente['cliente_usuario'] != '' ? $cliente['cliente_usuario']:$_SESSION['formCliente']['cliente_usuario'] ?>">
+                  </div>
+
                   
-                  <div class="form-group">
-                    <label for="clienteEsteril"><?= esteril ?>*</label>
-                    <select class="form-control" id="clienteEsteril" name="clienteEsteril" required>
-                      <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($estadoSexual as $key => $valor) { ?>
-                        <option value="<?= $key ?>" <?= $select = $cliente['cliente_esteril'] == $key ? 'selected':'' ?>><?= $valor ?></option>
-                      <?php } ?>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="clienteColor"><?= color ?>*</label>
-                    <select class="form-control" id="clienteColor" name="clienteColor" required>
-                      <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($colores as $key => $valor) { ?>
-                        <option value="<?= $key ?>" <?= $select = $cliente['cliente_color'] == $key ? 'selected':'' ?>><?= $valor ?></option>
-                      <?php } ?>
-                    </select>
-                  </div>
-
                   <div class="form-group">
                     <label><?= nacimiento ?>*</label>
                     <div class="input-group date" id="clienteNacimiento" data-target-input="nearest">
@@ -126,39 +106,47 @@ include('parciales/7i7ul0.php');
                       </div>
                     </div>
                   </div>
+                  <br>
+                  <h3 class="card-title"><?= direccionCliente ?></h3>
+                  <br>
+                  <br>
+                  <div class="form-group">
+                    <label for="clienteCalle"><?= calle ?></label>
+                    <input type="text" class="form-control" id="clienteCalle" name="clienteCalle" value="<?= $clienteCalle = $cliente['cliente_calle'] != '' ? dCry2($cliente['cliente_calle']):$_SESSION['formCliente']['cliente_calle'] ?>">
+                  </div>
 
                   <div class="form-group">
-                    <label for="clienteCliente"><?= cliente ?></label>
-                    <select class="form-control" id="clienteCliente" name="clienteCliente" >
-                      <option value="Ninguno"><?= selecciona ?></option>
-                      <?php foreach ($listaClientes as $key => $cliente) { ?>
-                        <option value="<?= $cliente['clienteID'] ?>" <?= $select = $cliente['cliente_cliente'] == $cliente['clienteID'] ? 'selected':'' ?>><?= $cliente['clienteNombre'] ?></option>
-                      <?php } ?>
-                    </select>
-                  </div>  
+                    <label for="clienteNE"><?= ne ?></label>
+                    <input type="text" class="form-control" id="clienteNE" name="clienteNE" value="<?= $clienteNE = $cliente['cliente_ne'] != '' ? dCry2($cliente['cliente_ne']):$_SESSION['formCliente']['cliente_ne'] ?>">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="clienteNI"><?= ni ?></label>
+                    <input type="text" class="form-control" id="clienteNI" name="clienteNI" value="<?= $clienteNI = $cliente['cliente_ni'] != '' ? dCry2($cliente['cliente_ni']):$_SESSION['formCliente']['cliente_ni'] ?>">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="clienteColonia"><?= colonia ?></label>
+                    <input type="text" class="form-control" id="clienteColonia" name="clienteColonia" value="<?= $clienteColonia = $cliente['cliente_colonia'] != '' ? dCry2($cliente['cliente_colonia']):$_SESSION['formCliente']['cliente_colonia'] ?>">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="clienteCP"><?= cp ?></label>
+                    <input type="text" class="form-control" id="clienteCP" name="clienteCP" value="<?= $clienteCP = $cliente['cliente_cp'] != '' ? $cliente['cliente_cp']:$_SESSION['formCliente']['cliente_cp'] ?>">
+                  </div>
+
+                  
+
+
                   <input type="hidden" name="editar" id="editar" value="editar">
                   <input type="hidden" name="clienteID" id="clienteID" value="<?=$clienteID ?>">
-                  
-                
               <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= guardar ?></button>
             </form>
-
           </div>
         </div>
-        <!--/.card-body -->
       </div>
-      <!-- /.card -->
-
     </section>
-    <!-- /.content -->
-
-
-
-
-
   </div>
-  <!-- /.content-wrapper -->
-
 <?php
 include('parciales/3p1416e.php');
  ?>

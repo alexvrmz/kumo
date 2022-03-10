@@ -60,13 +60,13 @@ include('parciales/7i7ul0.php');
                 <?php foreach ($LdClientes as $key => $cliente) { ?>
                   <tr>
                     <td class="corta-texto"><?= $cliente['clienteID'] ?></td>
-                    <td class="corta-texto"><?= $cliente['clienteNombre1'] ?></td>
-                    <td class="corta-texto"><?= $cliente['clienteNombre2'] ?></td>
-                    <td class="corta-texto"><?= $cliente['clienteApellido1'] ?></td>
-                    <td class="corta-texto"><?= $cliente['clienteApellido2'] ?></td>
+                    <td class="corta-texto"><?= dCry2($cliente['clienteNombre1']) ?></td>
+                    <td class="corta-texto"><?= dCry2($cliente['clienteNombre2']) ?></td>
+                    <td class="corta-texto"><?= dCry2($cliente['clienteApellido1']) ?></td>
+                    <td class="corta-texto"><?= dCry2($cliente['clienteApellido2']) ?></td>
                     <td class="corta-texto"><?= $cliente['clienteUsuario'] ?></td>
-                    <td class="corta-texto"><?= $cliente['clienteTel1'] ?></td>
-                    <td class="corta-texto"><?= $cliente['clienteTel2'] ?></td>
+                    <td class="corta-texto"><?= dCry2($cliente['clienteTel1']) ?></td>
+                    <td class="corta-texto"><?= dCry2($cliente['clienteTel2']) ?></td>
                     <td class="corta-texto"><?= $sexo[$cliente['clienteSexo']] ?></td>
                     <td ><?= $cliente['clienteNacimiento'] ?></td>
                     <td class="corta-texto"><?= $cliente['clienteSistema'] ?></td>

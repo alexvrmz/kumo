@@ -7,7 +7,7 @@ define('regresar', 'Regresar');
 define('datosCliente', 'Datos de la Cliente');
 define('guardar', 'Guardar');
 
-
+ 
 
 $estadoSexual = [
   1 => 'Fertil',
