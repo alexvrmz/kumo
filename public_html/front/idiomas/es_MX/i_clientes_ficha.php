@@ -6,6 +6,8 @@ define('acciones', 'Acciones');
 define('regresar', 'Regresar');
 define('datosCliente', 'Datos');
 define('guardar', 'Guardar');
+define('editar', 'Editar');
+
 
 define('ntel', '# de Teléfono');
 define('correo', 'Email');
@@ -20,8 +22,32 @@ define('estado', 'Estado');
 define('pais', 'País');
 define('cp', 'Codígo Postal');
 
-define('detalles_cliente', 'Detalles');
+define('foto', 'Foto');
+define('id', 'ID');
+define('raza', 'Raza');
+define('nombre', 'Nombre');
+define('especie', 'Especie');
+define('propietario', 'Dueño');
+define('fechaNacimiento', 'Fecha de Nacimiento');
+define('fechaRegistro', 'Fecha de Registro');
+define('sexoMascota', 'Sexo');
+define('color', 'Color');
 
+
+$sexoMascota = [
+  1 => 'Macho',
+  2 => 'Hembra'
+];
+
+$colores = [
+  1 => 'Blanco',
+  2 => 'Negro',
+  3 => 'Marrón Oscuro',
+  4 => 'Marrón Claro',
+  5 => 'Crema',
+  6 => 'Gris',
+  1000 => 'Otro'
+];
 
 
 $sexo = [

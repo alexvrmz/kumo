@@ -6,8 +6,18 @@ define('acciones', 'Acciones');
 define('regresar', 'Regresar');
 define('datosMascota', 'Datos de la Mascota');
 define('guardar', 'Guardar');
+define('editar', 'Editar');
 
 
+define('raza', 'RAZA');
+define('pelaje', 'PELAJE');
+define('edad', 'EDAD');
+define('estadoReproductivo', 'E. Reproductivo');
+define('propietario', 'Dueño');
+define('fechaNacimiento', 'Fecha de Nacimiento');
+define('fechaRegistro', 'Fecha de Registro');
+
+define('expedienteTitulo', 'Expediente de ');
 
 $estadoSexual = [
   1 => 'Fertil',

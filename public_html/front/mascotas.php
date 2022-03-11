@@ -42,6 +42,7 @@ include('parciales/7i7ul0.php');
             <table class="table table-bordered table-hover table-responsive" id="example1" style="border: 0px;">
               <thead>
                 <tr>
+                  <th class="corta-texto"><?= acciones ?></th>
                   <th class="corta-texto"><?= id ?> <i class="fad fa-sort-alt"></i></th>
                   <th ><?= foto ?> </th>
                   <th  class="corta-texto"><?= nombre ?> <i class="fad fa-sort-alt"></i></th>
@@ -53,12 +54,21 @@ include('parciales/7i7ul0.php');
                   <th class="corta-texto"><?= edad ?> <i class="fad fa-sort-alt"></i></th>
                   <th class="corta-texto"><?= nacimiento ?> <i class="fad fa-sort-alt"></i></th>
                   <th class="corta-texto"><?= sistema ?> <i class="fad fa-sort-alt"></i></th>
-                  <th class="corta-texto"><?= acciones ?></th>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach ($LdMascotas as $key => $mascota) { ?>
                   <tr>
+                    <td style="text-align: center;">
+                      <div class="btn-group" role="group">
+                        <?php if(v4lID44x50("200-004", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
+                          <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
+                        <?php } ?>
+                        <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
+                          <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
+                        <?php } ?>
+                      </div>
+                    </td>
                     <td><?= $mascota['mascotaID'] ?></td>
                     <td style="text-align: center;">
                       <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>">
@@ -74,16 +84,6 @@ include('parciales/7i7ul0.php');
                     <td class="corta-texto"><?= $mascota['mascotaEdad'] ?></td>
                     <td ><?= $mascota['mascotaNacimiento'] ?></td>
                     <td class="corta-texto"><?= $mascota['mascotaSistema'] ?></td>
-                    <td style="text-align: center;">
-                      <div class="btn-group" role="group">
-                        <?php if(v4lID44x50("200-004", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
-                          <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
-                        <?php } ?>
-                        <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
-                          <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
-                        <?php } ?>
-                      </div>
-                    </td>
                   </tr>
                 <?php } ?>
               </tbody>
@@ -195,7 +195,7 @@ include('parciales/7i7ul0.php');
                         <?php foreach ($LdClientes as $key => $value) { /*$ca = array_rand($cls, 1);*/?>
                           <?php if(array_keys($_SESSION['formMascota']['mascotaCliente'], $value['clienteID'])) { $sLt = 'selected'; } ?>
                             <option value="<?= $value['clienteID'] ?>" <?= $sLt ?>><?= $value['clienteApellido1'] ?> <?= $value['clienteApellido2'] ?> <?= $value['clienteNombre1'] ?> <?= $value['clienteNombre2'] ?> | <?= $value['clienteUsuario'] ?> | <?= $value['clienteTel1'] ?></option>
-                          <?php unset($sLt); }  ?>
+                          <?php unset($sLt); }  ?> 
                     </select>
                   </div>
 

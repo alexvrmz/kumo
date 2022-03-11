@@ -9,11 +9,13 @@ define('usuarioRegistrado', 'Usuario');
 define('usuariosRegistrados', 'Usuarios');
 define('agrergarUno', 'Agregar Uno!'); 
 define('proveedorRegistrado', 'Proveedor'); 
+define('clienteRegistrado', 'Clientes'); 
+define('clientesRegistrados', 'Clientes');
 define('proveedoresRegistrados', 'Proveedores');
 define('actualizacionesSistema', 'Mira las Actualizaciones del Sistema');
 define('mascotaRegistrada', 'Mascota');
 define('mascotasRegistradas', 'Mascotas');
-
+ 
 
 
 

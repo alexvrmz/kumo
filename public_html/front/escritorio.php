@@ -2,7 +2,7 @@
 /// --- Todos los textos en variables 2021/05/21
 include('idiomas/'.$iDi['u5h8ir5_iDi'].'/i_escritorio.php');
 include('parciales/c4bec3r4.php');
-include('parciales/menu.php');
+include('parciales/menu.php'); 
 include('parciales/7i7ul0.php');
 ?>
   <!-- Main content -->
@@ -12,7 +12,43 @@ include('parciales/7i7ul0.php');
 
   <?php if($rll == 0 || $rll == 2 || $rll == 3){ ?>
     <div class="row">
-           
+      
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-yellow">
+          <div class="inner">
+            <h3><?= $nC ?></h3>
+            <?php if($nC == 1){ ?>
+                <p><?= clienteRegistrado ?></p>
+            </div>
+            <div class="icon">
+              <i class="fad fa-book-user" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #d51b1b; --fa-secondary-color: #bbb;" ></i>
+            </div>
+              <a href="app?accion=clientes" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+            <?php }
+            elseif($nC > 1) { ?>
+                  <p><?= clientesRegistrados ?></p>
+            </div>
+            <div class="icon">
+              <i class="fad fa-book-user" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #d51b1b; --fa-secondary-color: #bbb;"></i>
+            </div>
+              <a href="app?accion=clientes" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <?php }
+            elseif($nC == 0) {?>
+                    <p><?= clientesRegistrados ?></p>
+                    </div>
+          <div class="icon">
+            <i class="fad fa-book-user" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #d51b1b; --fa-secondary-color: #bbb;"></i>
+          </div>
+            <a href="app?accion=clientes" class="small-box-footer"><?= agrergarUno ?><i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <?php } ?>
+
+
       <div class="col-lg-3 col-6">
         <div class="small-box bg-cyan">
           <div class="inner">
@@ -57,7 +93,7 @@ include('parciales/7i7ul0.php');
                 <p><?= proveedorRegistrado ?></p>
             </div>
             <div class="icon">
-              <i class="fad fa-shipping-fast" ></i>
+              <i class="fad fa-shipping-fast" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #2b6eaa; --fa-secondary-color: #605e5e;"></i>
             </div>
               <a href="app?accion=pR0VxD" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
           </div>
@@ -67,7 +103,7 @@ include('parciales/7i7ul0.php');
                   <p><?= proveedoresRegistrados ?></p>
             </div>
             <div class="icon">
-              <i class="fad fa-shipping-fast"></i>
+              <i class="fad fa-shipping-fast" style="--fa-secondary-opacity: 1.0; --fa-primary-color: #2b6eaa; --fa-secondary-color: #605e5e;"></i>
             </div>
               <a href="app?accion=pR0VxD" class="small-box-footer"><?= ver ?><i class="fas fa-arrow-circle-right"></i></a>
           </div>

@@ -239,6 +239,75 @@ elseif($accion == 'fichaCliente'){
 	/*$edadCompleta = calcularEdad($cliente['cliente_nacimiento']);
 	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';*/
 
+	$C001 = "SELECT * FROM mascotas WHERE mascota_universo = $Universo AND mascota_dueno = ".$dCry($clienteID)." AND mascota_activa = 1";
+	$S001 = $conexion->query($C001) or die ("Fallo al consultar mascotas: ".$C001);
+	$numMascotas = $S001->num_rows;
+
+	$LdMascotas = [];
+	while ($mascota = $S001->fetch_array()) {
+		unset($datosMascota);
+		$especie = $mascota['mascota_especie'];
+		$raza = $mascota['mascota_raza'];
+
+		$C002 = "SELECT * FROM especies WHERE especie_id = $especie";
+		$S002 = $conexion->query($C002) or die ("Error al consultar especie de mascota");
+		$datosEspecie = $S002->fetch_assoc();
+		$especie = $datosEspecie['especie_descripcion'];
+
+		$C003 = "SELECT * FROM razas WHERE raza_id = $raza";
+		$S003 = $conexion->query($C003) or die ("Error al consultar raza");
+		$datosRaza = $S003->fetch_assoc();
+		$raza = $datosRaza['raza_descripcion'];
+
+		$edadCompleta = calcularEdad($mascota['mascota_nacimiento']);
+		$edad = $edadCompleta->format('%Y');
+		if($edad == 1){
+			$edad = $edad.' Año';
+		}
+		elseif($edad >= 2){
+			$edad = $edad.' Años';
+		}
+		elseif($edad < 1){
+			$edad = $edadCompleta->format('%m').' Mes(es)';
+			$edad .= ' y '. $edadCompleta->format('%d').' día(s)';
+		}
+
+			/*$edad = $edadCompleta->format('%m').' Mes(es)';
+			if($edad == 0){
+				$edad = $edadCompleta->format('%d').' día(s)';
+			}
+		}*/
+		
+		$C005 = "SELECT doc_archivo FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$mascota['mascota_id']." ORDER BY doc_id ASC";
+		$S005 = $conexion->query($C005) or die ("Fallo al consultar foto de mascota");
+		$fotoMascota = $S005->fetch_assoc();
+		if($fotoMascota != ''){
+			$mascotaFoto = 'docs/'.$Universo.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
+		}
+		else{
+			$mascotaFoto = 'dist/img/gato_avatar.jpg';
+		}
+
+		$edad = ltrim($edad, '0');//.' año(s)';
+		//$edad = $edad < 1 ? '- 1'.$edad:$edad;
+		unset($datosMascota);
+		$datosMascota = [
+			'mascotaID' => $mascota['mascota_id'],
+			'mascotaNombre' => dCry2($mascota['mascota_nombre']),
+			'mascotaFoto' => $mascotaFoto,
+			'mascotaEspecie' => $especie,
+			'mascotaRaza' => $raza,
+			'mascotaSexo' => $mascota['mascota_sexo'],
+			'mascotaEsteril' => $mascota['mascota_esteril'],
+			'mascotaColor' => $mascota['mascota_color'],
+			'mascotaEdad' => $edad,
+			'mascotaNacimiento' => $mascota['mascota_nacimiento'],
+			'mascotaSistema' => $mascota['mascota_sistema'],
+			'mascotaDueno' => $mascota['mascota_dueno'],
+		];
+		array_push($LdMascotas, $datosMascota);
+	}
+
 	if($fotoCliente['doc_archivo'] != ''){
 		$flis = 'documentos/'.$Universo.'/cliente-'.$cliente['cliente_id'].'/'.$fotoCliente['doc_archivo'];
 	}

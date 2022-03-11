@@ -115,7 +115,7 @@ include('parciales/7i7ul0.php');
                 
 
                 <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
-                  <a href="app?accion=editarCliente&clienteID=<?= $eCry($cliente['cliente_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> Editar</a>
+                  <a href="app?accion=editarCliente&clienteID=<?= $eCry($cliente['cliente_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> <?= editar ?></a>
                 <?php } ?>
 
                 
@@ -129,7 +129,7 @@ include('parciales/7i7ul0.php');
           
 
             <div class="card-header">
-              <h3 class="card-title"><?= detalles_cliente ?></h3>
+              <h3 class="card-title"><?= mascotas_cliente.$nombre1 ?></h3>
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                   <i class="fad fa-minus"></i>
@@ -138,7 +138,48 @@ include('parciales/7i7ul0.php');
             </div>
             <div class="card-body">
               <div class="card-body p-0">
-              
+                <table class="table table-bordered table-hover table-responsive" id="example1" style="border: 0px;">
+                  <thead>
+                    <tr>
+                      <th class="corta-texto"><?= acciones ?></th>
+                      <th class="corta-texto"><?= id ?> <i class="fad fa-sort-alt"></i></th>
+                      <th ><?= foto ?> </th>
+                      <th class="corta-texto"><?= nombre ?> <i class="fad fa-sort-alt"></i></th>
+                      <th class="corta-texto"><?= especie ?> <i class="fad fa-sort-alt"></i></th>
+                      <th class="corta-texto"><?= raza ?> <i class="fad fa-sort-alt"></i></th>
+                      <th class="corta-texto"><?= sexoMascota ?> <i class="fad fa-sort-alt"></i></th>
+                      <th class="corta-texto"><?= color ?> <i class="fad fa-sort-alt"></i></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($LdMascotas as $key => $mascota) { ?>
+                      <tr>
+                        <td style="text-align: center;">
+                          <div class="btn-group" role="group">
+                            <?php if(v4lID44x50("200-004", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
+                              <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
+                            <?php } ?>
+                            <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
+                              <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
+                            <?php } ?>
+                          </div>
+                        </td>
+                        <td><?= $mascota['mascotaID'] ?></td>
+                        <td style="text-align: center;">
+                          <a href="app?accion=fichaMascota&mascotaID=<?= $eCry($mascota['mascotaID']) ?>">
+                            <img class="direct-chat-img" style="margin-top: -9px;padding-left: 0px;margin-left: 16px;" src="<?= $mascota['mascotaFoto'] ?>" alt="<?= $mascota['mascotaNombre'] ?>">
+                          </a>
+                        </td>
+                        <td><?= $mascota['mascotaNombre'] ?></td>
+                        <td class="corta-texto"><?= $mascota['mascotaEspecie'] ?></td>
+                        <td class="corta-texto"><?= $mascota['mascotaRaza'] ?></td>
+                        <td><?= $sexoMascota[$mascota['mascotaSexo']] ?></td>
+                        <td><?= $colores[$mascota['mascotaColor']] ?></td>
+                      </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+
 
               </div>
             </div>

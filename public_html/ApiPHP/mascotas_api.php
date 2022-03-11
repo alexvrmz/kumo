@@ -33,9 +33,19 @@ if($accion === 'mascotas'){
 		$raza = $datosRaza['raza_descripcion'];
 
 		$edadCompleta = calcularEdad($mascota['mascota_nacimiento']);
-		$edad = $edadCompleta->format('%Y');/*.' Año(s)';
-		if($edad == 0){
+		$edad = $edadCompleta->format('%Y');
+		if($edad == 1){
+			$edad = $edad.' Año';
+		}
+		elseif($edad >= 2){
+			$edad = $edad.' Años';
+		}
+		elseif($edad < 1){
 			$edad = $edadCompleta->format('%m').' Mes(es)';
+			$edad .= ' y '. $edadCompleta->format('%d').' día(s)';
+		}
+
+			/*$edad = $edadCompleta->format('%m').' Mes(es)';
 			if($edad == 0){
 				$edad = $edadCompleta->format('%d').' día(s)';
 			}
@@ -45,17 +55,18 @@ if($accion === 'mascotas'){
 		$S005 = $conexion->query($C005) or die ("Fallo al consultar foto de mascota");
 		$fotoMascota = $S005->fetch_assoc();
 		if($fotoMascota != ''){
-			$mascotaFoto = 'documentos/'.$Universo.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
+			$mascotaFoto = 'docs/'.$Universo.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
 		}
 		else{
 			$mascotaFoto = 'dist/img/gato_avatar.jpg';
 		}
 
-		$edad = ltrim($edad, '0');
+		$edad = ltrim($edad, '0');//.' año(s)';
+		//$edad = $edad < 1 ? '- 1'.$edad:$edad;
 		unset($datosMascota);
 		$datosMascota = [
 			'mascotaID' => $mascota['mascota_id'],
-			'mascotaNombre' => $mascota['mascota_nombre'],
+			'mascotaNombre' => dCry2($mascota['mascota_nombre']),
 			'mascotaFoto' => $mascotaFoto,
 			'mascotaEspecie' => $especie,
 			'mascotaRaza' => $raza,
@@ -85,12 +96,12 @@ if($accion === 'mascotas'){
 		
 		$datosCliente = [
 			'clienteID' => $cliente['cliente_id'],
-			'clienteNombre1' => $cliente['cliente_nombre1'],
-			'clienteNombre2' => $cliente['cliente_nombre2'],
-			'clienteApellido1' => $cliente['cliente_apellido1'],
-			'clienteApellido2' => $cliente['cliente_apellido2'],
+			'clienteNombre1' => dCry2($cliente['cliente_nombre1']),
+			'clienteNombre2' => dCry2($cliente['cliente_nombre2']),
+			'clienteApellido1' => dCry2($cliente['cliente_apellido1']),
+			'clienteApellido2' => dCry2($cliente['cliente_apellido2']),
 			'clienteUsuario' => $cliente['cliente_usuario'],
-			'clienteTel1' => $cliente['cliente_telefono1']
+			'clienteTel1' => dCry2($cliente['cliente_telefono1'])
 		];
 		array_push($LdClientes, $datosCliente);
 	}
@@ -102,8 +113,24 @@ elseif($accion == 'editarMascota'){
 		$C001 = "SELECT * FROM mascotas WHERE mascota_id = $mascotaID";
 		$S001 = $conexion->query($C001) or die ("Fallo al seleccionar Mascota");
 		$mascota = $S001->fetch_assoc();
+		$mascota['mascota_nombre'] = dCry2($mascota['mascota_nombre']);
 
 		$listaRazas = listaSelectRazas($mascota['mascota_especie']);
+
+		$C002 = "SELECT cliente_id, cliente_usuario, cliente_nombre1, cliente_nombre2, cliente_apellido1, cliente_apellido2, cliente_telefono1 FROM clientes WHERE Universo = $Universo AND cliente_activo = 1";
+		$S002 = $conexion->query($C002) or die ("Fallo al consultar clientes: ".$C002);
+		$listaClientes = [];
+		while ($datosCliente = $S002->fetch_array()){
+			unset($cliente);
+			$clienteNombre = dCry2($datosCliente['cliente_apellido1']).' '.dCry2($datosCliente['cliente_apellido2']).' '.dCry2($datosCliente['cliente_nombre1']).' '.dCry2($datosCliente['cliente_nombre2']);
+			$cliente = [
+				'clienteID' => $datosCliente['cliente_id'],
+				'clienteUsuario' => $datosCliente['cliente_usuario'],
+				'clienteNombre' => $clienteNombre,
+				'clienteTelefono' => $datosCliente['clienteTelefono1']
+			];
+			array_push($listaClientes, $cliente);
+		}
 
 	}
 	else{
@@ -120,7 +147,7 @@ elseif($accion == 'procesaMascota'){
 	$mascotaSexo = limpia($mascotaSexo);
 	$mascotaEsteril = limpia($mascotaEsteril);
 	$mascotaColor = limpia($mascotaColor);
-	//$mascotaCliente = limpia($mascotaCliente);
+	$mascotaCliente = limpia($mascotaCliente);
 
 	$_SESSION['mensajeForm'] = [];
 	$_SESSION['formError'] = 0;
@@ -130,6 +157,7 @@ elseif($accion == 'procesaMascota'){
 	if($mascotaNombre == 'Kina'){ $_SESSION['mensajeForm'][] = 'Kina!!!, TE AMO <i class="fad fa-heart" style="--fa-secondary-opacity: 1.0; --fa-primary-color: pink; --fa-secondary-color: red;"></i> <i class="fad fa-disease" style="--fa-secondary-opacity: 1.0; --fa-primary-color: dodgerblue; --fa-secondary-color: gold;"></i>'; }
 	if($mascotaEspecie == 'Ninguno' || empty($mascotaEspecie)){ $_SESSION['mensajeForm'][] = 'Selecciona una especie para '.$mascotaNombre; $_SESSION['formError']++; }
 	if($mascotaRaza == 'Ninguno' || empty($mascotaRaza)){ $_SESSION['mensajeForm'][] = 'Selecciona una raza para '.$mascotaNombre; $_SESSION['formError']++; }
+	//if($mascotaCliente == 'Ninguno' || empty($mascotaCliente)){ $_SESSION['mensajeForm'][] = 'Selecciona un dueño para '.$mascotaNombre; $_SESSION['formError']++; }
 	if($mascotaSexo == 'Ninguno' || empty($mascotaSexo)){ $_SESSION['mensajeForm'][] = 'Selecciona el sexo para '.$mascotaNombre; $_SESSION['formError']++; }
 	if($mascotaEsteril == 'Ninguno' || empty($mascotaEsteril)){ $_SESSION['mensajeForm'][] = 'Selecciona el Estado Reproductivo de '.$mascotaNombre; $_SESSION['formError']++; }
 	if($mascotaColor == 'Ninguno' || empty($mascotaColor)){ $_SESSION['mensajeForm'][] = 'Selecciona el Pelaje de '.$mascotaNombre; $_SESSION['formError']++; }
@@ -157,7 +185,7 @@ elseif($accion == 'procesaMascota'){
 		if($editar == 'editar' && $mascotaID != ''){
 			unset($sql_array);
 			$sql_array = [
-				'mascota_nombre' => $mascotaNombre,
+				'mascota_nombre' => eCry2($mascotaNombre),
 				'mascota_especie' => $mascotaEspecie,
 				'mascota_raza' => $mascotaRaza,
 				'mascota_sexo' => $mascotaSexo,
@@ -181,7 +209,7 @@ elseif($accion == 'procesaMascota'){
 		else{
 			unset($sql_array);
 			$sql_array = [
-				'mascota_nombre' => $mascotaNombre,
+				'mascota_nombre' => eCry2($mascotaNombre),
 				'mascota_especie' => $mascotaEspecie,
 				'mascota_raza' => $mascotaRaza,
 				'mascota_sexo' => $mascotaSexo,
@@ -199,7 +227,7 @@ elseif($accion == 'procesaMascota'){
 			echo '</pre>';*/
 			$mascotaID = ejecutaDB('mascotas', $sql_array, $accion, $paramatros);
 			
-			$carpetaMascota = 'docs/'.$Universo.'/';
+			$carpetaMascota = '../docs/'.$Universo;
 			if(mkdir($carpetaMascota)){
 				//echo "<p>La carpeta fue creada</p>";
 				chmod($carpetaMascota, 0777);
@@ -207,9 +235,9 @@ elseif($accion == 'procesaMascota'){
 
 			//mkdir($carpetaMascota, 0777, true);
 
-			/*$carpetaMascota = 'documentos/'.$Universo.'/mascota-'.$mascotaID;
+			$carpetaMascota = '../docs/'.$Universo.'/mascota-'.$mascotaID;
 			mkdir($carpetaMascota, 0777, true);
-			chmod($carpetaMascota, 0777);*/
+			chmod($carpetaMascota, 0777);
 
 			if(isset($_FILES['mascotaFoto']) && $_FILES['mascotaFoto'] != ''){
 			
@@ -236,17 +264,17 @@ elseif($accion == 'procesaMascota'){
 					}*/
 				
 	
-					$allowedfileExtensions = array('png', 'webp', 'jpeg', 'jpg');
+					$allowedfileExtensions = array('png', 'jpeg', 'jpg');
 	
 					if (in_array($fileExtension, $allowedfileExtensions))	{
 					
 						$tiempo = time();
 						$newFileName = 'fotoPrincipal-'.$mascotaID. '-'.$tiempo.'.'.$fileExtension;
 
-						$path = 'docs/'.$Universo.'/';
+						$path = '../docs/'.$Universo.'/mascota-'.$mascotaID.'/';
 						$dest_path = $path . $newFileName;
 	
-						if(/*move_uploaded_file($fileTmpPath, $dest_path)*/copy($_FILES['mascotaFoto']['tmp_name'], $dest_path)) {
+						if(move_uploaded_file($fileTmpPath, $dest_path)/*copy($_FILES['mascotaFoto']['tmp_name'], $dest_path)*/) {
 	
 							$w3bp = 'fotoPrincipal-'.$mascotaID. '-'.$tiempo.'.'.$fileExtension;
 							$w3bpP47h = $path . $w3bp;
@@ -277,15 +305,16 @@ elseif($accion == 'procesaMascota'){
 								'doc_consulta' => 0,
 								'Universo' => $Universo
 							];		
-							echo '<pre>';
+							/*echo '<pre>';
 							print_r($sQl_d474_4rr4y);
-							echo '/<pre>';
+							echo '<pre>';*/
 							ejecutaDB('documentos', $sQl_d474_4rr4y, $accion, $p4r4m37r05);
 							//$_SESSION['m3ns4J3'] = lbl_8i7_x0301.$fotoDescripcion_add.'';
 						}
 						else {
 							$_SESSION['m3n3Rr0R']  = 'si';
-							$_SESSION['m3ns4J3'] = 'No se pudo subir el archivo '.$dest_path;					
+							$_SESSION['m3ns4J3'] = 'No se pudo subir el archivo '.$dest_path;		
+							//No se pudo subir el archivo docs/1/mascota-58/fotoPrincipal-58-1647016406.jpg			
 						}
 					}
 					else{
@@ -304,14 +333,6 @@ elseif($accion == 'procesaMascota'){
 				$_SESSION['m3n3Rr0R']  = 'si';
 				$_SESSION['m3ns4J3'] = ''.$_FILES['mascotaFoto']['error'];
 			}
-
-
-
-
-
-
-
-
 			unset($_SESSION['formMascota']);
 			//Bin4kuru('Se creo la mascota -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 			llevame('../app?accion=fichaMascota&mascotaID='.$eCry($mascotaID));
@@ -349,6 +370,7 @@ elseif($accion == 'fichaMascota'){
 	$C004 = "SELECT * FROM mascotas WHERE mascota_id = ".$dCry($mascotaID)." ";
 	$S004 = $conexion->query($C004) or die ("Fallo al seleccionar Mascota");
 	$mascota = $S004->fetch_assoc();
+	$mascota['mascota_nombre'] = dCry2($mascota['mascota_nombre']); 
 
 	$C005 = "SELECT doc_archivo, doc_id FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$mascota['mascota_id']." ORDER BY doc_id ASC";
 	$S005 = $conexion->query($C005) or die ("Fallo al consultar foto de mascota");
@@ -359,11 +381,16 @@ elseif($accion == 'fichaMascota'){
 	$datoRaza = $S007->fetch_assoc();
 	$mascotaRaza = $datoRaza['raza_descripcion'];
 
+	$C009 = "SELECT cliente_nombre1, cliente_nombre2, cliente_apellido1, cliente_apellido2, cliente_id FROM clientes WHERE Universo = $Universo AND cliente_id = ".$mascota['mascota_dueno']." ";
+	$S009 = $conexion->query($C009) or die ("Fallo al consultar cliente: ".$C009);
+	$datoCliente = $S009->fetch_assoc();
+	$mascota['mascota_dueno'] = dCry2($datoCliente['cliente_apellido1']).' '.dCry2($datoCliente['cliente_nombre1']);
+
 	$edadCompleta = calcularEdad($mascota['mascota_nacimiento']);
 	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';
 
 	if($fotoMascota['doc_archivo'] != ''){
-		$flis = 'documentos/'.$Universo.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
+		$flis = 'docs/'.$Universo.'/mascota-'.$mascota['mascota_id'].'/'.$fotoMascota['doc_archivo'];
 	}
 	else{
 		$flis = 'dist/img/gato_avatar.jpg'; 
@@ -374,4 +401,31 @@ elseif($accion == 'fichaMascota'){
 	$datoEspecie = $S006->fetch_assoc();
 	$mascotaEspecie = $datoEspecie['especie_descripcion'];
 	
+}
+elseif($accion == 'crearCapeta'){
+	echo '<pre>';
+	print_r($_REQUEST);
+	echo '</pre>';
+
+	$carpeta = '../docs/1/mascota-1000';
+	$crearCarpetaMascota = '';
+	if(!file_exists($carpeta)){
+		$crearCarpetaMascota = mkdir($carpeta, 0777);
+	}
+
+	if($crearCarpetaMascota == 1){
+		echo 'Se creo la carpetaMascota '.$carpeta.'<br>';
+	}
+	else{
+		echo 'No se creo la carpetaMascota '.$carpeta.'<br>';
+	}
+
+	$permiso = chmod($carpeta, 0777);
+	if($permiso == 1){
+		echo 'Se dieron permisos para carpetaMascota '.$carpeta.'<br>';
+	}
+	else{
+		echo 'No se dieron permisos para carpetaMascota '.$carpeta.'<br>';
+	}
+
 }

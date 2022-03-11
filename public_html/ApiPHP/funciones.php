@@ -354,6 +354,8 @@ function c0nVt0Jp3g($im6, $n3wN4m3, $quality = 80) {
         $image = imagecreatefrompng($im6);
     } else if (preg_match('/gif/i', $ext)) {
         $image = imagecreatefromgif($im6);
+    } else if (preg_match('/webp/i', $ext)) {
+        $image = imagecreatefromwebp($im6);
     } else {
         throw new \Exception("No se reconoce la imagen.");
     }

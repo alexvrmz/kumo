@@ -54,7 +54,7 @@ include('parciales/7i7ul0.php');
                 <div class="row">
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
-                      <h5 class="description-header">RAZA</h5>
+                      <h5 class="description-header"><?= raza ?></h5>
                       <span class="description-text"><?= $mascotaRaza ?></span>
                     </div>
                     <!-- /.description-block -->
@@ -62,7 +62,7 @@ include('parciales/7i7ul0.php');
                   <!-- /.col -->
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
-                      <h5 class="description-header">PELAJE</h5>
+                      <h5 class="description-header"><?= pelaje ?></h5>
                       <span class="description-text"><?= $colores[$mascota['mascota_color']] ?></span>
                     </div>
                     <!-- /.description-block -->
@@ -70,7 +70,7 @@ include('parciales/7i7ul0.php');
                   <!-- /.col -->
                   <div class="col-sm-4">
                     <div class="description-block">
-                      <h5 class="description-header">EDAD</h5>
+                      <h5 class="description-header"><?= edad ?></h5>
                       <span class="description-text"><?= $edad ?></span>
                     </div>
                     <!-- /.description-block -->
@@ -89,37 +89,30 @@ include('parciales/7i7ul0.php');
               <h5><?= datosMascota ?></h5>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>E. Reproductivo</b> <a class="float-right"><?= $estadoSexual[$mascota['mascota_esteril']] ?></a>
+                    <b><?= estadoReproductivo ?></b> <a class="float-right"><?= $estadoSexual[$mascota['mascota_esteril']] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Propietario</b> <a class="float-right"><?= $mascota['mascota_dueno'] ?></a>
+                    <b><?= propietario ?></b> <a class="float-right"><?= $mascota['mascota_dueno'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Fecha Nacimiento</b> <a class="float-right"><?= $mascota['mascota_nacimiento'] ?></a>
+                    <b><?= fechaNacimiento ?></b> <a class="float-right"><?= $mascota['mascota_nacimiento'] ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Fecha Registro</b> <a class="float-right"><?= $mascota['mascota_sistema'] ?></a>
+                    <b><?= fechaRegistro ?></b> <a class="float-right"><?= $mascota['mascota_sistema'] ?></a>
                   </li>
-                                  
                 </ul>
-                
 
                 <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
-                  <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascota_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> Editar</a>
+                  <a href="app?accion=editarMascota&mascotaID=<?= $eCry($mascota['mascota_id']) ?>" class="btn btn-warning btn-block"><i class="fad fa-edit"></i> <?= editar ?></a>
                 <?php } ?>
-
-                
               </div>
-       
             </div>
         </div>
 
         <div class="col-lg-9">
           <div class="card <?= $brr4 ?> card-outline">
-          
-
             <div class="card-header">
-              <h3 class="card-title">xx</h3>
+              <h3 class="card-title"><?= expedienteTitulo.$mascota['mascota_nombre'] ?></h3>
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                   <i class="fad fa-minus"></i>
@@ -128,8 +121,6 @@ include('parciales/7i7ul0.php');
             </div>
             <div class="card-body">
               <div class="card-body p-0">
-              
-
               </div>
             </div>
             <!--/.card-body -->

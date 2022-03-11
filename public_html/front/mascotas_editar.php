@@ -132,7 +132,7 @@ include('parciales/7i7ul0.php');
                     <select class="form-control" id="mascotaCliente" name="mascotaCliente" >
                       <option value="Ninguno"><?= selecciona ?></option>
                       <?php foreach ($listaClientes as $key => $cliente) { ?>
-                        <option value="<?= $cliente['clienteID'] ?>" <?= $select = $mascota['mascota_cliente'] == $cliente['clienteID'] ? 'selected':'' ?>><?= $cliente['clienteNombre'] ?></option>
+                        <option value="<?= $cliente['clienteID'] ?>" <?= $select = $mascota['mascota_dueno'] == $cliente['clienteID'] ? 'selected':'' ?>><?= $cliente['clienteNombre'] ?></option>
                       <?php } ?>
                     </select>
                   </div>  
