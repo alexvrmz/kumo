@@ -122,7 +122,7 @@ include('parciales/7i7ul0.php');
               <?php if(!empty($_SESSION['tXFrm']['frm_010'])){ $vrffrm_010 = 'is-invalid'; } else { $vrffrm_010 = 'is-valid'; } ?>
               <select class="form-control <?= $vrffrm_010 ?>" id="frm_010" name="frm_010" onchange="this.form.submit()" >
                 <option value="nada" selected><?= lbl_n3w53lL3xi0N4aD ?></option>
-                  <?php foreach (c0nEst4() as $key => $tR4ns) {  ?>
+                  <?php foreach (consulta_estados() as $key => $tR4ns) {  ?>
                     <option value="<?= $tR4ns['Ed0iD'] ?>"<?php if ($xPxEd0Hid == $tR4ns['Ed0iD']){ echo ' selected'; } ?> ><?= $tR4ns['Ed0N0m'] ?></option>    
                   <?php } ?>
               </select>

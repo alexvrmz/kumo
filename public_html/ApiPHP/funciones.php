@@ -619,22 +619,26 @@ function c0nNuEmP($flo0, $mdr){
   return $ne;
 }
 
-function c0nEst4(){
+function consulta_estados($pais){
   global $conexion;
-  $SQ3s742 = "SELECT xXid3s742x, xXN00Ms742x FROM 3s7A2";
+  $SQ3s742 = "SELECT * FROM 3s7A2";
+  if($pais != 'todos'){
+    $SQ3s742 .= " WHERE estado_pais LIKE '%".$pais."%' ";
+  }
 	$CQ3s742 = $conexion->query($SQ3s742) or die ("Falló listado de estados" . $SQ3s742);
 	$l3st4 = [];
 	while ($LEs7A = $CQ3s742->fetch_assoc()) {
 		$arr3 = array(
-			'Ed0iD' => $LEs7A['xXid3s742x'],
-			'Ed0N0m' => $LEs7A['xXN00Ms742x']
+			'estadoID' => $LEs7A['xXid3s742x'],
+			'estadoNombre' => $LEs7A['xXN00Ms742x'],
+      'assss' => $SQ3s742
 		);
 		array_push($l3st4, $arr3);
 	}
   return $l3st4;
 }
 
-function c0nEst4iD($ED){
+function consulta_estado_id($ED){
   global $conexion;
   $SQ3s742 = "SELECT xXid3s742x, xXN00Ms742x FROM 3s7A2 WHERE xXid3s742x = $ED";
 	$CQ3s742 = $conexion->query($SQ3s742) or die ("Falló listado de estados" . $SQ3s742);
@@ -648,7 +652,13 @@ function C0nMuniD($MD){
   $SQ3s745 = "SELECT zSMNcPi0sidX, zSMNcPi0sN0omX FROM MNcPi0s WHERE zSMNcPi0sidX = '".$MD."' ";
 	$CQ3s745 = $conexion->query($SQ3s745) or die ("Falló municipios " . $SQ3s745);
 	$LEpi0s = $CQ3s745->fetch_assoc();
-  $MuNNM09o = $LEpi0s['zSMNcPi0sN0omX'];
+  $nr = $CQ3s745->num_rows;
+  if($nr >= 1){
+    $MuNNM09o = $LEpi0s['zSMNcPi0sN0omX'];
+  }
+  else{
+    $MuNNM09o = 'noid';
+  }
   return $MuNNM09o;
 }
 

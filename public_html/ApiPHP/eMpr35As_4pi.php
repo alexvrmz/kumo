@@ -471,7 +471,7 @@ elseif($accion == 'emPr3Edi7'){
 		$xPxcPH = $DP['eMCPEm']; if($xPxcPH != ''){ $xPxcPH = dCry2($DP['eMCPEm']); }
 		$xPxMAlH = C0nMuniD($DP['eMMUNEm']);
 		$xPxMAlHid = $DP['eMMUNEm'];
-		$xPxEd0H = c0nEst4iD($DP['eMEDOEm']);
+		$xPxEd0H = consulta_estado_id(($DP['eMEDOEm']);
 		$xPxEd0Hid = $DP['eMEDOEm'];
 		$xPxPisH = 'México';
 		$xPxR3pH = $DP['eMREPEm']; if($xPxR3pH != ''){ $xPxR3pH = dCry2($DP['eMREPEm']); }

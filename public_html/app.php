@@ -7,6 +7,12 @@ error_reporting(E_ALL ^ E_NOTICE);
 $usuario_id = $_SESSION['usuarioID'];
 include ('ApiPHP/conexion.php');
 include ('ApiPHP/funciones.php');
+
+$paises = [
+  'AR' => 'Argentina',
+  'US' => 'Estados Unidos',
+  'MX' => 'México',
+];
  
 if(!isset($_SESSION['usuario'])){
 	header("location:acceso.php?accion=entrar"); // --- llevame a login si no hay sesión ---

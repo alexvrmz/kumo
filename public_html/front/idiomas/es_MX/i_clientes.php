@@ -18,13 +18,17 @@ define('apellido2', 'Apellido Materno');
 define('telefono1', 'Teléfono Fijo');
 define('telefono2', 'Teléfono Movil');
 define('correo', 'E-mail');
-define('sexo', 'Sexo');
+define('sexo', 'Género');
 define('ni', 'Número Interior');
 define('ne', 'Número Exterior');
 define('calle', 'Calle');
 define('colonia', 'Colonia');
 define('municipio', 'Alcaldía/Municipio');
 define('cp', 'Codígo Postal');
+define('estado', 'Estado');
+define('pais', 'País');
+
+
 
 define('nacimiento', 'Nacimiento');
 define('sistema', 'Sistema');

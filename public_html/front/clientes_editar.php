@@ -110,6 +110,46 @@ include('parciales/7i7ul0.php');
                   <h3 class="card-title"><?= direccionCliente ?></h3>
                   <br>
                   <br>
+
+                  <div class="form-group">
+                    <label for="clientePais"><?= pais ?></label>
+                    <select class="form-control" id="clientePais" name="clientePais" onchange="this.form.submit()" >
+                      <option value="nada" <?php if ($clientePais === 'nada'){ echo ' selected'; } ?>><?= selecciona ?></option>
+                        <?php foreach ($paises as $key => $ps) {  ?>
+                          <option value="<?= $key ?>"<?php if ($clientePais === $key){ echo ' selected'; } ?> ><?= $ps ?></option>    
+                        <?php } ?>
+                    </select>
+                  </div>
+                  <?= $clienteEstadoActual ?>
+
+                  <div class="form-group">
+                    <label for="clienteEstado"><?= estado ?></label>
+                    <select class="form-control" id="clienteEstado" name="clienteEstado" onchange="this.form.submit()" >
+                      <option value="nada" selected><?= selecciona ?></option>
+                        <?php foreach (consulta_estados($clientePais) as $key => $tR4ns) {  ?>
+                          <option value="<?= $tR4ns['estadoID'] ?>"<?php if ($clienteEstado == $tR4ns['estadoID']){ echo ' selected'; }  ?> ><?= $tR4ns['estadoNombre'] ?></option>    
+                        <?php } ?>
+                    </select>
+                  </div>
+                  <?php if($clientePais == 'MX'){ ?>
+                    <div class="form-group">
+                      <label for="clienteMunicipio"><?= municipio ?></label>
+                      <select class="form-control" id="clienteMunicipio" name="clienteMunicipio" >
+                        <option value="nada" selected><?= selecciona ?></option>
+                          <?php foreach (C0nMun($clienteEstado) as $key => $tR4ns) {  ?>
+                            <option value="<?= $tR4ns['MuNID09o'] ?>"<?php if ($cliente['cliente_municipio'] == $tR4ns['MuNID09o']){ echo ' selected'; } ?> ><?= $tR4ns['MuNNM09o'] ?></option>    
+                          <?php } ?>
+                      </select>
+                    </div>
+                  <?php } else { //$mun = $cliente['cliente_municipio'] == 'nada' ? '':$cliente['cliente_municipio'];
+                    $mun = $cliente['cliente_municipio'] != '' ? $cliente['cliente_municipio']:$_SESSION['formCliente']['clienteMunicipioActual'];
+                   ?>
+                    <div class="form-group">
+                      <label for="clienteMunicipio"><?= municipio ?></label>
+                      <input type="text" class="form-control" id="clienteMunicipio" name="clienteMunicipio" value="<?= $mun ?>">
+                    </div>
+                  <?php } ?>
+
                   <div class="form-group">
                     <label for="clienteCalle"><?= calle ?></label>
                     <input type="text" class="form-control" id="clienteCalle" name="clienteCalle" value="<?= $clienteCalle = $cliente['cliente_calle'] != '' ? dCry2($cliente['cliente_calle']):$_SESSION['formCliente']['cliente_calle'] ?>">
@@ -135,11 +175,11 @@ include('parciales/7i7ul0.php');
                     <input type="text" class="form-control" id="clienteCP" name="clienteCP" value="<?= $clienteCP = $cliente['cliente_cp'] != '' ? $cliente['cliente_cp']:$_SESSION['formCliente']['cliente_cp'] ?>">
                   </div>
 
-                  
-
-
                   <input type="hidden" name="editar" id="editar" value="editar">
                   <input type="hidden" name="clienteID" id="clienteID" value="<?=$clienteID ?>">
+                  <input type="hidden" name="clientePaisActual" value="<?= $clientePais ?>">
+                  <input type="hidden" name="clienteEstadoActual" value="<?= $clienteEstado ?>">
+
               <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= guardar ?></button>
             </form>
           </div>

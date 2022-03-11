@@ -210,7 +210,7 @@ include('parciales/7i7ul0.php');
                   <label for="pp_xx010"><?= lbl_n3w010 ?>*</label>
                   <select class="form-control" id="pp_xx010" name="pp_xx010" onchange="this.form.submit()" >
                     <option value="nada" selected><?= lbl_n3w53lL3xi0N4aD ?></option>
-                      <?php foreach (c0nEst4() as $key => $tR4ns) {  ?>
+                      <?php foreach (consulta_estados() as $key => $tR4ns) {  ?>
                         <option value="<?= $tR4ns['Ed0iD'] ?>"<?php if ($px010 == $tR4ns['Ed0iD']){ echo ' selected'; } ?> ><?= $tR4ns['Ed0N0m'] ?></option>    
                       <?php } ?>
                   </select>

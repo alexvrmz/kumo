@@ -446,7 +446,7 @@ elseif($accion == 'pr0VxVW' || $accion == 'pr0VxDT'){
 		$xPxcPH = $DP['pR0CP']; if($xPxcPH != ''){ $xPxcPH = dCry2($DP['pR0CP']); }
 		$xPxMAlH = C0nMuniD($DP['pR0MuAl']);
 		$xPxMAlHid = $DP['pR0MuAl'];
-		$xPxEd0H = c0nEst4iD($DP['pR0ED0']);
+		$xPxEd0H = consulta_estado_id(($DP['pR0ED0']);
 		$xPxEd0Hid = $DP['pR0ED0'];
 		$xPxPisH = 'México';
 		$xPxR3pH = $DP['pR0R3P']; if($xPxR3pH != ''){ $xPxR3pH = dCry2($DP['pR0R3P']); }

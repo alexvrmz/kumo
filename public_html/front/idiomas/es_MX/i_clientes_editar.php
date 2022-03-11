@@ -25,6 +25,9 @@ define('ni', '# Interior');
 define('ne', '# Exterior');
 define('colonia', 'Colonia');
 define('cp', 'Codigo Postal');
+define('pais', 'País');
+define('estado', 'Estado');
+define('municipio', 'Municipio');
 
 define('nacimiento', 'Nacimiento');
 define('sistema', 'Sistema');

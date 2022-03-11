@@ -42,6 +42,7 @@ include('parciales/7i7ul0.php');
             <table class="table table-bordered table-hover table-responsive" id="example1" style="border: 0px;">
               <thead>
                 <tr>
+                  <th class="corta-texto"><?= acciones ?></th>
                   <th class="corta-texto"><?= id ?> <i class="fad fa-sort-alt"></i></th>
                   <th  class="corta-texto"><?= nombre1 ?> <i class="fad fa-sort-alt"></i></th>
                   <th  class="corta-texto"><?= nombre2 ?> <i class="fad fa-sort-alt"></i></th>
@@ -53,12 +54,21 @@ include('parciales/7i7ul0.php');
                   <th class="corta-texto"><?= sexo ?> <i class="fad fa-sort-alt"></i></th>
                   <th class="corta-texto"><?= nacimiento ?> <i class="fad fa-sort-alt"></i></th>
                   <th class="corta-texto"><?= sistema ?> <i class="fad fa-sort-alt"></i></th>
-                  <th class="corta-texto"><?= acciones ?></th>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach ($LdClientes as $key => $cliente) { ?>
                   <tr>
+                    <td style="text-align: center;">
+                      <div class="btn-group" role="group">
+                        <?php if(v4lID44x50("200-004", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
+                          <a href="app?accion=fichaCliente&clienteID=<?= $eCry($cliente['clienteID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
+                        <?php } ?>
+                        <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
+                          <a href="app?accion=editarCliente&clienteID=<?= $eCry($cliente['clienteID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
+                        <?php } ?>
+                      </div>
+                    </td>
                     <td class="corta-texto"><?= $cliente['clienteID'] ?></td>
                     <td class="corta-texto"><?= dCry2($cliente['clienteNombre1']) ?></td>
                     <td class="corta-texto"><?= dCry2($cliente['clienteNombre2']) ?></td>
@@ -70,16 +80,6 @@ include('parciales/7i7ul0.php');
                     <td class="corta-texto"><?= $sexo[$cliente['clienteSexo']] ?></td>
                     <td ><?= $cliente['clienteNacimiento'] ?></td>
                     <td class="corta-texto"><?= $cliente['clienteSistema'] ?></td>
-                    <td style="text-align: center;">
-                      <div class="btn-group" role="group">
-                        <?php if(v4lID44x50("200-004", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
-                          <a href="app?accion=fichaCliente&clienteID=<?= $eCry($cliente['clienteID']) ?>" class="btn bg-gradient-info btn-sm"><i class="fad fa-eye"></i></a>
-                        <?php } ?>
-                        <?php if(v4lID44x50("200-003", $usuario_id) == TRUE){ /// --- Editar Modulo ?>
-                          <a href="app?accion=editarCliente&clienteID=<?= $eCry($cliente['clienteID']) ?>" class="btn bg-gradient-warning btn-sm"><i class="fad fa-edit"></i></a>
-                        <?php } ?>
-                      </div>
-                    </td>
                   </tr>
                 <?php } ?>
               </tbody>
@@ -174,24 +174,42 @@ include('parciales/7i7ul0.php');
                   </div>
 
                   <div class="form-group">
-                    <label for="clienteEstado"><?= estado ?></label>
-                    <select class="form-control" id="clienteEstado" name="clienteEstado" onchange="this.form.submit()" >
-                      <option value="nada" selected><?= selecciona ?></option>
-                        <?php foreach (c0nEst4() as $key => $tR4ns) {  ?>
-                          <option value="<?= $tR4ns['Ed0iD'] ?>"<?php if ($_SESSION['formCliente']['clienteEstado'] == $tR4ns['Ed0iD']){ echo ' selected'; } ?> ><?= $tR4ns['Ed0N0m'] ?></option>    
+                    <label for="clientePais"><?= pais ?></label>
+                    <select class="form-control" id="clientePais" name="clientePais" onchange="this.form.submit()" >
+                      <option value="nada" <?php if ($_SESSION['formCliente']['clientePais'] === 'nada'){ echo ' selected'; } ?>><?= selecciona ?></option>
+                        <?php foreach ($paises as $key => $ps) {  ?>
+                          <option value="<?= $key ?>"<?php if ($_SESSION['formCliente']['clientePais'] === $key){ echo ' selected'; } ?> ><?= $ps ?></option>    
                         <?php } ?>
                     </select>
                   </div>
 
+
                   <div class="form-group">
-                    <label for="clienteMunicipio"><?= municipio ?></label>
-                    <select class="form-control" id="clienteMunicipio" name="clienteMunicipio" >
+                    <label for="clienteEstado"><?= estado ?></label>
+                    <select class="form-control" id="clienteEstado" name="clienteEstado" onchange="this.form.submit()" >
                       <option value="nada" selected><?= selecciona ?></option>
-                        <?php foreach (C0nMun($_SESSION['formCliente']['clienteEstado']) as $key => $tR4ns) {  ?>
-                          <option value="<?= $tR4ns['MuNID09o'] ?>"<?php if ($_SESSION['formCliente']['clienteMunicipio'] == $tR4ns['MuNID09o']){ echo ' selected'; } ?> ><?= $tR4ns['MuNNM09o'] ?></option>    
+                        <?php foreach (consulta_estados($_SESSION['formCliente']['clientePais']) as $key => $tR4ns) {  ?>
+                          <option value="<?= $tR4ns['estadoID'] ?>"<?php if ($_SESSION['formCliente']['clienteEstado'] == $tR4ns['estadoID']){ echo ' selected'; } ?> ><?= $tR4ns['estadoNombre'] ?></option>    
                         <?php } ?>
                     </select>
                   </div>
+
+                  <?php if($_SESSION['formCliente']['clientePais'] == 'MX'){ ?>
+                    <div class="form-group">
+                      <label for="clienteMunicipio"><?= municipio ?></label>
+                      <select class="form-control" id="clienteMunicipio" name="clienteMunicipio" >
+                        <option value="nada" selected><?= selecciona ?></option>
+                          <?php foreach (C0nMun($_SESSION['formCliente']['clienteEstado']) as $key => $tR4ns) {  ?>
+                            <option value="<?= $tR4ns['MuNID09o'] ?>"<?php if ($_SESSION['formCliente']['clienteMunicipio'] == $tR4ns['MuNID09o']){ echo ' selected'; } ?> ><?= $tR4ns['MuNNM09o'] ?></option>    
+                          <?php } ?>
+                      </select>
+                    </div>
+                  <?php } else { $mun = $_SESSION['formCliente']['clienteMunicipio'] == 'nada' ? '':$_SESSION['formCliente']['clienteMunicipio']; ?>
+                    <div class="form-group">
+                      <label for="clienteMunicipio"><?= municipio ?></label>
+                      <input type="text" class="form-control" id="clienteMunicipio" name="clienteMunicipio" value="<?= $mun ?>">
+                    </div>
+                  <?php } ?>
 
 
                   <div class="form-group">
@@ -222,8 +240,7 @@ include('parciales/7i7ul0.php');
               </div>
               <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fad fa-times"></i> <?= cerrar ?></button>
-              <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= guardar ?></button>
-              
+                <button type="submit" class="btn btn-success"><i class="fad fa-save"></i> <?= guardar ?></button>
               </div>
             </form>
           </div>

@@ -44,8 +44,20 @@ elseif($accion == 'editarCliente'){
 		$S001 = $conexion->query($C001) or die ("Fallo al seleccionar Cliente");
 		$cliente = $S001->fetch_assoc();
 		$sexo = $cliente['cliente_sexo'];
-		//$listaRazas = listaSelectRazas($cliente['cliente_especie']);
+		$clienteMunicipio = C0nMuniD($cliente['cliente_municipio']) == 'noid' ? $cliente['cliente_municipio']:C0nMuniD($cliente['cliente_municipio']);
+		if($_SESSION['formCliente']['clientePaisActual'] != ''){
+			$clientePais = $_SESSION['formCliente']['clientePaisActual'];
+		}
+		else{
+			$clientePais = $cliente['cliente_pais'];
+		}
 
+		if($_SESSION['formCliente']['clienteEstadoActual'] != ''){
+			$clienteEstado = $_SESSION['formCliente']['clienteEstadoActual'];
+		}
+		else{
+			$clienteEstado = $cliente['cliente_estado'];
+		}
 	}
 	else{
 		$_SESSION['m3ns4J3'] = 'No habia ID de cliente a editar! (m-01).';
@@ -60,28 +72,31 @@ elseif($accion == 'procesaCliente'){
 	$clienteApellido1 = limpia($clienteApellido1);
 	$clienteApellido2 = limpia($clienteApellido2);
 	$clienteNI = limpia($clienteNI);
-	//$clienteSexo = limpia($clienteSexo);
-	//$clienteNacimiento = limpia($clienteNacimiento);
 	$clienteNE = limpia($clienteNE);
 	$clienteCalle = limpia($clienteCalle);
 	$clienteColonia = limpia($clienteColonia);
-	$clienteMunicipio = 52;
-	$clienteEstado = 255;
 	$clienteCP = limpia($clienteCP);
-	$clientePais = 52;
-	$clienteTelefono1 = '5512771445';
-	$clienteTelefono2 = '5512771489';
-
+	//$clientePais = limpia($clientePais);
+	//$clienteEstado = limpia($clienteEstado);
+	//$clienteMunicipio = limpia($clienteMunicipio);
 	$_SESSION['mensajeForm'] = [];
 	$_SESSION['formError'] = 0;
 	
-	if(empty($clienteNombre1)){ $_SESSION['mensajeForm'][] = 'No has escrito un Nombre'; $_SESSION['formError']++; }
-	if(empty($clienteApellido1)){ $_SESSION['mensajeForm'][] = 'No has escrito Apellido Paterno'; $_SESSION['formError']++; }
-	//if(!empty($clienteUsuario) && !v4lEm4Il($clienteUsuario)){ $_SESSION['mensajeForm'][] = 'Email no Valido'; $_SESSION['formError']++; }
-	//if(!empty($clienteCP) && !v4l_cp($clienteCP)){ $_SESSION['mensajeForm'][] = 'Código Postal no Válido	'; $_SESSION['formError']++; }
-	//if($clienteSexo == '' || empty($clienteSexo)){ $_SESSION['mensajeForm'][] = 'Selecciona el sexo de '.$clienteNombre1; $_SESSION['formError']++; }
-	//if($clienteMunicipio == 'Ninguno'){ $clienteMunicipio = 0; }
+	if(empty($clienteNombre1)){ $_SESSION['mensajeForm'][] = 'Necesitas Escribir por los menos un Nombre.'; $_SESSION['formError']++; }
+	if(empty($clienteApellido1)){ $_SESSION['mensajeForm'][] = 'Necesitas Escribir el Apellido Paterno'; $_SESSION['formError']++; }
+	if(!empty($clienteUsuario) && !v4lEm4Il($clienteUsuario)){ $_SESSION['mensajeForm'][] = 'El Email no es Válido'; $_SESSION['formError']++; }
+	if(empty($clienteUsuario)){ $_SESSION['mensajeForm'][] = 'El Email es Obligatorio'; $_SESSION['formError']++; }
+	if(!empty($clienteCP) && !v4l_cp($clienteCP)){ $_SESSION['mensajeForm'][] = 'El Código Postal no Válido	'; $_SESSION['formError']++; }
+	if($clienteSexo == 'Ninguno'){ $_SESSION['mensajeForm'][] = 'Selecciona el Género de '.$clienteNombre1; $_SESSION['formError']++; }
+	if($clientePaisActual != $clientePais){ $clienteEstado = ''; $clienteMunicipio = ''; }
+	if($clienteEstadoActual != $clienteEstado){ $clienteMunicipio = ''; }
+	if($clientePais == 'nada' || $clientePais == ''){ $_SESSION['mensajeForm'][] = 'Selecciona Pais.'; $_SESSION['formError']++; }
+	if($clienteMunicipio == 'nada' || $clienteMunicipio == '' || $clienteMunicipio == 'Nada'){ $_SESSION['mensajeForm'][] = 'Selecciona Delegacón/Municipio.'; $_SESSION['formError']++; }
+	if($clienteEstado == 'nada' || $clienteEstado == ''){ $_SESSION['mensajeForm'][] = 'Selecciona Estado'; $_SESSION['formError']++; }
+
 	$_SESSION['formCliente'] = [];
+	$_SESSION['formCliente']['clientePaisActual'] = $clientePais;
+	$_SESSION['formCliente']['clienteEstadoActual'] = $clienteEstado;
 	$_SESSION['formCliente']['clienteNombre1'] = $clienteNombre1;
 	$_SESSION['formCliente']['clienteNombre2'] = $clienteNombre2;
 	$_SESSION['formCliente']['clienteApellido1'] = $clienteApellido1;
@@ -98,7 +113,7 @@ elseif($accion == 'procesaCliente'){
 	$_SESSION['formCliente']['clienteTelefono2'] = $clienteTelefono2;
 	$_SESSION['formCliente']['clienteSexo'] = $clienteSexo;
 	$_SESSION['formCliente']['clienteNacimiento'] = $clienteNacimiento;
-	$_SESSION['formCliente']['clientePais'] = '52';
+	$_SESSION['formCliente']['clientePais'] = $clientePais;
 
 	if($_SESSION['formError'] == 0){
 		if($editar == 'editar' && $clienteID != ''){
@@ -125,58 +140,56 @@ elseif($accion == 'procesaCliente'){
 				'cliente_registro' => date("Y-m-d H:i:s"),
 				'Universo' => $Universo
 			];
+			if($clientePsswd != ''){
+				$sql_array['cliente_psswd'] = md5($clientePsswd);
+			}
 			$accion = 'actualizar';
 			$paramatros = 'cliente_id = '.$clienteID;
-			echo '<pre>';
-			print_r($sql_array);
-			echo '</pre>';
 			ejecutaDB('clientes', $sql_array, $accion, $paramatros);
 			unset($_SESSION['formCliente']);
-			Bin4kuru('Se creo la cliente -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
+			//Bin4kuru('Se creo la cliente -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
 			llevame('../app?accion=fichaCliente&clienteID='.$eCry($clienteID));
 		}
 		else{
 			unset($sql_array);
+			$contrasenaTemp = g3n_ps(8);
 			$sql_array = [
 				'cliente_usuario' => $clienteUsuario,
-				'cliente_psswd' => NULL,
-				'cliente_nombre1' => $clienteNombre1,
-				'cliente_nombre2' => $clienteNombre2,
-				'cliente_apellido1' => $clienteApellido1,
-				'cliente_apellido2' => $clienteApellido2,
+				'cliente_psswd' => md5($contrasenaTemp),
+				'cliente_nombre1' => eCry2($clienteNombre1),
+				'cliente_nombre2' => eCry2($clienteNombre2),
+				'cliente_apellido1' => eCry2($clienteApellido1),
+				'cliente_apellido2' => eCry2($clienteApellido2),
 				'cliente_sexo' => $clienteSexo,
-				'cliente_ni' => $clienteNI,
-				'cliente_ne' => $clienteNE,
-				'cliente_calle' => $clienteCalle,
-				'cliente_colonia' => $clienteColonia,
+				'cliente_ni' => eCry2($clienteNI),
+				'cliente_ne' => eCry2($clienteNE),
+				'cliente_calle' => eCry2($clienteCalle),
+				'cliente_colonia' => eCry2($clienteColonia),
 				'cliente_municipio' => $clienteMunicipio,
 				'cliente_estado' => $clienteEstado,
-				'cliente_pais' => 52,
+				'cliente_pais' => $clientePais,
 				'cliente_cp' => $clienteCP,
-				'cliente_telefono1' => $clienteTelefono1,
-				'cliente_telefono2' => $clienteTelefono2,
+				'cliente_telefono1' => eCry2($clienteTelefono1),
+				'cliente_telefono2' => eCry2($clienteTelefono2),
 				'cliente_nacimiento' => $clienteNacimiento,
 				'cliente_registro' => date("Y-m-d H:i:s"),
 				'Universo' => $Universo
 			];
 			$accion = 'insertar';
 			$paramatros = NULL;
-			/*echo '<pre>';
-			print_r($sql_array);
-			echo '</pre>';*/
 			$clienteID = ejecutaDB('clientes', $sql_array, $accion, $paramatros);
-			
 			$carpetaCliente = 'documentos/'.$_SESSION['Universo'].'/cliente-'.$clienteID;
 			mkdir($carpetaCliente, 0777, true);
 			chmod($carpetaCliente, 0777);
-
 			unset($_SESSION['formCliente']);
 			//Bin4kuru('Se creo la cliente -> ', $accion, $V=0, $U, $F=0, $E=0, $D=0, $P=0);
-			llevame('../app?accion=fichaCliente&clienteID='.$eCry($clienteID));
+			llevame('../app?accion=fichaCliente&clienteID='.$eCry($clienteID).'&cltemp='.$eCry($contrasenaTemp));
 		}
 	}
 	else{
 		if($editar == 'editar' && $clienteID != ''){
+			$_SESSION['formCliente']['clientePaisActual'] = $clientePais;
+			$_SESSION['formCliente']['clienteEstadoActual'] = $clienteEstado;
 			llevame('../app?accion=editarCliente&clienteID='.$eCry($clienteID));
 		}
 		else{
@@ -195,18 +208,41 @@ elseif($accion == 'fichaCliente'){
 	$C004 = "SELECT * FROM clientes WHERE cliente_id = ".$dCry($clienteID)." ";
 	$S004 = $conexion->query($C004) or die ("Fallo al seleccionar Cliente");
 	$cliente = $S004->fetch_assoc();
+	$nombre1 = dCry2($cliente['cliente_nombre1']);
+	$nombre2 = dCry2($cliente['cliente_nombre2']);
+	$apellido1 = dCry2($cliente['cliente_apellido1']);
+	$apellido2 = dCry2($cliente['cliente_apellido2']);
+	$nombreCompleto = $apellido1.' '.$apellido2.' '.$nombre1.' '.$nombre2;
+	$clienteTelefono = $cliente['cliente_telefono1'] != '' ? dCry2($cliente['cliente_telefono1']):dCry2($cliente['cliente_telefono2']);
+	$clienteCorreo = $cliente['cliente_usuario'];
+	$clienteRegistro = $cliente['cliente_registro'];
+	$clienteCalle = dCry2($cliente['cliente_calle']);
+	$clienteNE = dCry2($cliente['cliente_ne']);
+	$clienteNI = dCry2($cliente['cliente_ni']);
+	$clienteColonia = dCry2($cliente['cliente_colonia']);
+	//if(is_string($clienteMunicipio) == 1 && is_numeric($clienteMunicipio) == 0){
+		$clienteMunicipio = C0nMuniD($cliente['cliente_municipio']) == 'noid' ? $cliente['cliente_municipio']:C0nMuniD($cliente['cliente_municipio']);
 
-	$C005 = "SELECT doc_archivo, doc_id FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$cliente['cliente_id']." ORDER BY doc_id ASC";
+	//}
+	//else{
+		//$clienteMunicipio = $cliente['cliente_municipio'];
+	//}
+	//$clienteMunicipio = $cliente['cliente_municipio'] == 1 ? 'si':'no';
+	$clientePais = $cliente['cliente_pais'];
+	$clienteEstado = consulta_estado_id($cliente['cliente_estado']);
+	$clienteCP = $cliente['cliente_cp'];
+	$clientePais = $paises[$cliente['cliente_pais']];
+	/*$C005 = "SELECT doc_archivo, doc_id FROM documentos WHERE doc_tipo = 1 AND doc_individuo = ".$cliente['cliente_id']." ORDER BY doc_id ASC";
 	$S005 = $conexion->query($C005) or die ("Fallo al consultar foto de cliente");
-	$fotoCliente = $S005->fetch_assoc();
+	$fotoCliente = $S005->fetch_assoc();*/
 
-	$edadCompleta = calcularEdad($cliente['cliente_nacimiento']);
-	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';
+	/*$edadCompleta = calcularEdad($cliente['cliente_nacimiento']);
+	$edad = $edadCompleta->format('%Y').' Año(s) '.$edadCompleta->format('%m').' Mes(es) y '.$edadCompleta->format('%d').' Dia(s)';*/
 
 	if($fotoCliente['doc_archivo'] != ''){
 		$flis = 'documentos/'.$Universo.'/cliente-'.$cliente['cliente_id'].'/'.$fotoCliente['doc_archivo'];
 	}
 	else{
-		$flis = 'dist/img/gato_avatar.jpg'; 
+		$flis = 'dist/img/usuario.png'; 
 	}	
 }

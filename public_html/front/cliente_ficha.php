@@ -5,15 +5,12 @@ include('parciales/menu.php');
 include('parciales/7i7ul0.php');
 ?>
   <section class="content"> 
-      
-
     <div class="container-fluid">
     <!-- Main content -->
       <!-- acciones -->
       <div class="card <?= $brr4 ?> card-outline">
         <div class="card-header">
           <h3 class="card-title"><?= acciones ?></h3>
-
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fad fa-minus"></i>
@@ -43,34 +40,34 @@ include('parciales/7i7ul0.php');
             <div class="card card-widget widget-user shadow-lg">
               <!-- Add the bg color to the header using any of the bg-* classes -->
               <div class="widget-user-header text-white" style="background: url('<?= $carpetaFondos ?><?= fondoRandom() ?>') center center; height: 300px; background-size: cover;">
-                <h3 class="widget-user-username text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $cliente['cliente_nombre'] ?></h3>
-                <h5 class="widget-user-desc text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $clienteEspecie ?> / <?= $sexo[$cliente['cliente_sexo']] ?></h5>
+                <h3 class="widget-user-username text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $nombreCompleto ?></h3>
+                <h5 class="widget-user-desc text-left" style="background-color: #8a8a8a80;padding-top: 10px;padding-bottom: 10px;width: max-content;padding-left: 10px;padding-right: 10px;"><?= $sexo[$cliente['cliente_sexo']] ?></h5>
               </div>
               <div class="widget-user-image" id="pop">
-                <img class="img-circle" id="imageresource" src="<?=$flis ?>" alt="Foto Cliente" style="width: 250px;height: 250px;border-radius: 160px;border: 10px solid #666;margin-left: -85px;margin-top: 26px;object-fit: cover;">
+                <img class="img-circle" id="imageresource" src="<?= $flis ?>" alt="Foto Cliente" style="width: 250px;height: 250px;border-radius: 160px;border: 10px solid #666;margin-left: -85px;margin-top: 26px;object-fit: cover;">
               </div>
               <div class="card-footer">
                 <div class="row">
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
-                      <h5 class="description-header">RAZA</h5>
-                      <span class="description-text"><?= $clienteRaza ?></span>
+                      <h5 class="description-header"><?= ntel ?></h5>
+                      <span class="description-text"><?= $clienteTelefono ?></span>
                     </div>
                     <!-- /.description-block -->
                   </div>
                   <!-- /.col -->
                   <div class="col-sm-4 border-right">
                     <div class="description-block">
-                      <h5 class="description-header">PELAJE</h5>
-                      <span class="description-text"><?= $colores[$cliente['cliente_color']] ?></span>
+                      <h5 class="description-header"><?= correo ?></h5>
+                      <span class="description-text"><?= $clienteCorreo ?></span>
                     </div>
                     <!-- /.description-block -->
                   </div>
                   <!-- /.col -->
                   <div class="col-sm-4">
                     <div class="description-block">
-                      <h5 class="description-header">EDAD</h5>
-                      <span class="description-text"><?= $edad ?></span>
+                      <h5 class="description-header"><?= registro ?></h5>
+                      <span class="description-text"><?= $clienteRegistro ?></span>
                     </div>
                     <!-- /.description-block -->
                   </div>
@@ -88,18 +85,32 @@ include('parciales/7i7ul0.php');
               <h5><?= datosCliente ?></h5>
                 <ul class="list-group list-group-unbordered mb-3">
                   <li class="list-group-item">
-                    <b>E. Reproductivo</b> <a class="float-right"><?= $estadoSexual[$cliente['cliente_esteril']] ?></a>
+                    <b><?= calle ?></b> <a class="float-right"><?= $clienteCalle ?></a>
                   </li>
                   <li class="list-group-item">
-                    <b>Propietario</b> <a class="float-right"><?= $cliente['cliente_dueno'] ?></a>
+                    <b><?= ne ?></b> <a class="float-right"><?= $clienteNE ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b><?= ni ?></b> <a class="float-right"><?= $clienteNI ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b><?= colonia ?></b> <a class="float-right"><?= $clienteColonia ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b><?= municipio ?></b> <a class="float-right"><?= $clienteMunicipio ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b><?= estado ?></b> <a class="float-right"><?= $clienteEstado ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b><?= pais ?></b> <a class="float-right"><?= $clientePais ?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b><?= cp ?></b> <a class="float-right"><?= $clienteCP ?></a>
                   </li>
                   <li class="list-group-item">
                     <b>Fecha Nacimiento</b> <a class="float-right"><?= $cliente['cliente_nacimiento'] ?></a>
                   </li>
-                  <li class="list-group-item">
-                    <b>Fecha Registro</b> <a class="float-right"><?= $cliente['cliente_sistema'] ?></a>
-                  </li>
-                                  
                 </ul>
                 
 
@@ -118,7 +129,7 @@ include('parciales/7i7ul0.php');
           
 
             <div class="card-header">
-              <h3 class="card-title">xx</h3>
+              <h3 class="card-title"><?= detalles_cliente ?></h3>
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                   <i class="fad fa-minus"></i>
